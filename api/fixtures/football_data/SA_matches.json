@@ -1,0 +1,4088 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "matches": [
+  {
+   "id": 402000,
+   "utcDate": "2026-08-30T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402001,
+   "utcDate": "2026-08-31T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Torino FC Stadium",
+   "homeTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402002,
+   "utcDate": "2026-09-01T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402003,
+   "utcDate": "2026-08-30T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "AS Roma Stadium",
+   "homeTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402004,
+   "utcDate": "2026-08-31T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402005,
+   "utcDate": "2026-09-01T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Parma Calcio 1913 Stadium",
+   "homeTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402006,
+   "utcDate": "2026-08-30T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402007,
+   "utcDate": "2026-08-31T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Milan Stadium",
+   "homeTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402008,
+   "utcDate": "2026-09-01T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402009,
+   "utcDate": "2026-08-30T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402010,
+   "utcDate": "2026-09-06T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Torino FC Stadium",
+   "homeTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402011,
+   "utcDate": "2026-09-07T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402012,
+   "utcDate": "2026-09-08T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "AS Roma Stadium",
+   "homeTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402013,
+   "utcDate": "2026-09-06T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402014,
+   "utcDate": "2026-09-07T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Parma Calcio 1913 Stadium",
+   "homeTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402015,
+   "utcDate": "2026-09-08T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402016,
+   "utcDate": "2026-09-06T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Milan Stadium",
+   "homeTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402017,
+   "utcDate": "2026-09-07T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402018,
+   "utcDate": "2026-09-08T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402019,
+   "utcDate": "2026-09-06T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402020,
+   "utcDate": "2026-09-13T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402021,
+   "utcDate": "2026-09-14T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "AS Roma Stadium",
+   "homeTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402022,
+   "utcDate": "2026-09-15T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402023,
+   "utcDate": "2026-09-13T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Parma Calcio 1913 Stadium",
+   "homeTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402024,
+   "utcDate": "2026-09-14T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402025,
+   "utcDate": "2026-09-15T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Milan Stadium",
+   "homeTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402026,
+   "utcDate": "2026-09-13T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402027,
+   "utcDate": "2026-09-14T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402028,
+   "utcDate": "2026-09-15T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402029,
+   "utcDate": "2026-09-13T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402030,
+   "utcDate": "2026-09-20T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "AS Roma Stadium",
+   "homeTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402031,
+   "utcDate": "2026-09-21T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Sassuolo Calcio Stadium",
+   "homeTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402032,
+   "utcDate": "2026-09-22T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Parma Calcio 1913 Stadium",
+   "homeTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402033,
+   "utcDate": "2026-09-20T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402034,
+   "utcDate": "2026-09-21T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Milan Stadium",
+   "homeTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402035,
+   "utcDate": "2026-09-22T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402036,
+   "utcDate": "2026-09-20T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402037,
+   "utcDate": "2026-09-21T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402038,
+   "utcDate": "2026-09-22T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402039,
+   "utcDate": "2026-09-20T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402040,
+   "utcDate": "2026-09-27T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402041,
+   "utcDate": "2026-09-28T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Parma Calcio 1913 Stadium",
+   "homeTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402042,
+   "utcDate": "2026-09-29T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Sassuolo Calcio Stadium",
+   "homeTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402043,
+   "utcDate": "2026-09-27T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Milan Stadium",
+   "homeTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402044,
+   "utcDate": "2026-09-28T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402045,
+   "utcDate": "2026-09-29T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402046,
+   "utcDate": "2026-09-27T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402047,
+   "utcDate": "2026-09-28T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402048,
+   "utcDate": "2026-09-29T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402049,
+   "utcDate": "2026-09-27T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402050,
+   "utcDate": "2026-10-04T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Parma Calcio 1913 Stadium",
+   "homeTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402051,
+   "utcDate": "2026-10-05T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Pisa 1909 Stadium",
+   "homeTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402052,
+   "utcDate": "2026-10-06T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Milan Stadium",
+   "homeTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402053,
+   "utcDate": "2026-10-04T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Sassuolo Calcio Stadium",
+   "homeTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402054,
+   "utcDate": "2026-10-05T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402055,
+   "utcDate": "2026-10-06T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402056,
+   "utcDate": "2026-10-04T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402057,
+   "utcDate": "2026-10-05T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402058,
+   "utcDate": "2026-10-06T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402059,
+   "utcDate": "2026-10-04T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402060,
+   "utcDate": "2026-10-11T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402061,
+   "utcDate": "2026-10-12T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Milan Stadium",
+   "homeTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402062,
+   "utcDate": "2026-10-13T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Pisa 1909 Stadium",
+   "homeTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402063,
+   "utcDate": "2026-10-11T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402064,
+   "utcDate": "2026-10-12T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Sassuolo Calcio Stadium",
+   "homeTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402065,
+   "utcDate": "2026-10-13T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402066,
+   "utcDate": "2026-10-11T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402067,
+   "utcDate": "2026-10-12T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402068,
+   "utcDate": "2026-10-13T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402069,
+   "utcDate": "2026-10-11T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402070,
+   "utcDate": "2026-10-18T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Milan Stadium",
+   "homeTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402071,
+   "utcDate": "2026-10-19T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402072,
+   "utcDate": "2026-10-20T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402073,
+   "utcDate": "2026-10-18T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Pisa 1909 Stadium",
+   "homeTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402074,
+   "utcDate": "2026-10-19T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402075,
+   "utcDate": "2026-10-20T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Sassuolo Calcio Stadium",
+   "homeTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402076,
+   "utcDate": "2026-10-18T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402077,
+   "utcDate": "2026-10-19T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402078,
+   "utcDate": "2026-10-20T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402079,
+   "utcDate": "2026-10-18T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402080,
+   "utcDate": "2026-10-25T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402081,
+   "utcDate": "2026-10-26T15:30:00Z",
+   "status": "IN_PLAY",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402082,
+   "utcDate": "2026-10-27T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402083,
+   "utcDate": "2026-10-25T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402084,
+   "utcDate": "2026-10-26T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Pisa 1909 Stadium",
+   "homeTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402085,
+   "utcDate": "2026-10-27T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402086,
+   "utcDate": "2026-10-25T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Sassuolo Calcio Stadium",
+   "homeTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 402087,
+   "utcDate": "2026-10-26T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402088,
+   "utcDate": "2026-10-27T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402089,
+   "utcDate": "2026-10-25T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 402090,
+   "utcDate": "2026-11-01T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "SS Lazio Stadium",
+   "homeTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402091,
+   "utcDate": "2026-11-02T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Lecce Stadium",
+   "homeTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402092,
+   "utcDate": "2026-11-03T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402093,
+   "utcDate": "2026-11-01T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402094,
+   "utcDate": "2026-11-02T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402095,
+   "utcDate": "2026-11-03T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Pisa 1909 Stadium",
+   "homeTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402096,
+   "utcDate": "2026-11-01T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402097,
+   "utcDate": "2026-11-02T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Sassuolo Calcio Stadium",
+   "homeTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402098,
+   "utcDate": "2026-11-03T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402099,
+   "utcDate": "2026-11-01T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402100,
+   "utcDate": "2026-11-08T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402101,
+   "utcDate": "2026-11-09T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402102,
+   "utcDate": "2026-11-10T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Lecce Stadium",
+   "homeTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402103,
+   "utcDate": "2026-11-08T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402104,
+   "utcDate": "2026-11-09T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402105,
+   "utcDate": "2026-11-10T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402106,
+   "utcDate": "2026-11-08T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Pisa 1909 Stadium",
+   "homeTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402107,
+   "utcDate": "2026-11-09T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402108,
+   "utcDate": "2026-11-10T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Sassuolo Calcio Stadium",
+   "homeTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402109,
+   "utcDate": "2026-11-08T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402110,
+   "utcDate": "2026-11-15T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Internazionale Milano Stadium",
+   "homeTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402111,
+   "utcDate": "2026-11-16T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Juventus FC Stadium",
+   "homeTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402112,
+   "utcDate": "2026-11-17T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Genoa CFC Stadium",
+   "homeTeam": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402113,
+   "utcDate": "2026-11-15T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Lecce Stadium",
+   "homeTeam": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402114,
+   "utcDate": "2026-11-16T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Cremonese Stadium",
+   "homeTeam": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402115,
+   "utcDate": "2026-11-17T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402116,
+   "utcDate": "2026-11-15T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Cagliari Calcio Stadium",
+   "homeTeam": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402117,
+   "utcDate": "2026-11-16T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "AC Pisa 1909 Stadium",
+   "homeTeam": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402118,
+   "utcDate": "2026-11-17T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Udinese Calcio Stadium",
+   "homeTeam": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 402119,
+   "utcDate": "2026-11-15T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "US Sassuolo Calcio Stadium",
+   "homeTeam": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  }
+ ]
+}

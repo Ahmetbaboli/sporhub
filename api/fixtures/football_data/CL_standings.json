@@ -1,0 +1,699 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "standings": [
+  {
+   "stage": "LEAGUE_STAGE",
+   "type": "TOTAL",
+   "group": null,
+   "table": [
+    {
+     "position": 1,
+     "team": {
+      "id": 1065,
+      "name": "Eintracht Frankfurt",
+      "shortName": "Eintracht Frankfurt",
+      "tla": "SGE",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,W,W,W,W",
+     "won": 6,
+     "draw": 2,
+     "lost": 1,
+     "points": 20,
+     "goalsFor": 17,
+     "goalsAgainst": 8,
+     "goalDifference": 9
+    },
+    {
+     "position": 2,
+     "team": {
+      "id": 1001,
+      "name": "Arsenal FC",
+      "shortName": "Arsenal",
+      "tla": "ARS",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,D,W,L,L",
+     "won": 6,
+     "draw": 1,
+     "lost": 2,
+     "points": 19,
+     "goalsFor": 17,
+     "goalsAgainst": 13,
+     "goalDifference": 4
+    },
+    {
+     "position": 3,
+     "team": {
+      "id": 1039,
+      "name": "Villarreal CF",
+      "shortName": "Villarreal CF",
+      "tla": "VIL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,W,D,W",
+     "won": 5,
+     "draw": 2,
+     "lost": 1,
+     "points": 17,
+     "goalsFor": 15,
+     "goalsAgainst": 8,
+     "goalDifference": 7
+    },
+    {
+     "position": 4,
+     "team": {
+      "id": 1082,
+      "name": "Sporting Clube de Portugal",
+      "shortName": "Sporting Clube de Portugal",
+      "tla": "SCP",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,W,D,W,W",
+     "won": 5,
+     "draw": 1,
+     "lost": 2,
+     "points": 16,
+     "goalsFor": 16,
+     "goalsAgainst": 7,
+     "goalDifference": 9
+    },
+    {
+     "position": 5,
+     "team": {
+      "id": 1054,
+      "name": "SSC Napoli",
+      "shortName": "SSC Napoli",
+      "tla": "NAP",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,W,L,W,D",
+     "won": 5,
+     "draw": 1,
+     "lost": 3,
+     "points": 16,
+     "goalsFor": 16,
+     "goalsAgainst": 9,
+     "goalDifference": 7
+    },
+    {
+     "position": 6,
+     "team": {
+      "id": 1041,
+      "name": "Atalanta BC",
+      "shortName": "Atalanta BC",
+      "tla": "ATA",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,W,L,L,W",
+     "won": 5,
+     "draw": 1,
+     "lost": 2,
+     "points": 16,
+     "goalsFor": 13,
+     "goalsAgainst": 8,
+     "goalDifference": 5
+    },
+    {
+     "position": 7,
+     "team": {
+      "id": 1034,
+      "name": "Real Madrid CF",
+      "shortName": "Real Madrid CF",
+      "tla": "RMA",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,W,W,W",
+     "won": 5,
+     "draw": 1,
+     "lost": 2,
+     "points": 16,
+     "goalsFor": 10,
+     "goalsAgainst": 6,
+     "goalDifference": 4
+    },
+    {
+     "position": 8,
+     "team": {
+      "id": 1018,
+      "name": "Tottenham Hotspur FC",
+      "shortName": "Tottenham Hotspur",
+      "tla": "TOT",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,W,W,W,L",
+     "won": 5,
+     "draw": 1,
+     "lost": 3,
+     "points": 16,
+     "goalsFor": 12,
+     "goalsAgainst": 9,
+     "goalDifference": 3
+    },
+    {
+     "position": 9,
+     "team": {
+      "id": 1084,
+      "name": "PSV",
+      "shortName": "PSV",
+      "tla": "PSV",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,D,L,W,W",
+     "won": 4,
+     "draw": 3,
+     "lost": 2,
+     "points": 15,
+     "goalsFor": 17,
+     "goalsAgainst": 12,
+     "goalDifference": 5
+    },
+    {
+     "position": 10,
+     "team": {
+      "id": 1021,
+      "name": "Athletic Club",
+      "shortName": "Athletic Club",
+      "tla": "ATH",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,D,W,W,L",
+     "won": 4,
+     "draw": 3,
+     "lost": 1,
+     "points": 15,
+     "goalsFor": 13,
+     "goalsAgainst": 8,
+     "goalDifference": 5
+    },
+    {
+     "position": 11,
+     "team": {
+      "id": 1095,
+      "name": "Pafos FC",
+      "shortName": "Pafos",
+      "tla": "PAF",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,W,D,L,W",
+     "won": 4,
+     "draw": 2,
+     "lost": 2,
+     "points": 14,
+     "goalsFor": 16,
+     "goalsAgainst": 11,
+     "goalDifference": 5
+    },
+    {
+     "position": 12,
+     "team": {
+      "id": 1086,
+      "name": "Club Brugge KV",
+      "shortName": "Club Brugge KV",
+      "tla": "CLB",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,D,W,W",
+     "won": 4,
+     "draw": 2,
+     "lost": 2,
+     "points": 14,
+     "goalsFor": 11,
+     "goalsAgainst": 8,
+     "goalDifference": 3
+    },
+    {
+     "position": 13,
+     "team": {
+      "id": 1090,
+      "name": "SK Slavia Praha",
+      "shortName": "SK Slavia Praha",
+      "tla": "SLA",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,D,W,L,L",
+     "won": 4,
+     "draw": 2,
+     "lost": 3,
+     "points": 14,
+     "goalsFor": 11,
+     "goalsAgainst": 9,
+     "goalDifference": 2
+    },
+    {
+     "position": 14,
+     "team": {
+      "id": 1022,
+      "name": "Club Atlético de Madrid",
+      "shortName": "Club Atlético de Madrid",
+      "tla": "ATM",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,W,W,W,L",
+     "won": 4,
+     "draw": 2,
+     "lost": 2,
+     "points": 14,
+     "goalsFor": 12,
+     "goalsAgainst": 11,
+     "goalDifference": 1
+    },
+    {
+     "position": 15,
+     "team": {
+      "id": 1080,
+      "name": "Olympique de Marseille",
+      "shortName": "Olympique de Marseille",
+      "tla": "OM",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,D,W,W,W",
+     "won": 4,
+     "draw": 1,
+     "lost": 3,
+     "points": 13,
+     "goalsFor": 12,
+     "goalsAgainst": 8,
+     "goalDifference": 4
+    },
+    {
+     "position": 16,
+     "team": {
+      "id": 1049,
+      "name": "FC Internazionale Milano",
+      "shortName": "FC Internazionale Milano",
+      "tla": "INT",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,D,W,W,L",
+     "won": 4,
+     "draw": 1,
+     "lost": 3,
+     "points": 13,
+     "goalsFor": 12,
+     "goalsAgainst": 11,
+     "goalDifference": 1
+    },
+    {
+     "position": 17,
+     "team": {
+      "id": 1062,
+      "name": "Borussia Dortmund",
+      "shortName": "Borussia Dortmund",
+      "tla": "BVB",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,D,L,L,W",
+     "won": 3,
+     "draw": 3,
+     "lost": 2,
+     "points": 12,
+     "goalsFor": 12,
+     "goalsAgainst": 9,
+     "goalDifference": 3
+    },
+    {
+     "position": 18,
+     "team": {
+      "id": 1088,
+      "name": "Olympiacos FC",
+      "shortName": "Olympiacos",
+      "tla": "OLY",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,D,L,W",
+     "won": 3,
+     "draw": 3,
+     "lost": 2,
+     "points": 12,
+     "goalsFor": 12,
+     "goalsAgainst": 10,
+     "goalDifference": 2
+    },
+    {
+     "position": 19,
+     "team": {
+      "id": 1050,
+      "name": "Juventus FC",
+      "shortName": "Juventus",
+      "tla": "JUV",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,L,L,D,W",
+     "won": 3,
+     "draw": 2,
+     "lost": 3,
+     "points": 11,
+     "goalsFor": 10,
+     "goalsAgainst": 10,
+     "goalDifference": 0
+    },
+    {
+     "position": 20,
+     "team": {
+      "id": 1061,
+      "name": "FC Bayern München",
+      "shortName": "FC Bayern München",
+      "tla": "BAY",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,L,L,L,W",
+     "won": 3,
+     "draw": 2,
+     "lost": 4,
+     "points": 11,
+     "goalsFor": 11,
+     "goalsAgainst": 12,
+     "goalDifference": -1
+    },
+    {
+     "position": 21,
+     "team": {
+      "id": 1094,
+      "name": "FC København",
+      "shortName": "FC København",
+      "tla": "FCK",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,D,W,L",
+     "won": 3,
+     "draw": 2,
+     "lost": 3,
+     "points": 11,
+     "goalsFor": 11,
+     "goalsAgainst": 12,
+     "goalDifference": -1
+    },
+    {
+     "position": 22,
+     "team": {
+      "id": 1087,
+      "name": "Galatasaray SK",
+      "shortName": "Galatasaray SK",
+      "tla": "GAL",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,L,D,L,W",
+     "won": 3,
+     "draw": 2,
+     "lost": 4,
+     "points": 11,
+     "goalsFor": 11,
+     "goalsAgainst": 13,
+     "goalDifference": -2
+    },
+    {
+     "position": 23,
+     "team": {
+      "id": 1089,
+      "name": "Celtic FC",
+      "shortName": "Celtic",
+      "tla": "CEL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,L,L,W",
+     "won": 3,
+     "draw": 2,
+     "lost": 3,
+     "points": 11,
+     "goalsFor": 8,
+     "goalsAgainst": 12,
+     "goalDifference": -4
+    },
+    {
+     "position": 24,
+     "team": {
+      "id": 1093,
+      "name": "Royale Union Saint-Gilloise",
+      "shortName": "Royale Union Saint-Gilloise",
+      "tla": "USG",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,W,W,W,L",
+     "won": 3,
+     "draw": 2,
+     "lost": 4,
+     "points": 11,
+     "goalsFor": 11,
+     "goalsAgainst": 16,
+     "goalDifference": -5
+    },
+    {
+     "position": 25,
+     "team": {
+      "id": 1091,
+      "name": "FK Bodø/Glimt",
+      "shortName": "FK Bodø/Glimt",
+      "tla": "BOD",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,L,W,D,D",
+     "won": 2,
+     "draw": 4,
+     "lost": 2,
+     "points": 10,
+     "goalsFor": 12,
+     "goalsAgainst": 12,
+     "goalDifference": 0
+    },
+    {
+     "position": 26,
+     "team": {
+      "id": 1081,
+      "name": "AS Monaco FC",
+      "shortName": "AS Monaco",
+      "tla": "ASM",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,L,D,L,W",
+     "won": 2,
+     "draw": 4,
+     "lost": 3,
+     "points": 10,
+     "goalsFor": 9,
+     "goalsAgainst": 9,
+     "goalDifference": 0
+    },
+    {
+     "position": 27,
+     "team": {
+      "id": 1013,
+      "name": "Manchester City FC",
+      "shortName": "Manchester City",
+      "tla": "MCI",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,D,D,L",
+     "won": 2,
+     "draw": 3,
+     "lost": 3,
+     "points": 9,
+     "goalsFor": 10,
+     "goalsAgainst": 8,
+     "goalDifference": 2
+    },
+    {
+     "position": 28,
+     "team": {
+      "id": 1083,
+      "name": "SL Benfica",
+      "shortName": "SL Benfica",
+      "tla": "SLB",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,D,W,L",
+     "won": 2,
+     "draw": 1,
+     "lost": 5,
+     "points": 7,
+     "goalsFor": 6,
+     "goalsAgainst": 11,
+     "goalDifference": -5
+    },
+    {
+     "position": 29,
+     "team": {
+      "id": 1012,
+      "name": "Liverpool FC",
+      "shortName": "Liverpool",
+      "tla": "LIV",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,D,L,L,L",
+     "won": 2,
+     "draw": 1,
+     "lost": 6,
+     "points": 7,
+     "goalsFor": 7,
+     "goalsAgainst": 17,
+     "goalDifference": -10
+    },
+    {
+     "position": 30,
+     "team": {
+      "id": 1007,
+      "name": "Chelsea FC",
+      "shortName": "Chelsea",
+      "tla": "CHE",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,D,D,L,L",
+     "won": 1,
+     "draw": 3,
+     "lost": 4,
+     "points": 6,
+     "goalsFor": 9,
+     "goalsAgainst": 13,
+     "goalDifference": -4
+    },
+    {
+     "position": 31,
+     "team": {
+      "id": 1079,
+      "name": "Paris Saint-Germain FC",
+      "shortName": "Paris Saint-Germain",
+      "tla": "PSG",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,L,L,W",
+     "won": 2,
+     "draw": 0,
+     "lost": 6,
+     "points": 6,
+     "goalsFor": 9,
+     "goalsAgainst": 19,
+     "goalDifference": -10
+    },
+    {
+     "position": 32,
+     "team": {
+      "id": 1092,
+      "name": "Qarabağ Ağdam FK",
+      "shortName": "Qarabağ Ağdam FK",
+      "tla": "QAR",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,D,L,L",
+     "won": 1,
+     "draw": 2,
+     "lost": 5,
+     "points": 5,
+     "goalsFor": 7,
+     "goalsAgainst": 11,
+     "goalDifference": -4
+    },
+    {
+     "position": 33,
+     "team": {
+      "id": 1085,
+      "name": "AFC Ajax",
+      "shortName": "AFC Ajax",
+      "tla": "AJA",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,D,L,D",
+     "won": 1,
+     "draw": 2,
+     "lost": 5,
+     "points": 5,
+     "goalsFor": 4,
+     "goalsAgainst": 8,
+     "goalDifference": -4
+    },
+    {
+     "position": 34,
+     "team": {
+      "id": 1015,
+      "name": "Newcastle United FC",
+      "shortName": "Newcastle United",
+      "tla": "NEW",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,L,L,L",
+     "won": 1,
+     "draw": 2,
+     "lost": 5,
+     "points": 5,
+     "goalsFor": 7,
+     "goalsAgainst": 16,
+     "goalDifference": -9
+    },
+    {
+     "position": 35,
+     "team": {
+      "id": 1027,
+      "name": "FC Barcelona",
+      "shortName": "FC Barcelona",
+      "tla": "FCB",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,L,W,L,D",
+     "won": 1,
+     "draw": 2,
+     "lost": 6,
+     "points": 5,
+     "goalsFor": 9,
+     "goalsAgainst": 22,
+     "goalDifference": -13
+    },
+    {
+     "position": 36,
+     "team": {
+      "id": 1064,
+      "name": "Bayer 04 Leverkusen",
+      "shortName": "Bayer 04 Leverkusen",
+      "tla": "B04",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,L,L,L",
+     "won": 1,
+     "draw": 0,
+     "lost": 7,
+     "points": 3,
+     "goalsFor": 7,
+     "goalsAgainst": 16,
+     "goalDifference": -9
+    }
+   ]
+  }
+ ]
+}

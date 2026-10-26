@@ -1,0 +1,357 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "standings": [
+  {
+   "stage": "REGULAR_SEASON",
+   "type": "TOTAL",
+   "group": null,
+   "table": [
+    {
+     "position": 1,
+     "team": {
+      "id": 1071,
+      "name": "TSG 1899 Hoffenheim",
+      "shortName": "TSG 1899 Hoffenheim",
+      "tla": "TSG",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,W,W,W,W",
+     "won": 7,
+     "draw": 0,
+     "lost": 1,
+     "points": 21,
+     "goalsFor": 16,
+     "goalsAgainst": 9,
+     "goalDifference": 7
+    },
+    {
+     "position": 2,
+     "team": {
+      "id": 1067,
+      "name": "SC Freiburg",
+      "shortName": "SC Freiburg",
+      "tla": "SCF",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,W,D,W,W",
+     "won": 5,
+     "draw": 3,
+     "lost": 1,
+     "points": 18,
+     "goalsFor": 12,
+     "goalsAgainst": 4,
+     "goalDifference": 8
+    },
+    {
+     "position": 3,
+     "team": {
+      "id": 1063,
+      "name": "RB Leipzig",
+      "shortName": "RB Leipzig",
+      "tla": "RBL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,W,W,W",
+     "won": 6,
+     "draw": 0,
+     "lost": 2,
+     "points": 18,
+     "goalsFor": 14,
+     "goalsAgainst": 9,
+     "goalDifference": 5
+    },
+    {
+     "position": 4,
+     "team": {
+      "id": 1076,
+      "name": "1. FC Köln",
+      "shortName": "1.",
+      "tla": "KOE",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,L,W,W,W",
+     "won": 5,
+     "draw": 1,
+     "lost": 3,
+     "points": 16,
+     "goalsFor": 13,
+     "goalsAgainst": 8,
+     "goalDifference": 5
+    },
+    {
+     "position": 5,
+     "team": {
+      "id": 1061,
+      "name": "FC Bayern München",
+      "shortName": "FC Bayern München",
+      "tla": "BAY",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,D,L,L,W",
+     "won": 5,
+     "draw": 1,
+     "lost": 3,
+     "points": 16,
+     "goalsFor": 15,
+     "goalsAgainst": 11,
+     "goalDifference": 4
+    },
+    {
+     "position": 6,
+     "team": {
+      "id": 1069,
+      "name": "VfL Wolfsburg",
+      "shortName": "VfL Wolfsburg",
+      "tla": "WOB",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,W,D,W,L",
+     "won": 4,
+     "draw": 3,
+     "lost": 1,
+     "points": 15,
+     "goalsFor": 14,
+     "goalsAgainst": 4,
+     "goalDifference": 10
+    },
+    {
+     "position": 7,
+     "team": {
+      "id": 1064,
+      "name": "Bayer 04 Leverkusen",
+      "shortName": "Bayer 04 Leverkusen",
+      "tla": "B04",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,W,L,W,L",
+     "won": 4,
+     "draw": 1,
+     "lost": 4,
+     "points": 13,
+     "goalsFor": 17,
+     "goalsAgainst": 14,
+     "goalDifference": 3
+    },
+    {
+     "position": 8,
+     "team": {
+      "id": 1065,
+      "name": "Eintracht Frankfurt",
+      "shortName": "Eintracht Frankfurt",
+      "tla": "SGE",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,W,L,W,D",
+     "won": 3,
+     "draw": 3,
+     "lost": 2,
+     "points": 12,
+     "goalsFor": 9,
+     "goalsAgainst": 6,
+     "goalDifference": 3
+    },
+    {
+     "position": 9,
+     "team": {
+      "id": 1074,
+      "name": "1. FSV Mainz 05",
+      "shortName": "1. FSV Mainz 05",
+      "tla": "M05",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,W,L,W",
+     "won": 4,
+     "draw": 0,
+     "lost": 4,
+     "points": 12,
+     "goalsFor": 11,
+     "goalsAgainst": 9,
+     "goalDifference": 2
+    },
+    {
+     "position": 10,
+     "team": {
+      "id": 1070,
+      "name": "Borussia Mönchengladbach",
+      "shortName": "Borussia Mönchengladbach",
+      "tla": "BMG",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,W,W,L,L",
+     "won": 3,
+     "draw": 2,
+     "lost": 4,
+     "points": 11,
+     "goalsFor": 11,
+     "goalsAgainst": 13,
+     "goalDifference": -2
+    },
+    {
+     "position": 11,
+     "team": {
+      "id": 1078,
+      "name": "1. FC Heidenheim 1846",
+      "shortName": "1.",
+      "tla": "HDH",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,D,L,D,L",
+     "won": 3,
+     "draw": 2,
+     "lost": 3,
+     "points": 11,
+     "goalsFor": 9,
+     "goalsAgainst": 12,
+     "goalDifference": -3
+    },
+    {
+     "position": 12,
+     "team": {
+      "id": 1073,
+      "name": "1. FC Union Berlin",
+      "shortName": "1.",
+      "tla": "FCU",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,D,L,W,L",
+     "won": 3,
+     "draw": 1,
+     "lost": 5,
+     "points": 10,
+     "goalsFor": 7,
+     "goalsAgainst": 11,
+     "goalDifference": -4
+    },
+    {
+     "position": 13,
+     "team": {
+      "id": 1077,
+      "name": "Hamburger SV",
+      "shortName": "Hamburger SV",
+      "tla": "HSV",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,D,D,D",
+     "won": 2,
+     "draw": 3,
+     "lost": 3,
+     "points": 9,
+     "goalsFor": 8,
+     "goalsAgainst": 8,
+     "goalDifference": 0
+    },
+    {
+     "position": 14,
+     "team": {
+      "id": 1072,
+      "name": "FC Augsburg",
+      "shortName": "FC Augsburg",
+      "tla": "FCA",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,D,L,W,W",
+     "won": 2,
+     "draw": 2,
+     "lost": 4,
+     "points": 8,
+     "goalsFor": 8,
+     "goalsAgainst": 12,
+     "goalDifference": -4
+    },
+    {
+     "position": 15,
+     "team": {
+      "id": 1066,
+      "name": "VfB Stuttgart",
+      "shortName": "VfB Stuttgart",
+      "tla": "VFB",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,L,L,D,L",
+     "won": 2,
+     "draw": 2,
+     "lost": 4,
+     "points": 8,
+     "goalsFor": 7,
+     "goalsAgainst": 14,
+     "goalDifference": -7
+    },
+    {
+     "position": 16,
+     "team": {
+      "id": 1075,
+      "name": "FC St. Pauli 1910",
+      "shortName": "FC St. Pauli 1910",
+      "tla": "STP",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,L,L,L",
+     "won": 2,
+     "draw": 0,
+     "lost": 6,
+     "points": 6,
+     "goalsFor": 8,
+     "goalsAgainst": 18,
+     "goalDifference": -10
+    },
+    {
+     "position": 17,
+     "team": {
+      "id": 1068,
+      "name": "SV Werder Bremen",
+      "shortName": "SV Werder Bremen",
+      "tla": "SVW",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,L,W,L,L",
+     "won": 1,
+     "draw": 2,
+     "lost": 5,
+     "points": 5,
+     "goalsFor": 8,
+     "goalsAgainst": 14,
+     "goalDifference": -6
+    },
+    {
+     "position": 18,
+     "team": {
+      "id": 1062,
+      "name": "Borussia Dortmund",
+      "shortName": "Borussia Dortmund",
+      "tla": "BVB",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,L,L,L",
+     "won": 1,
+     "draw": 0,
+     "lost": 7,
+     "points": 3,
+     "goalsFor": 5,
+     "goalsAgainst": 16,
+     "goalDifference": -11
+    }
+   ]
+  }
+ ]
+}

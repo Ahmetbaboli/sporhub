@@ -1,0 +1,4088 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "matches": [
+  {
+   "id": 401000,
+   "utcDate": "2026-08-30T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Athletic Club Stadium",
+   "homeTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401001,
+   "utcDate": "2026-08-31T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401002,
+   "utcDate": "2026-09-01T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401003,
+   "utcDate": "2026-08-30T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Sevilla FC Stadium",
+   "homeTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401004,
+   "utcDate": "2026-08-31T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401005,
+   "utcDate": "2026-09-01T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Oviedo Stadium",
+   "homeTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401006,
+   "utcDate": "2026-08-30T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401007,
+   "utcDate": "2026-08-31T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Betis Balompié Stadium",
+   "homeTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401008,
+   "utcDate": "2026-09-01T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401009,
+   "utcDate": "2026-08-30T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401010,
+   "utcDate": "2026-09-06T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401011,
+   "utcDate": "2026-09-07T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401012,
+   "utcDate": "2026-09-08T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Sevilla FC Stadium",
+   "homeTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401013,
+   "utcDate": "2026-09-06T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401014,
+   "utcDate": "2026-09-07T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Oviedo Stadium",
+   "homeTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401015,
+   "utcDate": "2026-09-08T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401016,
+   "utcDate": "2026-09-06T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Betis Balompié Stadium",
+   "homeTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401017,
+   "utcDate": "2026-09-07T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401018,
+   "utcDate": "2026-09-08T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401019,
+   "utcDate": "2026-09-06T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401020,
+   "utcDate": "2026-09-13T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Athletic Club Stadium",
+   "homeTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401021,
+   "utcDate": "2026-09-14T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Sevilla FC Stadium",
+   "homeTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401022,
+   "utcDate": "2026-09-15T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401023,
+   "utcDate": "2026-09-13T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Oviedo Stadium",
+   "homeTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401024,
+   "utcDate": "2026-09-14T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401025,
+   "utcDate": "2026-09-15T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Betis Balompié Stadium",
+   "homeTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401026,
+   "utcDate": "2026-09-13T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401027,
+   "utcDate": "2026-09-14T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401028,
+   "utcDate": "2026-09-15T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401029,
+   "utcDate": "2026-09-13T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401030,
+   "utcDate": "2026-09-20T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Sevilla FC Stadium",
+   "homeTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401031,
+   "utcDate": "2026-09-21T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Valencia CF Stadium",
+   "homeTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401032,
+   "utcDate": "2026-09-22T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Oviedo Stadium",
+   "homeTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401033,
+   "utcDate": "2026-09-20T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401034,
+   "utcDate": "2026-09-21T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Betis Balompié Stadium",
+   "homeTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401035,
+   "utcDate": "2026-09-22T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401036,
+   "utcDate": "2026-09-20T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401037,
+   "utcDate": "2026-09-21T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401038,
+   "utcDate": "2026-09-22T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401039,
+   "utcDate": "2026-09-20T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401040,
+   "utcDate": "2026-09-27T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Athletic Club Stadium",
+   "homeTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401041,
+   "utcDate": "2026-09-28T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Oviedo Stadium",
+   "homeTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401042,
+   "utcDate": "2026-09-29T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Valencia CF Stadium",
+   "homeTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401043,
+   "utcDate": "2026-09-27T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Betis Balompié Stadium",
+   "homeTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401044,
+   "utcDate": "2026-09-28T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401045,
+   "utcDate": "2026-09-29T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401046,
+   "utcDate": "2026-09-27T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401047,
+   "utcDate": "2026-09-28T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401048,
+   "utcDate": "2026-09-29T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401049,
+   "utcDate": "2026-09-27T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401050,
+   "utcDate": "2026-10-04T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Oviedo Stadium",
+   "homeTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401051,
+   "utcDate": "2026-10-05T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Sociedad de Fútbol Stadium",
+   "homeTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401052,
+   "utcDate": "2026-10-06T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Betis Balompié Stadium",
+   "homeTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401053,
+   "utcDate": "2026-10-04T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Valencia CF Stadium",
+   "homeTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401054,
+   "utcDate": "2026-10-05T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401055,
+   "utcDate": "2026-10-06T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401056,
+   "utcDate": "2026-10-04T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401057,
+   "utcDate": "2026-10-05T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401058,
+   "utcDate": "2026-10-06T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401059,
+   "utcDate": "2026-10-04T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401060,
+   "utcDate": "2026-10-11T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Athletic Club Stadium",
+   "homeTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401061,
+   "utcDate": "2026-10-12T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Betis Balompié Stadium",
+   "homeTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401062,
+   "utcDate": "2026-10-13T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Sociedad de Fútbol Stadium",
+   "homeTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401063,
+   "utcDate": "2026-10-11T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401064,
+   "utcDate": "2026-10-12T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Valencia CF Stadium",
+   "homeTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401065,
+   "utcDate": "2026-10-13T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401066,
+   "utcDate": "2026-10-11T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401067,
+   "utcDate": "2026-10-12T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401068,
+   "utcDate": "2026-10-13T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401069,
+   "utcDate": "2026-10-11T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401070,
+   "utcDate": "2026-10-18T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Betis Balompié Stadium",
+   "homeTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401071,
+   "utcDate": "2026-10-19T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401072,
+   "utcDate": "2026-10-20T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401073,
+   "utcDate": "2026-10-18T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Sociedad de Fútbol Stadium",
+   "homeTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401074,
+   "utcDate": "2026-10-19T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401075,
+   "utcDate": "2026-10-20T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Valencia CF Stadium",
+   "homeTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401076,
+   "utcDate": "2026-10-18T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401077,
+   "utcDate": "2026-10-19T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401078,
+   "utcDate": "2026-10-20T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401079,
+   "utcDate": "2026-10-18T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401080,
+   "utcDate": "2026-10-25T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Athletic Club Stadium",
+   "homeTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401081,
+   "utcDate": "2026-10-26T15:30:00Z",
+   "status": "IN_PLAY",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401082,
+   "utcDate": "2026-10-27T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401083,
+   "utcDate": "2026-10-25T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401084,
+   "utcDate": "2026-10-26T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Sociedad de Fútbol Stadium",
+   "homeTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401085,
+   "utcDate": "2026-10-27T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401086,
+   "utcDate": "2026-10-25T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Valencia CF Stadium",
+   "homeTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 401087,
+   "utcDate": "2026-10-26T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401088,
+   "utcDate": "2026-10-27T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401089,
+   "utcDate": "2026-10-25T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 401090,
+   "utcDate": "2026-11-01T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Mallorca Stadium",
+   "homeTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401091,
+   "utcDate": "2026-11-02T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Rayo Vallecano de Madrid Stadium",
+   "homeTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401092,
+   "utcDate": "2026-11-03T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401093,
+   "utcDate": "2026-11-01T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401094,
+   "utcDate": "2026-11-02T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401095,
+   "utcDate": "2026-11-03T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Sociedad de Fútbol Stadium",
+   "homeTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401096,
+   "utcDate": "2026-11-01T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401097,
+   "utcDate": "2026-11-02T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Valencia CF Stadium",
+   "homeTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401098,
+   "utcDate": "2026-11-03T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401099,
+   "utcDate": "2026-11-01T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401100,
+   "utcDate": "2026-11-08T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Athletic Club Stadium",
+   "homeTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401101,
+   "utcDate": "2026-11-09T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401102,
+   "utcDate": "2026-11-10T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Rayo Vallecano de Madrid Stadium",
+   "homeTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401103,
+   "utcDate": "2026-11-08T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401104,
+   "utcDate": "2026-11-09T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401105,
+   "utcDate": "2026-11-10T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401106,
+   "utcDate": "2026-11-08T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Sociedad de Fútbol Stadium",
+   "homeTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401107,
+   "utcDate": "2026-11-09T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401108,
+   "utcDate": "2026-11-10T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Valencia CF Stadium",
+   "homeTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401109,
+   "utcDate": "2026-11-08T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401110,
+   "utcDate": "2026-11-15T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Girona FC Stadium",
+   "homeTeam": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401111,
+   "utcDate": "2026-11-16T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Levante UD Stadium",
+   "homeTeam": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401112,
+   "utcDate": "2026-11-17T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "FC Barcelona Stadium",
+   "homeTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401113,
+   "utcDate": "2026-11-15T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Rayo Vallecano de Madrid Stadium",
+   "homeTeam": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401114,
+   "utcDate": "2026-11-16T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Deportivo Alavés Stadium",
+   "homeTeam": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401115,
+   "utcDate": "2026-11-17T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401116,
+   "utcDate": "2026-11-15T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "CA Osasuna Stadium",
+   "homeTeam": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401117,
+   "utcDate": "2026-11-16T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Real Sociedad de Fútbol Stadium",
+   "homeTeam": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401118,
+   "utcDate": "2026-11-17T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "RCD Espanyol de Barcelona Stadium",
+   "homeTeam": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 401119,
+   "utcDate": "2026-11-15T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Valencia CF Stadium",
+   "homeTeam": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  }
+ ]
+}

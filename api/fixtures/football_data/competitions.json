@@ -1,0 +1,79 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "count": 5,
+ "competitions": [
+  {
+   "id": 2021,
+   "name": "Premier League",
+   "code": "PL",
+   "type": "LEAGUE",
+   "emblem": null,
+   "area": {
+    "name": "England"
+   },
+   "currentSeason": {
+    "startDate": "2026-08-15",
+    "endDate": "2027-05-30"
+   }
+  },
+  {
+   "id": 2014,
+   "name": "Primera Division",
+   "code": "PD",
+   "type": "LEAGUE",
+   "emblem": null,
+   "area": {
+    "name": "Spain"
+   },
+   "currentSeason": {
+    "startDate": "2026-08-15",
+    "endDate": "2027-05-30"
+   }
+  },
+  {
+   "id": 2019,
+   "name": "Serie A",
+   "code": "SA",
+   "type": "LEAGUE",
+   "emblem": null,
+   "area": {
+    "name": "Italy"
+   },
+   "currentSeason": {
+    "startDate": "2026-08-15",
+    "endDate": "2027-05-30"
+   }
+  },
+  {
+   "id": 2002,
+   "name": "Bundesliga",
+   "code": "BL1",
+   "type": "LEAGUE",
+   "emblem": null,
+   "area": {
+    "name": "Germany"
+   },
+   "currentSeason": {
+    "startDate": "2026-08-15",
+    "endDate": "2027-05-30"
+   }
+  },
+  {
+   "id": 2001,
+   "name": "UEFA Champions League",
+   "code": "CL",
+   "type": "LEAGUE",
+   "emblem": null,
+   "area": {
+    "name": "Europe"
+   },
+   "currentSeason": {
+    "startDate": "2026-08-15",
+    "endDate": "2027-05-30"
+   }
+  }
+ ]
+}

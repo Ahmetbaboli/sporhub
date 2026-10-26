@@ -1,0 +1,7352 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "matches": [
+  {
+   "id": 404000,
+   "utcDate": "2026-08-30T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404001,
+   "utcDate": "2026-08-31T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "FC København Stadium",
+   "homeTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404002,
+   "utcDate": "2026-09-01T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404003,
+   "utcDate": "2026-08-30T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Qarabağ Ağdam FK Stadium",
+   "homeTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404004,
+   "utcDate": "2026-08-31T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404005,
+   "utcDate": "2026-09-01T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SK Slavia Praha Stadium",
+   "homeTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404006,
+   "utcDate": "2026-08-30T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404007,
+   "utcDate": "2026-08-31T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympiacos FC Stadium",
+   "homeTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404008,
+   "utcDate": "2026-09-01T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404009,
+   "utcDate": "2026-08-30T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404010,
+   "utcDate": "2026-08-31T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404011,
+   "utcDate": "2026-09-01T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404012,
+   "utcDate": "2026-08-30T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404013,
+   "utcDate": "2026-08-31T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404014,
+   "utcDate": "2026-09-01T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404015,
+   "utcDate": "2026-08-30T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404016,
+   "utcDate": "2026-08-31T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404017,
+   "utcDate": "2026-09-01T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404018,
+   "utcDate": "2026-09-06T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "FC København Stadium",
+   "homeTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404019,
+   "utcDate": "2026-09-07T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404020,
+   "utcDate": "2026-09-08T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Qarabağ Ağdam FK Stadium",
+   "homeTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404021,
+   "utcDate": "2026-09-06T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404022,
+   "utcDate": "2026-09-07T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SK Slavia Praha Stadium",
+   "homeTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404023,
+   "utcDate": "2026-09-08T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404024,
+   "utcDate": "2026-09-06T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympiacos FC Stadium",
+   "homeTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404025,
+   "utcDate": "2026-09-07T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404026,
+   "utcDate": "2026-09-08T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404027,
+   "utcDate": "2026-09-06T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404028,
+   "utcDate": "2026-09-07T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404029,
+   "utcDate": "2026-09-08T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404030,
+   "utcDate": "2026-09-06T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404031,
+   "utcDate": "2026-09-07T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404032,
+   "utcDate": "2026-09-08T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404033,
+   "utcDate": "2026-09-06T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404034,
+   "utcDate": "2026-09-07T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404035,
+   "utcDate": "2026-09-08T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404036,
+   "utcDate": "2026-09-13T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404037,
+   "utcDate": "2026-09-14T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Qarabağ Ağdam FK Stadium",
+   "homeTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404038,
+   "utcDate": "2026-09-15T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404039,
+   "utcDate": "2026-09-13T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SK Slavia Praha Stadium",
+   "homeTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404040,
+   "utcDate": "2026-09-14T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404041,
+   "utcDate": "2026-09-15T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympiacos FC Stadium",
+   "homeTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404042,
+   "utcDate": "2026-09-13T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404043,
+   "utcDate": "2026-09-14T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404044,
+   "utcDate": "2026-09-15T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404045,
+   "utcDate": "2026-09-13T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404046,
+   "utcDate": "2026-09-14T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404047,
+   "utcDate": "2026-09-15T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404048,
+   "utcDate": "2026-09-13T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404049,
+   "utcDate": "2026-09-14T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404050,
+   "utcDate": "2026-09-15T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404051,
+   "utcDate": "2026-09-13T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404052,
+   "utcDate": "2026-09-14T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404053,
+   "utcDate": "2026-09-15T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404054,
+   "utcDate": "2026-09-20T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Qarabağ Ağdam FK Stadium",
+   "homeTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404055,
+   "utcDate": "2026-09-21T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Royale Union Saint-Gilloise Stadium",
+   "homeTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404056,
+   "utcDate": "2026-09-22T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SK Slavia Praha Stadium",
+   "homeTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404057,
+   "utcDate": "2026-09-20T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404058,
+   "utcDate": "2026-09-21T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympiacos FC Stadium",
+   "homeTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404059,
+   "utcDate": "2026-09-22T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404060,
+   "utcDate": "2026-09-20T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404061,
+   "utcDate": "2026-09-21T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404062,
+   "utcDate": "2026-09-22T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404063,
+   "utcDate": "2026-09-20T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404064,
+   "utcDate": "2026-09-21T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404065,
+   "utcDate": "2026-09-22T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404066,
+   "utcDate": "2026-09-20T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404067,
+   "utcDate": "2026-09-21T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404068,
+   "utcDate": "2026-09-22T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404069,
+   "utcDate": "2026-09-20T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404070,
+   "utcDate": "2026-09-21T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404071,
+   "utcDate": "2026-09-22T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404072,
+   "utcDate": "2026-09-27T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404073,
+   "utcDate": "2026-09-28T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SK Slavia Praha Stadium",
+   "homeTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404074,
+   "utcDate": "2026-09-29T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Royale Union Saint-Gilloise Stadium",
+   "homeTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404075,
+   "utcDate": "2026-09-27T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympiacos FC Stadium",
+   "homeTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404076,
+   "utcDate": "2026-09-28T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404077,
+   "utcDate": "2026-09-29T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404078,
+   "utcDate": "2026-09-27T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404079,
+   "utcDate": "2026-09-28T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404080,
+   "utcDate": "2026-09-29T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404081,
+   "utcDate": "2026-09-27T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404082,
+   "utcDate": "2026-09-28T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404083,
+   "utcDate": "2026-09-29T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404084,
+   "utcDate": "2026-09-27T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404085,
+   "utcDate": "2026-09-28T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404086,
+   "utcDate": "2026-09-29T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404087,
+   "utcDate": "2026-09-27T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404088,
+   "utcDate": "2026-09-28T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404089,
+   "utcDate": "2026-09-29T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404090,
+   "utcDate": "2026-10-04T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SK Slavia Praha Stadium",
+   "homeTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404091,
+   "utcDate": "2026-10-05T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "FK Bodø/Glimt Stadium",
+   "homeTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404092,
+   "utcDate": "2026-10-06T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympiacos FC Stadium",
+   "homeTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404093,
+   "utcDate": "2026-10-04T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Royale Union Saint-Gilloise Stadium",
+   "homeTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404094,
+   "utcDate": "2026-10-05T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404095,
+   "utcDate": "2026-10-06T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404096,
+   "utcDate": "2026-10-04T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404097,
+   "utcDate": "2026-10-05T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404098,
+   "utcDate": "2026-10-06T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404099,
+   "utcDate": "2026-10-04T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404100,
+   "utcDate": "2026-10-05T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404101,
+   "utcDate": "2026-10-06T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404102,
+   "utcDate": "2026-10-04T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404103,
+   "utcDate": "2026-10-05T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404104,
+   "utcDate": "2026-10-06T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404105,
+   "utcDate": "2026-10-04T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404106,
+   "utcDate": "2026-10-05T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404107,
+   "utcDate": "2026-10-06T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404108,
+   "utcDate": "2026-10-11T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404109,
+   "utcDate": "2026-10-12T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympiacos FC Stadium",
+   "homeTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404110,
+   "utcDate": "2026-10-13T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "FK Bodø/Glimt Stadium",
+   "homeTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404111,
+   "utcDate": "2026-10-11T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404112,
+   "utcDate": "2026-10-12T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Royale Union Saint-Gilloise Stadium",
+   "homeTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404113,
+   "utcDate": "2026-10-13T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404114,
+   "utcDate": "2026-10-11T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404115,
+   "utcDate": "2026-10-12T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404116,
+   "utcDate": "2026-10-13T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404117,
+   "utcDate": "2026-10-11T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404118,
+   "utcDate": "2026-10-12T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404119,
+   "utcDate": "2026-10-13T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404120,
+   "utcDate": "2026-10-11T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404121,
+   "utcDate": "2026-10-12T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404122,
+   "utcDate": "2026-10-13T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404123,
+   "utcDate": "2026-10-11T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404124,
+   "utcDate": "2026-10-12T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404125,
+   "utcDate": "2026-10-13T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404126,
+   "utcDate": "2026-10-18T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympiacos FC Stadium",
+   "homeTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404127,
+   "utcDate": "2026-10-19T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Celtic FC Stadium",
+   "homeTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404128,
+   "utcDate": "2026-10-20T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404129,
+   "utcDate": "2026-10-18T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "FK Bodø/Glimt Stadium",
+   "homeTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404130,
+   "utcDate": "2026-10-19T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404131,
+   "utcDate": "2026-10-20T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Royale Union Saint-Gilloise Stadium",
+   "homeTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404132,
+   "utcDate": "2026-10-18T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404133,
+   "utcDate": "2026-10-19T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404134,
+   "utcDate": "2026-10-20T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404135,
+   "utcDate": "2026-10-18T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404136,
+   "utcDate": "2026-10-19T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404137,
+   "utcDate": "2026-10-20T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404138,
+   "utcDate": "2026-10-18T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404139,
+   "utcDate": "2026-10-19T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404140,
+   "utcDate": "2026-10-20T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404141,
+   "utcDate": "2026-10-18T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404142,
+   "utcDate": "2026-10-19T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404143,
+   "utcDate": "2026-10-20T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404144,
+   "utcDate": "2026-10-25T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404145,
+   "utcDate": "2026-10-26T15:30:00Z",
+   "status": "IN_PLAY",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404146,
+   "utcDate": "2026-10-27T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Celtic FC Stadium",
+   "homeTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404147,
+   "utcDate": "2026-10-25T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404148,
+   "utcDate": "2026-10-26T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "FK Bodø/Glimt Stadium",
+   "homeTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404149,
+   "utcDate": "2026-10-27T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404150,
+   "utcDate": "2026-10-25T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Royale Union Saint-Gilloise Stadium",
+   "homeTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 404151,
+   "utcDate": "2026-10-26T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404152,
+   "utcDate": "2026-10-27T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404153,
+   "utcDate": "2026-10-25T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404154,
+   "utcDate": "2026-10-26T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404155,
+   "utcDate": "2026-10-27T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404156,
+   "utcDate": "2026-10-25T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404157,
+   "utcDate": "2026-10-26T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404158,
+   "utcDate": "2026-10-27T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404159,
+   "utcDate": "2026-10-25T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 404160,
+   "utcDate": "2026-10-26T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404161,
+   "utcDate": "2026-10-27T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404162,
+   "utcDate": "2026-11-01T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Brugge KV Stadium",
+   "homeTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404163,
+   "utcDate": "2026-11-02T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Galatasaray SK Stadium",
+   "homeTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404164,
+   "utcDate": "2026-11-03T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404165,
+   "utcDate": "2026-11-01T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Celtic FC Stadium",
+   "homeTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404166,
+   "utcDate": "2026-11-02T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404167,
+   "utcDate": "2026-11-03T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "FK Bodø/Glimt Stadium",
+   "homeTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404168,
+   "utcDate": "2026-11-01T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404169,
+   "utcDate": "2026-11-02T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Royale Union Saint-Gilloise Stadium",
+   "homeTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404170,
+   "utcDate": "2026-11-03T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404171,
+   "utcDate": "2026-11-01T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404172,
+   "utcDate": "2026-11-02T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404173,
+   "utcDate": "2026-11-03T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404174,
+   "utcDate": "2026-11-01T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404175,
+   "utcDate": "2026-11-02T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404176,
+   "utcDate": "2026-11-03T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404177,
+   "utcDate": "2026-11-01T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404178,
+   "utcDate": "2026-11-02T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404179,
+   "utcDate": "2026-11-03T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404180,
+   "utcDate": "2026-11-08T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404181,
+   "utcDate": "2026-11-09T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404182,
+   "utcDate": "2026-11-10T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Galatasaray SK Stadium",
+   "homeTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404183,
+   "utcDate": "2026-11-08T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404184,
+   "utcDate": "2026-11-09T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Celtic FC Stadium",
+   "homeTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404185,
+   "utcDate": "2026-11-10T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404186,
+   "utcDate": "2026-11-08T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "FK Bodø/Glimt Stadium",
+   "homeTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404187,
+   "utcDate": "2026-11-09T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404188,
+   "utcDate": "2026-11-10T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Royale Union Saint-Gilloise Stadium",
+   "homeTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404189,
+   "utcDate": "2026-11-08T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404190,
+   "utcDate": "2026-11-09T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404191,
+   "utcDate": "2026-11-10T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404192,
+   "utcDate": "2026-11-08T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404193,
+   "utcDate": "2026-11-09T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404194,
+   "utcDate": "2026-11-10T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404195,
+   "utcDate": "2026-11-08T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404196,
+   "utcDate": "2026-11-09T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404197,
+   "utcDate": "2026-11-10T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404198,
+   "utcDate": "2026-11-15T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "PSV Stadium",
+   "homeTeam": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404199,
+   "utcDate": "2026-11-16T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "AFC Ajax Stadium",
+   "homeTeam": {
+    "id": 1085,
+    "name": "AFC Ajax",
+    "shortName": "AFC Ajax",
+    "tla": "AJA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1083,
+    "name": "SL Benfica",
+    "shortName": "SL Benfica",
+    "tla": "SLB",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404200,
+   "utcDate": "2026-11-17T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Sporting Clube de Portugal Stadium",
+   "homeTeam": {
+    "id": 1082,
+    "name": "Sporting Clube de Portugal",
+    "shortName": "Sporting Clube de Portugal",
+    "tla": "SCP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404201,
+   "utcDate": "2026-11-15T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Galatasaray SK Stadium",
+   "homeTeam": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1081,
+    "name": "AS Monaco FC",
+    "shortName": "AS Monaco",
+    "tla": "ASM",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404202,
+   "utcDate": "2026-11-16T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Olympique de Marseille Stadium",
+   "homeTeam": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404203,
+   "utcDate": "2026-11-17T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Celtic FC Stadium",
+   "homeTeam": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1079,
+    "name": "Paris Saint-Germain FC",
+    "shortName": "Paris Saint-Germain",
+    "tla": "PSG",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404204,
+   "utcDate": "2026-11-15T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Eintracht Frankfurt Stadium",
+   "homeTeam": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404205,
+   "utcDate": "2026-11-16T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "FK Bodø/Glimt Stadium",
+   "homeTeam": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404206,
+   "utcDate": "2026-11-17T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Borussia Dortmund Stadium",
+   "homeTeam": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1092,
+    "name": "Qarabağ Ağdam FK",
+    "shortName": "Qarabağ Ağdam FK",
+    "tla": "QAR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404207,
+   "utcDate": "2026-11-15T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Royale Union Saint-Gilloise Stadium",
+   "homeTeam": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404208,
+   "utcDate": "2026-11-16T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Atalanta BC Stadium",
+   "homeTeam": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404209,
+   "utcDate": "2026-11-17T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Pafos FC Stadium",
+   "homeTeam": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404210,
+   "utcDate": "2026-11-15T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "SSC Napoli Stadium",
+   "homeTeam": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404211,
+   "utcDate": "2026-11-16T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404212,
+   "utcDate": "2026-11-17T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Villarreal CF Stadium",
+   "homeTeam": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404213,
+   "utcDate": "2026-11-15T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404214,
+   "utcDate": "2026-11-16T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Club Atlético de Madrid Stadium",
+   "homeTeam": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 404215,
+   "utcDate": "2026-11-17T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "LEAGUE_STAGE",
+   "venue": "Real Madrid CF Stadium",
+   "homeTeam": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  }
+ ]
+}

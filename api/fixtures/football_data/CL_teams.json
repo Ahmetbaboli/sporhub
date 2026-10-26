@@ -1,0 +1,4221 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "count": 36,
+ "teams": [
+  {
+   "id": 1001,
+   "name": "Arsenal FC",
+   "shortName": "Arsenal",
+   "tla": "ARS",
+   "crest": null,
+   "area": {
+    "name": "England"
+   },
+   "squad": [
+    {
+     "id": 100100,
+     "name": "Mateo Garcia",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "2003-03-14"
+    },
+    {
+     "id": 100101,
+     "name": "Marco Silva",
+     "position": "Goalkeeper",
+     "nationality": "Turkey",
+     "dateOfBirth": "1997-10-02"
+    },
+    {
+     "id": 100102,
+     "name": "Luca Zielinski",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1997-09-24"
+    },
+    {
+     "id": 100103,
+     "name": "Yusuf Eriksen",
+     "position": "Centre-Back",
+     "nationality": "England",
+     "dateOfBirth": "1994-11-14"
+    },
+    {
+     "id": 100104,
+     "name": "Emre Demir",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "2004-10-03"
+    },
+    {
+     "id": 100105,
+     "name": "Tomas Rossi",
+     "position": "Left-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1993-05-12"
+    },
+    {
+     "id": 100106,
+     "name": "Diego Moretti",
+     "position": "Right-Back",
+     "nationality": "England",
+     "dateOfBirth": "1995-02-20"
+    },
+    {
+     "id": 100107,
+     "name": "Noah Almeida",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "2001-04-28"
+    },
+    {
+     "id": 100108,
+     "name": "Emre Rossi",
+     "position": "Central Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "1997-10-02"
+    },
+    {
+     "id": 100109,
+     "name": "Mateo Lemaire",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "1996-02-23"
+    },
+    {
+     "id": 100110,
+     "name": "Marco Quinn",
+     "position": "Attacking Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "1992-10-03"
+    },
+    {
+     "id": 100111,
+     "name": "Hugo Quinn",
+     "position": "Left Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "2002-08-01"
+    },
+    {
+     "id": 100112,
+     "name": "Pedro Brandt",
+     "position": "Right Winger",
+     "nationality": "Italy",
+     "dateOfBirth": "1995-02-24"
+    },
+    {
+     "id": 100113,
+     "name": "Rafael Vidal",
+     "position": "Centre-Forward",
+     "nationality": "France",
+     "dateOfBirth": "1999-02-28"
+    },
+    {
+     "id": 100114,
+     "name": "Luca Hoffmann",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "2006-04-27"
+    }
+   ]
+  },
+  {
+   "id": 1012,
+   "name": "Liverpool FC",
+   "shortName": "Liverpool",
+   "tla": "LIV",
+   "crest": null,
+   "area": {
+    "name": "England"
+   },
+   "squad": [
+    {
+     "id": 101200,
+     "name": "Leo Fofana",
+     "position": "Goalkeeper",
+     "nationality": "Italy",
+     "dateOfBirth": "2003-04-20"
+    },
+    {
+     "id": 101201,
+     "name": "Luca Lemaire",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "2004-09-19"
+    },
+    {
+     "id": 101202,
+     "name": "Noah Vidal",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2005-07-01"
+    },
+    {
+     "id": 101203,
+     "name": "Nico Okafor",
+     "position": "Centre-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "2006-10-08"
+    },
+    {
+     "id": 101204,
+     "name": "Nico Petrov",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1996-04-20"
+    },
+    {
+     "id": 101205,
+     "name": "Nico Rossi",
+     "position": "Left-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2006-11-27"
+    },
+    {
+     "id": 101206,
+     "name": "Tomas Jansen",
+     "position": "Right-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "1994-12-06"
+    },
+    {
+     "id": 101207,
+     "name": "Luca Ilic",
+     "position": "Central Midfield",
+     "nationality": "Spain",
+     "dateOfBirth": "1992-04-26"
+    },
+    {
+     "id": 101208,
+     "name": "Sami Fofana",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "1997-04-25"
+    },
+    {
+     "id": 101209,
+     "name": "Mateo Fofana",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1998-09-17"
+    },
+    {
+     "id": 101210,
+     "name": "Tomas Weber",
+     "position": "Attacking Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2003-11-04"
+    },
+    {
+     "id": 101211,
+     "name": "Marco Weber",
+     "position": "Left Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "1995-06-26"
+    },
+    {
+     "id": 101212,
+     "name": "Mateo Yildiz",
+     "position": "Right Winger",
+     "nationality": "Italy",
+     "dateOfBirth": "1991-04-23"
+    },
+    {
+     "id": 101213,
+     "name": "Hugo Eriksen",
+     "position": "Centre-Forward",
+     "nationality": "Germany",
+     "dateOfBirth": "1992-12-04"
+    },
+    {
+     "id": 101214,
+     "name": "Mateo Ilic",
+     "position": "Centre-Forward",
+     "nationality": "France",
+     "dateOfBirth": "2001-10-27"
+    }
+   ]
+  },
+  {
+   "id": 1013,
+   "name": "Manchester City FC",
+   "shortName": "Manchester City",
+   "tla": "MCI",
+   "crest": null,
+   "area": {
+    "name": "England"
+   },
+   "squad": [
+    {
+     "id": 101300,
+     "name": "Rafael Ilic",
+     "position": "Goalkeeper",
+     "nationality": "Italy",
+     "dateOfBirth": "1991-07-28"
+    },
+    {
+     "id": 101301,
+     "name": "Mateo Moretti",
+     "position": "Goalkeeper",
+     "nationality": "Germany",
+     "dateOfBirth": "1999-01-21"
+    },
+    {
+     "id": 101302,
+     "name": "Leo Costa",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2005-11-11"
+    },
+    {
+     "id": 101303,
+     "name": "Jonas Garcia",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "2000-12-25"
+    },
+    {
+     "id": 101304,
+     "name": "Diego Moretti",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2001-11-22"
+    },
+    {
+     "id": 101305,
+     "name": "Noah Demir",
+     "position": "Left-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2003-02-14"
+    },
+    {
+     "id": 101306,
+     "name": "Arda Moretti",
+     "position": "Right-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1996-02-28"
+    },
+    {
+     "id": 101307,
+     "name": "Karim Kaya",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1997-01-10"
+    },
+    {
+     "id": 101308,
+     "name": "Sami Weber",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2002-08-15"
+    },
+    {
+     "id": 101309,
+     "name": "Sami Costa",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "1999-05-14"
+    },
+    {
+     "id": 101310,
+     "name": "Rafael Petrov",
+     "position": "Attacking Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "1993-11-10"
+    },
+    {
+     "id": 101311,
+     "name": "Karim Fofana",
+     "position": "Left Winger",
+     "nationality": "Brazil",
+     "dateOfBirth": "1999-03-24"
+    },
+    {
+     "id": 101312,
+     "name": "Marco Almeida",
+     "position": "Right Winger",
+     "nationality": "Germany",
+     "dateOfBirth": "2004-03-14"
+    },
+    {
+     "id": 101313,
+     "name": "Tomas Costa",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "2001-05-03"
+    },
+    {
+     "id": 101314,
+     "name": "Karim Yildiz",
+     "position": "Centre-Forward",
+     "nationality": "Germany",
+     "dateOfBirth": "1998-11-12"
+    }
+   ]
+  },
+  {
+   "id": 1007,
+   "name": "Chelsea FC",
+   "shortName": "Chelsea",
+   "tla": "CHE",
+   "crest": null,
+   "area": {
+    "name": "England"
+   },
+   "squad": [
+    {
+     "id": 100700,
+     "name": "Mateo Tanaka",
+     "position": "Goalkeeper",
+     "nationality": "Italy",
+     "dateOfBirth": "2000-12-23"
+    },
+    {
+     "id": 100701,
+     "name": "Diego Hoffmann",
+     "position": "Goalkeeper",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1992-11-07"
+    },
+    {
+     "id": 100702,
+     "name": "Tomas Brandt",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2000-12-20"
+    },
+    {
+     "id": 100703,
+     "name": "Mateo Brandt",
+     "position": "Centre-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1997-04-23"
+    },
+    {
+     "id": 100704,
+     "name": "Jonas Demir",
+     "position": "Centre-Back",
+     "nationality": "England",
+     "dateOfBirth": "1999-12-21"
+    },
+    {
+     "id": 100705,
+     "name": "Omar Jansen",
+     "position": "Left-Back",
+     "nationality": "France",
+     "dateOfBirth": "1998-11-01"
+    },
+    {
+     "id": 100706,
+     "name": "Leo Silva",
+     "position": "Right-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1993-04-01"
+    },
+    {
+     "id": 100707,
+     "name": "Mateo Silva",
+     "position": "Central Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "1994-08-13"
+    },
+    {
+     "id": 100708,
+     "name": "Karim Novak",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1992-07-09"
+    },
+    {
+     "id": 100709,
+     "name": "Omar Fofana",
+     "position": "Central Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "1991-09-16"
+    },
+    {
+     "id": 100710,
+     "name": "Pedro Tanaka",
+     "position": "Attacking Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "2006-04-04"
+    },
+    {
+     "id": 100711,
+     "name": "Hugo Costa",
+     "position": "Left Winger",
+     "nationality": "Brazil",
+     "dateOfBirth": "2001-06-01"
+    },
+    {
+     "id": 100712,
+     "name": "Diego Quinn",
+     "position": "Right Winger",
+     "nationality": "Italy",
+     "dateOfBirth": "1999-12-20"
+    },
+    {
+     "id": 100713,
+     "name": "Nico Garcia",
+     "position": "Centre-Forward",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2000-02-27"
+    },
+    {
+     "id": 100714,
+     "name": "Ivan Brandt",
+     "position": "Centre-Forward",
+     "nationality": "Germany",
+     "dateOfBirth": "1996-06-20"
+    }
+   ]
+  },
+  {
+   "id": 1018,
+   "name": "Tottenham Hotspur FC",
+   "shortName": "Tottenham Hotspur",
+   "tla": "TOT",
+   "crest": null,
+   "area": {
+    "name": "England"
+   },
+   "squad": [
+    {
+     "id": 101800,
+     "name": "Nico Vidal",
+     "position": "Goalkeeper",
+     "nationality": "Turkey",
+     "dateOfBirth": "1994-11-08"
+    },
+    {
+     "id": 101801,
+     "name": "Viktor Kaya",
+     "position": "Goalkeeper",
+     "nationality": "Germany",
+     "dateOfBirth": "1996-09-24"
+    },
+    {
+     "id": 101802,
+     "name": "Omar Garcia",
+     "position": "Centre-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "2003-09-22"
+    },
+    {
+     "id": 101803,
+     "name": "Diego Eriksen",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2003-01-19"
+    },
+    {
+     "id": 101804,
+     "name": "Omar Eriksen",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2003-06-04"
+    },
+    {
+     "id": 101805,
+     "name": "Noah Brandt",
+     "position": "Left-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2001-08-16"
+    },
+    {
+     "id": 101806,
+     "name": "Ivan Almeida",
+     "position": "Right-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1995-01-11"
+    },
+    {
+     "id": 101807,
+     "name": "Arda Eriksen",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "2004-11-07"
+    },
+    {
+     "id": 101808,
+     "name": "Luca Costa",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1997-03-13"
+    },
+    {
+     "id": 101809,
+     "name": "Diego Almeida",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "2000-12-08"
+    },
+    {
+     "id": 101810,
+     "name": "Diego Petrov",
+     "position": "Attacking Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "1992-10-07"
+    },
+    {
+     "id": 101811,
+     "name": "Rafael Jansen",
+     "position": "Left Winger",
+     "nationality": "Portugal",
+     "dateOfBirth": "1995-01-21"
+    },
+    {
+     "id": 101812,
+     "name": "Pedro Demir",
+     "position": "Right Winger",
+     "nationality": "England",
+     "dateOfBirth": "2006-04-03"
+    },
+    {
+     "id": 101813,
+     "name": "Tomas Kaya",
+     "position": "Centre-Forward",
+     "nationality": "France",
+     "dateOfBirth": "2004-06-08"
+    },
+    {
+     "id": 101814,
+     "name": "Sami Garcia",
+     "position": "Centre-Forward",
+     "nationality": "Brazil",
+     "dateOfBirth": "1994-03-03"
+    }
+   ]
+  },
+  {
+   "id": 1015,
+   "name": "Newcastle United FC",
+   "shortName": "Newcastle United",
+   "tla": "NEW",
+   "crest": null,
+   "area": {
+    "name": "England"
+   },
+   "squad": [
+    {
+     "id": 101500,
+     "name": "Arda Jansen",
+     "position": "Goalkeeper",
+     "nationality": "Portugal",
+     "dateOfBirth": "2003-05-14"
+    },
+    {
+     "id": 101501,
+     "name": "Viktor Weber",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "2006-12-20"
+    },
+    {
+     "id": 101502,
+     "name": "Luca Silva",
+     "position": "Centre-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "2004-08-14"
+    },
+    {
+     "id": 101503,
+     "name": "Sami Kaya",
+     "position": "Centre-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "1998-05-02"
+    },
+    {
+     "id": 101504,
+     "name": "Hugo Tanaka",
+     "position": "Centre-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1994-02-09"
+    },
+    {
+     "id": 101505,
+     "name": "Omar Jansen",
+     "position": "Left-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2005-09-19"
+    },
+    {
+     "id": 101506,
+     "name": "Ivan Kaya",
+     "position": "Right-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "1997-07-05"
+    },
+    {
+     "id": 101507,
+     "name": "Arda Almeida",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1991-07-13"
+    },
+    {
+     "id": 101508,
+     "name": "Luca Costa",
+     "position": "Central Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "1998-04-02"
+    },
+    {
+     "id": 101509,
+     "name": "Rafael Eriksen",
+     "position": "Central Midfield",
+     "nationality": "Spain",
+     "dateOfBirth": "2006-04-13"
+    },
+    {
+     "id": 101510,
+     "name": "Rafael Moretti",
+     "position": "Attacking Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "2001-03-18"
+    },
+    {
+     "id": 101511,
+     "name": "Omar Quinn",
+     "position": "Left Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "1992-11-24"
+    },
+    {
+     "id": 101512,
+     "name": "Tomas Novak",
+     "position": "Right Winger",
+     "nationality": "Germany",
+     "dateOfBirth": "1992-01-11"
+    },
+    {
+     "id": 101513,
+     "name": "Tomas Eriksen",
+     "position": "Centre-Forward",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2004-07-24"
+    },
+    {
+     "id": 101514,
+     "name": "Yusuf Brandt",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "1995-03-06"
+    }
+   ]
+  },
+  {
+   "id": 1034,
+   "name": "Real Madrid CF",
+   "shortName": "Real Madrid CF",
+   "tla": "RMA",
+   "crest": null,
+   "area": {
+    "name": "Spain"
+   },
+   "squad": [
+    {
+     "id": 103400,
+     "name": "Mateo Vidal",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "1993-02-13"
+    },
+    {
+     "id": 103401,
+     "name": "Jonas Hoffmann",
+     "position": "Goalkeeper",
+     "nationality": "Turkey",
+     "dateOfBirth": "1998-03-12"
+    },
+    {
+     "id": 103402,
+     "name": "Leo Almeida",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "1992-05-19"
+    },
+    {
+     "id": 103403,
+     "name": "Pedro Zielinski",
+     "position": "Centre-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "2006-08-05"
+    },
+    {
+     "id": 103404,
+     "name": "Arda Hoffmann",
+     "position": "Centre-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "1994-09-13"
+    },
+    {
+     "id": 103405,
+     "name": "Pedro Vidal",
+     "position": "Left-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1992-01-21"
+    },
+    {
+     "id": 103406,
+     "name": "Ivan Hoffmann",
+     "position": "Right-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1991-07-27"
+    },
+    {
+     "id": 103407,
+     "name": "Noah Tanaka",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1996-10-24"
+    },
+    {
+     "id": 103408,
+     "name": "Arda Novak",
+     "position": "Central Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "2005-12-09"
+    },
+    {
+     "id": 103409,
+     "name": "Nico Okafor",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "1991-11-07"
+    },
+    {
+     "id": 103410,
+     "name": "Luca Tanaka",
+     "position": "Attacking Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "1997-04-18"
+    },
+    {
+     "id": 103411,
+     "name": "Emre Moretti",
+     "position": "Left Winger",
+     "nationality": "Italy",
+     "dateOfBirth": "1994-01-24"
+    },
+    {
+     "id": 103412,
+     "name": "Omar Moretti",
+     "position": "Right Winger",
+     "nationality": "France",
+     "dateOfBirth": "1992-10-27"
+    },
+    {
+     "id": 103413,
+     "name": "Marco Brandt",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "1997-11-26"
+    },
+    {
+     "id": 103414,
+     "name": "Pedro Almeida",
+     "position": "Centre-Forward",
+     "nationality": "Argentina",
+     "dateOfBirth": "1996-05-11"
+    }
+   ]
+  },
+  {
+   "id": 1027,
+   "name": "FC Barcelona",
+   "shortName": "FC Barcelona",
+   "tla": "FCB",
+   "crest": null,
+   "area": {
+    "name": "Spain"
+   },
+   "squad": [
+    {
+     "id": 102700,
+     "name": "Luca Demir",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "2006-04-01"
+    },
+    {
+     "id": 102701,
+     "name": "Yusuf Yildiz",
+     "position": "Goalkeeper",
+     "nationality": "Turkey",
+     "dateOfBirth": "1992-09-27"
+    },
+    {
+     "id": 102702,
+     "name": "Sami Brandt",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "1999-06-24"
+    },
+    {
+     "id": 102703,
+     "name": "Ivan Petrov",
+     "position": "Centre-Back",
+     "nationality": "England",
+     "dateOfBirth": "2003-12-03"
+    },
+    {
+     "id": 102704,
+     "name": "Yusuf Demir",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-09-09"
+    },
+    {
+     "id": 102705,
+     "name": "Viktor Silva",
+     "position": "Left-Back",
+     "nationality": "France",
+     "dateOfBirth": "1991-08-17"
+    },
+    {
+     "id": 102706,
+     "name": "Marco Moretti",
+     "position": "Right-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1997-07-15"
+    },
+    {
+     "id": 102707,
+     "name": "Viktor Brandt",
+     "position": "Central Midfield",
+     "nationality": "Spain",
+     "dateOfBirth": "1995-03-22"
+    },
+    {
+     "id": 102708,
+     "name": "Karim Jansen",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1991-03-13"
+    },
+    {
+     "id": 102709,
+     "name": "Pedro Okafor",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2003-02-05"
+    },
+    {
+     "id": 102710,
+     "name": "Yusuf Fofana",
+     "position": "Attacking Midfield",
+     "nationality": "England",
+     "dateOfBirth": "2005-01-28"
+    },
+    {
+     "id": 102711,
+     "name": "Emre Demir",
+     "position": "Left Winger",
+     "nationality": "Spain",
+     "dateOfBirth": "2006-10-18"
+    },
+    {
+     "id": 102712,
+     "name": "Hugo Petrov",
+     "position": "Right Winger",
+     "nationality": "England",
+     "dateOfBirth": "1994-01-18"
+    },
+    {
+     "id": 102713,
+     "name": "Jonas Almeida",
+     "position": "Centre-Forward",
+     "nationality": "Portugal",
+     "dateOfBirth": "2004-01-16"
+    },
+    {
+     "id": 102714,
+     "name": "Ivan Eriksen",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "1999-06-15"
+    }
+   ]
+  },
+  {
+   "id": 1022,
+   "name": "Club Atlético de Madrid",
+   "shortName": "Club Atlético de Madrid",
+   "tla": "ATM",
+   "crest": null,
+   "area": {
+    "name": "Spain"
+   },
+   "squad": [
+    {
+     "id": 102200,
+     "name": "Emre Novak",
+     "position": "Goalkeeper",
+     "nationality": "Argentina",
+     "dateOfBirth": "2002-02-27"
+    },
+    {
+     "id": 102201,
+     "name": "Nico Rossi",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "2002-04-14"
+    },
+    {
+     "id": 102202,
+     "name": "Mateo Ilic",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1999-12-13"
+    },
+    {
+     "id": 102203,
+     "name": "Leo Demir",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2003-11-22"
+    },
+    {
+     "id": 102204,
+     "name": "Pedro Brandt",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "1996-01-11"
+    },
+    {
+     "id": 102205,
+     "name": "Leo Silva",
+     "position": "Left-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2006-08-12"
+    },
+    {
+     "id": 102206,
+     "name": "Rafael Rossi",
+     "position": "Right-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1994-02-22"
+    },
+    {
+     "id": 102207,
+     "name": "Arda Hoffmann",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1995-04-14"
+    },
+    {
+     "id": 102208,
+     "name": "Arda Costa",
+     "position": "Central Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "2002-10-21"
+    },
+    {
+     "id": 102209,
+     "name": "Omar Weber",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2002-06-07"
+    },
+    {
+     "id": 102210,
+     "name": "Diego Jansen",
+     "position": "Attacking Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1993-06-19"
+    },
+    {
+     "id": 102211,
+     "name": "Noah Demir",
+     "position": "Left Winger",
+     "nationality": "Germany",
+     "dateOfBirth": "1995-08-02"
+    },
+    {
+     "id": 102212,
+     "name": "Jonas Petrov",
+     "position": "Right Winger",
+     "nationality": "England",
+     "dateOfBirth": "1992-01-15"
+    },
+    {
+     "id": 102213,
+     "name": "Ivan Jansen",
+     "position": "Centre-Forward",
+     "nationality": "Germany",
+     "dateOfBirth": "1991-12-21"
+    },
+    {
+     "id": 102214,
+     "name": "Omar Eriksen",
+     "position": "Centre-Forward",
+     "nationality": "Portugal",
+     "dateOfBirth": "1991-04-09"
+    }
+   ]
+  },
+  {
+   "id": 1021,
+   "name": "Athletic Club",
+   "shortName": "Athletic Club",
+   "tla": "ATH",
+   "crest": null,
+   "area": {
+    "name": "Spain"
+   },
+   "squad": [
+    {
+     "id": 102100,
+     "name": "Sami Quinn",
+     "position": "Goalkeeper",
+     "nationality": "Italy",
+     "dateOfBirth": "1998-05-18"
+    },
+    {
+     "id": 102101,
+     "name": "Omar Tanaka",
+     "position": "Goalkeeper",
+     "nationality": "Turkey",
+     "dateOfBirth": "2004-06-04"
+    },
+    {
+     "id": 102102,
+     "name": "Arda Okafor",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "1996-07-28"
+    },
+    {
+     "id": 102103,
+     "name": "Viktor Almeida",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1991-04-20"
+    },
+    {
+     "id": 102104,
+     "name": "Rafael Lemaire",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1994-04-12"
+    },
+    {
+     "id": 102105,
+     "name": "Marco Moretti",
+     "position": "Left-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2005-07-01"
+    },
+    {
+     "id": 102106,
+     "name": "Luca Eriksen",
+     "position": "Right-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1994-01-17"
+    },
+    {
+     "id": 102107,
+     "name": "Karim Ilic",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "1997-03-21"
+    },
+    {
+     "id": 102108,
+     "name": "Rafael Petrov",
+     "position": "Central Midfield",
+     "nationality": "England",
+     "dateOfBirth": "2005-07-18"
+    },
+    {
+     "id": 102109,
+     "name": "Jonas Rossi",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "2001-11-03"
+    },
+    {
+     "id": 102110,
+     "name": "Jonas Costa",
+     "position": "Attacking Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2003-04-03"
+    },
+    {
+     "id": 102111,
+     "name": "Sami Novak",
+     "position": "Left Winger",
+     "nationality": "France",
+     "dateOfBirth": "1991-04-27"
+    },
+    {
+     "id": 102112,
+     "name": "Arda Zielinski",
+     "position": "Right Winger",
+     "nationality": "Brazil",
+     "dateOfBirth": "2003-10-17"
+    },
+    {
+     "id": 102113,
+     "name": "Arda Moretti",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "2002-03-21"
+    },
+    {
+     "id": 102114,
+     "name": "Tomas Demir",
+     "position": "Centre-Forward",
+     "nationality": "England",
+     "dateOfBirth": "2006-04-18"
+    }
+   ]
+  },
+  {
+   "id": 1039,
+   "name": "Villarreal CF",
+   "shortName": "Villarreal CF",
+   "tla": "VIL",
+   "crest": null,
+   "area": {
+    "name": "Spain"
+   },
+   "squad": [
+    {
+     "id": 103900,
+     "name": "Diego Garcia",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "1992-04-26"
+    },
+    {
+     "id": 103901,
+     "name": "Nico Demir",
+     "position": "Goalkeeper",
+     "nationality": "Italy",
+     "dateOfBirth": "1996-01-05"
+    },
+    {
+     "id": 103902,
+     "name": "Mateo Demir",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1991-10-17"
+    },
+    {
+     "id": 103903,
+     "name": "Karim Rossi",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "1994-12-14"
+    },
+    {
+     "id": 103904,
+     "name": "Arda Kaya",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2003-02-08"
+    },
+    {
+     "id": 103905,
+     "name": "Karim Zielinski",
+     "position": "Left-Back",
+     "nationality": "England",
+     "dateOfBirth": "2000-02-07"
+    },
+    {
+     "id": 103906,
+     "name": "Ivan Zielinski",
+     "position": "Right-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "1997-11-04"
+    },
+    {
+     "id": 103907,
+     "name": "Sami Vidal",
+     "position": "Central Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-04-25"
+    },
+    {
+     "id": 103908,
+     "name": "Karim Brandt",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1993-08-17"
+    },
+    {
+     "id": 103909,
+     "name": "Leo Kaya",
+     "position": "Central Midfield",
+     "nationality": "England",
+     "dateOfBirth": "2001-01-17"
+    },
+    {
+     "id": 103910,
+     "name": "Jonas Kaya",
+     "position": "Attacking Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "2002-12-09"
+    },
+    {
+     "id": 103911,
+     "name": "Ivan Kaya",
+     "position": "Left Winger",
+     "nationality": "Spain",
+     "dateOfBirth": "2004-04-21"
+    },
+    {
+     "id": 103912,
+     "name": "Noah Weber",
+     "position": "Right Winger",
+     "nationality": "Portugal",
+     "dateOfBirth": "2001-06-13"
+    },
+    {
+     "id": 103913,
+     "name": "Omar Brandt",
+     "position": "Centre-Forward",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-09-08"
+    },
+    {
+     "id": 103914,
+     "name": "Ivan Garcia",
+     "position": "Centre-Forward",
+     "nationality": "France",
+     "dateOfBirth": "2005-09-27"
+    }
+   ]
+  },
+  {
+   "id": 1049,
+   "name": "FC Internazionale Milano",
+   "shortName": "FC Internazionale Milano",
+   "tla": "INT",
+   "crest": null,
+   "area": {
+    "name": "Italy"
+   },
+   "squad": [
+    {
+     "id": 104900,
+     "name": "Viktor Okafor",
+     "position": "Goalkeeper",
+     "nationality": "England",
+     "dateOfBirth": "1998-08-11"
+    },
+    {
+     "id": 104901,
+     "name": "Tomas Ilic",
+     "position": "Goalkeeper",
+     "nationality": "Argentina",
+     "dateOfBirth": "1996-01-01"
+    },
+    {
+     "id": 104902,
+     "name": "Jonas Demir",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "1994-04-07"
+    },
+    {
+     "id": 104903,
+     "name": "Luca Lemaire",
+     "position": "Centre-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1992-06-18"
+    },
+    {
+     "id": 104904,
+     "name": "Sami Demir",
+     "position": "Centre-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2006-04-04"
+    },
+    {
+     "id": 104905,
+     "name": "Marco Tanaka",
+     "position": "Left-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2002-12-14"
+    },
+    {
+     "id": 104906,
+     "name": "Leo Yildiz",
+     "position": "Right-Back",
+     "nationality": "England",
+     "dateOfBirth": "1994-02-05"
+    },
+    {
+     "id": 104907,
+     "name": "Leo Silva",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "2000-09-12"
+    },
+    {
+     "id": 104908,
+     "name": "Yusuf Almeida",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1996-09-10"
+    },
+    {
+     "id": 104909,
+     "name": "Hugo Hoffmann",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "1996-05-01"
+    },
+    {
+     "id": 104910,
+     "name": "Marco Costa",
+     "position": "Attacking Midfield",
+     "nationality": "England",
+     "dateOfBirth": "1998-09-28"
+    },
+    {
+     "id": 104911,
+     "name": "Yusuf Petrov",
+     "position": "Left Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-04-26"
+    },
+    {
+     "id": 104912,
+     "name": "Rafael Petrov",
+     "position": "Right Winger",
+     "nationality": "Brazil",
+     "dateOfBirth": "1994-10-19"
+    },
+    {
+     "id": 104913,
+     "name": "Arda Zielinski",
+     "position": "Centre-Forward",
+     "nationality": "Germany",
+     "dateOfBirth": "1996-12-18"
+    },
+    {
+     "id": 104914,
+     "name": "Emre Brandt",
+     "position": "Centre-Forward",
+     "nationality": "France",
+     "dateOfBirth": "1996-07-13"
+    }
+   ]
+  },
+  {
+   "id": 1054,
+   "name": "SSC Napoli",
+   "shortName": "SSC Napoli",
+   "tla": "NAP",
+   "crest": null,
+   "area": {
+    "name": "Italy"
+   },
+   "squad": [
+    {
+     "id": 105400,
+     "name": "Arda Quinn",
+     "position": "Goalkeeper",
+     "nationality": "England",
+     "dateOfBirth": "1998-03-11"
+    },
+    {
+     "id": 105401,
+     "name": "Pedro Tanaka",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "1992-04-07"
+    },
+    {
+     "id": 105402,
+     "name": "Emre Yildiz",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2002-07-13"
+    },
+    {
+     "id": 105403,
+     "name": "Leo Costa",
+     "position": "Centre-Back",
+     "nationality": "England",
+     "dateOfBirth": "2006-10-08"
+    },
+    {
+     "id": 105404,
+     "name": "Viktor Rossi",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "2006-08-16"
+    },
+    {
+     "id": 105405,
+     "name": "Leo Zielinski",
+     "position": "Left-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2001-08-10"
+    },
+    {
+     "id": 105406,
+     "name": "Omar Garcia",
+     "position": "Right-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-12-22"
+    },
+    {
+     "id": 105407,
+     "name": "Emre Jansen",
+     "position": "Central Midfield",
+     "nationality": "Spain",
+     "dateOfBirth": "1998-09-28"
+    },
+    {
+     "id": 105408,
+     "name": "Marco Kaya",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2003-02-09"
+    },
+    {
+     "id": 105409,
+     "name": "Mateo Rossi",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1991-09-17"
+    },
+    {
+     "id": 105410,
+     "name": "Jonas Fofana",
+     "position": "Attacking Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1997-09-12"
+    },
+    {
+     "id": 105411,
+     "name": "Sami Zielinski",
+     "position": "Left Winger",
+     "nationality": "Portugal",
+     "dateOfBirth": "1997-10-09"
+    },
+    {
+     "id": 105412,
+     "name": "Viktor Weber",
+     "position": "Right Winger",
+     "nationality": "Germany",
+     "dateOfBirth": "2003-05-22"
+    },
+    {
+     "id": 105413,
+     "name": "Viktor Almeida",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "2004-03-13"
+    },
+    {
+     "id": 105414,
+     "name": "Leo Moretti",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "1997-04-08"
+    }
+   ]
+  },
+  {
+   "id": 1050,
+   "name": "Juventus FC",
+   "shortName": "Juventus",
+   "tla": "JUV",
+   "crest": null,
+   "area": {
+    "name": "Italy"
+   },
+   "squad": [
+    {
+     "id": 105000,
+     "name": "Leo Tanaka",
+     "position": "Goalkeeper",
+     "nationality": "Turkey",
+     "dateOfBirth": "2005-06-27"
+    },
+    {
+     "id": 105001,
+     "name": "Jonas Brandt",
+     "position": "Goalkeeper",
+     "nationality": "Italy",
+     "dateOfBirth": "2004-01-27"
+    },
+    {
+     "id": 105002,
+     "name": "Omar Novak",
+     "position": "Centre-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2002-10-13"
+    },
+    {
+     "id": 105003,
+     "name": "Jonas Vidal",
+     "position": "Centre-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "2006-07-15"
+    },
+    {
+     "id": 105004,
+     "name": "Omar Lemaire",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2001-04-11"
+    },
+    {
+     "id": 105005,
+     "name": "Tomas Moretti",
+     "position": "Left-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2002-08-06"
+    },
+    {
+     "id": 105006,
+     "name": "Ivan Lemaire",
+     "position": "Right-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1996-08-19"
+    },
+    {
+     "id": 105007,
+     "name": "Marco Costa",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "2002-10-10"
+    },
+    {
+     "id": 105008,
+     "name": "Karim Almeida",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2004-10-20"
+    },
+    {
+     "id": 105009,
+     "name": "Marco Weber",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "2004-09-05"
+    },
+    {
+     "id": 105010,
+     "name": "Sami Silva",
+     "position": "Attacking Midfield",
+     "nationality": "France",
+     "dateOfBirth": "2005-05-03"
+    },
+    {
+     "id": 105011,
+     "name": "Jonas Petrov",
+     "position": "Left Winger",
+     "nationality": "France",
+     "dateOfBirth": "1993-12-16"
+    },
+    {
+     "id": 105012,
+     "name": "Yusuf Garcia",
+     "position": "Right Winger",
+     "nationality": "Germany",
+     "dateOfBirth": "2000-02-02"
+    },
+    {
+     "id": 105013,
+     "name": "Nico Garcia",
+     "position": "Centre-Forward",
+     "nationality": "France",
+     "dateOfBirth": "1995-08-07"
+    },
+    {
+     "id": 105014,
+     "name": "Yusuf Tanaka",
+     "position": "Centre-Forward",
+     "nationality": "Brazil",
+     "dateOfBirth": "1997-03-02"
+    }
+   ]
+  },
+  {
+   "id": 1041,
+   "name": "Atalanta BC",
+   "shortName": "Atalanta BC",
+   "tla": "ATA",
+   "crest": null,
+   "area": {
+    "name": "Italy"
+   },
+   "squad": [
+    {
+     "id": 104100,
+     "name": "Pedro Fofana",
+     "position": "Goalkeeper",
+     "nationality": "Portugal",
+     "dateOfBirth": "2003-01-07"
+    },
+    {
+     "id": 104101,
+     "name": "Jonas Garcia",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "2003-11-25"
+    },
+    {
+     "id": 104102,
+     "name": "Sami Garcia",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2005-08-08"
+    },
+    {
+     "id": 104103,
+     "name": "Jonas Okafor",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "1994-07-17"
+    },
+    {
+     "id": 104104,
+     "name": "Emre Vidal",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "1997-10-02"
+    },
+    {
+     "id": 104105,
+     "name": "Ivan Weber",
+     "position": "Left-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1997-09-16"
+    },
+    {
+     "id": 104106,
+     "name": "Sami Lemaire",
+     "position": "Right-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "2003-11-06"
+    },
+    {
+     "id": 104107,
+     "name": "Sami Brandt",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1999-10-16"
+    },
+    {
+     "id": 104108,
+     "name": "Arda Lemaire",
+     "position": "Central Midfield",
+     "nationality": "Spain",
+     "dateOfBirth": "2006-03-21"
+    },
+    {
+     "id": 104109,
+     "name": "Ivan Hoffmann",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "1996-11-12"
+    },
+    {
+     "id": 104110,
+     "name": "Omar Jansen",
+     "position": "Attacking Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "2003-04-14"
+    },
+    {
+     "id": 104111,
+     "name": "Marco Okafor",
+     "position": "Left Winger",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2000-09-24"
+    },
+    {
+     "id": 104112,
+     "name": "Sami Petrov",
+     "position": "Right Winger",
+     "nationality": "Turkey",
+     "dateOfBirth": "2003-10-27"
+    },
+    {
+     "id": 104113,
+     "name": "Leo Fofana",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "1997-02-05"
+    },
+    {
+     "id": 104114,
+     "name": "Viktor Okafor",
+     "position": "Centre-Forward",
+     "nationality": "Brazil",
+     "dateOfBirth": "1997-03-19"
+    }
+   ]
+  },
+  {
+   "id": 1061,
+   "name": "FC Bayern München",
+   "shortName": "FC Bayern München",
+   "tla": "BAY",
+   "crest": null,
+   "area": {
+    "name": "Germany"
+   },
+   "squad": [
+    {
+     "id": 106100,
+     "name": "Tomas Kaya",
+     "position": "Goalkeeper",
+     "nationality": "Brazil",
+     "dateOfBirth": "1995-07-12"
+    },
+    {
+     "id": 106101,
+     "name": "Tomas Demir",
+     "position": "Goalkeeper",
+     "nationality": "England",
+     "dateOfBirth": "2003-03-12"
+    },
+    {
+     "id": 106102,
+     "name": "Marco Novak",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2000-09-09"
+    },
+    {
+     "id": 106103,
+     "name": "Leo Okafor",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2002-11-03"
+    },
+    {
+     "id": 106104,
+     "name": "Jonas Okafor",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2005-01-09"
+    },
+    {
+     "id": 106105,
+     "name": "Sami Hoffmann",
+     "position": "Left-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "1994-11-13"
+    },
+    {
+     "id": 106106,
+     "name": "Marco Brandt",
+     "position": "Right-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1991-06-22"
+    },
+    {
+     "id": 106107,
+     "name": "Leo Quinn",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "1996-05-20"
+    },
+    {
+     "id": 106108,
+     "name": "Mateo Rossi",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1995-07-20"
+    },
+    {
+     "id": 106109,
+     "name": "Karim Okafor",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1994-10-04"
+    },
+    {
+     "id": 106110,
+     "name": "Rafael Tanaka",
+     "position": "Attacking Midfield",
+     "nationality": "Spain",
+     "dateOfBirth": "2006-10-27"
+    },
+    {
+     "id": 106111,
+     "name": "Noah Okafor",
+     "position": "Left Winger",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1993-08-05"
+    },
+    {
+     "id": 106112,
+     "name": "Marco Vidal",
+     "position": "Right Winger",
+     "nationality": "Italy",
+     "dateOfBirth": "1999-01-11"
+    },
+    {
+     "id": 106113,
+     "name": "Diego Costa",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "2002-07-28"
+    },
+    {
+     "id": 106114,
+     "name": "Tomas Brandt",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "2006-07-24"
+    }
+   ]
+  },
+  {
+   "id": 1062,
+   "name": "Borussia Dortmund",
+   "shortName": "Borussia Dortmund",
+   "tla": "BVB",
+   "crest": null,
+   "area": {
+    "name": "Germany"
+   },
+   "squad": [
+    {
+     "id": 106200,
+     "name": "Arda Hoffmann",
+     "position": "Goalkeeper",
+     "nationality": "Brazil",
+     "dateOfBirth": "1993-11-02"
+    },
+    {
+     "id": 106201,
+     "name": "Tomas Okafor",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "1992-09-04"
+    },
+    {
+     "id": 106202,
+     "name": "Jonas Moretti",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2002-07-28"
+    },
+    {
+     "id": 106203,
+     "name": "Tomas Quinn",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2002-07-22"
+    },
+    {
+     "id": 106204,
+     "name": "Arda Almeida",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1993-05-12"
+    },
+    {
+     "id": 106205,
+     "name": "Viktor Fofana",
+     "position": "Left-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1999-11-23"
+    },
+    {
+     "id": 106206,
+     "name": "Ivan Okafor",
+     "position": "Right-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "1996-08-02"
+    },
+    {
+     "id": 106207,
+     "name": "Karim Petrov",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1994-09-09"
+    },
+    {
+     "id": 106208,
+     "name": "Yusuf Zielinski",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1997-03-06"
+    },
+    {
+     "id": 106209,
+     "name": "Omar Tanaka",
+     "position": "Central Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "1999-07-11"
+    },
+    {
+     "id": 106210,
+     "name": "Marco Jansen",
+     "position": "Attacking Midfield",
+     "nationality": "England",
+     "dateOfBirth": "2005-10-07"
+    },
+    {
+     "id": 106211,
+     "name": "Omar Zielinski",
+     "position": "Left Winger",
+     "nationality": "Turkey",
+     "dateOfBirth": "1998-08-06"
+    },
+    {
+     "id": 106212,
+     "name": "Arda Quinn",
+     "position": "Right Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "2004-04-26"
+    },
+    {
+     "id": 106213,
+     "name": "Yusuf Petrov",
+     "position": "Centre-Forward",
+     "nationality": "Argentina",
+     "dateOfBirth": "1996-04-25"
+    },
+    {
+     "id": 106214,
+     "name": "Diego Ilic",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "2003-03-25"
+    }
+   ]
+  },
+  {
+   "id": 1064,
+   "name": "Bayer 04 Leverkusen",
+   "shortName": "Bayer 04 Leverkusen",
+   "tla": "B04",
+   "crest": null,
+   "area": {
+    "name": "Germany"
+   },
+   "squad": [
+    {
+     "id": 106400,
+     "name": "Hugo Tanaka",
+     "position": "Goalkeeper",
+     "nationality": "England",
+     "dateOfBirth": "2002-09-07"
+    },
+    {
+     "id": 106401,
+     "name": "Rafael Costa",
+     "position": "Goalkeeper",
+     "nationality": "Italy",
+     "dateOfBirth": "1995-02-23"
+    },
+    {
+     "id": 106402,
+     "name": "Karim Lemaire",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2001-03-13"
+    },
+    {
+     "id": 106403,
+     "name": "Mateo Garcia",
+     "position": "Centre-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1995-05-26"
+    },
+    {
+     "id": 106404,
+     "name": "Leo Weber",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2005-10-06"
+    },
+    {
+     "id": 106405,
+     "name": "Mateo Novak",
+     "position": "Left-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2004-02-06"
+    },
+    {
+     "id": 106406,
+     "name": "Arda Quinn",
+     "position": "Right-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2005-03-24"
+    },
+    {
+     "id": 106407,
+     "name": "Leo Quinn",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "2005-09-03"
+    },
+    {
+     "id": 106408,
+     "name": "Noah Brandt",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "2006-05-16"
+    },
+    {
+     "id": 106409,
+     "name": "Karim Tanaka",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "2004-08-05"
+    },
+    {
+     "id": 106410,
+     "name": "Rafael Zielinski",
+     "position": "Attacking Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1993-02-26"
+    },
+    {
+     "id": 106411,
+     "name": "Mateo Brandt",
+     "position": "Left Winger",
+     "nationality": "Turkey",
+     "dateOfBirth": "1991-12-03"
+    },
+    {
+     "id": 106412,
+     "name": "Omar Silva",
+     "position": "Right Winger",
+     "nationality": "France",
+     "dateOfBirth": "1998-02-12"
+    },
+    {
+     "id": 106413,
+     "name": "Emre Rossi",
+     "position": "Centre-Forward",
+     "nationality": "Turkey",
+     "dateOfBirth": "1993-04-21"
+    },
+    {
+     "id": 106414,
+     "name": "Karim Silva",
+     "position": "Centre-Forward",
+     "nationality": "France",
+     "dateOfBirth": "1994-05-05"
+    }
+   ]
+  },
+  {
+   "id": 1065,
+   "name": "Eintracht Frankfurt",
+   "shortName": "Eintracht Frankfurt",
+   "tla": "SGE",
+   "crest": null,
+   "area": {
+    "name": "Germany"
+   },
+   "squad": [
+    {
+     "id": 106500,
+     "name": "Arda Lemaire",
+     "position": "Goalkeeper",
+     "nationality": "Germany",
+     "dateOfBirth": "1993-03-16"
+    },
+    {
+     "id": 106501,
+     "name": "Viktor Fofana",
+     "position": "Goalkeeper",
+     "nationality": "Portugal",
+     "dateOfBirth": "1995-03-11"
+    },
+    {
+     "id": 106502,
+     "name": "Ivan Eriksen",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1998-03-10"
+    },
+    {
+     "id": 106503,
+     "name": "Emre Rossi",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "1992-10-03"
+    },
+    {
+     "id": 106504,
+     "name": "Ivan Silva",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2005-05-12"
+    },
+    {
+     "id": 106505,
+     "name": "Sami Eriksen",
+     "position": "Left-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1993-02-04"
+    },
+    {
+     "id": 106506,
+     "name": "Karim Ilic",
+     "position": "Right-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "2001-01-26"
+    },
+    {
+     "id": 106507,
+     "name": "Mateo Quinn",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2001-06-27"
+    },
+    {
+     "id": 106508,
+     "name": "Diego Zielinski",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1992-04-17"
+    },
+    {
+     "id": 106509,
+     "name": "Leo Yildiz",
+     "position": "Central Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "2005-06-05"
+    },
+    {
+     "id": 106510,
+     "name": "Yusuf Lemaire",
+     "position": "Attacking Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "1996-10-24"
+    },
+    {
+     "id": 106511,
+     "name": "Karim Silva",
+     "position": "Left Winger",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1995-12-03"
+    },
+    {
+     "id": 106512,
+     "name": "Nico Demir",
+     "position": "Right Winger",
+     "nationality": "Italy",
+     "dateOfBirth": "2003-05-26"
+    },
+    {
+     "id": 106513,
+     "name": "Pedro Silva",
+     "position": "Centre-Forward",
+     "nationality": "Turkey",
+     "dateOfBirth": "1996-01-17"
+    },
+    {
+     "id": 106514,
+     "name": "Pedro Weber",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "1993-05-27"
+    }
+   ]
+  },
+  {
+   "id": 1079,
+   "name": "Paris Saint-Germain FC",
+   "shortName": "Paris Saint-Germain",
+   "tla": "PSG",
+   "crest": null,
+   "area": {
+    "name": "France"
+   },
+   "squad": [
+    {
+     "id": 107900,
+     "name": "Tomas Zielinski",
+     "position": "Goalkeeper",
+     "nationality": "Portugal",
+     "dateOfBirth": "1992-12-06"
+    },
+    {
+     "id": 107901,
+     "name": "Yusuf Tanaka",
+     "position": "Goalkeeper",
+     "nationality": "Italy",
+     "dateOfBirth": "2006-10-14"
+    },
+    {
+     "id": 107902,
+     "name": "Leo Tanaka",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2005-07-19"
+    },
+    {
+     "id": 107903,
+     "name": "Emre Lemaire",
+     "position": "Centre-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "1998-02-18"
+    },
+    {
+     "id": 107904,
+     "name": "Luca Yildiz",
+     "position": "Centre-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "1993-09-21"
+    },
+    {
+     "id": 107905,
+     "name": "Karim Costa",
+     "position": "Left-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2000-10-07"
+    },
+    {
+     "id": 107906,
+     "name": "Sami Kaya",
+     "position": "Right-Back",
+     "nationality": "England",
+     "dateOfBirth": "2002-09-19"
+    },
+    {
+     "id": 107907,
+     "name": "Noah Weber",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "1995-03-09"
+    },
+    {
+     "id": 107908,
+     "name": "Omar Eriksen",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1999-09-21"
+    },
+    {
+     "id": 107909,
+     "name": "Luca Hoffmann",
+     "position": "Central Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "1997-06-23"
+    },
+    {
+     "id": 107910,
+     "name": "Marco Jansen",
+     "position": "Attacking Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "2005-07-06"
+    },
+    {
+     "id": 107911,
+     "name": "Karim Rossi",
+     "position": "Left Winger",
+     "nationality": "Portugal",
+     "dateOfBirth": "1992-08-18"
+    },
+    {
+     "id": 107912,
+     "name": "Tomas Quinn",
+     "position": "Right Winger",
+     "nationality": "Italy",
+     "dateOfBirth": "2006-11-13"
+    },
+    {
+     "id": 107913,
+     "name": "Ivan Yildiz",
+     "position": "Centre-Forward",
+     "nationality": "England",
+     "dateOfBirth": "2003-12-11"
+    },
+    {
+     "id": 107914,
+     "name": "Noah Yildiz",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "1995-09-10"
+    }
+   ]
+  },
+  {
+   "id": 1080,
+   "name": "Olympique de Marseille",
+   "shortName": "Olympique de Marseille",
+   "tla": "OM",
+   "crest": null,
+   "area": {
+    "name": "France"
+   },
+   "squad": [
+    {
+     "id": 108000,
+     "name": "Rafael Rossi",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "1993-03-13"
+    },
+    {
+     "id": 108001,
+     "name": "Noah Moretti",
+     "position": "Goalkeeper",
+     "nationality": "Brazil",
+     "dateOfBirth": "2002-06-04"
+    },
+    {
+     "id": 108002,
+     "name": "Emre Hoffmann",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2000-09-18"
+    },
+    {
+     "id": 108003,
+     "name": "Marco Ilic",
+     "position": "Centre-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1991-01-10"
+    },
+    {
+     "id": 108004,
+     "name": "Viktor Quinn",
+     "position": "Centre-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "1993-04-28"
+    },
+    {
+     "id": 108005,
+     "name": "Sami Demir",
+     "position": "Left-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2001-03-01"
+    },
+    {
+     "id": 108006,
+     "name": "Leo Petrov",
+     "position": "Right-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "2000-11-20"
+    },
+    {
+     "id": 108007,
+     "name": "Rafael Moretti",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "1999-05-27"
+    },
+    {
+     "id": 108008,
+     "name": "Luca Eriksen",
+     "position": "Central Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "2006-02-07"
+    },
+    {
+     "id": 108009,
+     "name": "Karim Weber",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1997-11-23"
+    },
+    {
+     "id": 108010,
+     "name": "Sami Petrov",
+     "position": "Attacking Midfield",
+     "nationality": "Spain",
+     "dateOfBirth": "1993-08-27"
+    },
+    {
+     "id": 108011,
+     "name": "Pedro Tanaka",
+     "position": "Left Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "2001-11-08"
+    },
+    {
+     "id": 108012,
+     "name": "Sami Jansen",
+     "position": "Right Winger",
+     "nationality": "France",
+     "dateOfBirth": "2006-12-28"
+    },
+    {
+     "id": 108013,
+     "name": "Sami Brandt",
+     "position": "Centre-Forward",
+     "nationality": "Germany",
+     "dateOfBirth": "2003-04-08"
+    },
+    {
+     "id": 108014,
+     "name": "Leo Yildiz",
+     "position": "Centre-Forward",
+     "nationality": "England",
+     "dateOfBirth": "1994-07-14"
+    }
+   ]
+  },
+  {
+   "id": 1081,
+   "name": "AS Monaco FC",
+   "shortName": "AS Monaco",
+   "tla": "ASM",
+   "crest": null,
+   "area": {
+    "name": "France"
+   },
+   "squad": [
+    {
+     "id": 108100,
+     "name": "Rafael Jansen",
+     "position": "Goalkeeper",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1993-10-07"
+    },
+    {
+     "id": 108101,
+     "name": "Rafael Yildiz",
+     "position": "Goalkeeper",
+     "nationality": "Brazil",
+     "dateOfBirth": "2002-04-06"
+    },
+    {
+     "id": 108102,
+     "name": "Leo Brandt",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2004-10-08"
+    },
+    {
+     "id": 108103,
+     "name": "Karim Jansen",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2003-09-22"
+    },
+    {
+     "id": 108104,
+     "name": "Hugo Novak",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2000-05-02"
+    },
+    {
+     "id": 108105,
+     "name": "Leo Demir",
+     "position": "Left-Back",
+     "nationality": "England",
+     "dateOfBirth": "1993-05-09"
+    },
+    {
+     "id": 108106,
+     "name": "Marco Jansen",
+     "position": "Right-Back",
+     "nationality": "France",
+     "dateOfBirth": "1991-04-19"
+    },
+    {
+     "id": 108107,
+     "name": "Viktor Lemaire",
+     "position": "Central Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "1994-06-17"
+    },
+    {
+     "id": 108108,
+     "name": "Emre Garcia",
+     "position": "Central Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "2005-01-23"
+    },
+    {
+     "id": 108109,
+     "name": "Nico Eriksen",
+     "position": "Central Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "1992-09-04"
+    },
+    {
+     "id": 108110,
+     "name": "Jonas Weber",
+     "position": "Attacking Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1992-03-23"
+    },
+    {
+     "id": 108111,
+     "name": "Sami Rossi",
+     "position": "Left Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "1994-11-03"
+    },
+    {
+     "id": 108112,
+     "name": "Rafael Almeida",
+     "position": "Right Winger",
+     "nationality": "Spain",
+     "dateOfBirth": "1994-12-05"
+    },
+    {
+     "id": 108113,
+     "name": "Hugo Yildiz",
+     "position": "Centre-Forward",
+     "nationality": "Brazil",
+     "dateOfBirth": "1997-11-16"
+    },
+    {
+     "id": 108114,
+     "name": "Tomas Hoffmann",
+     "position": "Centre-Forward",
+     "nationality": "England",
+     "dateOfBirth": "1999-07-03"
+    }
+   ]
+  },
+  {
+   "id": 1082,
+   "name": "Sporting Clube de Portugal",
+   "shortName": "Sporting Clube de Portugal",
+   "tla": "SCP",
+   "crest": null,
+   "area": {
+    "name": "Portugal"
+   },
+   "squad": [
+    {
+     "id": 108200,
+     "name": "Noah Rossi",
+     "position": "Goalkeeper",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1992-12-15"
+    },
+    {
+     "id": 108201,
+     "name": "Ivan Zielinski",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "1992-02-25"
+    },
+    {
+     "id": 108202,
+     "name": "Pedro Eriksen",
+     "position": "Centre-Back",
+     "nationality": "England",
+     "dateOfBirth": "1996-08-23"
+    },
+    {
+     "id": 108203,
+     "name": "Sami Costa",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1999-06-03"
+    },
+    {
+     "id": 108204,
+     "name": "Arda Weber",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "1999-06-09"
+    },
+    {
+     "id": 108205,
+     "name": "Leo Brandt",
+     "position": "Left-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "2000-10-28"
+    },
+    {
+     "id": 108206,
+     "name": "Mateo Hoffmann",
+     "position": "Right-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1994-01-03"
+    },
+    {
+     "id": 108207,
+     "name": "Diego Novak",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "2005-09-11"
+    },
+    {
+     "id": 108208,
+     "name": "Arda Moretti",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1994-09-12"
+    },
+    {
+     "id": 108209,
+     "name": "Ivan Garcia",
+     "position": "Central Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-06-14"
+    },
+    {
+     "id": 108210,
+     "name": "Leo Eriksen",
+     "position": "Attacking Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1993-04-07"
+    },
+    {
+     "id": 108211,
+     "name": "Noah Tanaka",
+     "position": "Left Winger",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2003-07-01"
+    },
+    {
+     "id": 108212,
+     "name": "Rafael Moretti",
+     "position": "Right Winger",
+     "nationality": "France",
+     "dateOfBirth": "2001-12-23"
+    },
+    {
+     "id": 108213,
+     "name": "Yusuf Zielinski",
+     "position": "Centre-Forward",
+     "nationality": "Portugal",
+     "dateOfBirth": "1997-04-04"
+    },
+    {
+     "id": 108214,
+     "name": "Luca Moretti",
+     "position": "Centre-Forward",
+     "nationality": "Turkey",
+     "dateOfBirth": "2002-09-09"
+    }
+   ]
+  },
+  {
+   "id": 1083,
+   "name": "SL Benfica",
+   "shortName": "SL Benfica",
+   "tla": "SLB",
+   "crest": null,
+   "area": {
+    "name": "Portugal"
+   },
+   "squad": [
+    {
+     "id": 108300,
+     "name": "Noah Jansen",
+     "position": "Goalkeeper",
+     "nationality": "Portugal",
+     "dateOfBirth": "2002-06-07"
+    },
+    {
+     "id": 108301,
+     "name": "Diego Garcia",
+     "position": "Goalkeeper",
+     "nationality": "Portugal",
+     "dateOfBirth": "2000-02-20"
+    },
+    {
+     "id": 108302,
+     "name": "Karim Novak",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2005-11-19"
+    },
+    {
+     "id": 108303,
+     "name": "Jonas Lemaire",
+     "position": "Centre-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "2005-12-08"
+    },
+    {
+     "id": 108304,
+     "name": "Noah Okafor",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "1993-07-14"
+    },
+    {
+     "id": 108305,
+     "name": "Jonas Brandt",
+     "position": "Left-Back",
+     "nationality": "England",
+     "dateOfBirth": "2006-02-03"
+    },
+    {
+     "id": 108306,
+     "name": "Ivan Quinn",
+     "position": "Right-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2004-07-23"
+    },
+    {
+     "id": 108307,
+     "name": "Ivan Petrov",
+     "position": "Central Midfield",
+     "nationality": "England",
+     "dateOfBirth": "1991-07-24"
+    },
+    {
+     "id": 108308,
+     "name": "Luca Demir",
+     "position": "Central Midfield",
+     "nationality": "England",
+     "dateOfBirth": "1993-06-12"
+    },
+    {
+     "id": 108309,
+     "name": "Omar Silva",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1998-12-06"
+    },
+    {
+     "id": 108310,
+     "name": "Sami Vidal",
+     "position": "Attacking Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1992-05-08"
+    },
+    {
+     "id": 108311,
+     "name": "Noah Almeida",
+     "position": "Left Winger",
+     "nationality": "Portugal",
+     "dateOfBirth": "2002-09-20"
+    },
+    {
+     "id": 108312,
+     "name": "Karim Jansen",
+     "position": "Right Winger",
+     "nationality": "France",
+     "dateOfBirth": "2006-05-03"
+    },
+    {
+     "id": 108313,
+     "name": "Tomas Petrov",
+     "position": "Centre-Forward",
+     "nationality": "Brazil",
+     "dateOfBirth": "2001-08-20"
+    },
+    {
+     "id": 108314,
+     "name": "Jonas Petrov",
+     "position": "Centre-Forward",
+     "nationality": "Portugal",
+     "dateOfBirth": "2005-07-01"
+    }
+   ]
+  },
+  {
+   "id": 1084,
+   "name": "PSV",
+   "shortName": "PSV",
+   "tla": "PSV",
+   "crest": null,
+   "area": {
+    "name": "Netherlands"
+   },
+   "squad": [
+    {
+     "id": 108400,
+     "name": "Mateo Zielinski",
+     "position": "Goalkeeper",
+     "nationality": "Turkey",
+     "dateOfBirth": "2004-08-08"
+    },
+    {
+     "id": 108401,
+     "name": "Tomas Weber",
+     "position": "Goalkeeper",
+     "nationality": "Germany",
+     "dateOfBirth": "1994-11-25"
+    },
+    {
+     "id": 108402,
+     "name": "Tomas Tanaka",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2000-10-17"
+    },
+    {
+     "id": 108403,
+     "name": "Yusuf Okafor",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2005-03-05"
+    },
+    {
+     "id": 108404,
+     "name": "Tomas Yildiz",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "1992-12-07"
+    },
+    {
+     "id": 108405,
+     "name": "Marco Novak",
+     "position": "Left-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "2005-04-20"
+    },
+    {
+     "id": 108406,
+     "name": "Ivan Eriksen",
+     "position": "Right-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1995-04-16"
+    },
+    {
+     "id": 108407,
+     "name": "Hugo Demir",
+     "position": "Central Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-12-14"
+    },
+    {
+     "id": 108408,
+     "name": "Arda Rossi",
+     "position": "Central Midfield",
+     "nationality": "Spain",
+     "dateOfBirth": "2004-10-07"
+    },
+    {
+     "id": 108409,
+     "name": "Rafael Lemaire",
+     "position": "Central Midfield",
+     "nationality": "England",
+     "dateOfBirth": "2005-02-08"
+    },
+    {
+     "id": 108410,
+     "name": "Noah Petrov",
+     "position": "Attacking Midfield",
+     "nationality": "France",
+     "dateOfBirth": "2006-05-26"
+    },
+    {
+     "id": 108411,
+     "name": "Hugo Lemaire",
+     "position": "Left Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "1998-09-26"
+    },
+    {
+     "id": 108412,
+     "name": "Karim Almeida",
+     "position": "Right Winger",
+     "nationality": "Portugal",
+     "dateOfBirth": "2003-02-04"
+    },
+    {
+     "id": 108413,
+     "name": "Noah Petrov",
+     "position": "Centre-Forward",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-02-19"
+    },
+    {
+     "id": 108414,
+     "name": "Karim Vidal",
+     "position": "Centre-Forward",
+     "nationality": "Brazil",
+     "dateOfBirth": "2004-03-20"
+    }
+   ]
+  },
+  {
+   "id": 1085,
+   "name": "AFC Ajax",
+   "shortName": "AFC Ajax",
+   "tla": "AJA",
+   "crest": null,
+   "area": {
+    "name": "Netherlands"
+   },
+   "squad": [
+    {
+     "id": 108500,
+     "name": "Yusuf Rossi",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "1994-02-11"
+    },
+    {
+     "id": 108501,
+     "name": "Emre Costa",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "1992-01-11"
+    },
+    {
+     "id": 108502,
+     "name": "Omar Moretti",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1998-03-04"
+    },
+    {
+     "id": 108503,
+     "name": "Yusuf Hoffmann",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "1997-12-07"
+    },
+    {
+     "id": 108504,
+     "name": "Pedro Zielinski",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "1996-02-03"
+    },
+    {
+     "id": 108505,
+     "name": "Yusuf Fofana",
+     "position": "Left-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1996-01-22"
+    },
+    {
+     "id": 108506,
+     "name": "Nico Garcia",
+     "position": "Right-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2004-11-18"
+    },
+    {
+     "id": 108507,
+     "name": "Jonas Moretti",
+     "position": "Central Midfield",
+     "nationality": "England",
+     "dateOfBirth": "1994-01-05"
+    },
+    {
+     "id": 108508,
+     "name": "Diego Petrov",
+     "position": "Central Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "2000-06-11"
+    },
+    {
+     "id": 108509,
+     "name": "Omar Demir",
+     "position": "Central Midfield",
+     "nationality": "England",
+     "dateOfBirth": "2003-03-22"
+    },
+    {
+     "id": 108510,
+     "name": "Luca Silva",
+     "position": "Attacking Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "2000-06-11"
+    },
+    {
+     "id": 108511,
+     "name": "Pedro Moretti",
+     "position": "Left Winger",
+     "nationality": "Spain",
+     "dateOfBirth": "1997-06-23"
+    },
+    {
+     "id": 108512,
+     "name": "Diego Ilic",
+     "position": "Right Winger",
+     "nationality": "Turkey",
+     "dateOfBirth": "2000-12-04"
+    },
+    {
+     "id": 108513,
+     "name": "Viktor Tanaka",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "2005-09-07"
+    },
+    {
+     "id": 108514,
+     "name": "Diego Yildiz",
+     "position": "Centre-Forward",
+     "nationality": "Portugal",
+     "dateOfBirth": "2000-02-06"
+    }
+   ]
+  },
+  {
+   "id": 1086,
+   "name": "Club Brugge KV",
+   "shortName": "Club Brugge KV",
+   "tla": "CLB",
+   "crest": null,
+   "area": {
+    "name": "Belgium"
+   },
+   "squad": [
+    {
+     "id": 108600,
+     "name": "Viktor Weber",
+     "position": "Goalkeeper",
+     "nationality": "Turkey",
+     "dateOfBirth": "2001-12-16"
+    },
+    {
+     "id": 108601,
+     "name": "Diego Lemaire",
+     "position": "Goalkeeper",
+     "nationality": "Argentina",
+     "dateOfBirth": "1997-05-16"
+    },
+    {
+     "id": 108602,
+     "name": "Tomas Zielinski",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1998-06-04"
+    },
+    {
+     "id": 108603,
+     "name": "Mateo Novak",
+     "position": "Centre-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "2004-08-20"
+    },
+    {
+     "id": 108604,
+     "name": "Luca Hoffmann",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1996-03-15"
+    },
+    {
+     "id": 108605,
+     "name": "Arda Silva",
+     "position": "Left-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "1998-05-01"
+    },
+    {
+     "id": 108606,
+     "name": "Karim Moretti",
+     "position": "Right-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2002-06-02"
+    },
+    {
+     "id": 108607,
+     "name": "Ivan Rossi",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2004-08-06"
+    },
+    {
+     "id": 108608,
+     "name": "Mateo Silva",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2005-07-02"
+    },
+    {
+     "id": 108609,
+     "name": "Hugo Almeida",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1996-08-05"
+    },
+    {
+     "id": 108610,
+     "name": "Tomas Brandt",
+     "position": "Attacking Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2004-10-01"
+    },
+    {
+     "id": 108611,
+     "name": "Rafael Eriksen",
+     "position": "Left Winger",
+     "nationality": "Turkey",
+     "dateOfBirth": "1997-10-07"
+    },
+    {
+     "id": 108612,
+     "name": "Ivan Garcia",
+     "position": "Right Winger",
+     "nationality": "Portugal",
+     "dateOfBirth": "2004-05-11"
+    },
+    {
+     "id": 108613,
+     "name": "Pedro Garcia",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "2000-03-13"
+    },
+    {
+     "id": 108614,
+     "name": "Pedro Costa",
+     "position": "Centre-Forward",
+     "nationality": "Turkey",
+     "dateOfBirth": "1996-07-07"
+    }
+   ]
+  },
+  {
+   "id": 1087,
+   "name": "Galatasaray SK",
+   "shortName": "Galatasaray SK",
+   "tla": "GAL",
+   "crest": null,
+   "area": {
+    "name": "Turkey"
+   },
+   "squad": [
+    {
+     "id": 108700,
+     "name": "Noah Almeida",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "2003-04-27"
+    },
+    {
+     "id": 108701,
+     "name": "Leo Garcia",
+     "position": "Goalkeeper",
+     "nationality": "England",
+     "dateOfBirth": "1999-04-15"
+    },
+    {
+     "id": 108702,
+     "name": "Rafael Fofana",
+     "position": "Centre-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "1996-12-14"
+    },
+    {
+     "id": 108703,
+     "name": "Omar Eriksen",
+     "position": "Centre-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "2005-12-09"
+    },
+    {
+     "id": 108704,
+     "name": "Hugo Garcia",
+     "position": "Centre-Back",
+     "nationality": "England",
+     "dateOfBirth": "2004-10-21"
+    },
+    {
+     "id": 108705,
+     "name": "Omar Kaya",
+     "position": "Left-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1994-03-17"
+    },
+    {
+     "id": 108706,
+     "name": "Diego Almeida",
+     "position": "Right-Back",
+     "nationality": "England",
+     "dateOfBirth": "2004-01-28"
+    },
+    {
+     "id": 108707,
+     "name": "Hugo Quinn",
+     "position": "Central Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "2003-05-03"
+    },
+    {
+     "id": 108708,
+     "name": "Pedro Vidal",
+     "position": "Central Midfield",
+     "nationality": "England",
+     "dateOfBirth": "1997-12-19"
+    },
+    {
+     "id": 108709,
+     "name": "Emre Okafor",
+     "position": "Central Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "1995-05-07"
+    },
+    {
+     "id": 108710,
+     "name": "Leo Ilic",
+     "position": "Attacking Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "2000-03-12"
+    },
+    {
+     "id": 108711,
+     "name": "Jonas Weber",
+     "position": "Left Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "1997-09-19"
+    },
+    {
+     "id": 108712,
+     "name": "Rafael Novak",
+     "position": "Right Winger",
+     "nationality": "Brazil",
+     "dateOfBirth": "2004-06-18"
+    },
+    {
+     "id": 108713,
+     "name": "Hugo Petrov",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "2000-01-14"
+    },
+    {
+     "id": 108714,
+     "name": "Rafael Yildiz",
+     "position": "Centre-Forward",
+     "nationality": "Turkey",
+     "dateOfBirth": "1995-09-25"
+    }
+   ]
+  },
+  {
+   "id": 1088,
+   "name": "Olympiacos FC",
+   "shortName": "Olympiacos",
+   "tla": "OLY",
+   "crest": null,
+   "area": {
+    "name": "Greece"
+   },
+   "squad": [
+    {
+     "id": 108800,
+     "name": "Tomas Weber",
+     "position": "Goalkeeper",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2006-06-14"
+    },
+    {
+     "id": 108801,
+     "name": "Emre Kaya",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "2002-06-18"
+    },
+    {
+     "id": 108802,
+     "name": "Ivan Costa",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1997-11-05"
+    },
+    {
+     "id": 108803,
+     "name": "Jonas Almeida",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "2002-08-07"
+    },
+    {
+     "id": 108804,
+     "name": "Marco Moretti",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2005-08-16"
+    },
+    {
+     "id": 108805,
+     "name": "Sami Quinn",
+     "position": "Left-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "1995-05-10"
+    },
+    {
+     "id": 108806,
+     "name": "Arda Moretti",
+     "position": "Right-Back",
+     "nationality": "England",
+     "dateOfBirth": "1995-01-22"
+    },
+    {
+     "id": 108807,
+     "name": "Leo Petrov",
+     "position": "Central Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "2006-05-11"
+    },
+    {
+     "id": 108808,
+     "name": "Karim Vidal",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1995-07-11"
+    },
+    {
+     "id": 108809,
+     "name": "Leo Tanaka",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1994-03-01"
+    },
+    {
+     "id": 108810,
+     "name": "Marco Silva",
+     "position": "Attacking Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1995-02-07"
+    },
+    {
+     "id": 108811,
+     "name": "Ivan Garcia",
+     "position": "Left Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-06-09"
+    },
+    {
+     "id": 108812,
+     "name": "Hugo Fofana",
+     "position": "Right Winger",
+     "nationality": "England",
+     "dateOfBirth": "2006-06-28"
+    },
+    {
+     "id": 108813,
+     "name": "Hugo Fofana",
+     "position": "Centre-Forward",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1991-07-25"
+    },
+    {
+     "id": 108814,
+     "name": "Luca Jansen",
+     "position": "Centre-Forward",
+     "nationality": "Brazil",
+     "dateOfBirth": "1994-04-14"
+    }
+   ]
+  },
+  {
+   "id": 1089,
+   "name": "Celtic FC",
+   "shortName": "Celtic",
+   "tla": "CEL",
+   "crest": null,
+   "area": {
+    "name": "Scotland"
+   },
+   "squad": [
+    {
+     "id": 108900,
+     "name": "Leo Okafor",
+     "position": "Goalkeeper",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2003-08-11"
+    },
+    {
+     "id": 108901,
+     "name": "Emre Brandt",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "1993-12-02"
+    },
+    {
+     "id": 108902,
+     "name": "Jonas Brandt",
+     "position": "Centre-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1992-12-23"
+    },
+    {
+     "id": 108903,
+     "name": "Sami Fofana",
+     "position": "Centre-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1992-02-01"
+    },
+    {
+     "id": 108904,
+     "name": "Mateo Hoffmann",
+     "position": "Centre-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1994-11-26"
+    },
+    {
+     "id": 108905,
+     "name": "Mateo Hoffmann",
+     "position": "Left-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1994-01-02"
+    },
+    {
+     "id": 108906,
+     "name": "Diego Hoffmann",
+     "position": "Right-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1991-12-04"
+    },
+    {
+     "id": 108907,
+     "name": "Viktor Zielinski",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1992-02-02"
+    },
+    {
+     "id": 108908,
+     "name": "Leo Weber",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "2001-01-03"
+    },
+    {
+     "id": 108909,
+     "name": "Emre Brandt",
+     "position": "Central Midfield",
+     "nationality": "Spain",
+     "dateOfBirth": "2005-03-16"
+    },
+    {
+     "id": 108910,
+     "name": "Noah Zielinski",
+     "position": "Attacking Midfield",
+     "nationality": "England",
+     "dateOfBirth": "1992-06-27"
+    },
+    {
+     "id": 108911,
+     "name": "Diego Fofana",
+     "position": "Left Winger",
+     "nationality": "Italy",
+     "dateOfBirth": "1991-10-25"
+    },
+    {
+     "id": 108912,
+     "name": "Arda Yildiz",
+     "position": "Right Winger",
+     "nationality": "Turkey",
+     "dateOfBirth": "2003-04-13"
+    },
+    {
+     "id": 108913,
+     "name": "Hugo Kaya",
+     "position": "Centre-Forward",
+     "nationality": "Turkey",
+     "dateOfBirth": "1994-02-22"
+    },
+    {
+     "id": 108914,
+     "name": "Jonas Ilic",
+     "position": "Centre-Forward",
+     "nationality": "Germany",
+     "dateOfBirth": "2001-11-15"
+    }
+   ]
+  },
+  {
+   "id": 1090,
+   "name": "SK Slavia Praha",
+   "shortName": "SK Slavia Praha",
+   "tla": "SLA",
+   "crest": null,
+   "area": {
+    "name": "Czechia"
+   },
+   "squad": [
+    {
+     "id": 109000,
+     "name": "Pedro Eriksen",
+     "position": "Goalkeeper",
+     "nationality": "Turkey",
+     "dateOfBirth": "2002-11-08"
+    },
+    {
+     "id": 109001,
+     "name": "Jonas Zielinski",
+     "position": "Goalkeeper",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-08-02"
+    },
+    {
+     "id": 109002,
+     "name": "Yusuf Lemaire",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "2000-12-27"
+    },
+    {
+     "id": 109003,
+     "name": "Yusuf Demir",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "2001-12-07"
+    },
+    {
+     "id": 109004,
+     "name": "Yusuf Lemaire",
+     "position": "Centre-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "1999-01-23"
+    },
+    {
+     "id": 109005,
+     "name": "Jonas Jansen",
+     "position": "Left-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "2002-02-04"
+    },
+    {
+     "id": 109006,
+     "name": "Emre Quinn",
+     "position": "Right-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "2000-08-26"
+    },
+    {
+     "id": 109007,
+     "name": "Pedro Weber",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1996-06-19"
+    },
+    {
+     "id": 109008,
+     "name": "Arda Kaya",
+     "position": "Central Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "2006-07-02"
+    },
+    {
+     "id": 109009,
+     "name": "Omar Costa",
+     "position": "Central Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "1994-09-23"
+    },
+    {
+     "id": 109010,
+     "name": "Marco Okafor",
+     "position": "Attacking Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "2006-10-20"
+    },
+    {
+     "id": 109011,
+     "name": "Viktor Moretti",
+     "position": "Left Winger",
+     "nationality": "Turkey",
+     "dateOfBirth": "1994-02-09"
+    },
+    {
+     "id": 109012,
+     "name": "Mateo Silva",
+     "position": "Right Winger",
+     "nationality": "France",
+     "dateOfBirth": "1998-03-11"
+    },
+    {
+     "id": 109013,
+     "name": "Tomas Quinn",
+     "position": "Centre-Forward",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2004-01-13"
+    },
+    {
+     "id": 109014,
+     "name": "Pedro Demir",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "1993-11-16"
+    }
+   ]
+  },
+  {
+   "id": 1091,
+   "name": "FK Bodø/Glimt",
+   "shortName": "FK Bodø/Glimt",
+   "tla": "BOD",
+   "crest": null,
+   "area": {
+    "name": "Norway"
+   },
+   "squad": [
+    {
+     "id": 109100,
+     "name": "Marco Brandt",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "1992-06-22"
+    },
+    {
+     "id": 109101,
+     "name": "Yusuf Silva",
+     "position": "Goalkeeper",
+     "nationality": "Germany",
+     "dateOfBirth": "1998-06-18"
+    },
+    {
+     "id": 109102,
+     "name": "Sami Quinn",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "1994-08-27"
+    },
+    {
+     "id": 109103,
+     "name": "Karim Eriksen",
+     "position": "Centre-Back",
+     "nationality": "England",
+     "dateOfBirth": "2002-10-04"
+    },
+    {
+     "id": 109104,
+     "name": "Sami Rossi",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2000-10-06"
+    },
+    {
+     "id": 109105,
+     "name": "Ivan Petrov",
+     "position": "Left-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "1991-06-24"
+    },
+    {
+     "id": 109106,
+     "name": "Arda Demir",
+     "position": "Right-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1994-09-04"
+    },
+    {
+     "id": 109107,
+     "name": "Jonas Tanaka",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1999-06-16"
+    },
+    {
+     "id": 109108,
+     "name": "Arda Brandt",
+     "position": "Central Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "1992-05-17"
+    },
+    {
+     "id": 109109,
+     "name": "Marco Zielinski",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2006-03-06"
+    },
+    {
+     "id": 109110,
+     "name": "Mateo Costa",
+     "position": "Attacking Midfield",
+     "nationality": "Portugal",
+     "dateOfBirth": "1997-04-14"
+    },
+    {
+     "id": 109111,
+     "name": "Karim Tanaka",
+     "position": "Left Winger",
+     "nationality": "England",
+     "dateOfBirth": "1994-10-04"
+    },
+    {
+     "id": 109112,
+     "name": "Arda Moretti",
+     "position": "Right Winger",
+     "nationality": "Turkey",
+     "dateOfBirth": "2003-02-17"
+    },
+    {
+     "id": 109113,
+     "name": "Yusuf Quinn",
+     "position": "Centre-Forward",
+     "nationality": "Brazil",
+     "dateOfBirth": "1994-10-08"
+    },
+    {
+     "id": 109114,
+     "name": "Pedro Lemaire",
+     "position": "Centre-Forward",
+     "nationality": "Turkey",
+     "dateOfBirth": "1994-01-01"
+    }
+   ]
+  },
+  {
+   "id": 1092,
+   "name": "Qarabağ Ağdam FK",
+   "shortName": "Qarabağ Ağdam FK",
+   "tla": "QAR",
+   "crest": null,
+   "area": {
+    "name": "Azerbaijan"
+   },
+   "squad": [
+    {
+     "id": 109200,
+     "name": "Yusuf Quinn",
+     "position": "Goalkeeper",
+     "nationality": "Portugal",
+     "dateOfBirth": "1999-04-05"
+    },
+    {
+     "id": 109201,
+     "name": "Ivan Silva",
+     "position": "Goalkeeper",
+     "nationality": "France",
+     "dateOfBirth": "1993-07-27"
+    },
+    {
+     "id": 109202,
+     "name": "Mateo Ilic",
+     "position": "Centre-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "1996-09-02"
+    },
+    {
+     "id": 109203,
+     "name": "Jonas Fofana",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "2001-04-21"
+    },
+    {
+     "id": 109204,
+     "name": "Mateo Moretti",
+     "position": "Centre-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "1996-11-10"
+    },
+    {
+     "id": 109205,
+     "name": "Leo Rossi",
+     "position": "Left-Back",
+     "nationality": "France",
+     "dateOfBirth": "2004-05-28"
+    },
+    {
+     "id": 109206,
+     "name": "Tomas Jansen",
+     "position": "Right-Back",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2001-05-21"
+    },
+    {
+     "id": 109207,
+     "name": "Arda Hoffmann",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2002-10-22"
+    },
+    {
+     "id": 109208,
+     "name": "Emre Moretti",
+     "position": "Central Midfield",
+     "nationality": "Argentina",
+     "dateOfBirth": "2004-09-23"
+    },
+    {
+     "id": 109209,
+     "name": "Karim Garcia",
+     "position": "Central Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "2002-08-07"
+    },
+    {
+     "id": 109210,
+     "name": "Diego Yildiz",
+     "position": "Attacking Midfield",
+     "nationality": "Germany",
+     "dateOfBirth": "2004-11-13"
+    },
+    {
+     "id": 109211,
+     "name": "Yusuf Tanaka",
+     "position": "Left Winger",
+     "nationality": "Germany",
+     "dateOfBirth": "2002-07-11"
+    },
+    {
+     "id": 109212,
+     "name": "Viktor Vidal",
+     "position": "Right Winger",
+     "nationality": "Portugal",
+     "dateOfBirth": "1996-12-07"
+    },
+    {
+     "id": 109213,
+     "name": "Jonas Petrov",
+     "position": "Centre-Forward",
+     "nationality": "France",
+     "dateOfBirth": "1992-11-05"
+    },
+    {
+     "id": 109214,
+     "name": "Omar Silva",
+     "position": "Centre-Forward",
+     "nationality": "France",
+     "dateOfBirth": "2003-06-10"
+    }
+   ]
+  },
+  {
+   "id": 1093,
+   "name": "Royale Union Saint-Gilloise",
+   "shortName": "Royale Union Saint-Gilloise",
+   "tla": "USG",
+   "crest": null,
+   "area": {
+    "name": "Belgium"
+   },
+   "squad": [
+    {
+     "id": 109300,
+     "name": "Leo Weber",
+     "position": "Goalkeeper",
+     "nationality": "Argentina",
+     "dateOfBirth": "2003-12-12"
+    },
+    {
+     "id": 109301,
+     "name": "Diego Okafor",
+     "position": "Goalkeeper",
+     "nationality": "England",
+     "dateOfBirth": "2006-10-18"
+    },
+    {
+     "id": 109302,
+     "name": "Sami Fofana",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-12-18"
+    },
+    {
+     "id": 109303,
+     "name": "Hugo Petrov",
+     "position": "Centre-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "1995-11-19"
+    },
+    {
+     "id": 109304,
+     "name": "Emre Weber",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "1997-06-08"
+    },
+    {
+     "id": 109305,
+     "name": "Leo Rossi",
+     "position": "Left-Back",
+     "nationality": "France",
+     "dateOfBirth": "1999-01-14"
+    },
+    {
+     "id": 109306,
+     "name": "Luca Zielinski",
+     "position": "Right-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "2001-11-05"
+    },
+    {
+     "id": 109307,
+     "name": "Yusuf Yildiz",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2001-06-17"
+    },
+    {
+     "id": 109308,
+     "name": "Viktor Rossi",
+     "position": "Central Midfield",
+     "nationality": "France",
+     "dateOfBirth": "1991-06-24"
+    },
+    {
+     "id": 109309,
+     "name": "Karim Rossi",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1992-07-06"
+    },
+    {
+     "id": 109310,
+     "name": "Luca Costa",
+     "position": "Attacking Midfield",
+     "nationality": "England",
+     "dateOfBirth": "1993-12-07"
+    },
+    {
+     "id": 109311,
+     "name": "Tomas Kaya",
+     "position": "Left Winger",
+     "nationality": "France",
+     "dateOfBirth": "1991-12-05"
+    },
+    {
+     "id": 109312,
+     "name": "Emre Vidal",
+     "position": "Right Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "1998-05-02"
+    },
+    {
+     "id": 109313,
+     "name": "Viktor Brandt",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "1992-07-24"
+    },
+    {
+     "id": 109314,
+     "name": "Karim Lemaire",
+     "position": "Centre-Forward",
+     "nationality": "Spain",
+     "dateOfBirth": "2003-08-28"
+    }
+   ]
+  },
+  {
+   "id": 1094,
+   "name": "FC København",
+   "shortName": "FC København",
+   "tla": "FCK",
+   "crest": null,
+   "area": {
+    "name": "Denmark"
+   },
+   "squad": [
+    {
+     "id": 109400,
+     "name": "Tomas Vidal",
+     "position": "Goalkeeper",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2002-11-16"
+    },
+    {
+     "id": 109401,
+     "name": "Mateo Petrov",
+     "position": "Goalkeeper",
+     "nationality": "Brazil",
+     "dateOfBirth": "2003-01-25"
+    },
+    {
+     "id": 109402,
+     "name": "Leo Petrov",
+     "position": "Centre-Back",
+     "nationality": "France",
+     "dateOfBirth": "2006-06-06"
+    },
+    {
+     "id": 109403,
+     "name": "Ivan Kaya",
+     "position": "Centre-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "2001-03-06"
+    },
+    {
+     "id": 109404,
+     "name": "Diego Vidal",
+     "position": "Centre-Back",
+     "nationality": "England",
+     "dateOfBirth": "1993-02-22"
+    },
+    {
+     "id": 109405,
+     "name": "Karim Brandt",
+     "position": "Left-Back",
+     "nationality": "Italy",
+     "dateOfBirth": "1993-02-01"
+    },
+    {
+     "id": 109406,
+     "name": "Yusuf Quinn",
+     "position": "Right-Back",
+     "nationality": "Turkey",
+     "dateOfBirth": "2005-08-28"
+    },
+    {
+     "id": 109407,
+     "name": "Hugo Moretti",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "2000-08-20"
+    },
+    {
+     "id": 109408,
+     "name": "Viktor Okafor",
+     "position": "Central Midfield",
+     "nationality": "Brazil",
+     "dateOfBirth": "1996-07-27"
+    },
+    {
+     "id": 109409,
+     "name": "Sami Almeida",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "2006-03-21"
+    },
+    {
+     "id": 109410,
+     "name": "Mateo Eriksen",
+     "position": "Attacking Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "2001-05-23"
+    },
+    {
+     "id": 109411,
+     "name": "Rafael Kaya",
+     "position": "Left Winger",
+     "nationality": "Brazil",
+     "dateOfBirth": "2000-11-25"
+    },
+    {
+     "id": 109412,
+     "name": "Karim Weber",
+     "position": "Right Winger",
+     "nationality": "Argentina",
+     "dateOfBirth": "2001-05-18"
+    },
+    {
+     "id": 109413,
+     "name": "Mateo Fofana",
+     "position": "Centre-Forward",
+     "nationality": "Italy",
+     "dateOfBirth": "2006-02-19"
+    },
+    {
+     "id": 109414,
+     "name": "Ivan Zielinski",
+     "position": "Centre-Forward",
+     "nationality": "England",
+     "dateOfBirth": "1994-09-16"
+    }
+   ]
+  },
+  {
+   "id": 1095,
+   "name": "Pafos FC",
+   "shortName": "Pafos",
+   "tla": "PAF",
+   "crest": null,
+   "area": {
+    "name": "Cyprus"
+   },
+   "squad": [
+    {
+     "id": 109500,
+     "name": "Noah Garcia",
+     "position": "Goalkeeper",
+     "nationality": "Spain",
+     "dateOfBirth": "1998-10-14"
+    },
+    {
+     "id": 109501,
+     "name": "Viktor Fofana",
+     "position": "Goalkeeper",
+     "nationality": "Netherlands",
+     "dateOfBirth": "2003-10-20"
+    },
+    {
+     "id": 109502,
+     "name": "Pedro Ilic",
+     "position": "Centre-Back",
+     "nationality": "Portugal",
+     "dateOfBirth": "1995-06-08"
+    },
+    {
+     "id": 109503,
+     "name": "Noah Demir",
+     "position": "Centre-Back",
+     "nationality": "Argentina",
+     "dateOfBirth": "1997-11-20"
+    },
+    {
+     "id": 109504,
+     "name": "Hugo Ilic",
+     "position": "Centre-Back",
+     "nationality": "Germany",
+     "dateOfBirth": "2004-11-25"
+    },
+    {
+     "id": 109505,
+     "name": "Rafael Petrov",
+     "position": "Left-Back",
+     "nationality": "Brazil",
+     "dateOfBirth": "2001-04-20"
+    },
+    {
+     "id": 109506,
+     "name": "Arda Silva",
+     "position": "Right-Back",
+     "nationality": "Spain",
+     "dateOfBirth": "1999-07-28"
+    },
+    {
+     "id": 109507,
+     "name": "Yusuf Petrov",
+     "position": "Central Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "2004-10-09"
+    },
+    {
+     "id": 109508,
+     "name": "Nico Yildiz",
+     "position": "Central Midfield",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1991-08-17"
+    },
+    {
+     "id": 109509,
+     "name": "Diego Rossi",
+     "position": "Central Midfield",
+     "nationality": "Turkey",
+     "dateOfBirth": "1995-12-16"
+    },
+    {
+     "id": 109510,
+     "name": "Leo Almeida",
+     "position": "Attacking Midfield",
+     "nationality": "Italy",
+     "dateOfBirth": "1997-09-28"
+    },
+    {
+     "id": 109511,
+     "name": "Tomas Tanaka",
+     "position": "Left Winger",
+     "nationality": "Netherlands",
+     "dateOfBirth": "1993-08-16"
+    },
+    {
+     "id": 109512,
+     "name": "Omar Rossi",
+     "position": "Right Winger",
+     "nationality": "Spain",
+     "dateOfBirth": "1996-09-04"
+    },
+    {
+     "id": 109513,
+     "name": "Jonas Yildiz",
+     "position": "Centre-Forward",
+     "nationality": "Argentina",
+     "dateOfBirth": "1993-04-04"
+    },
+    {
+     "id": 109514,
+     "name": "Yusuf Vidal",
+     "position": "Centre-Forward",
+     "nationality": "Germany",
+     "dateOfBirth": "1998-05-08"
+    }
+   ]
+  }
+ ]
+}

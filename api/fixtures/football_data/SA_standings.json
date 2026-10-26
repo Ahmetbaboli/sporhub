@@ -1,0 +1,395 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "standings": [
+  {
+   "stage": "REGULAR_SEASON",
+   "type": "TOTAL",
+   "group": null,
+   "table": [
+    {
+     "position": 1,
+     "team": {
+      "id": 1053,
+      "name": "AC Milan",
+      "shortName": "AC Milan",
+      "tla": "MIL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,W,D,W",
+     "won": 6,
+     "draw": 1,
+     "lost": 1,
+     "points": 19,
+     "goalsFor": 18,
+     "goalsAgainst": 7,
+     "goalDifference": 11
+    },
+    {
+     "position": 2,
+     "team": {
+      "id": 1045,
+      "name": "US Cremonese",
+      "shortName": "US Cremonese",
+      "tla": "CRE",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,W,W,W,D",
+     "won": 6,
+     "draw": 1,
+     "lost": 1,
+     "points": 19,
+     "goalsFor": 13,
+     "goalsAgainst": 3,
+     "goalDifference": 10
+    },
+    {
+     "position": 3,
+     "team": {
+      "id": 1043,
+      "name": "Cagliari Calcio",
+      "shortName": "Cagliari Calcio",
+      "tla": "CAG",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,L,D,W,D",
+     "won": 5,
+     "draw": 3,
+     "lost": 1,
+     "points": 18,
+     "goalsFor": 14,
+     "goalsAgainst": 7,
+     "goalDifference": 7
+    },
+    {
+     "position": 4,
+     "team": {
+      "id": 1049,
+      "name": "FC Internazionale Milano",
+      "shortName": "FC Internazionale Milano",
+      "tla": "INT",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,W,W,L,D",
+     "won": 5,
+     "draw": 2,
+     "lost": 2,
+     "points": 17,
+     "goalsFor": 16,
+     "goalsAgainst": 8,
+     "goalDifference": 8
+    },
+    {
+     "position": 5,
+     "team": {
+      "id": 1058,
+      "name": "US Sassuolo Calcio",
+      "shortName": "US Sassuolo Calcio",
+      "tla": "SAS",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,W,W,L,W",
+     "won": 5,
+     "draw": 2,
+     "lost": 2,
+     "points": 17,
+     "goalsFor": 14,
+     "goalsAgainst": 10,
+     "goalDifference": 4
+    },
+    {
+     "position": 6,
+     "team": {
+      "id": 1057,
+      "name": "AS Roma",
+      "shortName": "AS Roma",
+      "tla": "ROM",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,W,L,L,W",
+     "won": 5,
+     "draw": 1,
+     "lost": 2,
+     "points": 16,
+     "goalsFor": 13,
+     "goalsAgainst": 9,
+     "goalDifference": 4
+    },
+    {
+     "position": 7,
+     "team": {
+      "id": 1048,
+      "name": "Hellas Verona FC",
+      "shortName": "Hellas Verona",
+      "tla": "HEL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,W,D,W",
+     "won": 4,
+     "draw": 2,
+     "lost": 2,
+     "points": 14,
+     "goalsFor": 8,
+     "goalsAgainst": 10,
+     "goalDifference": -2
+    },
+    {
+     "position": 8,
+     "team": {
+      "id": 1051,
+      "name": "SS Lazio",
+      "shortName": "SS Lazio",
+      "tla": "LAZ",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,D,W,W,W",
+     "won": 3,
+     "draw": 4,
+     "lost": 1,
+     "points": 13,
+     "goalsFor": 11,
+     "goalsAgainst": 6,
+     "goalDifference": 5
+    },
+    {
+     "position": 9,
+     "team": {
+      "id": 1055,
+      "name": "Parma Calcio 1913",
+      "shortName": "Parma Calcio 1913",
+      "tla": "PAR",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,L,D,L,D",
+     "won": 3,
+     "draw": 3,
+     "lost": 3,
+     "points": 12,
+     "goalsFor": 17,
+     "goalsAgainst": 12,
+     "goalDifference": 5
+    },
+    {
+     "position": 10,
+     "team": {
+      "id": 1052,
+      "name": "US Lecce",
+      "shortName": "US Lecce",
+      "tla": "LEC",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,L,L,D,W",
+     "won": 3,
+     "draw": 3,
+     "lost": 3,
+     "points": 12,
+     "goalsFor": 9,
+     "goalsAgainst": 9,
+     "goalDifference": 0
+    },
+    {
+     "position": 11,
+     "team": {
+      "id": 1060,
+      "name": "Udinese Calcio",
+      "shortName": "Udinese Calcio",
+      "tla": "UDI",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,D,W,D,W",
+     "won": 3,
+     "draw": 3,
+     "lost": 2,
+     "points": 12,
+     "goalsFor": 8,
+     "goalsAgainst": 8,
+     "goalDifference": 0
+    },
+    {
+     "position": 12,
+     "team": {
+      "id": 1041,
+      "name": "Atalanta BC",
+      "shortName": "Atalanta BC",
+      "tla": "ATA",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,W,L,L,L",
+     "won": 2,
+     "draw": 3,
+     "lost": 4,
+     "points": 9,
+     "goalsFor": 13,
+     "goalsAgainst": 15,
+     "goalDifference": -2
+    },
+    {
+     "position": 13,
+     "team": {
+      "id": 1054,
+      "name": "SSC Napoli",
+      "shortName": "SSC Napoli",
+      "tla": "NAP",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,W,W,D",
+     "won": 2,
+     "draw": 2,
+     "lost": 4,
+     "points": 8,
+     "goalsFor": 7,
+     "goalsAgainst": 8,
+     "goalDifference": -1
+    },
+    {
+     "position": 14,
+     "team": {
+      "id": 1059,
+      "name": "Torino FC",
+      "shortName": "Torino",
+      "tla": "TOR",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,L,L,D",
+     "won": 2,
+     "draw": 2,
+     "lost": 4,
+     "points": 8,
+     "goalsFor": 9,
+     "goalsAgainst": 12,
+     "goalDifference": -3
+    },
+    {
+     "position": 15,
+     "team": {
+      "id": 1056,
+      "name": "AC Pisa 1909",
+      "shortName": "AC Pisa 1909",
+      "tla": "PIS",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,D,L,W,L",
+     "won": 2,
+     "draw": 2,
+     "lost": 4,
+     "points": 8,
+     "goalsFor": 8,
+     "goalsAgainst": 12,
+     "goalDifference": -4
+    },
+    {
+     "position": 16,
+     "team": {
+      "id": 1047,
+      "name": "Genoa CFC",
+      "shortName": "Genoa CFC",
+      "tla": "GEN",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,D,L,D",
+     "won": 1,
+     "draw": 4,
+     "lost": 3,
+     "points": 7,
+     "goalsFor": 7,
+     "goalsAgainst": 10,
+     "goalDifference": -3
+    },
+    {
+     "position": 17,
+     "team": {
+      "id": 1042,
+      "name": "Bologna FC 1909",
+      "shortName": "Bologna",
+      "tla": "BOL",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,L,W,D,D",
+     "won": 1,
+     "draw": 4,
+     "lost": 4,
+     "points": 7,
+     "goalsFor": 8,
+     "goalsAgainst": 17,
+     "goalDifference": -9
+    },
+    {
+     "position": 18,
+     "team": {
+      "id": 1050,
+      "name": "Juventus FC",
+      "shortName": "Juventus",
+      "tla": "JUV",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,L,L,W",
+     "won": 1,
+     "draw": 2,
+     "lost": 5,
+     "points": 5,
+     "goalsFor": 5,
+     "goalsAgainst": 12,
+     "goalDifference": -7
+    },
+    {
+     "position": 19,
+     "team": {
+      "id": 1044,
+      "name": "Como 1907",
+      "shortName": "Como 1907",
+      "tla": "COM",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,D,L,L",
+     "won": 1,
+     "draw": 1,
+     "lost": 6,
+     "points": 4,
+     "goalsFor": 5,
+     "goalsAgainst": 15,
+     "goalDifference": -10
+    },
+    {
+     "position": 20,
+     "team": {
+      "id": 1046,
+      "name": "ACF Fiorentina",
+      "shortName": "ACF Fiorentina",
+      "tla": "FIO",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,L,D,L,L",
+     "won": 0,
+     "draw": 3,
+     "lost": 6,
+     "points": 3,
+     "goalsFor": 7,
+     "goalsAgainst": 20,
+     "goalDifference": -13
+    }
+   ]
+  }
+ ]
+}

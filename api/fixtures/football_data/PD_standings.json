@@ -1,0 +1,395 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "standings": [
+  {
+   "stage": "REGULAR_SEASON",
+   "type": "TOTAL",
+   "group": null,
+   "table": [
+    {
+     "position": 1,
+     "team": {
+      "id": 1029,
+      "name": "Girona FC",
+      "shortName": "Girona",
+      "tla": "GIR",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,D,W,D,L",
+     "won": 5,
+     "draw": 2,
+     "lost": 2,
+     "points": 17,
+     "goalsFor": 18,
+     "goalsAgainst": 14,
+     "goalDifference": 4
+    },
+    {
+     "position": 2,
+     "team": {
+      "id": 1038,
+      "name": "Valencia CF",
+      "shortName": "Valencia CF",
+      "tla": "VAL",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,W,L,D,W",
+     "won": 5,
+     "draw": 1,
+     "lost": 3,
+     "points": 16,
+     "goalsFor": 20,
+     "goalsAgainst": 11,
+     "goalDifference": 9
+    },
+    {
+     "position": 3,
+     "team": {
+      "id": 1024,
+      "name": "RC Celta de Vigo",
+      "shortName": "RC Celta de Vigo",
+      "tla": "CEL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,D,W,D",
+     "won": 4,
+     "draw": 2,
+     "lost": 2,
+     "points": 14,
+     "goalsFor": 12,
+     "goalsAgainst": 9,
+     "goalDifference": 3
+    },
+    {
+     "position": 4,
+     "team": {
+      "id": 1030,
+      "name": "Levante UD",
+      "shortName": "Levante UD",
+      "tla": "LEV",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,W,W,W,D",
+     "won": 4,
+     "draw": 2,
+     "lost": 2,
+     "points": 14,
+     "goalsFor": 12,
+     "goalsAgainst": 10,
+     "goalDifference": 2
+    },
+    {
+     "position": 5,
+     "team": {
+      "id": 1037,
+      "name": "Sevilla FC",
+      "shortName": "Sevilla",
+      "tla": "SEV",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,D,D,D",
+     "won": 3,
+     "draw": 4,
+     "lost": 1,
+     "points": 13,
+     "goalsFor": 9,
+     "goalsAgainst": 5,
+     "goalDifference": 4
+    },
+    {
+     "position": 6,
+     "team": {
+      "id": 1035,
+      "name": "Real Oviedo",
+      "shortName": "Real Oviedo",
+      "tla": "OVI",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,D,L,L,W",
+     "won": 4,
+     "draw": 1,
+     "lost": 4,
+     "points": 13,
+     "goalsFor": 17,
+     "goalsAgainst": 17,
+     "goalDifference": 0
+    },
+    {
+     "position": 7,
+     "team": {
+      "id": 1034,
+      "name": "Real Madrid CF",
+      "shortName": "Real Madrid CF",
+      "tla": "RMA",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,D,W,W",
+     "won": 4,
+     "draw": 1,
+     "lost": 3,
+     "points": 13,
+     "goalsFor": 11,
+     "goalsAgainst": 13,
+     "goalDifference": -2
+    },
+    {
+     "position": 8,
+     "team": {
+      "id": 1033,
+      "name": "Real Betis Balompié",
+      "shortName": "Real Betis Balompié",
+      "tla": "BET",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,D,W,D",
+     "won": 3,
+     "draw": 3,
+     "lost": 2,
+     "points": 12,
+     "goalsFor": 14,
+     "goalsAgainst": 12,
+     "goalDifference": 2
+    },
+    {
+     "position": 9,
+     "team": {
+      "id": 1040,
+      "name": "RCD Espanyol de Barcelona",
+      "shortName": "RCD Espanyol de Barcelona",
+      "tla": "ESP",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,L,D,D",
+     "won": 3,
+     "draw": 3,
+     "lost": 2,
+     "points": 12,
+     "goalsFor": 9,
+     "goalsAgainst": 8,
+     "goalDifference": 1
+    },
+    {
+     "position": 10,
+     "team": {
+      "id": 1027,
+      "name": "FC Barcelona",
+      "shortName": "FC Barcelona",
+      "tla": "FCB",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,D,D,W",
+     "won": 3,
+     "draw": 2,
+     "lost": 3,
+     "points": 11,
+     "goalsFor": 14,
+     "goalsAgainst": 11,
+     "goalDifference": 3
+    },
+    {
+     "position": 11,
+     "team": {
+      "id": 1028,
+      "name": "Getafe CF",
+      "shortName": "Getafe CF",
+      "tla": "GET",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,D,D,D,D",
+     "won": 2,
+     "draw": 5,
+     "lost": 1,
+     "points": 11,
+     "goalsFor": 9,
+     "goalsAgainst": 7,
+     "goalDifference": 2
+    },
+    {
+     "position": 12,
+     "team": {
+      "id": 1023,
+      "name": "CA Osasuna",
+      "shortName": "CA Osasuna",
+      "tla": "OSA",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,D,W,D,L",
+     "won": 3,
+     "draw": 2,
+     "lost": 4,
+     "points": 11,
+     "goalsFor": 11,
+     "goalsAgainst": 13,
+     "goalDifference": -2
+    },
+    {
+     "position": 13,
+     "team": {
+      "id": 1031,
+      "name": "RCD Mallorca",
+      "shortName": "RCD Mallorca",
+      "tla": "MLL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,D,D,W",
+     "won": 3,
+     "draw": 2,
+     "lost": 3,
+     "points": 11,
+     "goalsFor": 9,
+     "goalsAgainst": 11,
+     "goalDifference": -2
+    },
+    {
+     "position": 14,
+     "team": {
+      "id": 1032,
+      "name": "Rayo Vallecano de Madrid",
+      "shortName": "Rayo Vallecano de Madrid",
+      "tla": "RAY",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,L,W,L,W",
+     "won": 3,
+     "draw": 1,
+     "lost": 5,
+     "points": 10,
+     "goalsFor": 19,
+     "goalsAgainst": 24,
+     "goalDifference": -5
+    },
+    {
+     "position": 15,
+     "team": {
+      "id": 1025,
+      "name": "Deportivo Alavés",
+      "shortName": "Deportivo Alavés",
+      "tla": "ALA",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,D,W,L,L",
+     "won": 2,
+     "draw": 3,
+     "lost": 3,
+     "points": 9,
+     "goalsFor": 14,
+     "goalsAgainst": 12,
+     "goalDifference": 2
+    },
+    {
+     "position": 16,
+     "team": {
+      "id": 1022,
+      "name": "Club Atlético de Madrid",
+      "shortName": "Club Atlético de Madrid",
+      "tla": "ATM",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,D,D,W,W",
+     "won": 2,
+     "draw": 3,
+     "lost": 4,
+     "points": 9,
+     "goalsFor": 11,
+     "goalsAgainst": 13,
+     "goalDifference": -2
+    },
+    {
+     "position": 17,
+     "team": {
+      "id": 1036,
+      "name": "Real Sociedad de Fútbol",
+      "shortName": "Real Sociedad de Fútbol",
+      "tla": "RSO",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,D,D,L,D",
+     "won": 2,
+     "draw": 3,
+     "lost": 3,
+     "points": 9,
+     "goalsFor": 11,
+     "goalsAgainst": 13,
+     "goalDifference": -2
+    },
+    {
+     "position": 18,
+     "team": {
+      "id": 1021,
+      "name": "Athletic Club",
+      "shortName": "Athletic Club",
+      "tla": "ATH",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,D,L,D,L",
+     "won": 1,
+     "draw": 5,
+     "lost": 3,
+     "points": 8,
+     "goalsFor": 9,
+     "goalsAgainst": 12,
+     "goalDifference": -3
+    },
+    {
+     "position": 19,
+     "team": {
+      "id": 1039,
+      "name": "Villarreal CF",
+      "shortName": "Villarreal CF",
+      "tla": "VIL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,W,D,L,L",
+     "won": 1,
+     "draw": 4,
+     "lost": 3,
+     "points": 7,
+     "goalsFor": 10,
+     "goalsAgainst": 13,
+     "goalDifference": -3
+    },
+    {
+     "position": 20,
+     "team": {
+      "id": 1026,
+      "name": "Elche CF",
+      "shortName": "Elche CF",
+      "tla": "ELC",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,L,L,D,L",
+     "won": 2,
+     "draw": 1,
+     "lost": 6,
+     "points": 7,
+     "goalsFor": 7,
+     "goalsAgainst": 18,
+     "goalDifference": -11
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,395 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "standings": [
+  {
+   "stage": "REGULAR_SEASON",
+   "type": "TOTAL",
+   "group": null,
+   "table": [
+    {
+     "position": 1,
+     "team": {
+      "id": 1003,
+      "name": "AFC Bournemouth",
+      "shortName": "AFC Bournemouth",
+      "tla": "BOU",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,D,W,W,W",
+     "won": 7,
+     "draw": 1,
+     "lost": 1,
+     "points": 22,
+     "goalsFor": 21,
+     "goalsAgainst": 12,
+     "goalDifference": 9
+    },
+    {
+     "position": 2,
+     "team": {
+      "id": 1020,
+      "name": "Wolverhampton Wanderers FC",
+      "shortName": "Wolverhampton Wanderers",
+      "tla": "WOL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,W,W,D,L",
+     "won": 6,
+     "draw": 1,
+     "lost": 1,
+     "points": 19,
+     "goalsFor": 20,
+     "goalsAgainst": 9,
+     "goalDifference": 11
+    },
+    {
+     "position": 3,
+     "team": {
+      "id": 1007,
+      "name": "Chelsea FC",
+      "shortName": "Chelsea",
+      "tla": "CHE",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,D,W,W,W",
+     "won": 6,
+     "draw": 1,
+     "lost": 1,
+     "points": 19,
+     "goalsFor": 19,
+     "goalsAgainst": 11,
+     "goalDifference": 8
+    },
+    {
+     "position": 4,
+     "team": {
+      "id": 1015,
+      "name": "Newcastle United FC",
+      "shortName": "Newcastle United",
+      "tla": "NEW",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,L,W,W,W",
+     "won": 5,
+     "draw": 3,
+     "lost": 1,
+     "points": 18,
+     "goalsFor": 18,
+     "goalsAgainst": 12,
+     "goalDifference": 6
+    },
+    {
+     "position": 5,
+     "team": {
+      "id": 1001,
+      "name": "Arsenal FC",
+      "shortName": "Arsenal",
+      "tla": "ARS",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,W,W,L,W",
+     "won": 6,
+     "draw": 0,
+     "lost": 3,
+     "points": 18,
+     "goalsFor": 11,
+     "goalsAgainst": 8,
+     "goalDifference": 3
+    },
+    {
+     "position": 6,
+     "team": {
+      "id": 1005,
+      "name": "Brighton & Hove Albion FC",
+      "shortName": "Brighton & Hove Albion",
+      "tla": "BHA",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,W,W,L,W",
+     "won": 5,
+     "draw": 1,
+     "lost": 2,
+     "points": 16,
+     "goalsFor": 15,
+     "goalsAgainst": 9,
+     "goalDifference": 6
+    },
+    {
+     "position": 7,
+     "team": {
+      "id": 1008,
+      "name": "Crystal Palace FC",
+      "shortName": "Crystal Palace",
+      "tla": "CRY",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,L,D,D,W",
+     "won": 4,
+     "draw": 2,
+     "lost": 2,
+     "points": 14,
+     "goalsFor": 12,
+     "goalsAgainst": 10,
+     "goalDifference": 2
+    },
+    {
+     "position": 8,
+     "team": {
+      "id": 1011,
+      "name": "Leeds United FC",
+      "shortName": "Leeds United",
+      "tla": "LEE",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,L,W,D,L",
+     "won": 3,
+     "draw": 3,
+     "lost": 2,
+     "points": 12,
+     "goalsFor": 13,
+     "goalsAgainst": 6,
+     "goalDifference": 7
+    },
+    {
+     "position": 9,
+     "team": {
+      "id": 1018,
+      "name": "Tottenham Hotspur FC",
+      "shortName": "Tottenham Hotspur",
+      "tla": "TOT",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,L,W,L,W",
+     "won": 4,
+     "draw": 0,
+     "lost": 5,
+     "points": 12,
+     "goalsFor": 11,
+     "goalsAgainst": 15,
+     "goalDifference": -4
+    },
+    {
+     "position": 10,
+     "team": {
+      "id": 1012,
+      "name": "Liverpool FC",
+      "shortName": "Liverpool",
+      "tla": "LIV",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "L,W,D,W,L",
+     "won": 3,
+     "draw": 2,
+     "lost": 4,
+     "points": 11,
+     "goalsFor": 12,
+     "goalsAgainst": 14,
+     "goalDifference": -2
+    },
+    {
+     "position": 11,
+     "team": {
+      "id": 1002,
+      "name": "Aston Villa FC",
+      "shortName": "Aston Villa",
+      "tla": "AVL",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "W,W,L,L,L",
+     "won": 3,
+     "draw": 2,
+     "lost": 4,
+     "points": 11,
+     "goalsFor": 11,
+     "goalsAgainst": 13,
+     "goalDifference": -2
+    },
+    {
+     "position": 12,
+     "team": {
+      "id": 1013,
+      "name": "Manchester City FC",
+      "shortName": "Manchester City",
+      "tla": "MCI",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,D,W,L,W",
+     "won": 2,
+     "draw": 3,
+     "lost": 3,
+     "points": 9,
+     "goalsFor": 9,
+     "goalsAgainst": 9,
+     "goalDifference": 0
+    },
+    {
+     "position": 13,
+     "team": {
+      "id": 1004,
+      "name": "Brentford FC",
+      "shortName": "Brentford",
+      "tla": "BRE",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,D,L,W,L",
+     "won": 2,
+     "draw": 3,
+     "lost": 3,
+     "points": 9,
+     "goalsFor": 9,
+     "goalsAgainst": 10,
+     "goalDifference": -1
+    },
+    {
+     "position": 14,
+     "team": {
+      "id": 1009,
+      "name": "Everton FC",
+      "shortName": "Everton",
+      "tla": "EVE",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,L,D,W,L",
+     "won": 2,
+     "draw": 3,
+     "lost": 4,
+     "points": 9,
+     "goalsFor": 10,
+     "goalsAgainst": 12,
+     "goalDifference": -2
+    },
+    {
+     "position": 15,
+     "team": {
+      "id": 1017,
+      "name": "Sunderland AFC",
+      "shortName": "Sunderland AFC",
+      "tla": "SUN",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "W,D,L,D,L",
+     "won": 2,
+     "draw": 3,
+     "lost": 3,
+     "points": 9,
+     "goalsFor": 10,
+     "goalsAgainst": 12,
+     "goalDifference": -2
+    },
+    {
+     "position": 16,
+     "team": {
+      "id": 1010,
+      "name": "Fulham FC",
+      "shortName": "Fulham",
+      "tla": "FUL",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "D,W,L,L,D",
+     "won": 2,
+     "draw": 2,
+     "lost": 4,
+     "points": 8,
+     "goalsFor": 7,
+     "goalsAgainst": 14,
+     "goalDifference": -7
+    },
+    {
+     "position": 17,
+     "team": {
+      "id": 1006,
+      "name": "Burnley FC",
+      "shortName": "Burnley",
+      "tla": "BUR",
+      "crest": null
+     },
+     "playedGames": 9,
+     "form": "D,L,L,W,L",
+     "won": 1,
+     "draw": 4,
+     "lost": 4,
+     "points": 7,
+     "goalsFor": 12,
+     "goalsAgainst": 19,
+     "goalDifference": -7
+    },
+    {
+     "position": 18,
+     "team": {
+      "id": 1016,
+      "name": "Nottingham Forest FC",
+      "shortName": "Nottingham Forest",
+      "tla": "NFO",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,W,D,D",
+     "won": 1,
+     "draw": 2,
+     "lost": 5,
+     "points": 5,
+     "goalsFor": 11,
+     "goalsAgainst": 16,
+     "goalDifference": -5
+    },
+    {
+     "position": 19,
+     "team": {
+      "id": 1019,
+      "name": "West Ham United FC",
+      "shortName": "West Ham United",
+      "tla": "WHU",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,D,L,D,L",
+     "won": 0,
+     "draw": 4,
+     "lost": 4,
+     "points": 4,
+     "goalsFor": 10,
+     "goalsAgainst": 16,
+     "goalDifference": -6
+    },
+    {
+     "position": 20,
+     "team": {
+      "id": 1014,
+      "name": "Manchester United FC",
+      "shortName": "Manchester United",
+      "tla": "MUN",
+      "crest": null
+     },
+     "playedGames": 8,
+     "form": "L,L,L,L,L",
+     "won": 0,
+     "draw": 0,
+     "lost": 8,
+     "points": 0,
+     "goalsFor": 5,
+     "goalsAgainst": 19,
+     "goalDifference": -14
+    }
+   ]
+  }
+ ]
+}

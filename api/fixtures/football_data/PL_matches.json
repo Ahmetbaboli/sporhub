@@ -1,0 +1,4088 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in football-data.org v4 format."
+ },
+ "matches": [
+  {
+   "id": 400000,
+   "utcDate": "2026-08-30T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400001,
+   "utcDate": "2026-08-31T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "West Ham United FC Stadium",
+   "homeTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400002,
+   "utcDate": "2026-09-01T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400003,
+   "utcDate": "2026-08-30T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Sunderland AFC Stadium",
+   "homeTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400004,
+   "utcDate": "2026-08-31T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400005,
+   "utcDate": "2026-09-01T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Newcastle United FC Stadium",
+   "homeTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400006,
+   "utcDate": "2026-08-30T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400007,
+   "utcDate": "2026-08-31T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400008,
+   "utcDate": "2026-09-01T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400009,
+   "utcDate": "2026-08-30T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 1,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400010,
+   "utcDate": "2026-09-06T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "West Ham United FC Stadium",
+   "homeTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400011,
+   "utcDate": "2026-09-07T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400012,
+   "utcDate": "2026-09-08T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Sunderland AFC Stadium",
+   "homeTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400013,
+   "utcDate": "2026-09-06T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400014,
+   "utcDate": "2026-09-07T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Newcastle United FC Stadium",
+   "homeTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400015,
+   "utcDate": "2026-09-08T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400016,
+   "utcDate": "2026-09-06T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400017,
+   "utcDate": "2026-09-07T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400018,
+   "utcDate": "2026-09-08T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400019,
+   "utcDate": "2026-09-06T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 2,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400020,
+   "utcDate": "2026-09-13T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400021,
+   "utcDate": "2026-09-14T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Sunderland AFC Stadium",
+   "homeTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400022,
+   "utcDate": "2026-09-15T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400023,
+   "utcDate": "2026-09-13T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Newcastle United FC Stadium",
+   "homeTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400024,
+   "utcDate": "2026-09-14T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400025,
+   "utcDate": "2026-09-15T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400026,
+   "utcDate": "2026-09-13T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400027,
+   "utcDate": "2026-09-14T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400028,
+   "utcDate": "2026-09-15T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400029,
+   "utcDate": "2026-09-13T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 3,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400030,
+   "utcDate": "2026-09-20T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Sunderland AFC Stadium",
+   "homeTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400031,
+   "utcDate": "2026-09-21T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400032,
+   "utcDate": "2026-09-22T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Newcastle United FC Stadium",
+   "homeTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400033,
+   "utcDate": "2026-09-20T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400034,
+   "utcDate": "2026-09-21T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400035,
+   "utcDate": "2026-09-22T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400036,
+   "utcDate": "2026-09-20T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400037,
+   "utcDate": "2026-09-21T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400038,
+   "utcDate": "2026-09-22T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400039,
+   "utcDate": "2026-09-20T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 4,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400040,
+   "utcDate": "2026-09-27T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400041,
+   "utcDate": "2026-09-28T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Newcastle United FC Stadium",
+   "homeTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400042,
+   "utcDate": "2026-09-29T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400043,
+   "utcDate": "2026-09-27T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400044,
+   "utcDate": "2026-09-28T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400045,
+   "utcDate": "2026-09-29T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400046,
+   "utcDate": "2026-09-27T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400047,
+   "utcDate": "2026-09-28T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400048,
+   "utcDate": "2026-09-29T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400049,
+   "utcDate": "2026-09-27T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 5,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400050,
+   "utcDate": "2026-10-04T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Newcastle United FC Stadium",
+   "homeTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400051,
+   "utcDate": "2026-10-05T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Nottingham Forest FC Stadium",
+   "homeTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400052,
+   "utcDate": "2026-10-06T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400053,
+   "utcDate": "2026-10-04T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400054,
+   "utcDate": "2026-10-05T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400055,
+   "utcDate": "2026-10-06T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400056,
+   "utcDate": "2026-10-04T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400057,
+   "utcDate": "2026-10-05T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400058,
+   "utcDate": "2026-10-06T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400059,
+   "utcDate": "2026-10-04T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 6,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400060,
+   "utcDate": "2026-10-11T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400061,
+   "utcDate": "2026-10-12T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400062,
+   "utcDate": "2026-10-13T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Nottingham Forest FC Stadium",
+   "homeTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400063,
+   "utcDate": "2026-10-11T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400064,
+   "utcDate": "2026-10-12T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400065,
+   "utcDate": "2026-10-13T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400066,
+   "utcDate": "2026-10-11T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400067,
+   "utcDate": "2026-10-12T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400068,
+   "utcDate": "2026-10-13T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400069,
+   "utcDate": "2026-10-11T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 7,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400070,
+   "utcDate": "2026-10-18T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester City FC Stadium",
+   "homeTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400071,
+   "utcDate": "2026-10-19T15:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester United FC Stadium",
+   "homeTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400072,
+   "utcDate": "2026-10-20T17:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400073,
+   "utcDate": "2026-10-18T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Nottingham Forest FC Stadium",
+   "homeTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400074,
+   "utcDate": "2026-10-19T20:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400075,
+   "utcDate": "2026-10-20T13:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400076,
+   "utcDate": "2026-10-18T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 4,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 2,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400077,
+   "utcDate": "2026-10-19T17:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400078,
+   "utcDate": "2026-10-20T19:00:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400079,
+   "utcDate": "2026-10-18T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 8,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400080,
+   "utcDate": "2026-10-25T13:00:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400081,
+   "utcDate": "2026-10-26T15:30:00Z",
+   "status": "IN_PLAY",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400082,
+   "utcDate": "2026-10-27T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester United FC Stadium",
+   "homeTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400083,
+   "utcDate": "2026-10-25T19:30:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": "AWAY_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 3
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "id": 400084,
+   "utcDate": "2026-10-26T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Nottingham Forest FC Stadium",
+   "homeTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400085,
+   "utcDate": "2026-10-27T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400086,
+   "utcDate": "2026-10-25T15:00:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400087,
+   "utcDate": "2026-10-26T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400088,
+   "utcDate": "2026-10-27T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400089,
+   "utcDate": "2026-10-25T20:30:00Z",
+   "status": "FINISHED",
+   "matchday": 9,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 400090,
+   "utcDate": "2026-11-01T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Leeds United FC Stadium",
+   "homeTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400091,
+   "utcDate": "2026-11-02T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Liverpool FC Stadium",
+   "homeTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400092,
+   "utcDate": "2026-11-03T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400093,
+   "utcDate": "2026-11-01T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester United FC Stadium",
+   "homeTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400094,
+   "utcDate": "2026-11-02T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400095,
+   "utcDate": "2026-11-03T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Nottingham Forest FC Stadium",
+   "homeTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400096,
+   "utcDate": "2026-11-01T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400097,
+   "utcDate": "2026-11-02T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400098,
+   "utcDate": "2026-11-03T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400099,
+   "utcDate": "2026-11-01T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 10,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400100,
+   "utcDate": "2026-11-08T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Arsenal FC Stadium",
+   "homeTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400101,
+   "utcDate": "2026-11-09T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400102,
+   "utcDate": "2026-11-10T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Liverpool FC Stadium",
+   "homeTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400103,
+   "utcDate": "2026-11-08T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400104,
+   "utcDate": "2026-11-09T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester United FC Stadium",
+   "homeTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400105,
+   "utcDate": "2026-11-10T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400106,
+   "utcDate": "2026-11-08T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Nottingham Forest FC Stadium",
+   "homeTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400107,
+   "utcDate": "2026-11-09T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400108,
+   "utcDate": "2026-11-10T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400109,
+   "utcDate": "2026-11-08T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 11,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400110,
+   "utcDate": "2026-11-15T13:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Everton FC Stadium",
+   "homeTeam": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400111,
+   "utcDate": "2026-11-16T15:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Fulham FC Stadium",
+   "homeTeam": {
+    "id": 1010,
+    "name": "Fulham FC",
+    "shortName": "Fulham",
+    "tla": "FUL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400112,
+   "utcDate": "2026-11-17T17:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Chelsea FC Stadium",
+   "homeTeam": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400113,
+   "utcDate": "2026-11-15T19:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Liverpool FC Stadium",
+   "homeTeam": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400114,
+   "utcDate": "2026-11-16T20:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Brighton & Hove Albion FC Stadium",
+   "homeTeam": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400115,
+   "utcDate": "2026-11-17T13:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Manchester United FC Stadium",
+   "homeTeam": {
+    "id": 1014,
+    "name": "Manchester United FC",
+    "shortName": "Manchester United",
+    "tla": "MUN",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400116,
+   "utcDate": "2026-11-15T15:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "AFC Bournemouth Stadium",
+   "homeTeam": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400117,
+   "utcDate": "2026-11-16T17:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Nottingham Forest FC Stadium",
+   "homeTeam": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400118,
+   "utcDate": "2026-11-17T19:00:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Wolverhampton Wanderers FC Stadium",
+   "homeTeam": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 400119,
+   "utcDate": "2026-11-15T20:30:00Z",
+   "status": "TIMED",
+   "matchday": 12,
+   "stage": "REGULAR_SEASON",
+   "venue": "Tottenham Hotspur FC Stadium",
+   "homeTeam": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "awayTeam": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  }
+ ]
+}
