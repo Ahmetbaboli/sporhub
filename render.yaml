@@ -1,0 +1,32 @@
+# Render Blueprint for the Just Sport API. Database lives on Neon; the web app on Vercel.
+# See docs/DEPLOY.md. Secrets are marked `sync: false` and entered in the Render dashboard.
+services:
+  - type: web
+    name: justsport-api
+    runtime: docker
+    dockerfilePath: ./api/Dockerfile
+    dockerContext: ./api
+    plan: free
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: DATABASE_URL
+        sync: false # Neon connection string, rewritten to postgresql+asyncpg://
+      - key: REDIS_URL
+        sync: false # optional (Upstash/Render Key Value); empty = in-memory cache
+      - key: FOOTBALL_DATA_API_KEY
+        sync: false
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: USE_FIXTURES
+        value: "false"
+      - key: SEED_ON_START
+        value: "false"
+      - key: SCHEDULER_ENABLED
+        value: "true"
+      - key: SYNC_INTERVAL_MINUTES
+        value: "30"
+      - key: CORS_ORIGINS
+        sync: false # e.g. https://justsport.vercel.app
+      - key: LOG_LEVEL
+        value: info
