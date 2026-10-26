@@ -32,10 +32,10 @@ export function EventCardSkeleton({ rows = 4 }: { rows?: number }) {
   );
 }
 
-export function EventListSkeleton({ cards = 2 }: { cards?: number }) {
+/** Suspense fallback for a block of event cards (no page title: the page renders its own). */
+export function EventCardsSkeleton({ cards = 2 }: { cards?: number }) {
   return (
     <LoadingRegion label={tr.states.loading}>
-      <TitleSkeleton />
       <div className="space-y-4">
         {Array.from({ length: cards }, (_, i) => (
           <EventCardSkeleton key={i} />
@@ -45,11 +45,20 @@ export function EventListSkeleton({ cards = 2 }: { cards?: number }) {
   );
 }
 
+/** Whole-page skeleton, used by routes that never 404 (search). */
+export function EventListSkeleton({ cards = 2 }: { cards?: number }) {
+  return (
+    <>
+      <TitleSkeleton />
+      <EventCardsSkeleton cards={cards} />
+    </>
+  );
+}
+
+/** Suspense fallback for a table block. */
 export function TableSkeleton({ rows = 10 }: { rows?: number }) {
   return (
     <LoadingRegion label={tr.states.loading}>
-      <TitleSkeleton />
-      <Skeleton className="mb-4 h-11 w-full max-w-md" />
       <div className="bg-card space-y-3 rounded-lg border p-3">
         {Array.from({ length: rows }, (_, i) => (
           <Skeleton key={i} className="h-6 w-full" />

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { competitionHref, EventCard } from "@/components/sport/event-list";
+import { EventCardsSkeleton } from "@/components/sport/skeletons";
 import { TeamBadge } from "@/components/sport/team-badge";
 import { EmptyState } from "@/components/ui/states";
 import { api } from "@/lib/api";
@@ -22,22 +24,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function SportPage({ params }: Props) {
   const { sport } = await params;
+  // Existence is checked before anything streams so an unknown sport is a real HTTP 404.
   const sports = await api.sports();
   const current = sports.items.find((s) => s.slug === sport);
   if (!current) notFound();
-
   const competitions = (await orNotFound(api.competitions(sport))).items;
-  const upcoming = await Promise.all(
-    competitions.map(async (competition) => ({
-      competition,
-      events: (
-        await api.competitionEvents(competition.slug, {
-          status: ["live", "scheduled"],
-          pageSize: UPCOMING_PER_COMPETITION,
-        })
-      ).items,
-    })),
-  );
 
   return (
     <>
@@ -78,25 +69,44 @@ export default async function SportPage({ params }: Props) {
           <h2 className="font-display text-primary mt-8 mb-3 text-2xl font-semibold uppercase">
             {tr.sport.upcoming}
           </h2>
-          <div className="space-y-4">
-            {upcoming.every((u) => u.events.length === 0) ? (
-              <EmptyState title={tr.sport.noUpcoming} />
-            ) : (
-              upcoming
-                .filter((u) => u.events.length > 0)
-                .map(({ competition, events }) => (
-                  <EventCard
-                    key={competition.id}
-                    title={competition.name}
-                    href={competitionHref(competition)}
-                    events={events}
-                    showRound
-                  />
-                ))
-            )}
-          </div>
+          <Suspense fallback={<EventCardsSkeleton />}>
+            <Upcoming competitions={competitions} />
+          </Suspense>
         </>
       )}
     </>
+  );
+}
+
+async function Upcoming({
+  competitions,
+}: {
+  competitions: { id: number; slug: string; name: string; sport_slug: string }[];
+}) {
+  const upcoming = await Promise.all(
+    competitions.map(async (competition) => ({
+      competition,
+      events: (
+        await api.competitionEvents(competition.slug, {
+          status: ["live", "scheduled"],
+          pageSize: UPCOMING_PER_COMPETITION,
+        })
+      ).items,
+    })),
+  );
+  const nonEmpty = upcoming.filter((u) => u.events.length > 0);
+  if (nonEmpty.length === 0) return <EmptyState title={tr.sport.noUpcoming} />;
+  return (
+    <div className="space-y-4">
+      {nonEmpty.map(({ competition, events }) => (
+        <EventCard
+          key={competition.id}
+          title={competition.name}
+          href={competitionHref(competition)}
+          events={events}
+          showRound
+        />
+      ))}
+    </div>
   );
 }

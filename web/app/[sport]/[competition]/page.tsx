@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { DayGroupedEvents } from "@/components/sport/event-list";
+import { TableSkeleton } from "@/components/sport/skeletons";
 import { StandingsTable } from "@/components/sport/standings-table";
 import { EmptyState } from "@/components/ui/states";
 import { Pagination } from "@/components/ui/pagination";
@@ -64,16 +66,18 @@ export default async function CompetitionPage({ params, searchParams }: Props) {
 
       <TabNav tabs={tabs} active={tab} />
 
-      {tab === "standings" ? (
-        <StandingsTab competition={competition.slug} />
-      ) : (
-        <EventsTab
-          competition={competition.slug}
-          tab={tab}
-          page={page}
-          hrefFor={(p) => `${base}?tab=${tab}&page=${p}`}
-        />
-      )}
+      <Suspense key={`${tab}-${page}`} fallback={<TableSkeleton />}>
+        {tab === "standings" ? (
+          <StandingsTab competition={competition.slug} />
+        ) : (
+          <EventsTab
+            competition={competition.slug}
+            tab={tab}
+            page={page}
+            hrefFor={(p) => `${base}?tab=${tab}&page=${p}`}
+          />
+        )}
+      </Suspense>
     </>
   );
 }
