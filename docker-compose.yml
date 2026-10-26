@@ -32,6 +32,7 @@ services:
       USE_FIXTURES: "true"
       SEED_ON_START: "true"
       ADMIN_TOKEN: ${ADMIN_TOKEN:-dev-admin-token}
+      API_TOKEN_SECRET: ${API_TOKEN_SECRET:-}
       CORS_ORIGINS: http://localhost:3000
       SCHEDULER_ENABLED: "false"
       FOOTBALL_DATA_API_KEY: ${FOOTBALL_DATA_API_KEY:-}

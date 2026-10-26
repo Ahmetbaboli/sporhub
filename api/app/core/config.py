@@ -27,6 +27,8 @@ class Settings(BaseSettings):
     fixture_today: str = ""
 
     admin_token: str = Field(default="", repr=False)
+    # HS256 key shared with the web app (API_TOKEN_SECRET); empty disables /api/v1/me.
+    api_token_secret: str = Field(default="", repr=False)
     cors_origins: str = "http://localhost:3000"
     log_level: str = "info"
 

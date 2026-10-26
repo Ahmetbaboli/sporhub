@@ -16,6 +16,7 @@ dependencies = [
   "apscheduler>=3.10,<4",
   "redis>=5.2",
   "tzdata>=2024.2",
+  "pyjwt>=2.9",
 ]
 
 [dependency-groups]

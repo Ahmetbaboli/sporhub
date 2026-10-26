@@ -35,7 +35,9 @@ def scrub(value: Any) -> Any:
 
 class Capture:
     def __init__(self) -> None:
-        self.client = httpx.Client(base_url=BASE_URL, headers={"User-Agent": USER_AGENT}, timeout=20)
+        self.client = httpx.Client(
+            base_url=BASE_URL, headers={"User-Agent": USER_AGENT}, timeout=20
+        )
         self.requests = 0
 
     def get(self, path: str, offset: int = 0) -> dict[str, Any]:
@@ -93,9 +95,15 @@ def main(season: str) -> None:
     write(f"{season}_results", shell(rows, RaceTable={"season": season, "Races": results}))
 
     constructors, total = cap.pages(f"/{season}/constructors/", "ConstructorTable", "Constructors")
-    write(f"{season}_constructors", shell(total, ConstructorTable={"season": season, "Constructors": constructors}))
+    write(
+        f"{season}_constructors",
+        shell(total, ConstructorTable={"season": season, "Constructors": constructors}),
+    )
 
-    for name, key in (("driverstandings", "DriverStandings"), ("constructorstandings", "ConstructorStandings")):
+    for name, key in (
+        ("driverstandings", "DriverStandings"),
+        ("constructorstandings", "ConstructorStandings"),
+    ):
         mr = cap.get(f"/{season}/{name}/")
         write(f"{season}_{name}", shell(int(mr["total"]), StandingsTable=mr["StandingsTable"]))
         print(name, len(mr["StandingsTable"]["StandingsLists"][0][key]))

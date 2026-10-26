@@ -33,6 +33,7 @@ from app.main import create_app
 from app.services.sync_service import run_sync
 
 FIXTURE_TODAY = "2026-10-26"
+TOKEN_SECRET = "test-shared-secret-that-is-at-least-32-bytes-long"
 TEST_DATABASE_URL = os.environ.get("TEST_DATABASE_URL", "")
 IS_POSTGRES = TEST_DATABASE_URL.startswith("postgresql")
 WORK_SCHEMA = "work"
@@ -70,6 +71,7 @@ def settings() -> Settings:
         use_fixtures=True,
         fixture_today=FIXTURE_TODAY,
         admin_token="test-admin-token",
+        api_token_secret=TOKEN_SECRET,
         redis_url="",
         database_url="sqlite+aiosqlite://",
     )
@@ -81,6 +83,7 @@ def _isolate(settings: Settings, monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr("app.core.config.get_settings", lambda: settings)
     monkeypatch.setattr("app.core.cache.get_settings", lambda: settings)
     monkeypatch.setattr("app.routers.admin.get_settings", lambda: settings)
+    monkeypatch.setattr("app.core.auth.get_settings", lambda: settings)
     cache.reset_cache()
 
 

@@ -30,3 +30,5 @@ services:
         sync: false # e.g. https://justsport.vercel.app
       - key: LOG_LEVEL
         value: info
+      - key: API_TOKEN_SECRET
+        sync: false # same value as the web app's API_TOKEN_SECRET (>= 32 random bytes)

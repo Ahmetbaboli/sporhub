@@ -22,7 +22,9 @@ async def main(name: str) -> None:
         for ext in adapter.default_competitions[:1]:
             comp = comps[ext]
             season = comp.season_key or ""
-            print(f"competition {ext}: season {comp.season_label} {comp.season_start}..{comp.season_end}")
+            print(
+                f"competition {ext}: season {comp.season_label} {comp.season_start}..{comp.season_end}"
+            )
             teams = await adapter.fetch_teams(ext, season)
             events = await adapter.fetch_events(ext, season)
             standings = await adapter.fetch_standings(ext, season)
@@ -32,8 +34,12 @@ async def main(name: str) -> None:
             finished = [e for e in events if e.status == "finished"]
             if finished:
                 last = finished[-1]
-                print("last finished:", last.name, last.start_time.isoformat(),
-                      [(p.position, p.extra.get("code"), p.points) for p in last.participants[:3]])
+                print(
+                    "last finished:",
+                    last.name,
+                    last.start_time.isoformat(),
+                    [(p.position, p.extra.get("code"), p.points) for p in last.participants[:3]],
+                )
     finally:
         await adapter.aclose()
 

@@ -131,11 +131,82 @@ async def get_event(session: AsyncSession, event_id: int) -> Event | None:
 
 
 async def list_team_events(
-    session: AsyncSession, team_id: int, page: int, page_size: int, descending: bool
+    session: AsyncSession,
+    team_id: int,
+    page: int,
+    page_size: int,
+    descending: bool,
+    statuses: list[str] | None = None,
 ) -> tuple[list[Event], int]:
     involved = select(EventParticipant.event_id).where(EventParticipant.team_id == team_id)
     stmt = _event_base().where(Event.id.in_(involved))
+    if statuses:
+        stmt = stmt.where(Event.status.in_(statuses))
     return await _paginate_events(session, stmt, descending, page, page_size)
+
+
+async def list_player_events(
+    session: AsyncSession, player_id: int, page: int, page_size: int, descending: bool
+) -> tuple[list[Event], int]:
+    involved = select(EventParticipant.event_id).where(EventParticipant.player_id == player_id)
+    stmt = _event_base().where(Event.id.in_(involved))
+    return await _paginate_events(session, stmt, descending, page, page_size)
+
+
+async def list_teams(
+    session: AsyncSession, sport_slug: str | None, q: str | None, limit: int
+) -> list[Team]:
+    stmt = select(Team).join(Team.sport).options(contains_eager(Team.sport))
+    if sport_slug:
+        stmt = stmt.where(Sport.slug == sport_slug)
+    if q:
+        stmt = stmt.where(Team.name.ilike(_like(q)))
+    return list((await session.scalars(stmt.order_by(Team.name).limit(limit))).all())
+
+
+async def list_players(
+    session: AsyncSession, sport_slug: str | None, q: str | None, limit: int
+) -> list[Player]:
+    stmt = (
+        select(Player)
+        .join(Player.sport)
+        .options(contains_eager(Player.sport), joinedload(Player.team).joinedload(Team.sport))
+    )
+    if sport_slug:
+        stmt = stmt.where(Sport.slug == sport_slug)
+    if q:
+        stmt = stmt.where(Player.name.ilike(_like(q)))
+    return list((await session.scalars(stmt.order_by(Player.name).limit(limit))).unique().all())
+
+
+def _like(text: str) -> str:
+    return f"%{text.replace('%', '').replace('_', '')}%"
+
+
+async def standings_of(
+    session: AsyncSession, *, team_id: int | None = None, player_id: int | None = None
+) -> list[tuple[Standing, Season, Competition]]:
+    """A team's (or player's) row in the current season table of every competition."""
+    stmt = (
+        select(Standing, Season, Competition)
+        .join(Season, Standing.season_id == Season.id)
+        .join(Competition, Season.competition_id == Competition.id)
+        .join(Competition.sport)
+        .options(
+            contains_eager(Competition.sport),
+            joinedload(Standing.team).joinedload(Team.sport),
+            joinedload(Standing.player),
+        )
+        .where(Season.is_current)
+        .order_by(Competition.id)
+    )
+    if player_id is not None:
+        stmt = stmt.where(Standing.player_id == player_id)
+    else:
+        # A team's own row (constructor/club), not the driver rows that merely list the team.
+        stmt = stmt.where(Standing.team_id == team_id, Standing.player_id.is_(None))
+    rows = (await session.execute(stmt)).unique().all()
+    return [(r[0], r[1], r[2]) for r in rows]
 
 
 async def list_standings(session: AsyncSession, season_id: int) -> list[Standing]:
@@ -170,7 +241,7 @@ async def get_player(session: AsyncSession, player_id: int) -> Player | None:
 async def search(
     session: AsyncSession, query: str
 ) -> tuple[list[Competition], list[Team], list[Player]]:
-    like = f"%{query.replace('%', '').replace('_', '')}%"
+    like = _like(query)
     comps = await session.scalars(
         select(Competition)
         .join(Competition.sport)

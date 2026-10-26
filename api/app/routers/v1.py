@@ -137,3 +137,54 @@ async def search(
     q: Annotated[str, Query(min_length=1, max_length=100, description="Arama metni")],
 ) -> SearchResults:
     return await svc.search_all(session, q)
+
+
+LOOKUP_DEFAULT_LIMIT = 100
+LOOKUP_MAX_LIMIT = 500
+
+
+@router.get(
+    "/teams", response_model=svc.TeamList, tags=["teams"], summary="Takım listesi (seçiciler için)"
+)
+async def list_teams(
+    session: Session,
+    sport: Annotated[str | None, Query(description="Spor slug'ı")] = None,
+    q: Annotated[str | None, Query(max_length=100, description="Ada göre filtre")] = None,
+    limit: Annotated[int, Query(ge=1, le=LOOKUP_MAX_LIMIT)] = LOOKUP_DEFAULT_LIMIT,
+) -> svc.TeamList:
+    return await svc.lookup_teams(session, sport, q, limit)
+
+
+@router.get(
+    "/players", response_model=svc.PlayerList, tags=["players"], summary="Oyuncu/sürücü listesi"
+)
+async def list_players(
+    session: Session,
+    sport: Annotated[str | None, Query(description="Spor slug'ı")] = None,
+    q: Annotated[str | None, Query(max_length=100, description="Ada göre filtre")] = None,
+    limit: Annotated[int, Query(ge=1, le=LOOKUP_MAX_LIMIT)] = LOOKUP_DEFAULT_LIMIT,
+) -> svc.PlayerList:
+    return await svc.lookup_players(session, sport, q, limit)
+
+
+@router.get("/teams/{team_id}/standings", response_model=svc.StandingEntryList, tags=["teams"])
+async def team_standings(team_id: int, session: Session) -> svc.StandingEntryList:
+    return await svc.get_team_standings(session, team_id)
+
+
+@router.get(
+    "/players/{player_id}/standings", response_model=svc.StandingEntryList, tags=["players"]
+)
+async def player_standings(player_id: int, session: Session) -> svc.StandingEntryList:
+    return await svc.get_player_standings(session, player_id)
+
+
+@router.get("/players/{player_id}/events", response_model=svc.EventList, tags=["players"])
+async def list_player_events(
+    player_id: int,
+    session: Session,
+    order: Order = "asc",
+    page: PageParam = 1,
+    page_size: PageSizeParam = DEFAULT_PAGE_SIZE,
+) -> svc.EventList:
+    return await svc.get_player_events(session, player_id, page, page_size, order == "desc")

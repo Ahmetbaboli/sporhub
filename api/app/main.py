@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import get_settings
 from app.core.errors import register_error_handlers
 from app.core.logging import configure_logging
-from app.routers import admin, v1
+from app.routers import admin, me, v1
 from app.schemas.api import HealthOut
 from app.services.scheduler import build_scheduler
 
@@ -73,6 +73,7 @@ def create_app() -> FastAPI:
 
     app.include_router(v1.router)
     app.include_router(admin.router)
+    app.include_router(me.router)
     return app
 
 

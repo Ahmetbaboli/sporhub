@@ -19,6 +19,7 @@ from app.schemas.api import (
     SearchResults,
     SeasonOut,
     SportOut,
+    StandingEntry,
     StandingOut,
     TeamDetail,
     TeamOut,
@@ -286,3 +287,60 @@ async def search_all(session: AsyncSession, query: str) -> SearchResults:
         )
 
     return await cached(f"search:{q.lower()}", SearchResults, load, ttl=120)
+
+
+class TeamList(Page[TeamOut]):
+    pass
+
+
+class PlayerList(Page[PlayerOut]):
+    pass
+
+
+class StandingEntryList(Page[StandingEntry]):
+    pass
+
+
+async def lookup_teams(
+    session: AsyncSession, sport: str | None, q: str | None, limit: int
+) -> TeamList:
+    rows = await queries.list_teams(session, sport, q, limit)
+    return TeamList(**_page([team_out(t) for t in rows], 1, limit))
+
+
+async def lookup_players(
+    session: AsyncSession, sport: str | None, q: str | None, limit: int
+) -> PlayerList:
+    rows = await queries.list_players(session, sport, q, limit)
+    return PlayerList(**_page([player_out(p) for p in rows], 1, limit))
+
+
+async def get_player_events(
+    session: AsyncSession, player_id: int, page: int, page_size: int, descending: bool
+) -> EventList:
+    if await queries.get_player(session, player_id) is None:
+        raise NotFoundError("Oyuncu")
+    rows, total = await queries.list_player_events(session, player_id, page, page_size, descending)
+    return EventList(**_page([event_out(e) for e in rows], page, page_size, total))
+
+
+def _entries(rows) -> StandingEntryList:
+    items = [
+        StandingEntry(
+            competition=competition_out(comp), season=season.year_label, standing=standing_out(st)
+        )
+        for st, season, comp in rows
+    ]
+    return StandingEntryList(**_page(items, 1, max(len(items), 1)))
+
+
+async def get_team_standings(session: AsyncSession, team_id: int) -> StandingEntryList:
+    if await queries.get_team(session, team_id) is None:
+        raise NotFoundError("Takım")
+    return _entries(await queries.standings_of(session, team_id=team_id))
+
+
+async def get_player_standings(session: AsyncSession, player_id: int) -> StandingEntryList:
+    if await queries.get_player(session, player_id) is None:
+        raise NotFoundError("Oyuncu")
+    return _entries(await queries.standings_of(session, player_id=player_id))

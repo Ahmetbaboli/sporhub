@@ -119,3 +119,11 @@ class HealthOut(BaseModel):
 class SyncAccepted(BaseModel):
     status: str
     adapter: str
+
+
+class StandingEntry(BaseModel):
+    """One standings row together with the competition it belongs to."""
+
+    competition: CompetitionOut
+    season: str
+    standing: StandingOut
