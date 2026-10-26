@@ -1,23 +1,23 @@
 # İlerleme
 
 ## Aşama 0 — Hazırlık
-- [ ] git init, LICENSE, .gitignore, .editorconfig
-- [ ] Monorepo klasör yapısı
-- [ ] CLAUDE.md
-- [ ] docs/PROGRESS, DECISIONS, ARCHITECTURE
-- [ ] api/.env.example, web/.env.example
+- [x] git init, LICENSE, .gitignore, .editorconfig
+- [x] Monorepo klasör yapısı
+- [x] CLAUDE.md
+- [x] docs/PROGRESS, DECISIONS, ARCHITECTURE
+- [x] api/.env.example, web/.env.example
 
 ## Aşama 1 — Altyapı ve veri modeli
-- [ ] docker-compose.yml
-- [ ] FastAPI iskeleti (ayarlar, /health, CORS, hata işleyici, log)
-- [ ] SQLAlchemy modelleri + ilk Alembic migration
-- [ ] BaseAdapter, DTO'lar, registry
-- [ ] Futbol adapter'ı + fixture'lar + fixture modu
-- [ ] sync_service (upsert) + APScheduler + sync_runs
-- [ ] Seed komutu
-- [ ] Redis cache katmanı
-- [ ] REST uçları (/api/v1)
-- [ ] pytest testleri
+- [x] docker-compose.yml
+- [x] FastAPI iskeleti (ayarlar, /health, CORS, hata işleyici, log)
+- [x] SQLAlchemy modelleri + ilk Alembic migration
+- [x] BaseAdapter, DTO'lar, registry
+- [x] Futbol adapter'ı + fixture'lar + fixture modu
+- [x] sync_service (upsert) + APScheduler + sync_runs
+- [x] Seed komutu
+- [x] Redis cache katmanı
+- [x] REST uçları (/api/v1)
+- [x] pytest testleri
 
 ## Aşama 2 — Futbol MVP
 - [ ] Next.js iskeleti, tema, layout
@@ -51,3 +51,4 @@
 
 ## Engeller
 (henüz yok)
+- Docker bu makinede yok: `docker compose up` yazıldı ama doğrulanamadı; API yerelde SQLite + uvicorn ile doğrulandı. Docker'lı makinede ilk iş: `docker compose up --build`.
