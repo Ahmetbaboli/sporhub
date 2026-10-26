@@ -43,14 +43,15 @@ export default async function TeamPage({ params }: Props) {
       </div>
 
       <Suspense fallback={<EventCardsSkeleton />}>
-        <TeamEvents teamId={id} />
+        <TeamEvents teamId={id} sport={team.sport_slug} />
       </Suspense>
       <Squad team={team} />
     </>
   );
 }
 
-async function TeamEvents({ teamId }: { teamId: number }) {
+async function TeamEvents({ teamId, sport }: { teamId: number; sport: string | null }) {
+  const isRace = sport === "formula-1";
   const events = await api.teamEvents(teamId, {
     order: "desc",
     pageSize: EVENTS_FETCH_SIZE,
@@ -60,14 +61,24 @@ async function TeamEvents({ teamId }: { teamId: number }) {
     <div className="mt-8 grid gap-6 lg:grid-cols-2">
       <div>
         {recent.length ? (
-          <EventCard title={tr.team.recent} events={recent} showRound heading="h2" />
+          <EventCard
+            title={isRace ? tr.team.recentRaces : tr.team.recent}
+            events={recent}
+            showRound
+            heading="h2"
+          />
         ) : (
           <EmptyState title={tr.team.noRecent} />
         )}
       </div>
       <div>
         {upcoming.length ? (
-          <EventCard title={tr.team.upcoming} events={upcoming} showRound heading="h2" />
+          <EventCard
+            title={isRace ? tr.team.upcomingRaces : tr.team.upcoming}
+            events={upcoming}
+            showRound
+            heading="h2"
+          />
         ) : (
           <EmptyState title={tr.team.noUpcoming} />
         )}
@@ -84,7 +95,7 @@ function Squad({ team }: { team: TeamDetail }) {
         id="squad"
         className="font-display text-primary mb-3 text-2xl font-semibold uppercase"
       >
-        {tr.team.squad}
+        {team.sport_slug === "formula-1" ? tr.team.drivers : tr.team.squad}
       </h2>
       {squad.length === 0 ? (
         <EmptyState title={tr.team.noSquad} />

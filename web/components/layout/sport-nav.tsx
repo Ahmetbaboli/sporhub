@@ -3,16 +3,18 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { tr } from "@/lib/i18n/tr";
+import { templateFor } from "@/lib/sports";
 import type { Sport } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 export function SportNav({ sports }: { sports: Sport[] }) {
   const pathname = usePathname();
   const items = [
-    { href: "/", label: tr.nav.home },
+    { href: "/", label: tr.nav.home, Icon: null },
     ...sports.map((s) => ({
       href: `/${s.slug}`,
       label: s.name,
+      Icon: templateFor(s.slug).icon,
     })),
   ];
 
@@ -36,6 +38,7 @@ export function SportNav({ sports }: { sports: Sport[] }) {
                     : "text-muted-foreground hover:bg-muted hover:text-foreground",
                 )}
               >
+                {item.Icon ? <item.Icon className="mr-1.5 size-4" aria-hidden /> : null}
                 {item.label}
               </Link>
             </li>

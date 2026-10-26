@@ -2,7 +2,7 @@
 
 Çok sporlu, modüler bir spor veri platformu. Bir Python servisi dış API'lerden veri çeker, ortak bir şemaya normalize edip PostgreSQL'e yazar; Next.js arayüzü yalnızca kendi API'mizi okur. **Yeni bir spor eklemek = yeni bir adapter sınıfı yazmak.**
 
-> Durum: **v0.1.0 — Futbol MVP.** Basketbol ve Formula 1 adapter'ları sıradaki aşamada ([docs/PROGRESS.md](docs/PROGRESS.md)).
+> Durum: **v0.2.0 — Futbol, basketbol (NBA) ve Formula 1.** Üç spor da aynı adapter mimarisiyle çalışır ([docs/adding-a-sport.md](docs/adding-a-sport.md)). Sıradaki aşamalar: [docs/PROGRESS.md](docs/PROGRESS.md).
 
 <!-- Ekran görüntüleri Aşama 6'da eklenecek -->
 | Bugünün maçları | Lig · Puan tablosu | Takım |
@@ -11,6 +11,7 @@
 
 ## Özellikler
 - Bugünün karşılaşmaları (spora ve lige göre gruplu), fikstür, sonuçlar, puan tablosu
+- **Spora özel şablonlar:** futbolda lig tablosu, NBA'de konferans sıralaması, F1'de yarış kartı (podyum + tam sonuç) ve sürücü/takım şampiyonası
 - Takım sayfası (son/gelecek maçlar, kadro), oyuncu profili, arama
 - Koyu/açık tema, mobil öncelikli, erişilebilir, Türkçe arayüz (TR/EN'e hazır)
 - **Anahtarsız demo:** `USE_FIXTURES=true` ile gömülü örnek veriyle çalışır; testler internetsiz koşar
@@ -78,9 +79,9 @@ npm run dev
 | Değişken | Anlamı |
 | --- | --- |
 | `USE_FIXTURES=true` | Adapter'lar `api/fixtures/` altındaki örnek JSON'u okur (varsayılan). Maç tarihleri bugüne göre kaydırılır. |
-| `USE_FIXTURES=false` + `FOOTBALL_DATA_API_KEY` | Gerçek football-data.org verisi (ücretsiz katman: PL, La Liga, Serie A, Bundesliga, Şampiyonlar Ligi; dakikada 10 istek). Anahtar yoksa otomatik fixture'a düşer. |
+| `USE_FIXTURES=false` + anahtarlar | Gerçek veri. Futbol: `FOOTBALL_DATA_API_KEY` (ücretsiz katman: PL, La Liga, Serie A, Bundesliga, Şampiyonlar Ligi; 10 istek/dk). NBA: `BALLDONTLIE_API_KEY` (ücretsiz katman 5 istek/dk; kadro ücretli katmanda). F1: anahtarsız (Jolpica, 500 istek/saat). Anahtarı olmayan adapter fixture'a düşer; zamanlayıcı onu atlar. |
 
-Elle senkronizasyon: `POST /api/v1/admin/sync/football-data` (`X-Admin-Token: $ADMIN_TOKEN`). Fixture'ları yeniden üretmek: `cd api && uv run python tools/generate_fixtures.py`.
+Elle senkronizasyon: `POST /api/v1/admin/sync/{football-data, balldontlie, jolpica}` (`X-Admin-Token: $ADMIN_TOKEN`). Fixture'ları yeniden üretmek: `cd api && uv run python tools/generate_fixtures.py` (+ `generate_basketball_fixtures.py`, `generate_f1_fixtures.py`). Yeni spor eklemek: [docs/adding-a-sport.md](docs/adding-a-sport.md).
 
 ## Test ve kalite
 
@@ -89,7 +90,7 @@ cd api && uv run pytest --cov=app && uv run ruff check . && uv run ruff format -
 cd web && npm run lint && npx tsc --noEmit && npm test && npm run build
 ```
 
-CI (`.github/workflows/ci.yml`) aynı adımları PostgreSQL + Redis servisleriyle her push ve PR'da çalıştırır.
+API testleri varsayılan olarak SQLite'ta koşar; gerçek PostgreSQL için `TEST_DATABASE_URL=postgresql+asyncpg://...` (ve Redis için `TEST_REDIS_URL`) verin. CI (`.github/workflows/ci.yml`) testleri her push ve PR'da **PostgreSQL + Redis servisleriyle** çalıştırır.
 
 ## Teknoloji
 
@@ -98,7 +99,7 @@ CI (`.github/workflows/ci.yml`) aynı adımları PostgreSQL + Redis servisleriyl
 **Altyapı:** Docker Compose, GitHub Actions; hedef barındırma Vercel (web), Render (api), Neon (PostgreSQL)
 
 ## Yol haritası
-Basketbol (NBA) ve Formula 1 adapter'ları → kullanıcı hesapları ve favoriler → canlı skor (SSE), AI maç özeti → v1.0. Ayrıntı: [docs/PROGRESS.md](docs/PROGRESS.md).
+Kullanıcı hesapları ve favoriler (Aşama 4) → canlı skor (SSE), AI maç özeti (Aşama 5) → v1.0. Ayrıntı: [docs/PROGRESS.md](docs/PROGRESS.md).
 
 ## Lisans
 [MIT](LICENSE)

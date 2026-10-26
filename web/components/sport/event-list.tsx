@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EventRow } from "@/components/sport/event-row";
+import { EventItem } from "@/components/sport/event-item";
 import { groupByDay } from "@/lib/events";
 import { formatDay } from "@/lib/format";
 import type { Competition, SportEvent } from "@/lib/types";
@@ -38,7 +38,7 @@ export function EventCard({
       </header>
       <ul className="divide-y">
         {events.map((event) => (
-          <EventRow key={event.id} event={event} showRound={showRound} />
+          <EventItem key={event.id} event={event} showRound={showRound} />
         ))}
       </ul>
     </section>

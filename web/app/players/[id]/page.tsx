@@ -16,6 +16,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: player?.name ?? tr.app.name };
 }
 
+/** Sport-specific profile facts stored in `player.extra` (shown only when present). */
+const SPORT_FACTS: [string, string][] = [
+  ["number", tr.player.number], // F1 permanent number
+  ["code", tr.player.code], // F1 three-letter code
+  ["jersey_number", tr.player.number], // basketball
+  ["height", tr.player.height],
+  ["weight", tr.player.weight],
+];
+
 export default async function PlayerPage({ params }: Props) {
   const player = await orNotFound(api.player(parseId((await params).id)));
   const birth =
@@ -25,6 +34,12 @@ export default async function PlayerPage({ params }: Props) {
     [tr.player.position, player.position ?? tr.player.unknown],
     [tr.player.nationality, player.nationality ?? tr.player.unknown],
     [tr.player.birthDate, birth ? formatDate(birth) : tr.player.unknown],
+    ...SPORT_FACTS.flatMap(([key, label]): [string, React.ReactNode][] => {
+      const value = player.extra[key];
+      return typeof value === "string" || typeof value === "number"
+        ? [[label, String(value)]]
+        : [];
+    }),
     [
       tr.player.team,
       player.team ? (

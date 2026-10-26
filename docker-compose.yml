@@ -35,6 +35,7 @@ services:
       CORS_ORIGINS: http://localhost:3000
       SCHEDULER_ENABLED: "false"
       FOOTBALL_DATA_API_KEY: ${FOOTBALL_DATA_API_KEY:-}
+      BALLDONTLIE_API_KEY: ${BALLDONTLIE_API_KEY:-}
     ports:
       - "8000:8000"
     depends_on:

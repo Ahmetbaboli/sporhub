@@ -21,7 +21,9 @@ uv sync
 uv run alembic upgrade head
 uv run python -m app.scripts.seed        # fixture verisiyle doldur
 uv run uvicorn app.main:app --reload
-uv run pytest --cov=app                  # test + kapsam
+uv run pytest --cov=app                  # test + kapsam (varsayılan SQLite)
+# Gerçek PostgreSQL/Redis ile: TEST_DATABASE_URL=postgresql+asyncpg://... TEST_REDIS_URL=redis://... uv run pytest
+uv run python tools/generate_f1_fixtures.py   # fixture üreteçleri: tools/generate_*.py
 uv run ruff check . && uv run ruff format --check .
 uv run alembic revision --autogenerate -m "mesaj"
 
@@ -38,6 +40,9 @@ npm run lint && npx tsc --noEmit && npm test && npm run build
 - Her dış kayıt `(source, external_id)` ile benzersiz; sync upsert'tir, idempotenttir.
 - Loglar yapılandırılmış (JSON); gizli bilgi loglanmaz. Yeni env değişkeni `.env.example`'a açıklamasıyla eklenir.
 - Adapter'lar: rate limit saygısı, tenacity ile üstel geri çekilme, timeout, `USE_FIXTURES=true` desteği.
+- Yeni spor: `docs/adding-a-sport.md` (adapter + fixture + registry satırı + `web/lib/sports.ts` şablonu). Tüm adapter'lar `tests/test_adapter_contract.py` sözleşmesinden geçmeli.
+- Dialect'e özgü SQL yalnızca `app/db/dialect.py`; `timestamptz`e yalnızca timezone-aware datetime yazılır.
+- Web detay sayfalarında `loading.tsx` kullanma (200 döndürür): varlık kontrolü + `notFound()` stream öncesi, yavaş bölümler sayfa içi `Suspense`.
 
 ## Commit formatı
 Conventional Commits: `feat(api): ...`, `fix(web): ...`, `docs: ...`, `test: ...`, `chore: ...`.

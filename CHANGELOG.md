@@ -2,6 +2,25 @@
 
 Biçim [Keep a Changelog](https://keepachangelog.com/), sürümleme [SemVer](https://semver.org/).
 
+## [0.2.0] — 2026-10-26
+
+### Eklendi
+- **Basketbol (NBA) adapter'ı** (balldontlie): takımlar, oyuncular (ücretli katmanda kadro), maçlar; puan durumu ücretsiz katmanda olmayan `/standings` yerine sonuçlardan hesaplanır.
+- **Formula 1 adapter'ı** (Jolpica): takvim, yarış sonuçları (`kind="race"`), sürücü ve takım şampiyonası, takımlar ve sürücüler.
+- Ortak `HttpFixtureAdapter` tabanı (hız sınırı, yeniden deneme, fixture modu, tarih kaydırma); futbol adapter'ı ona taşındı.
+- Her adapter için fixture JSON'ları ve üreteç betikleri; **tüm adapter'lar için ortak sözleşme testleri** (registry'yi gezer).
+- Arayüzde spora özel şablonlar: NBA konferans sıralaması, F1 şampiyona tabloları ve yarış kartı (podyum + tam sonuç), spor ikonlu spor seçici, basketbol/F1 oyuncu profili bilgileri.
+- `docs/adding-a-sport.md`.
+- Anahtarı olmayan adapter fixture'a düştüğünde zamanlayıcı onu atlar.
+
+### Değişti
+- API testleri gerçek PostgreSQL ve Redis servisleriyle CI'da koşar (`TEST_DATABASE_URL`, `TEST_REDIS_URL`); yerelde SQLite varsayılandır. Postgres'e özgü upsert/timestamptz/JSONB testleri eklendi.
+- Dialect'e özgü kod `app/db/dialect.py` içinde toplandı; `UTCDateTime` naive datetime'ı reddeder.
+- Web: detay sayfaları artık gerçek HTTP 404 döner (sayfa içi Suspense, `loading.tsx` kaldırıldı).
+
+### Düzeltildi
+- İlk lig hatasındaki rollback'in spor satırını silmesi (PostgreSQL FK ile yakalandı).
+
 ## [0.1.0] — 2026-10-26
 
 ### Eklendi

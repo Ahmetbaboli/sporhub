@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { DayGroupedEvents } from "@/components/sport/event-list";
 import { TableSkeleton } from "@/components/sport/skeletons";
+import { ChampionshipTables } from "@/components/sport/championship-tables";
+import { ConferenceStandings } from "@/components/sport/conference-standings";
 import { StandingsTable } from "@/components/sport/standings-table";
 import { EmptyState } from "@/components/ui/states";
 import { Pagination } from "@/components/ui/pagination";
@@ -10,10 +12,10 @@ import { TabNav } from "@/components/ui/tab-nav";
 import { api } from "@/lib/api";
 import { orNotFound, parsePage } from "@/lib/api-helpers";
 import { tr } from "@/lib/i18n/tr";
+import { templateFor, type StandingsLayout } from "@/lib/sports";
 
 export const dynamic = "force-dynamic";
 
-const PAGE_SIZE = 20;
 const TABS = ["fixtures", "results", "standings"] as const;
 type Tab = (typeof TABS)[number];
 
@@ -41,10 +43,11 @@ export default async function CompetitionPage({ params, searchParams }: Props) {
   const competition = await orNotFound(api.competition(ref));
   if (competition.sport_slug !== sport) notFound();
 
+  const template = templateFor(sport);
   const base = `/${sport}/${competition.slug}`;
   const tabs = TABS.map((id) => ({
     id,
-    label: tr.competition.tabs[id],
+    label: template.tabs[id],
     href: `${base}?tab=${id}`,
   }));
 
@@ -68,12 +71,13 @@ export default async function CompetitionPage({ params, searchParams }: Props) {
 
       <Suspense key={`${tab}-${page}`} fallback={<TableSkeleton />}>
         {tab === "standings" ? (
-          <StandingsTab competition={competition.slug} />
+          <StandingsTab competition={competition.slug} layout={template.standings} />
         ) : (
           <EventsTab
             competition={competition.slug}
             tab={tab}
             page={page}
+            pageSize={template.pageSize}
             hrefFor={(p) => `${base}?tab=${tab}&page=${p}`}
           />
         )}
@@ -82,22 +86,37 @@ export default async function CompetitionPage({ params, searchParams }: Props) {
   );
 }
 
-async function StandingsTab({ competition }: { competition: string }) {
+async function StandingsTab({
+  competition,
+  layout,
+}: {
+  competition: string;
+  layout: StandingsLayout;
+}) {
   const standings = await api.standings(competition);
   if (standings.items.length === 0)
     return <EmptyState title={tr.competition.noStandings} />;
-  return <StandingsTable rows={standings.items} />;
+  switch (layout) {
+    case "championship":
+      return <ChampionshipTables rows={standings.items} />;
+    case "conference":
+      return <ConferenceStandings rows={standings.items} />;
+    default:
+      return <StandingsTable rows={standings.items} />;
+  }
 }
 
 async function EventsTab({
   competition,
   tab,
   page,
+  pageSize,
   hrefFor,
 }: {
   competition: string;
   tab: "fixtures" | "results";
   page: number;
+  pageSize: number;
   hrefFor: (page: number) => string;
 }) {
   const isResults = tab === "results";
@@ -105,7 +124,7 @@ async function EventsTab({
     status: isResults ? ["finished"] : ["live", "scheduled", "postponed"],
     order: isResults ? "desc" : "asc",
     page,
-    pageSize: PAGE_SIZE,
+    pageSize,
   });
   if (events.items.length === 0) {
     return (
@@ -119,7 +138,7 @@ async function EventsTab({
       <DayGroupedEvents events={events.items} />
       <Pagination
         page={page}
-        pageSize={PAGE_SIZE}
+        pageSize={pageSize}
         total={events.total}
         hrefFor={hrefFor}
       />

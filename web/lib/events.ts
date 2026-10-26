@@ -69,8 +69,13 @@ export function splitTeamEvents(events: SportEvent[], limit = 5) {
 
 export type PositionGroup = keyof typeof tr.team.positions;
 
+const BASKETBALL_POSITION = /^[gfc](-[gfc])?$/; // balldontlie: "G", "F-C", "G-F", ...
+const BASKETBALL_GROUPS = { g: "guard", f: "forward", c: "center" } as const;
+
 export function positionGroup(position: string | null): PositionGroup {
   const p = (position ?? "").toLowerCase();
+  if (BASKETBALL_POSITION.test(p)) return BASKETBALL_GROUPS[p[0] as "g" | "f" | "c"];
+  if (p === "driver") return "driver";
   if (p.includes("goalkeeper")) return "goalkeeper";
   if (p.includes("back") || p.includes("defence")) return "defence";
   if (p.includes("midfield")) return "midfield";
@@ -84,6 +89,10 @@ const POSITION_ORDER: PositionGroup[] = [
   "defence",
   "midfield",
   "offence",
+  "guard",
+  "forward",
+  "center",
+  "driver",
   "other",
 ];
 

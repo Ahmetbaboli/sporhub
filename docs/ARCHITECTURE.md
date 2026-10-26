@@ -31,3 +31,16 @@ flowchart LR
 
 ## Veri modeli
 `sports → competitions → seasons → events → event_participants`, `teams`, `players`, `standings`, `sync_runs`. Genel `events` tablosu maç ve yarışı taşır; spora özel alanlar `extra` JSONB'dedir.
+
+## Adapter'lar (v0.2.0)
+| Adapter (`source`) | Spor | Kaynak | Anahtar | Limit |
+| --- | --- | --- | --- | --- |
+| `football-data` | `football` | football-data.org v4 | `FOOTBALL_DATA_API_KEY` | 10 istek/dk (ücretsiz) |
+| `balldontlie` | `basketball` | balldontlie NBA v1 | `BALLDONTLIE_API_KEY` | 5 istek/dk (ücretsiz) |
+| `jolpica` | `formula-1` | Jolpica-F1 (Ergast uyumlu) | yok | 4 istek/sn, 500 istek/saat |
+
+Hepsi `HttpFixtureAdapter`'dan türer ve `tests/test_adapter_contract.py` sözleşmesine uyar. Spora özel sunum `web/lib/sports.ts` şablon tablosundadır. Rehber: [adding-a-sport.md](adding-a-sport.md).
+
+### F1'in ortak şemaya eşlenmesi
+- Yarış = `events` (`kind="race"`), sonuçlar = `event_participants` (`player_id` sürücü, `team_id` takım, `position`, `points`, `extra`: grid/süre/durum).
+- Sürücüler `players`, yapıcılar `teams`; şampiyona `standings` (sürücü satırı `player_id` dolu, yapıcı satırı yalnızca `team_id`; `extra.kind` ayırır).
