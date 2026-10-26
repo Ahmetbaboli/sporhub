@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Palette: chalk paper + pitch green by day, floodlit night pitch + lime chalk by night.
+   All colours are CSS variables so a theme change is a single class toggle. */
+:root {
+  --background: #f5f2ea;
+  --foreground: #12201a;
+  --card: #fffdf8;
+  --muted: #ebe7da;
+  --muted-foreground: #556559;
+  --border: #d8d3c2;
+  --primary: #0e4a36;
+  --primary-foreground: #f5f2ea;
+  --accent: #d7340f;
+  --accent-foreground: #ffffff;
+  --ring: #0e4a36;
+}
+
+.dark {
+  --background: #0a100d;
+  --foreground: #ecefe6;
+  --card: #111a15;
+  --muted: #18241d;
+  --muted-foreground: #9db0a4;
+  --border: #25362c;
+  --primary: #c8f23a;
+  --primary-foreground: #0a100d;
+  --accent: #ff6b4a;
+  --accent-foreground: #0a100d;
+  --ring: #c8f23a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-geist-sans), sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* Scores and tables use tabular numerals so columns line up. */
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.live-dot {
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot {
+    animation: none;
+  }
+}
