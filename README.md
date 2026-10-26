@@ -81,7 +81,7 @@ npm run dev
 | `USE_FIXTURES=true` | Adapter'lar `api/fixtures/` altındaki örnek JSON'u okur (varsayılan). Maç tarihleri bugüne göre kaydırılır. |
 | `USE_FIXTURES=false` + anahtarlar | Gerçek veri. Futbol: `FOOTBALL_DATA_API_KEY` (ücretsiz katman: PL, La Liga, Serie A, Bundesliga, Şampiyonlar Ligi; 10 istek/dk). NBA: `BALLDONTLIE_API_KEY` (ücretsiz katman 5 istek/dk; kadro ücretli katmanda). F1: anahtarsız (Jolpica, 500 istek/saat). Anahtarı olmayan adapter fixture'a düşer; zamanlayıcı onu atlar. |
 
-Elle senkronizasyon: `POST /api/v1/admin/sync/{football-data, balldontlie, jolpica}` (`X-Admin-Token: $ADMIN_TOKEN`). Fixture'ları yeniden üretmek: `cd api && uv run python tools/generate_fixtures.py` (+ `generate_basketball_fixtures.py`, `generate_f1_fixtures.py`). Yeni spor eklemek: [docs/adding-a-sport.md](docs/adding-a-sport.md).
+Elle senkronizasyon: `POST /api/v1/admin/sync/{football-data, balldontlie, jolpica}` (`X-Admin-Token: $ADMIN_TOKEN`). Fixture'ları yeniden üretmek: `cd api && uv run python tools/generate_fixtures.py` (+ `generate_basketball_fixtures.py`; F1 fixture'ları gerçek Jolpica yanıtlarından `tools/capture_jolpica.py` ile üretilir, `tools/live_check.py` gerçek API duman testidir). Yeni spor eklemek: [docs/adding-a-sport.md](docs/adding-a-sport.md).
 
 ## Test ve kalite
 

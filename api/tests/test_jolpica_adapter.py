@@ -28,12 +28,12 @@ async def test_competition_is_single_f1_season(adapter: JolpicaAdapter) -> None:
 
 async def test_calendar_becomes_race_events(adapter: JolpicaAdapter) -> None:
     events = await adapter.fetch_events("f1", "2026")
-    assert len(events) == 24
+    assert len(events) == 23
     assert {e.kind for e in events} == {"race"}
-    assert [e.round for e in events] == [str(i) for i in range(1, 25)]
+    assert [e.round for e in events] == [str(i) for i in range(1, 24)]
     finished = [e for e in events if e.status == "finished"]
-    assert len(finished) == 19
-    assert all(e.status == "scheduled" and not e.participants for e in events[19:])
+    assert len(finished) == 18
+    assert all(e.status == "scheduled" and not e.participants for e in events[18:])
     race = finished[0]
     assert race.name == "Australian Grand Prix"
     assert race.venue and "Melbourne" in race.venue
@@ -56,8 +56,8 @@ async def test_standings_contain_both_championships(adapter: JolpicaAdapter) -> 
     rows = await adapter.fetch_standings("f1", "2026")
     drivers = [r for r in rows if r.extra["kind"] == "driver"]
     teams = [r for r in rows if r.extra["kind"] == "constructor"]
-    assert (len(drivers), len(teams)) == (22, 11)
-    assert [r.position for r in drivers] == list(range(1, 23))
+    assert (len(drivers), len(teams)) == (23, 11)
+    assert [r.position for r in drivers] == list(range(1, 24))
     assert drivers[0].player_external_id and drivers[0].team is not None
     assert teams[0].player_external_id is None
     assert drivers[0].points >= drivers[1].points
@@ -67,7 +67,8 @@ async def test_standings_contain_both_championships(adapter: JolpicaAdapter) -> 
 async def test_constructors_carry_their_drivers(adapter: JolpicaAdapter) -> None:
     teams = {t.external_id: t for t in await adapter.fetch_teams("f1", "2026")}
     assert len(teams) == 11
-    assert all(len(t.squad) == 2 for t in teams.values())
+    assert all(len(t.squad) >= 2 for t in teams.values())
+    assert sum(len(t.squad) for t in teams.values()) == 23
     assert {p.extra["code"] for p in teams["ferrari"].squad} == {"LEC", "HAM"}
 
 
