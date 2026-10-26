@@ -1,4 +1,13 @@
+"""Test fixtures.
+
+The database is chosen by TEST_DATABASE_URL:
+  * unset            -> SQLite (fast, no services needed)
+  * postgresql+asyncpg://... -> real PostgreSQL; tests use two schemas ("work" per test,
+    "seeded" once per session) and a non-UTC session time zone to catch timezone bugs.
+"""
+
 import asyncio
+import os
 import shutil
 from collections.abc import AsyncIterator
 from pathlib import Path
@@ -6,8 +15,14 @@ from pathlib import Path
 import pytest
 from fastapi import FastAPI
 from httpx import ASGITransport, AsyncClient
-from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
-from sqlalchemy.pool import StaticPool
+from sqlalchemy import text
+from sqlalchemy.ext.asyncio import (
+    AsyncEngine,
+    AsyncSession,
+    async_sessionmaker,
+    create_async_engine,
+)
+from sqlalchemy.pool import NullPool, StaticPool
 
 from app.adapters.football_data import FootballDataAdapter
 from app.core import cache
@@ -18,6 +33,35 @@ from app.main import create_app
 from app.services.sync_service import run_sync
 
 FIXTURE_TODAY = "2026-10-26"
+TEST_DATABASE_URL = os.environ.get("TEST_DATABASE_URL", "")
+IS_POSTGRES = TEST_DATABASE_URL.startswith("postgresql")
+WORK_SCHEMA = "work"
+SEEDED_SCHEMA = "seeded"
+# Deliberately not UTC: proves timestamptz handling does not depend on the session zone.
+PG_SESSION_TIME_ZONE = "JST-9"  # POSIX form: valid even on builds without a tz database
+
+requires_postgres = pytest.mark.skipif(not IS_POSTGRES, reason="needs TEST_DATABASE_URL=postgresql")
+
+
+def _pg_engine(schema: str) -> AsyncEngine:
+    return create_async_engine(
+        TEST_DATABASE_URL,
+        poolclass=NullPool,
+        connect_args={"server_settings": {"search_path": schema, "timezone": PG_SESSION_TIME_ZONE}},
+    )
+
+
+async def _recreate_schema(schema: str) -> None:
+    engine = create_async_engine(TEST_DATABASE_URL, poolclass=NullPool)
+    async with engine.begin() as conn:
+        await conn.execute(text(f"DROP SCHEMA IF EXISTS {schema} CASCADE"))
+        await conn.execute(text(f"CREATE SCHEMA {schema}"))
+    await engine.dispose()
+
+
+async def _create_tables(engine: AsyncEngine) -> None:
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
 
 @pytest.fixture
@@ -42,11 +86,15 @@ def _isolate(settings: Settings, monkeypatch: pytest.MonkeyPatch) -> None:
 
 @pytest.fixture
 async def maker() -> AsyncIterator[async_sessionmaker[AsyncSession]]:
-    engine = create_async_engine(
-        "sqlite+aiosqlite://", poolclass=StaticPool, connect_args={"check_same_thread": False}
-    )
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+    """An empty database with the schema created; fresh for every test."""
+    if IS_POSTGRES:
+        await _recreate_schema(WORK_SCHEMA)
+        engine = _pg_engine(WORK_SCHEMA)
+    else:
+        engine = create_async_engine(
+            "sqlite+aiosqlite://", poolclass=StaticPool, connect_args={"check_same_thread": False}
+        )
+    await _create_tables(engine)
     yield async_sessionmaker(engine, expire_on_commit=False)
     await engine.dispose()
 
@@ -57,34 +105,38 @@ async def session(maker: async_sessionmaker[AsyncSession]) -> AsyncIterator[Asyn
         yield s
 
 
-@pytest.fixture(scope="session")
-def seeded_template(tmp_path_factory: pytest.TempPathFactory) -> Path:
-    """A SQLite file seeded once per test session; each test gets its own copy."""
-    path = tmp_path_factory.mktemp("seed") / "template.db"
+async def _seed(engine: AsyncEngine) -> None:
     settings = Settings(use_fixtures=True, fixture_today=FIXTURE_TODAY, redis_url="")
+    await _create_tables(engine)
+    maker = async_sessionmaker(engine, expire_on_commit=False)
+    await run_sync(maker, FootballDataAdapter(settings), ("PL", "CL"))
+    await engine.dispose()
 
-    async def build() -> None:
-        engine = create_async_engine(f"sqlite+aiosqlite:///{path}")
-        async with engine.begin() as conn:
-            await conn.run_sync(Base.metadata.create_all)
-        await run_sync(
-            async_sessionmaker(engine, expire_on_commit=False),
-            FootballDataAdapter(settings),
-            ("PL", "CL"),
-        )
-        await engine.dispose()
 
-    asyncio.run(build())
+@pytest.fixture(scope="session")
+def seeded_template(tmp_path_factory: pytest.TempPathFactory) -> Path | None:
+    """Seed once per session: a SQLite file (copied per test) or the PostgreSQL "seeded" schema."""
+    if IS_POSTGRES:
+        asyncio.run(_recreate_schema(SEEDED_SCHEMA))
+        asyncio.run(_seed(_pg_engine(SEEDED_SCHEMA)))
+        return None
+    path = tmp_path_factory.mktemp("seed") / "template.db"
+    asyncio.run(_seed(create_async_engine(f"sqlite+aiosqlite:///{path}")))
     return path
 
 
 @pytest.fixture
 async def seeded(
-    seeded_template: Path, tmp_path: Path
+    seeded_template: Path | None, tmp_path: Path
 ) -> AsyncIterator[async_sessionmaker[AsyncSession]]:
-    copy = tmp_path / "test.db"
-    shutil.copy(seeded_template, copy)
-    engine = create_async_engine(f"sqlite+aiosqlite:///{copy}")
+    """A database holding the football fixtures. Treat as read-only on PostgreSQL."""
+    if IS_POSTGRES:
+        engine = _pg_engine(SEEDED_SCHEMA)
+    else:
+        assert seeded_template is not None
+        copy = tmp_path / "test.db"
+        shutil.copy(seeded_template, copy)
+        engine = create_async_engine(f"sqlite+aiosqlite:///{copy}")
     yield async_sessionmaker(engine, expire_on_commit=False)
     await engine.dispose()
 

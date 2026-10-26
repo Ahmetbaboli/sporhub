@@ -23,7 +23,8 @@ class UTCDateTime(TypeDecorator[datetime]):
         if value is None:
             return None
         if value.tzinfo is None:
-            return value.replace(tzinfo=UTC)
+            # Never guess: a naive value silently becomes "server local time" in timestamptz.
+            raise ValueError("naive datetime rejected; pass a timezone-aware datetime")
         return value.astimezone(UTC)
 
     def process_result_value(self, value: datetime | None, dialect: object) -> datetime | None:

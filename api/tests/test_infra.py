@@ -1,8 +1,9 @@
 import json
 import logging
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta, timezone
 from pathlib import Path
 
+import pytest
 from alembic.config import Config
 from sqlalchemy import create_engine, inspect
 
@@ -89,5 +90,8 @@ def test_utc_datetime_type_normalizes() -> None:
 
     t = UTCDateTime()
     naive = datetime(2026, 1, 1, 12)
-    assert t.process_bind_param(naive, None).tzinfo == UTC
+    with pytest.raises(ValueError, match="naive"):
+        t.process_bind_param(naive, None)
+    istanbul = datetime(2026, 1, 1, 15, tzinfo=timezone(timedelta(hours=3)))
+    assert t.process_bind_param(istanbul, None) == datetime(2026, 1, 1, 12, tzinfo=UTC)
     assert t.process_result_value(naive, None).tzinfo == UTC

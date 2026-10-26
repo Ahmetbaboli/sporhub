@@ -253,6 +253,7 @@ async def run_sync(
         await session.commit()
         run_id = run.id
         sport_id = await ensure_sport(session, adapter.sport_slug, adapter.sport_name)
+        await session.commit()  # a later per-competition rollback must not undo the sport row
         ctx = SyncContext(session=session, adapter=adapter, sport_id=sport_id)
         errors: list[str] = []
         try:
