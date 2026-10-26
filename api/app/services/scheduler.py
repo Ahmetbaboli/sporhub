@@ -12,6 +12,11 @@ logger = logging.getLogger(__name__)
 
 async def sync_job(name: str, settings: Settings) -> None:
     adapter = create_adapter(name, settings)
+    if adapter.fell_back_to_fixtures:
+        # Missing API key in a real deployment: never overwrite real data with sample data.
+        logger.warning("scheduled sync skipped: API key missing", extra={"adapter": name})
+        await adapter.aclose()
+        return
     try:
         await run_sync(get_sessionmaker(), adapter)
     except Exception:

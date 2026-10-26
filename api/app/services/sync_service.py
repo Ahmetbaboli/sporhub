@@ -159,13 +159,29 @@ async def _upsert_teams(ctx: SyncContext, teams: list[TeamDTO]) -> None:
             ctx.upserted += 1
 
 
+async def _player_id(ctx: SyncContext, external_id: str | None) -> int | None:
+    """Resolve a driver/player referenced by a result or standing (None if unknown)."""
+    if not external_id:
+        return None
+    if external_id in ctx.player_ids:
+        return ctx.player_ids[external_id]
+    existing = await ctx.session.scalar(
+        select(Player.id).where(
+            Player.source == ctx.adapter.source, Player.external_id == external_id
+        )
+    )
+    if existing is not None:
+        ctx.player_ids[external_id] = existing
+    return existing
+
+
 async def _participants(ctx: SyncContext, dto: EventDTO) -> list[EventParticipant]:
     rows = []
     for p in dto.participants:
         rows.append(
             EventParticipant(
                 team_id=await _team_id(ctx, p.team) if p.team else None,
-                player_id=ctx.player_ids.get(p.player_external_id or ""),
+                player_id=await _player_id(ctx, p.player_external_id),
                 side=p.side,
                 score=p.score,
                 position=p.position,
@@ -215,7 +231,7 @@ async def _replace_standings(
             Standing(
                 season_id=season_id,
                 team_id=await _team_id(ctx, dto.team) if dto.team else None,
-                player_id=ctx.player_ids.get(dto.player_external_id or ""),
+                player_id=await _player_id(ctx, dto.player_external_id),
                 position=dto.position,
                 played=dto.played,
                 won=dto.won,

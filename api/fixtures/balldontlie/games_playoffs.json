@@ -1,0 +1,11 @@
+{
+ "_fixture": {
+  "reference_date": "2026-10-26",
+  "note": "Synthetic sample data in balldontlie NBA v1 format."
+ },
+ "data": [],
+ "meta": {
+  "per_page": 100,
+  "next_cursor": null
+ }
+}

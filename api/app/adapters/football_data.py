@@ -4,15 +4,11 @@ Docs: https://docs.football-data.org/general/v4/ — auth via `X-Auth-Token`,
 free tier allows 10 requests/minute.
 """
 
-import json
-import logging
 from datetime import UTC, date, datetime, timedelta
-from pathlib import Path
 from typing import Any
 
 import httpx
 
-from app.adapters.base import BaseAdapter
 from app.adapters.dto import (
     CompetitionDTO,
     EventDTO,
@@ -23,10 +19,8 @@ from app.adapters.dto import (
     TeamDTO,
     TeamRef,
 )
-from app.adapters.http import RateLimitedClient
+from app.adapters.http_fixture import HttpFixtureAdapter
 from app.core.config import Settings
-
-logger = logging.getLogger(__name__)
 
 BASE_URL = "https://api.football-data.org/v4"
 # Free tier: 10 requests per minute -> one request every 6 s, plus a safety margin.
@@ -152,53 +146,33 @@ def normalize_standings(raw: dict[str, Any]) -> list[StandingDTO]:
     return []
 
 
-class FootballDataAdapter(BaseAdapter):
+class FootballDataAdapter(HttpFixtureAdapter):
     sport_slug = "football"
     sport_name = "Futbol"
     source = "football-data"
     default_competitions = ("PL", "PD", "SA", "BL1", "CL")
+    fixtures_subdir = "football_data"
+    base_url = BASE_URL
 
     def __init__(self, settings: Settings, client: httpx.AsyncClient | None = None) -> None:
-        self._fixtures_dir: Path = settings.fixtures_dir / "football_data"
-        self._today = date.fromisoformat(settings.fixture_today) if settings.fixture_today else None
-        self.use_fixtures = settings.use_fixtures or not settings.football_data_api_key
-        if self.use_fixtures and not settings.use_fixtures:
-            logger.warning("FOOTBALL_DATA_API_KEY missing; falling back to fixtures")
-        self._http: RateLimitedClient | None = None
-        if not self.use_fixtures:
-            self._http = RateLimitedClient(
-                BASE_URL,
-                headers={"X-Auth-Token": settings.football_data_api_key},
-                min_interval=MIN_REQUEST_INTERVAL_SECONDS,
-                client=client,
-            )
+        super().__init__(
+            settings,
+            api_key=settings.football_data_api_key,
+            headers={"X-Auth-Token": settings.football_data_api_key},
+            min_interval=MIN_REQUEST_INTERVAL_SECONDS,
+            client=client,
+        )
 
-    async def _get(self, path: str, fixture: str, params: dict[str, Any] | None = None) -> Any:
-        if self._http is None:
-            return self._load_fixture(fixture)
-        return await self._http.get_json(path, params)
-
-    def _load_fixture(self, name: str) -> dict[str, Any]:
-        data = json.loads((self._fixtures_dir / f"{name}.json").read_text(encoding="utf-8"))
-        return self._shift_dates(data)
-
-    def _shift_dates(self, data: dict[str, Any]) -> dict[str, Any]:
-        """Move fixture match dates so the sample 'today' lines up with the real today."""
-        reference = (data.get("_fixture") or {}).get("reference_date")
-        if not reference or "matches" not in data:
-            return data
-        today = self._today or datetime.now(UTC).date()
-        shift = timedelta(days=(today - date.fromisoformat(reference)).days)
-        for match in data["matches"]:
-            match["utcDate"] = (_parse_dt(match["utcDate"]) + shift).isoformat()
-        return data
+    def shift_fixture_dates(self, data: dict[str, Any], delta: timedelta) -> None:
+        for match in data.get("matches", []):
+            match["utcDate"] = (_parse_dt(match["utcDate"]) + delta).isoformat()
 
     async def fetch_competitions(self) -> list[CompetitionDTO]:
-        data = await self._get("/competitions", "competitions")
+        data = await self._request("/competitions", "competitions")
         return [normalize_competition(c) for c in data["competitions"]]
 
     async def fetch_events(self, competition_ext_id: str, season: str) -> list[EventDTO]:
-        data = await self._get(
+        data = await self._request(
             f"/competitions/{competition_ext_id}/matches",
             f"{competition_ext_id}_matches",
             {"season": season},
@@ -206,7 +180,7 @@ class FootballDataAdapter(BaseAdapter):
         return [normalize_match(m) for m in data["matches"]]
 
     async def fetch_standings(self, competition_ext_id: str, season: str) -> list[StandingDTO]:
-        data = await self._get(
+        data = await self._request(
             f"/competitions/{competition_ext_id}/standings",
             f"{competition_ext_id}_standings",
             {"season": season},
@@ -214,13 +188,9 @@ class FootballDataAdapter(BaseAdapter):
         return normalize_standings(data)
 
     async def fetch_teams(self, competition_ext_id: str, season: str) -> list[TeamDTO]:
-        data = await self._get(
+        data = await self._request(
             f"/competitions/{competition_ext_id}/teams",
             f"{competition_ext_id}_teams",
             {"season": season},
         )
         return [normalize_team(t) for t in data["teams"]]
-
-    async def aclose(self) -> None:
-        if self._http:
-            await self._http.aclose()
