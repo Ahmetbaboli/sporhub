@@ -128,3 +128,34 @@ async def test_http_error_is_raised_after_retries() -> None:
     with pytest.raises(Exception, match="503"):
         await client.get_json("/x")
     await client.aclose()
+
+
+@respx.mock
+async def test_live_mode_never_shifts_dates(settings: Settings) -> None:
+    """Date shifting is a fixture-only feature; real API timestamps must pass through untouched."""
+    live = settings.model_copy(
+        update={"use_fixtures": False, "football_data_api_key": "k", "fixture_today": "2030-01-01"}
+    )
+    raw = {
+        "_fixture": {"reference_date": "2026-10-26"},  # even if a payload looked like a fixture
+        "matches": [
+            {
+                "id": 7,
+                "utcDate": "2026-03-01T15:00:00Z",
+                "status": "FINISHED",
+                "matchday": 1,
+                "homeTeam": {"id": 1, "name": "A"},
+                "awayTeam": {"id": 2, "name": "B"},
+                "score": {"fullTime": {"home": 1, "away": 0}},
+            }
+        ],
+    }
+    respx.get(f"{BASE_URL}/competitions/PL/matches").mock(
+        return_value=httpx.Response(200, json=raw)
+    )
+    adapter = FootballDataAdapter(live)
+    assert not adapter.use_fixtures
+    adapter._http = RateLimitedClient(BASE_URL, min_interval=0, backoff_min=0.01)
+    (event,) = await adapter.fetch_events("PL", "2026")
+    assert event.start_time.isoformat() == "2026-03-01T15:00:00+00:00"
+    await adapter.aclose()
