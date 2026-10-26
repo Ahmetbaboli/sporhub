@@ -20,17 +20,17 @@
 - [x] pytest testleri
 
 ## Aşama 2 — Futbol MVP
-- [ ] Next.js iskeleti, tema, layout
-- [ ] Tipli API istemcisi
-- [ ] Ana sayfa (bugünün maçları)
-- [ ] Lig sayfası (Fikstür, Sonuçlar, Puan Tablosu)
-- [ ] Takım ve oyuncu sayfaları
-- [ ] Arama (API + sayfa)
-- [ ] Skeleton, boş ve hata durumları
-- [ ] GitHub Actions CI
-- [ ] Deploy hazırlığı (render.yaml, docs/DEPLOY.md)
-- [ ] README ilk sürüm
-- [ ] v0.1.0 etiketi + CHANGELOG.md
+- [x] Next.js iskeleti, tema, layout
+- [x] Tipli API istemcisi
+- [x] Ana sayfa (bugünün maçları)
+- [x] Lig sayfası (Fikstür, Sonuçlar, Puan Tablosu)
+- [x] Takım ve oyuncu sayfaları
+- [x] Arama (API + sayfa)
+- [x] Skeleton, boş ve hata durumları
+- [x] GitHub Actions CI
+- [x] Deploy hazırlığı (render.yaml, docs/DEPLOY.md)
+- [x] README ilk sürüm
+- [x] v0.1.0 etiketi + CHANGELOG.md
 
 ## Sonraki oturumlar (şimdi yapma)
 ### Aşama 3 — Modülerliği kanıtla
@@ -50,5 +50,9 @@
 - [ ] README ekran görüntüleri/GIF, repo konu etiketleri, v1.0.0
 
 ## Engeller
-(henüz yok)
+
 - Docker bu makinede yok: `docker compose up` yazıldı ama doğrulanamadı; API yerelde SQLite + uvicorn ile doğrulandı. Docker'lı makinede ilk iş: `docker compose up --build`.
+- Docker doğrulanamadı (kurulu değil): `docker-compose.yml`, `api/Dockerfile`, `web/Dockerfile` yazıldı; yerelde API (SQLite + uvicorn) ve web (`next build` + `next start`) çalıştırılıp doğrulandı. CI'daki Postgres adımı da ilk push'ta görülecek.
+- `localhost:3000` bu makinede başka bir uygulama tarafından kullanılıyordu; web duman testi 3100'de yapıldı.
+- Süreç sonlandırma izni reddedildi: duman testi için başlattığım `uvicorn` (8000) ve `next start` (3100) süreçleri açık kalmış olabilir; elle kapatın.
+- Hata/404 sayfaları `loading.tsx` streaming'i yüzünden HTTP 200 dönüyor (içerik doğru, durum kodu değil). Aşama 3'te `generateMetadata`/ön kontrolle 404 durum koduna çevrilebilir.
