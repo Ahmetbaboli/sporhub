@@ -22,7 +22,7 @@ def adapter(settings: Settings) -> FootballDataAdapter:
 
 async def test_competitions_normalized(adapter: FootballDataAdapter) -> None:
     comps = {c.external_id: c for c in await adapter.fetch_competitions()}
-    assert set(comps) == {"PL", "PD", "SA", "BL1", "CL"}
+    assert set(comps) == {"PL", "PD", "SA", "BL1", "CL"}  # TIER_ONE only
     pl = comps["PL"]
     assert pl.name == "Premier League"
     assert pl.season_key == "2026"
@@ -196,3 +196,8 @@ async def test_scorers_forbidden_on_plan_is_not_fatal(settings: Settings) -> Non
     adapter._http = RateLimitedClient(BASE_URL, min_interval=0, backoff_min=0.01)
     assert await adapter.fetch_player_stats("PL", "2026") == []
     await adapter.aclose()
+
+
+async def test_only_free_tier_competitions_are_listed(adapter: FootballDataAdapter) -> None:
+    codes = {c.external_id for c in await adapter.fetch_competitions()}
+    assert "TSL" not in codes  # Süper Lig is TIER_THREE on football-data.org

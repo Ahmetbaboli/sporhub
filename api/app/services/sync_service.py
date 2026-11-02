@@ -33,6 +33,7 @@ from app.models import (
     Team,
 )
 from app.repositories.upsert import upsert_row
+from app.services.identity import link_team, linked_team, match_team
 
 logger = logging.getLogger(__name__)
 
@@ -104,7 +105,29 @@ async def _upsert_season(ctx: SyncContext, competition_id: int, dto: Competition
     )
 
 
+async def _resolve_other_source(ctx: SyncContext, ref: TeamRef, country: str | None) -> int | None:
+    """The id of this club when another provider already created it (see services/identity)."""
+    source = ctx.adapter.record_source
+    own = await ctx.session.scalar(
+        select(Team.id).where(Team.source == source, Team.external_id == ref.external_id)
+    )
+    if own is not None:
+        return None  # our own row exists: the normal upsert keeps it current
+    linked = await linked_team(ctx.session, source, ref.external_id)
+    if linked is not None:
+        return linked
+    matched = await match_team(ctx.session, ctx.sport_id, source, ref.name, country)
+    if matched is not None:
+        await link_team(ctx.session, matched, source, ref.external_id)
+        logger.info("team linked across sources", extra={"source": source, "team_id": matched})
+    return matched
+
+
 async def _upsert_team(ctx: SyncContext, ref: TeamRef, country: str | None = None) -> int:
+    other = await _resolve_other_source(ctx, ref, country)
+    if other is not None:
+        ctx.team_ids[ref.external_id] = other
+        return other
     team_id = await upsert_row(
         ctx.session,
         Team,
@@ -133,6 +156,8 @@ async def _team_id(ctx: SyncContext, ref: TeamRef) -> int:
             Team.source == ctx.adapter.record_source, Team.external_id == ref.external_id
         )
     )
+    if existing is None:
+        existing = await linked_team(ctx.session, ctx.adapter.record_source, ref.external_id)
     if existing is not None:
         ctx.team_ids[ref.external_id] = existing
         return existing

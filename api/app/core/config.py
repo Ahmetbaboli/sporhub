@@ -22,7 +22,7 @@ class Settings(BaseSettings):
 
     football_data_api_key: str = Field(default="", repr=False)
     balldontlie_api_key: str = Field(default="", repr=False)
-    api_football_key: str = Field(default="", repr=False)
+    thesportsdb_api_key: str = Field(default="", repr=False)
     # live = real provider data only; demo = bundled fixtures + sample news, clearly labelled.
     data_mode: Literal["live", "demo"] = "live"
     fixtures_dir: Path = DEFAULT_FIXTURES_DIR

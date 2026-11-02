@@ -6,6 +6,7 @@ from app.adapters.balldontlie import BallDontLieAdapter
 from app.adapters.base import BaseAdapter
 from app.adapters.football_data import FootballDataAdapter
 from app.adapters.jolpica import JolpicaAdapter
+from app.adapters.thesportsdb import TheSportsDbAdapter
 from app.core.config import Settings
 
 AdapterFactory = Callable[[Settings], BaseAdapter]
@@ -14,6 +15,7 @@ ADAPTERS: dict[str, AdapterFactory] = {
     "football-data": FootballDataAdapter,
     "balldontlie": BallDontLieAdapter,
     "jolpica": JolpicaAdapter,
+    "thesportsdb": TheSportsDbAdapter,
 }
 
 

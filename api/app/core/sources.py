@@ -43,15 +43,15 @@ SOURCES: tuple[SourceSpec, ...] = (
         probe_headers=lambda s: {"X-Auth-Token": s.football_data_api_key},
     ),
     SourceSpec(
-        name="api-football",
+        name="thesportsdb",
         kind="sports",
-        description="API-Football / API-Sports v3 (Süper Lig)",
+        description="TheSportsDB v1 (Süper Lig, TFF 1. Lig; ücretli anahtar)",
         requires_key=True,
         sport="football",
-        is_configured=lambda s: bool(s.api_football_key),
-        # /status reports the account and does not count towards the daily quota.
-        probe_url="https://v3.football.api-sports.io/status",
-        probe_headers=lambda s: {"x-apisports-key": s.api_football_key},
+        # The public development key "123" returns truncated data: not a live configuration.
+        is_configured=lambda s: bool(s.thesportsdb_api_key) and s.thesportsdb_api_key != "123",
+        probe_url="https://www.thesportsdb.com/api/v1/json/{key}/lookupleague.php?id=4339",
+        probe_headers=lambda s: {},
     ),
     SourceSpec(
         name="balldontlie",
@@ -134,4 +134,6 @@ async def probe_source(
             await _probe(client, f"news:{feed.get('name', '?')}", str(feed.get("url", "")), {})
             for feed in settings.news_feeds
         ]
-    return [await _probe(client, spec.name, spec.probe_url, spec.probe_headers(settings))]
+    # Path-keyed APIs: the key is substituted here and never echoed back in results.
+    url = spec.probe_url.replace("{key}", settings.thesportsdb_api_key)
+    return [await _probe(client, spec.name, url, spec.probe_headers(settings))]

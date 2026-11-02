@@ -1,0 +1,134 @@
+{
+ "_fixture": {
+  "reference_date": "2026-11-02",
+  "note": "Real TheSportsDB v1 responses captured 2026-11-02 with the public development key (truncated free-tier results: 5 table rows, 15 season events). Teams are derived from the table and events because the free key's team list endpoint returns another league."
+ },
+ "teams": [
+  {
+   "idTeam": "133804",
+   "strTeam": "Galatasaray",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/io7jk21767941298.png/tiny"
+  },
+  {
+   "idTeam": "138959",
+   "strTeam": "Amed",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/4fqdgh1783788571.png/tiny"
+  },
+  {
+   "idTeam": "133796",
+   "strTeam": "Trabzonspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/96s34o1776827629.png/tiny"
+  },
+  {
+   "idTeam": "133794",
+   "strTeam": "Beşiktaş",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/svo05k1776827439.png/tiny"
+  },
+  {
+   "idTeam": "133834",
+   "strTeam": "Kasımpaşa",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/uryxtp1448203236.png/tiny"
+  },
+  {
+   "idTeam": "138951",
+   "strTeam": "Çorum",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/ivoq4l1679510278.png"
+  },
+  {
+   "idTeam": "133835",
+   "strTeam": "Konyaspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/rxwptr1448203413.png"
+  },
+  {
+   "idTeam": "133885",
+   "strTeam": "Rizespor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/t7senr1657195719.png"
+  },
+  {
+   "idTeam": "133798",
+   "strTeam": "Gençlerbirliği",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/5hnd1c1639569938.png"
+  },
+  {
+   "idTeam": "133807",
+   "strTeam": "Fenerbahçe",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/twxxvs1448199691.png"
+  },
+  {
+   "idTeam": "138092",
+   "strTeam": "Gaziantep",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/54j6ik1579458093.png"
+  },
+  {
+   "idTeam": "135676",
+   "strTeam": "Alanyaspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://www.thesportsdb.com/images/media/team/badge/8r4d531792772765.png"
+  },
+  {
+   "idTeam": "138977",
+   "strTeam": "Eyüpspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/7fb0ub1626445710.png"
+  },
+  {
+   "idTeam": "134589",
+   "strTeam": "İstanbul Başakşehir",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/895mqt1685993958.png"
+  },
+  {
+   "idTeam": "133870",
+   "strTeam": "Kocaelispor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://www.thesportsdb.com/images/media/team/badge/oqs2h11792772341.png"
+  },
+  {
+   "idTeam": "134272",
+   "strTeam": "Erzurumspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/7sepx01783701613.png"
+  },
+  {
+   "idTeam": "133797",
+   "strTeam": "Samsunspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/vz05y71679456608.png"
+  },
+  {
+   "idTeam": "135891",
+   "strTeam": "Göztepe",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/9jwk7o1513952059.png"
+  }
+ ]
+}

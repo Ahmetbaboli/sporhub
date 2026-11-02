@@ -30,6 +30,8 @@ BASE_URL = "https://api.football-data.org/v4"
 # Free tier: 10 requests per minute -> one request every 6 s, plus a safety margin.
 MIN_REQUEST_INTERVAL_SECONDS = 6.5
 TOTAL_STANDING_TYPE = "TOTAL"
+# Competitions on the free tier carry plan TIER_ONE (verified 2026-11-02, docs/DATA-SOURCES.md).
+FREE_PLAN = "TIER_ONE"
 # Scorers list length requested per competition (one request, the API caps it).
 SCORERS_LIMIT = 50
 UNAVAILABLE = frozenset({401, 403, 404})
@@ -179,7 +181,10 @@ class FootballDataAdapter(HttpFixtureAdapter):
     sport_slug = "football"
     sport_name = "Futbol"
     source = "football-data"
-    default_competitions = ("PL", "PD", "SA", "BL1", "CL")
+    # All free-tier leagues in season; WC/EC are tournaments outside their season now.
+    default_competitions = ("PL", "PD", "SA", "BL1", "FL1", "CL", "DED", "PPL", "ELC", "BSA")
+    # Free plan: "Scores delayed" (https://www.football-data.org/pricing).
+    scores_delayed = True
     fixtures_subdir = "football_data"
     base_url = BASE_URL
 
@@ -198,7 +203,10 @@ class FootballDataAdapter(HttpFixtureAdapter):
 
     async def fetch_competitions(self) -> list[CompetitionDTO]:
         data = await self._request("/competitions", "competitions")
-        return [normalize_competition(c) for c in data["competitions"]]
+        # Only competitions our (free) plan can actually read; others would 403 later.
+        return [
+            normalize_competition(c) for c in data["competitions"] if c.get("plan") == FREE_PLAN
+        ]
 
     async def fetch_events(self, competition_ext_id: str, season: str) -> list[EventDTO]:
         data = await self._request(

@@ -16,6 +16,7 @@ from app.models import (
     Competition,
     Event,
     EventParticipant,
+    ExternalRef,
     Favorite,
     NewsArticle,
     NewsTag,
@@ -43,6 +44,16 @@ async def purge_demo(session: AsyncSession) -> dict[str, int]:
     demo_news = select(NewsArticle.id).where(NewsArticle.source.like(DEMO_LIKE))
 
     steps = [
+        (
+            "external_refs",
+            delete(ExternalRef).where(
+                or_(
+                    ExternalRef.source.like(DEMO_LIKE),
+                    (ExternalRef.kind == "team") & ExternalRef.entity_id.in_(demo_teams),
+                    (ExternalRef.kind == "player") & ExternalRef.entity_id.in_(demo_players),
+                )
+            ),
+        ),
         (
             "news_tags",
             delete(NewsTag).where(

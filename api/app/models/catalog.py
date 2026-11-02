@@ -63,3 +63,20 @@ class Player(Base):
 
     sport: Mapped[Sport] = relationship()
     team: Mapped[Team | None] = relationship()
+
+
+class ExternalRef(Base):
+    """Another provider's id for an existing team/player (cross-source identity).
+
+    The entity keeps the (source, external_id) of the provider that created it; every other
+    provider that refers to the same club/person gets a row here instead of a duplicate entity.
+    """
+
+    __tablename__ = "external_refs"
+    __table_args__ = (UniqueConstraint("kind", "source", "external_id"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    kind: Mapped[str] = mapped_column(String(16))  # "team" | "player"
+    entity_id: Mapped[int] = mapped_column(index=True)
+    source: Mapped[str] = mapped_column(String(64))
+    external_id: Mapped[str] = mapped_column(String(64))

@@ -18,6 +18,8 @@ class BaseAdapter(ABC):
     use_fixtures: bool = False
     # False in live mode when a required API key is missing: nothing is fetched or written.
     configured: bool = True
+    # True when the provider's plan delivers scores late (UI must not present them as live).
+    scores_delayed: bool = False
     # Value written to the database `source` columns ("demo:<source>" in demo mode).
     record_source: str = ""
 

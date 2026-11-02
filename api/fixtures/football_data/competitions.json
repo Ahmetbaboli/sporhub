@@ -17,7 +17,8 @@
    "currentSeason": {
     "startDate": "2026-08-15",
     "endDate": "2027-05-30"
-   }
+   },
+   "plan": "TIER_ONE"
   },
   {
    "id": 2014,
@@ -31,7 +32,8 @@
    "currentSeason": {
     "startDate": "2026-08-15",
     "endDate": "2027-05-30"
-   }
+   },
+   "plan": "TIER_ONE"
   },
   {
    "id": 2019,
@@ -45,7 +47,8 @@
    "currentSeason": {
     "startDate": "2026-08-15",
     "endDate": "2027-05-30"
-   }
+   },
+   "plan": "TIER_ONE"
   },
   {
    "id": 2002,
@@ -59,7 +62,8 @@
    "currentSeason": {
     "startDate": "2026-08-15",
     "endDate": "2027-05-30"
-   }
+   },
+   "plan": "TIER_ONE"
   },
   {
    "id": 2001,
@@ -73,6 +77,23 @@
    "currentSeason": {
     "startDate": "2026-08-15",
     "endDate": "2027-05-30"
+   },
+   "plan": "TIER_ONE"
+  },
+  {
+   "id": 2034,
+   "name": "Süper Lig",
+   "code": "TSL",
+   "type": "LEAGUE",
+   "plan": "TIER_THREE",
+   "area": {
+    "name": "Turkey"
+   },
+   "emblem": null,
+   "currentSeason": {
+    "id": 9999,
+    "startDate": "2026-08-08",
+    "endDate": "2027-05-23"
    }
   }
  ]

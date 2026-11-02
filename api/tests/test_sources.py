@@ -13,7 +13,7 @@ def test_status_reports_booleans_only(settings: Settings) -> None:
     configured = settings.model_copy(update={"football_data_api_key": SECRET})
     rows = {s.name: s for s in source_status(configured)}
     assert rows["football-data"].configured is True
-    assert rows["api-football"].configured is False
+    assert rows["thesportsdb"].configured is False
     assert rows["jolpica"].configured is True and rows["jolpica"].requires_key is False
     assert SECRET not in repr(source_status(configured))
     assert {s.name for s in SOURCES} >= {"football-data", "balldontlie", "jolpica", "news"}

@@ -1,0 +1,148 @@
+{
+ "_fixture": {
+  "reference_date": "2026-11-02",
+  "note": "Real TheSportsDB v1 responses captured 2026-11-02 with the public development key (truncated free-tier results: 5 table rows, 15 season events). Teams are derived from the table and events because the free key's team list endpoint returns another league."
+ },
+ "teams": [
+  {
+   "idTeam": "133801",
+   "strTeam": "Bursaspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/uyptpr1448199354.png/tiny"
+  },
+  {
+   "idTeam": "133802",
+   "strTeam": "Kayserispor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/bvskgi1601668985.png/tiny"
+  },
+  {
+   "idTeam": "147638",
+   "strTeam": "Iğdır",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/cj9ztt1690541191.png/tiny"
+  },
+  {
+   "idTeam": "149636",
+   "strTeam": "Mardin 1969",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/rhlqp21731084514.png/tiny"
+  },
+  {
+   "idTeam": "146459",
+   "strTeam": "Batman Petrolspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/pvcs2h1726287143.png/tiny"
+  },
+  {
+   "idTeam": "138939",
+   "strTeam": "Boluspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/5uv4ni1657195692.png"
+  },
+  {
+   "idTeam": "138955",
+   "strTeam": "Manisa",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/6vmq2x1626445480.png"
+  },
+  {
+   "idTeam": "133806",
+   "strTeam": "Sivasspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/pnhe5i1681161798.png"
+  },
+  {
+   "idTeam": "146461",
+   "strTeam": "Esenler Erokspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/107ke31657455566.png"
+  },
+  {
+   "idTeam": "133799",
+   "strTeam": "Antalyaspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/vqoral1601669436.png"
+  },
+  {
+   "idTeam": "138941",
+   "strTeam": "Ankara Keçiörengücü",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/u0saif1679456415.png"
+  },
+  {
+   "idTeam": "138935",
+   "strTeam": "Ümraniyespor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/wpi9qz1580847576.png"
+  },
+  {
+   "idTeam": "138970",
+   "strTeam": "Bandırmaspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/e4ynam1580904361.png"
+  },
+  {
+   "idTeam": "134238",
+   "strTeam": "İstanbulspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/d46tgg1714571615.png"
+  },
+  {
+   "idTeam": "138974",
+   "strTeam": "Bodrum",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/2njed61657195683.png"
+  },
+  {
+   "idTeam": "138958",
+   "strTeam": "Sarıyer",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://www.thesportsdb.com/images/media/team/badge/96qqkr1792771624.png"
+  },
+  {
+   "idTeam": "149661",
+   "strTeam": "Muğlaspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/n7bx7v1731093031.png"
+  },
+  {
+   "idTeam": "138969",
+   "strTeam": "Vanspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/imwcrs1679510336.png"
+  },
+  {
+   "idTeam": "138983",
+   "strTeam": "Fatih Karagümrük",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/bfb84y1580847945.png"
+  },
+  {
+   "idTeam": "138957",
+   "strTeam": "Pendikspor",
+   "strTeamShort": null,
+   "strCountry": "Turkey",
+   "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/3j0z7m1580851323.png"
+  }
+ ]
+}
