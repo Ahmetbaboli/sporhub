@@ -112,9 +112,21 @@ class SearchResults(BaseModel):
     players: list[PlayerOut]
 
 
+class HealthCheck(BaseModel):
+    ok: bool
+    detail: str | None = None
+    ms: float | None = None
+
+
 class HealthOut(BaseModel):
-    status: str
+    status: str  # ok | degraded | down
     version: str
+    data_mode: str | None = None
+    database: HealthCheck | None = None
+    redis: HealthCheck | None = None
+    # source name -> is its data stale (configured sources only)
+    stale_sources: list[str] = []
+    last_sync_at: datetime | None = None
 
 
 class SyncAccepted(BaseModel):

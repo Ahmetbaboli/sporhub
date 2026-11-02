@@ -1,5 +1,5 @@
-# Render Blueprint for the Just Sport API. Database lives on Neon; the web app on Vercel.
-# See docs/DEPLOY.md. Secrets are marked `sync: false` and entered in the Render dashboard.
+# Render Blueprint for the Just Sport API (real data). Database on Neon, web on Vercel.
+# See docs/DEPLOY.md. Secrets are `sync: false` and entered in the Render dashboard.
 services:
   - type: web
     name: justsport-api
@@ -11,24 +11,27 @@ services:
     autoDeployTrigger: commit
     envVars:
       - key: DATABASE_URL
-        sync: false # Neon connection string, rewritten to postgresql+asyncpg://
+        sync: false # Neon DIRECT (non-pooler) URL as copied; the API adapts it for asyncpg
       - key: REDIS_URL
-        sync: false # optional (Upstash/Render Key Value); empty = in-memory cache
-      - key: FOOTBALL_DATA_API_KEY
-        sync: false
-      - key: ADMIN_TOKEN
-        generateValue: true
+        sync: false # optional Upstash rediss:// URL; empty = in-process cache
       - key: DATA_MODE
         value: live
       - key: SEED_ON_START
-        value: "false"
+        value: "false" # only honoured with DATA_MODE=demo
       - key: SCHEDULER_ENABLED
-        value: "true"
-      - key: SYNC_INTERVAL_MINUTES
-        value: "30"
+        value: "true" # an advisory lock keeps it to one instance
+      - key: ADMIN_TOKEN
+        generateValue: true
       - key: CORS_ORIGINS
         sync: false # e.g. https://justsport.vercel.app
+      - key: API_TOKEN_SECRET
+        sync: false # same value as the web app's API_TOKEN_SECRET (>= 32 characters)
+      - key: FOOTBALL_DATA_API_KEY
+        sync: false
+      - key: THESPORTSDB_API_KEY
+        sync: false # premium key only; the public dev key "123" is ignored in live mode
+      - key: BALLDONTLIE_API_KEY
+        sync: false
+      # NEWS_FEEDS is deliberately not set: the built-in, terms-checked feed list is used.
       - key: LOG_LEVEL
         value: info
-      - key: API_TOKEN_SECRET
-        sync: false # same value as the web app's API_TOKEN_SECRET (>= 32 random bytes)

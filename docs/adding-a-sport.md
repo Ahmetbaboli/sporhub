@@ -64,7 +64,7 @@ Kurallar:
 ## 3. Fixture'lar — `api/fixtures/<kaynak>/`
 Fixture'lar **ham API biçiminde** olmalı; böylece normalizasyon fixture modunda da gerçek yolla çalışır. `api/tools/generate_*_fixtures.py` örneklerine bakın:
 - Gerçek takım/sürücü adları, **sentetik sonuçlar**; deterministik (`random.Random(seed)`).
-- Dosyanın en üstüne `"_fixture": {"reference_date": "YYYY-MM-DD"}` koyun. Fixture modunda adapter bu tarih ile "bugün" arasındaki gün farkını **tüm tarihlere** ekler (`shift_fixture_dates`), böylece "bugünün karşılaşmaları" hep doludur. Kaydırma yalnızca `USE_FIXTURES=true` iken çalışır; gerçek API yanıtlarına asla dokunulmaz (her adapter için test var).
+- Dosyanın en üstüne `"_fixture": {"reference_date": "YYYY-MM-DD"}` koyun. Demo modunda adapter bu tarih ile "bugün" arasındaki gün farkını **tüm tarihlere** ekler (`shift_fixture_dates`), böylece "bugünün karşılaşmaları" hep doludur. Kaydırma yalnızca `DATA_MODE=demo` iken çalışır; live modda gerçek API yanıtlarına asla dokunulmaz (her adapter için `tests/test_data_mode.py` testi var). Demo kayıtları `demo:<kaynak>` önekiyle yazılır.
 - Bitmiş, yaklaşan ve (mümkünse) canlı etkinlik bulundurun; sözleşme testleri bitmiş ve yaklaşan etkinlik arar.
 
 ## 4. Registry — `api/app/adapters/registry.py`

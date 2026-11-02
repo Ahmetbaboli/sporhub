@@ -1,8 +1,9 @@
 from functools import lru_cache
 from pathlib import Path
 from typing import Any, Literal
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
-from pydantic import Field
+from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 API_ROOT = Path(__file__).resolve().parents[2]
@@ -65,9 +66,35 @@ class Settings(BaseSettings):
     scheduler_enabled: bool = False
     cache_ttl_seconds: int = 60
 
+    @field_validator("database_url")
+    @classmethod
+    def _asyncpg_url(cls, value: str) -> str:
+        return normalize_database_url(value)
+
     @property
     def cors_origin_list(self) -> list[str]:
         return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
+
+
+# libpq options that asyncpg does not understand (Neon/Render copy-paste URLs carry them).
+_LIBPQ_ONLY = {"channel_binding", "sslmode"}
+
+
+def normalize_database_url(url: str) -> str:
+    """'postgres://…?sslmode=require' (Neon) -> 'postgresql+asyncpg://…?ssl=require'."""
+    parts = urlsplit(url)
+    scheme = parts.scheme
+    if scheme in ("postgres", "postgresql"):
+        scheme = "postgresql+asyncpg"
+    if not scheme.startswith("postgresql"):
+        return url
+    query = dict(parse_qsl(parts.query))
+    sslmode = query.pop("sslmode", None)
+    for key in _LIBPQ_ONLY:
+        query.pop(key, None)
+    if sslmode and sslmode != "disable" and "ssl" not in query:
+        query["ssl"] = "require"
+    return urlunsplit((scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
 
 
 @lru_cache

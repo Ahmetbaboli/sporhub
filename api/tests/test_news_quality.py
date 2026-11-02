@@ -134,7 +134,7 @@ async def test_same_story_from_two_publishers_is_merged(
 
 
 def test_default_feeds_are_real_publishers(settings: Settings) -> None:
-    assert Settings(data_mode="live").news_feeds == DEFAULT_NEWS_FEEDS
+    assert Settings(data_mode="live").news_feeds == DEFAULT_NEWS_FEEDS  # .env-free default
     langs = Counter(f["language"] for f in DEFAULT_NEWS_FEEDS)
     sports = {f["sport"] for f in DEFAULT_NEWS_FEEDS}
     assert langs["tr"] >= 2 and langs["en"] >= 3

@@ -1,48 +1,120 @@
-# Yayına alma rehberi
+# Yayına alma rehberi (gerçek veri, `DATA_MODE=live`)
 
-Hedef: **web → Vercel**, **api → Render**, **veritabanı → Neon**. Bu repo yalnızca yapılandırmayı hazırlar; deploy'u siz yaparsınız.
+Hedef mimari:
+
+| Parça | Nerede |
+| --- | --- |
+| web | Vercel |
+| api | Render (Docker) |
+| veritabanı | Neon PostgreSQL |
+| önbellek | Upstash Redis (isteğe bağlı) |
+
+Bu repo yalnızca yapılandırmayı hazırlar; hesapları siz açarsınız ve deploy'u siz yaparsınız.
+Gizli değerleri yalnızca barındırma panellerinin gizli değişken alanlarına girin. Repoya, loga
+veya ekran görüntüsüne koymayın.
 
 ## 1. Veritabanı (Neon)
-1. <https://neon.tech> üzerinde proje oluşturun, bir veritabanı (örn. `justsport`) açın.
-2. Bağlantı dizesini kopyalayın: `postgresql://USER:PASS@HOST/justsport?sslmode=require`.
-3. API için sürücü önekini ve SSL parametresini değiştirin (asyncpg `sslmode` yerine `ssl` bekler):
-   `postgresql+asyncpg://USER:PASS@HOST/justsport?ssl=require`
-4. Migration'lar API her açıldığında (`entrypoint.sh`) otomatik çalışır; elle gerekmez.
 
-## 2. API (Render)
-1. Repo'yu GitHub'a push'layın.
-2. Render → **New → Blueprint** → repo'yu seçin; `render.yaml` okunur ve `justsport-api` servisi oluşur.
-3. Dashboard'da `sync: false` değişkenlerini doldurun:
-   | Değişken | Değer |
-   | --- | --- |
-   | `DATABASE_URL` | Neon dizesi (yukarıdaki asyncpg biçimi) |
-   | `FOOTBALL_DATA_API_KEY` | football-data.org token'ı (ücretsiz kayıt) |
-   | `CORS_ORIGINS` | Vercel adresiniz, örn. `https://justsport.vercel.app` |
-   | `REDIS_URL` | İsteğe bağlı (Upstash/Render Key Value). Boşsa bellek içi cache kullanılır |
-4. `ADMIN_TOKEN` otomatik üretilir (Render → Environment).
-5. Anahtarsız demo için `USE_FIXTURES=true` ve `SEED_ON_START=true` yapın; gerçek veri için `false` bırakın.
-6. İlk açılışta veri çekmek için:
-   ```bash
-   curl -X POST https://<api>.onrender.com/api/v1/admin/sync/football-data -H "X-Admin-Token: <ADMIN_TOKEN>"
-   ```
-   Zamanlayıcı (`SCHEDULER_ENABLED=true`) sonraki senkronizasyonları 30 dakikada bir yapar. Ücretsiz Render planı boşta uyur; uyanınca zamanlayıcı yeniden başlar.
-7. Sağlık: `https://<api>.onrender.com/health`, dokümantasyon: `/docs`.
+1. https://neon.tech → yeni proje oluşturun; bölge olarak Frankfurt (`aws-eu-central-1`) seçin.
+   Vercel `fra1` ile aynı yerde olur.
+2. **Connection Details** → **Pooled connection kapalı** (doğrudan bağlantı) adresini kopyalayın:
+   `postgresql://USER:PASS@ep-xxx.eu-central-1.aws.neon.tech/neondb?sslmode=require`.
+   - Doğrudan bağlantı gerekli, çünkü zamanlayıcı kilidi PostgreSQL *oturum* düzeyinde bir advisory
+     lock'tur. Neon'un "-pooler" adresi (PgBouncer, transaction modu) oturum kilitlerini taşımaz.
+   - API'nin bağlantı sayısı küçüktür; havuzlayıcıya gerek yoktur.
+3. Adresi **olduğu gibi** `DATABASE_URL` olarak girin. API `postgres://`/`postgresql://` önekini
+   `postgresql+asyncpg://`'ye, `sslmode=require`'ı da `ssl=require`'a kendisi çevirir;
+   `channel_binding` parametresini düşürür.
+4. Migration'lar API her açıldığında (`entrypoint.sh` → `alembic upgrade head`) otomatik çalışır.
+5. Daha önce demo verisi yüklenmiş bir veritabanı kullanıyorsanız:
+   - Migration 0005 eski satırları `demo:` olarak işaretler.
+   - Live API açılışta bunları siler; elle silmek için `python -m app.scripts.purge_demo`.
 
-> football-data.org ücretsiz katmanı dakikada 10 istek verir; ilk tam senkronizasyon 5 lig × 3 istek ≈ 2 dakika sürer. Süper Lig ücretsiz katmanda yoktur.
+## 2. Redis (Upstash, isteğe bağlı)
 
-## 3. Web (Vercel)
-1. Vercel → **Add New → Project** → repo'yu seçin, **Root Directory = `web`**. Framework otomatik "Next.js" algılanır (`vercel.json` gerekmez).
-2. Ortam değişkeni: `NEXT_PUBLIC_API_URL = https://<api>.onrender.com`.
-3. Deploy. Sayfalar istek anında render edilir (`force-dynamic`); API yanıtları Next veri önbelleğinde 60 sn tutulur.
-4. Render'daki `CORS_ORIGINS` değerini Vercel alan adınızla güncelleyin (sunucu tarafı istekler CORS'a takılmaz; tarayıcı tarafı eklenirse gerekir).
+1. https://upstash.com → **Create database** → Frankfurt.
+2. **Redis URL**'yi (`rediss://default:...@...upstash.io:6379`, TLS) `REDIS_URL` olarak girin.
+3. Boş bırakılırsa süreç içi bellek önbelleği kullanılır. Tek örnekte sorun olmaz; birden fazla
+   örnekte önbellek örnekler arasında paylaşılmaz.
 
-## 4. Doğrulama listesi
-- [ ] `/health` → `{"status":"ok"}`
-- [ ] `/api/v1/sports` boş değil
-- [ ] Vercel ana sayfası bugünün maçlarını listeliyor
-- [ ] `POST /api/v1/admin/sync/football-data` yanlış token ile 401 dönüyor
+## 3. API (Render)
 
-## Sorun giderme
-- **API 503 `admin_disabled`**: `ADMIN_TOKEN` tanımlı değil.
-- **Web "API'ye ulaşılamıyor"**: `NEXT_PUBLIC_API_URL` yanlış veya Render servisi uyuyor (ilk istek ~30 sn sürebilir).
-- **Migration hatası**: bağlantı dizesinde `postgresql+asyncpg://` öneki ve `?ssl=require` olduğundan emin olun.
+1. Repoyu GitHub'a gönderin.
+2. Render → **New → Blueprint** → repoyu seçin. `render.yaml`'dan `justsport-api` oluşur.
+3. Dashboard'da `sync: false` değişkenlerini doldurun. **API ortam değişkenleri:**
+
+| Değişken | Zorunlu | Açıklama |
+| --- | --- | --- |
+| `DATABASE_URL` | evet | Neon doğrudan bağlantı adresi (yukarıda) |
+| `DATA_MODE` | — | `live` (varsayılan). `demo` herkese açık sitede kullanılmaz |
+| `SCHEDULER_ENABLED` | — | `true`: arka plan yenileme. Kilit sayesinde yalnızca bir örnek çalıştırır |
+| `CORS_ORIGINS` | evet | Web adresi, ör. `https://justsport.vercel.app` (`*` reddedilir) |
+| `ADMIN_TOKEN` | önerilir | ≥16 rastgele karakter (Render `generateValue`); boşsa admin uçları kapalı |
+| `API_TOKEN_SECRET` | girişi kullanacaksanız | ≥32 karakter; web'dekiyle **aynı** |
+| `FOOTBALL_DATA_API_KEY` | futbol için | https://www.football-data.org/client/register (ücretsiz: 12 lig, 10 istek/dk, skorlar gecikmeli) |
+| `THESPORTSDB_API_KEY` | Süper Lig için | **Ücretli** anahtar; açık geliştirme anahtarı `123` canlıda yok sayılır |
+| `BALLDONTLIE_API_KEY` | NBA için | https://app.balldontlie.io (ücretsiz: 5 istek/dk, kadro yok) |
+| `NEWS_FEEDS` | — | **Tanımlamayın**: varsayılan, koşulları kontrol edilmiş akış listesi kullanılır. `[]` haberleri kapatır |
+| `NEWS_INTERVAL_MINUTES` | — | Haber yenileme aralığı (varsayılan 15) |
+| `REDIS_URL` | — | Upstash adresi veya boş |
+| `LOG_LEVEL` | — | `info` |
+
+- Eksik veya hatalı değişkende API açılmaz. Hata mesajı **değişkenin adını ve kuralı** söyler,
+  değeri yazmaz.
+- Anahtarı olmayan sporlar sitede "Bu veri kaynağı henüz yapılandırılmadı" gösterir. Örnek veriye
+  düşülmez.
+- İlk veri: zamanlayıcı açıldıktan sonraki ilk dakikada her yapılandırılmış kaynak tam
+  senkronlanır. Elle tetiklemek için:
+
+  ```bash
+  curl -X POST https://<api>.onrender.com/api/v1/admin/sync/football-data -H "X-Admin-Token: $ADMIN_TOKEN"
+  curl -X POST https://<api>.onrender.com/api/v1/admin/sync/news -H "X-Admin-Token: $ADMIN_TOKEN"
+  ```
+
+- Ücretsiz Render planı boşta uyur. Uyanınca zamanlayıcı yeniden başlar ve tazelik göstergesi
+  aradaki gecikmeyi "Veri gecikmeli" olarak gösterir.
+
+### Zamanlayıcı neden yalnızca bir süreçte çalışır
+
+- Her API örneği açılışta `pg_try_advisory_lock` dener. Kilidi alan örnek zamanlayıcıyı başlatır;
+  diğerleri yalnızca istek karşılar.
+- Kilit, o örnek kapanınca bağlantıyla birlikte bırakılır ve bir sonraki açılan örnek devralır.
+- Böylece ölçeklendirmede çift senkron ve çift istek bütçesi harcanmaz (`app/db/dialect.py`).
+
+## 4. Web (Vercel)
+
+1. Vercel → **Add New → Project** → repo, **Root Directory = `web`**. Framework Next.js;
+   `web/vercel.json` bölgeyi `fra1` yapar.
+2. **Web ortam değişkenleri:**
+
+| Değişken | Zorunlu | Açıklama |
+| --- | --- | --- |
+| `NEXT_PUBLIC_API_URL` | evet | `https://<api>.onrender.com` |
+| `AUTH_SECRET` | girişi kullanacaksanız | `npx auth secret` |
+| `API_TOKEN_SECRET` | girişi kullanacaksanız | API'dekiyle aynı |
+| `AUTH_GITHUB_ID` / `AUTH_GITHUB_SECRET` | girişi kullanacaksanız | `docs/AUTH-SETUP.md` |
+| `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` | — | isteğe bağlı |
+| `ADMIN_ACCOUNT_IDS` | — | `/admin/status`'u görebilecek hesaplar, ör. `github:12345` |
+| `ADMIN_TOKEN` | `/admin/status` için | API'dekiyle aynı; yalnızca sunucu tarafında kullanılır |
+
+- `ENABLE_DEV_LOGIN` üretimde **etkisizdir** (yalnızca `next dev`).
+- Eksik veya yarım giriş ayarında web sunucusu açılmaz (`instrumentation.ts`); mesaj değişken
+  adlarını söyler.
+
+## 5. Doğrulama listesi
+
+- [ ] `GET /health`:
+  - `"status": "ok"` dönüyor;
+  - `database.ok` true;
+  - Redis girildiyse `redis.ok` true;
+  - `stale_sources` boş.
+  - Veritabanına ulaşılamazsa HTTP 503 ve `"down"`; Redis hatası veya gecikmeli kaynak varsa
+    `"degraded"`.
+- [ ] `python -m app.scripts.check_sources` (Render Shell): her anahtarlı kaynak "yapılandırıldı" ve
+  HTTP 200.
+- [ ] Sitede hiçbir sayfada "Örnek veri" şeridi yok.
+- [ ] Anahtarsız sporlar "yapılandırılmadı" diyor.
+- [ ] Her sayfanın altında "Kaynak · Son güncelleme" satırı var.
+- [ ] `/news` kartlarında kaynak adı var ve tıklayınca yayıncıya gidiyor.
+- [ ] `/sources`, `/about`, `/privacy` açılıyor; alt bilgide atıflar var.
+- [ ] `/admin/status` yalnızca `ADMIN_ACCOUNT_IDS` hesaplarına açılıyor (diğerlerine 404).

@@ -68,6 +68,30 @@ async def _create_tables(engine: AsyncEngine) -> None:
         await conn.run_sync(Base.metadata.create_all)
 
 
+# Tests must never see the developer's real configuration: no .env file, no provider keys or
+# feed lists from the shell environment.
+Settings.model_config["env_file"] = None
+ISOLATED_ENV = (
+    "DATA_MODE", "DATABASE_URL", "REDIS_URL", "FOOTBALL_DATA_API_KEY", "THESPORTSDB_API_KEY",
+    "BALLDONTLIE_API_KEY", "NEWS_FEEDS", "ADMIN_TOKEN", "API_TOKEN_SECRET", "SCHEDULER_ENABLED",
+    "CORS_ORIGINS",
+)  # fmt: skip
+
+SETTINGS_CONSUMERS = (
+    "app.core.config",
+    "app.core.auth",
+    "app.core.cache",
+    "app.core.redact",
+    "app.db.session",
+    "app.main",
+    "app.routers.admin",
+    "app.routers.v1",
+    "app.scripts.check_sources",
+    "app.scripts.purge_demo",
+    "app.scripts.seed",
+)
+
+
 @pytest.fixture
 def settings() -> Settings:
     return Settings(
@@ -83,11 +107,11 @@ def settings() -> Settings:
 @pytest.fixture(autouse=True)
 def _isolate(settings: Settings, monkeypatch: pytest.MonkeyPatch) -> None:
     get_settings.cache_clear()
-    monkeypatch.setattr("app.core.config.get_settings", lambda: settings)
-    monkeypatch.setattr("app.core.cache.get_settings", lambda: settings)
-    monkeypatch.setattr("app.routers.admin.get_settings", lambda: settings)
-    monkeypatch.setattr("app.routers.v1.get_settings", lambda: settings)
-    monkeypatch.setattr("app.core.auth.get_settings", lambda: settings)
+    for name in ISOLATED_ENV:
+        monkeypatch.delenv(name, raising=False)
+    # Every module that imported get_settings by name: tests must never read the real .env.
+    for module in SETTINGS_CONSUMERS:
+        monkeypatch.setattr(f"{module}.get_settings", lambda: settings)
     cache.reset_cache()
     reset_budgets()
 
