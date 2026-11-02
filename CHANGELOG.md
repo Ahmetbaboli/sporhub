@@ -2,6 +2,64 @@
 
 Biçim [Keep a Changelog](https://keepachangelog.com/), sürümleme [SemVer](https://semver.org/).
 
+## [0.4.0] — 2026-11-02
+
+Demo'dan gerçek veriye geçiş. (0.3 ayrı etiketlenmedi; o dönemin özellikleri de burada.)
+
+### Eklendi
+- **`DATA_MODE=live|demo`.**
+  - Live modda fixture ve örnek haber hiçbir koşulda yazılmaz ya da gösterilmez; anahtarsız
+    sağlayıcı "yapılandırılmadı" olur.
+  - Demo kayıtları `demo:` önekiyle yazılır ve her sayfada "Örnek veri" şeridi görünür.
+  - Yeni araçlar: `purge_demo` komutu, migration 0005.
+- **Kaynak durumu:** `GET /api/v1/admin/sources` ve `python -m app.scripts.check_sources`.
+  Yalnızca evet/hayır ve HTTP kodu döner.
+- **Süper Lig / TFF 1. Lig:**
+  - TheSportsDB adapter'ı (yalnızca ücretli anahtarla).
+  - football-data yalnızca ücretsiz katmandaki (`TIER_ONE`) 12 ligi döndürür.
+- **Sağlayıcılar arası kimlik eşleme:** `external_refs` tablosu.
+- **Yenileme altyapısı:**
+  - Sağlayıcı başına istek bütçesi; 429'da `Retry-After`'a uyulur.
+  - Canlı/bugün/F1 hafta sonu/boşta durumuna göre yenileme yapan planlayıcı.
+  - Tek süreçte zamanlayıcı (PostgreSQL advisory lock).
+- **Tazelik:** her sayfada "Kaynak · Son güncelleme", "Veri gecikmeli" uyarısı ve "skor
+  gecikmeli olabilir" notu.
+- **Yönetim ve sağlık:** `/admin/status` (yalnızca `ADMIN_ACCOUNT_IDS`); `/health` veritabanı,
+  Redis ve tazeliği raporlar.
+- **Gerçek haberler:**
+  - Koşulları kontrol edilmiş 9 yayıncı akışı (BBC Sport, ESPN, Yahoo, Habertürk, Sporx).
+  - En fazla 2 cümle özet; tam metin ve görsel yok.
+  - Kopya birleştirme ("Ayrıca: …").
+  - Gerçek başlıklarla ayarlanmış sınıflandırıcı (140 etiketli başlıkta %96,4; yanlış "resmî" 0).
+- **Hesap:** hesap ve veri silme (`DELETE /api/v1/me`), `/privacy`, `/sources`, `/about`;
+  alt bilgide sağlayıcı atıfları.
+- **0.3 döneminden:**
+  - Giriş ve favoriler, kişisel panel.
+  - Renk paletleri, TR/EN.
+  - Takım analizi ve karşılaştırma.
+  - Lig istatistikleri ve grafikler.
+  - Haber modülü.
+- **Belgeler:** `docs/DATA-SOURCES.md`, `docs/AUTH-SETUP.md`.
+
+### Değişti
+- Geliştirici girişi yalnızca `next dev` + `ENABLE_DEV_LOGIN=true` ile çalışır; üretim
+  derlemesinde hiç açılmaz.
+- API, Neon'un `postgresql://…?sslmode=require` adresini asyncpg biçimine kendisi çevirir.
+  Hatalı yapılandırmada açılmaz; mesaj değişken adını söyler, değeri yazmaz.
+- Sağlayıcı logoları gösterilmez: açık gösterim izni doğrulanamadı.
+- F1 fixture'ları 2026 Meksika GP sonrası gerçek Jolpica yanıtlarından yeniden üretildi.
+- Testler `.env` dosyasını ve kabuktaki sağlayıcı değişkenlerini okumaz.
+
+### Kaldırıldı
+- `USE_FIXTURES` (yerine `DATA_MODE`).
+- `SYNC_INTERVAL_MINUTES` (yerine planlayıcı).
+- `AUTH_DEV_LOGIN` (yerine `ENABLE_DEV_LOGIN`).
+- Anahtarsız sağlayıcının fixture'a düşmesi.
+
+### Güvenlik
+- Yapılandırılmış anahtar değerleri loglarda ve kaydedilen senkron hatalarında maskelenir
+  (TheSportsDB anahtarı URL yolunda taşınır).
+
 ## [0.2.0] — 2026-10-26
 
 ### Eklendi

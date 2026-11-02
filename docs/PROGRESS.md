@@ -66,7 +66,11 @@
 - [x] 4. Gerçek giriş: dev login yalnızca development + ENABLE_DEV_LOGIN; AUTH-SETUP.md; hesap silme; gizlilik sayfası
 - [x] 5. Kaynak gösterimi: /sources, atıflar, görsel politikası, Hakkında
 - [x] 6. Üretime hazırlık: Neon/Upstash, zamanlayıcı kilidi, açılışta env doğrulama, zengin /health
-- [ ] Belgeler + v0.4.0 etiketi
+- [x] Belgeler (README, CHANGELOG, CLAUDE.md, DATA-SOURCES, AUTH-SETUP, DEPLOY) + v0.4.0 etiketi
+### v0.4 sonrası ilk işler
+- [ ] TheSportsDB ücretli anahtarıyla Süper Lig + TFF 1. Lig gerçek senkronu ve normalizasyon kontrolü (anahtar yok)
+- [ ] İlk canlı deploy (Neon + Upstash + Render + Vercel) ve DEPLOY.md doğrulama listesi
+- [ ] TheSportsDB kadroları (lig başına takım sayısı kadar istek; bütçe planı)
 ### Aşama 5 — Öne çıkaran özellikler (v0.4 sonrası; bu oturumda başlanmadı)
 - [ ] SSE ile canlı skor
 - [ ] Bildirimler: Web Push (VAPID) — takip edilen maç başladı / gol / bitti, son dakika haberi; kullanıcı bazlı tercihler
@@ -93,3 +97,7 @@
 - Docker hâlâ bu makinede yok: compose dosyaları doğrulanamadı. PostgreSQL yerelde `pgserver` (taşınabilir PG 16.2) ile, Redis `fakeredis` ile doğrulandı; gerçek Redis yalnızca CI'da koşar.
 - balldontlie ücretsiz katmanı kadro (`/players/active`) ve `/standings` vermez: puan durumu hesaplanır, kadro yalnızca ücretli katmanda dolar. Gerçek anahtarla uçtan uca deneme yapılamadı (anahtar yok); davranış `respx` ile doğrulandı.
 - Jolpica canlı API'sine bu oturumda gerçek bir senkronizasyon çalıştırılmadı (yalnızca dokümandaki yapı ve örnek yanıtlar doğrulandı); `respx` testleri doküman şemasına göre yazıldı.
+- v0.4 (2026-11-02): TheSportsDB ücretli anahtarı yok → Süper Lig yalnızca açık geliştirme anahtarıyla **yapı** olarak doğrulandı (5 satırlık kesik tablo); canlıda "yapılandırılmadı" görünür.
+- v0.4: PostgreSQL'e özgü testler (advisory lock dahil) yerelde atlanır (Docker/PG yok); CI'da koşar. Scheduler kilidi gerçek PG'de bu makinede denenemedi.
+- v0.4: Gerçek deploy (Render/Vercel/Neon/Upstash) yapılmadı — hesaplar sahibinde; push yok.
+- v0.4: API sonuçlarının resmî bir "yarış sonrası gecikme" değeri Jolpica'da belgelenmemiş (doğrulanamadı).

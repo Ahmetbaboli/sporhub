@@ -34,8 +34,8 @@ Koşullar değişebilir: canlıya almadan önce bağlantıları yeniden okuyun.
 - **Süper Lig (TSL) ve 1. Lig (T1L):** ücretli katmanlarda (TIER_THREE / TIER_FOUR).
   - TSL için Advanced €99/ay gerektiği resmî tabloya dayanan çıkarımdır, doğrulanamadı.
   - Kaynak: https://www.football-data.org/pricing
-- **Gol krallığı (`/scorers`) ücretsiz planda mı:** doğrulanamadı. Adapter 401/403/404 alırsa
-  senkronizasyonu düşürmeden boş döner.
+- **Gol krallığı (`/scorers`):** ücretsiz planda **çalışıyor**. 2026-11-02 gerçek senkronunda
+  PL için 50 satır geldi. Adapter yine de 401/403/404'te senkronu düşürmeden boş döner.
 - **Atıf:** eski koşul sayfası açılmadı (404). Arama özetine göre istenen ifade "Football data
   provided by the Football-Data.org API"; bu ifade `/sources` sayfasında ve alt bilgide kullanılır.
 - **Arma (crest) URL'leri:** gösterim izni doğrulanamadı → **gösterilmez**, baş harfli yer tutucu
@@ -98,6 +98,8 @@ Satır ayrıntıları:
   Atıf zorunlu değil; ikame API kurmak yasak.
   - Kaynak: https://www.balldontlie.io/terms (§6, §11)
 - **Logolar:** takım nesnesinde logo alanı yok; baş harfli yer tutucu kullanılır.
+- **Gerçek senkron (2026-11-02):** 2026/27 için 1200 normal sezon maçı geldi. NBA, NBA Cup
+  dönemindeki 30 maçı grup aşamasından sonra ilan eder.
 - **Kadro ve puan durumu:** kadro (`/players/active`) ve `/standings` ücretli katmanda. Puan durumu
   maçlardan hesaplanır, kadro boş kalabilir.
 

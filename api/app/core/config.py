@@ -39,7 +39,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     app_name: str = "Just Sport API"
-    app_version: str = "0.1.0"
+    app_version: str = "0.4.0"
 
     database_url: str = "postgresql+asyncpg://justsport:justsport@localhost:5432/justsport"
     redis_url: str = ""

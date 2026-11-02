@@ -1,21 +1,73 @@
 # Just Sport
 
-Çok sporlu, modüler bir spor veri platformu. Bir Python servisi dış API'lerden veri çeker, ortak bir şemaya normalize edip PostgreSQL'e yazar; Next.js arayüzü yalnızca kendi API'mizi okur. **Yeni bir spor eklemek = yeni bir adapter sınıfı yazmak.**
+Çok sporlu, modüler bir spor veri platformu.
 
-> Durum: **v0.2.0 — Futbol, basketbol (NBA) ve Formula 1.** Üç spor da aynı adapter mimarisiyle çalışır ([docs/adding-a-sport.md](docs/adding-a-sport.md)). Sıradaki aşamalar: [docs/PROGRESS.md](docs/PROGRESS.md).
+- Bir Python servisi dış API'lerden ve yayıncıların RSS akışlarından veri çeker, ortak bir şemaya
+  normalize edip PostgreSQL'e yazar.
+- Next.js arayüzü yalnızca kendi API'mizi okur.
+- Sitede görünen her bilgi gerçek bir kaynaktan gelir. Kaynağı yapılandırılmamış bir spor için
+  "yapılandırılmadı" denir; örnek veri gösterilmez.
 
-<!-- Ekran görüntüleri Aşama 6'da eklenecek -->
-| Bugünün maçları | Lig · Puan tablosu | Takım |
-| --- | --- | --- |
-| _ekran görüntüsü yer tutucusu_ | _ekran görüntüsü yer tutucusu_ | _ekran görüntüsü yer tutucusu_ |
+> Durum: **v0.4.0, gerçek veri.** Kapsam:
+> - Futbol (football-data.org'un ücretsiz katmanındaki 12 lig; Süper Lig için TheSportsDB)
+> - NBA (balldontlie)
+> - Formula 1 (Jolpica)
+> - Gerçek haber akışları (BBC Sport, ESPN, Yahoo Sports, Habertürk, Sporx)
+>
+> Sıradaki aşamalar: [docs/PROGRESS.md](docs/PROGRESS.md).
 
 ## Özellikler
-- Bugünün karşılaşmaları (spora ve lige göre gruplu), fikstür, sonuçlar, puan tablosu
-- **Spora özel şablonlar:** futbolda lig tablosu, NBA'de konferans sıralaması, F1'de yarış kartı (podyum + tam sonuç) ve sürücü/takım şampiyonası
-- Takım sayfası (son/gelecek maçlar, kadro), oyuncu profili, arama
-- Koyu/açık tema, mobil öncelikli, erişilebilir, Türkçe arayüz (TR/EN'e hazır)
-- **Anahtarsız demo:** `USE_FIXTURES=true` ile gömülü örnek veriyle çalışır; testler internetsiz koşar
-- Sürümlü REST API (`/api/v1`), OpenAPI dokümanı (`/docs`), Redis cache, zamanlanmış senkronizasyon
+
+**Veri**
+- Bugünün karşılaşmaları, fikstür, sonuçlar, puan tablosu.
+- Lig istatistikleri: gol krallığı, liderlik tabloları, sezon geçmişi.
+- Takım analizi: form, iç saha/deplasman, geçmiş karşılaşmalar.
+- Karşılaştırma ve grafikler.
+- Spora özel şablonlar: futbol lig tablosu, NBA konferansları, F1 yarış kartı ve şampiyona.
+
+**Haberler**
+- Yalnızca başlık, yayıncının kısa özeti (en fazla 2 cümle), tarih, kaynak ve orijinal habere link.
+- Kategoriler: resmî transfer, söylenti, röportaj, organizasyon, son dakika. 140 gerçek başlıkla
+  değerlendirildi; doğruluk %96.
+- Farklı yayıncılardan aynı haber tek kartta birleştirilir.
+
+**Dürüst veri**
+- Her sayfada "Kaynak · Son güncelleme" satırı.
+- Sağlayıcı hata verirse son başarılı veri gösterilir ve "Veri gecikmeli" uyarısı çıkar.
+- Ücretsiz katmanı gecikmeli olan canlı skorlarda "gecikmeli olabilir" notu.
+
+**Kullanıcı**
+- GitHub/Google ile giriş.
+- Favori takım, sporcu ve lig; kişisel panel.
+- Hesabı ve tüm veriyi silme.
+- Gizlilik sayfası.
+
+**Arayüz**
+- TR/EN dil desteği.
+- 6 renk paleti (yüksek kontrast dahil), koyu/açık tema.
+- Mobil öncelikli ve erişilebilir.
+
+**Operasyon**
+- Sağlayıcı başına istek bütçesi; 429 gelirse `Retry-After`'a uyulur.
+- Canlı, bugün ve boşta durumuna göre değişen yenileme sıklığı.
+- Tek süreçte zamanlayıcı (PostgreSQL kilidi).
+- `/health` ve `/admin/status`.
+
+## Veri modu
+
+| `DATA_MODE` | Davranış |
+| --- | --- |
+| `live` (varsayılan) | Yalnızca gerçek sağlayıcı verisi. Anahtarı olmayan sağlayıcı "yapılandırılmadı" olur. Fixture veya örnek haber asla okunmaz, yazılmaz, gösterilmez. |
+| `demo` | Gömülü örnek veri (`demo:` kaynak önekiyle) ve her sayfada "Örnek veri" şeridi. Yalnızca yerel deneme içindir. |
+
+Örnek veriyi bir veritabanından silmek için: `uv run python -m app.scripts.purge_demo`.
+
+Hangi kaynağın yapılandırıldığını değerleri göstermeden görmek için:
+- `uv run python -m app.scripts.check_sources`
+- veya `GET /api/v1/admin/sources` (`X-Admin-Token` başlığıyla).
+
+Sağlayıcılar, limitler, kullanım koşulları ve görsel politikası:
+[docs/DATA-SOURCES.md](docs/DATA-SOURCES.md).
 
 ## Mimari
 
@@ -23,65 +75,57 @@
 flowchart LR
   subgraph Ext[Dış kaynaklar]
     FD[football-data.org]
+    TS[TheSportsDB]
     BD[balldontlie]
-    F1[Jolpica / OpenF1]
+    F1[Jolpica-F1]
+    RSS[RSS/Atom akışları]
   end
   subgraph API[api — FastAPI]
     AD[adapters → DTO]
-    SS[sync_service · upsert]
-    SCH[APScheduler]
+    B[istek bütçesi]
+    SS[sync · upsert · kimlik eşleme]
+    SCH[planlayıcı + kilit]
     R[routers → services → repositories]
   end
   PG[(PostgreSQL)]
   RD[(Redis)]
   WEB[web — Next.js]
-  FD & BD & F1 -.-> AD --> SS --> PG
+  FD & TS & BD & F1 & RSS -.-> B --> AD --> SS --> PG
   SCH --> SS
   PG --> R --> WEB
   R <--> RD
 ```
 
-Ayrıntılar: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · Kararlar: [docs/DECISIONS.md](docs/DECISIONS.md) · Tasarım: [docs/DESIGN.md](docs/DESIGN.md) · Yayına alma: [docs/DEPLOY.md](docs/DEPLOY.md)
+Ayrıntılar:
+- [ARCHITECTURE](docs/ARCHITECTURE.md)
+- [DECISIONS](docs/DECISIONS.md)
+- [DATA-SOURCES](docs/DATA-SOURCES.md)
+- [AUTH-SETUP](docs/AUTH-SETUP.md)
+- [DEPLOY](docs/DEPLOY.md)
 
-## Hızlı başlangıç (Docker)
-
-```bash
-docker compose up --build
-```
-
-- Web: <http://localhost:3000>
-- API: <http://localhost:8000> · Swagger: <http://localhost:8000/docs>
-
-İlk açılışta API migration'ları çalıştırır ve fixture verisini yükler (`SEED_ON_START=true`). API anahtarı gerekmez.
-
-## Yerel geliştirme (Docker'sız)
+## Yerel geliştirme
 
 Gereksinimler: Python 3.12 + [uv](https://docs.astral.sh/uv/), Node 22+.
 
 ```bash
-# API (SQLite ile hızlı deneme; PostgreSQL için DATABASE_URL'i değiştirin)
+# API: api/.env.example'ı api/.env olarak kopyalayın, anahtarlarınızı girin
 cd api
 uv sync
-export DATABASE_URL=sqlite+aiosqlite:///./dev.db     # PowerShell: $env:DATABASE_URL='...'
 uv run alembic upgrade head
-uv run python -m app.scripts.seed
+uv run python -m app.scripts.check_sources   # hangi kaynaklar etkin?
 uv run uvicorn app.main:app --reload
 
-# Web (başka bir terminal)
+# Web (başka bir terminal): web/.env.example → web/.env.local
 cd web
-cp .env.example .env.local
 npm install
 npm run dev
 ```
 
-## Fixture modu ve gerçek veri
-
-| Değişken | Anlamı |
-| --- | --- |
-| `USE_FIXTURES=true` | Adapter'lar `api/fixtures/` altındaki örnek JSON'u okur (varsayılan). Maç tarihleri bugüne göre kaydırılır. |
-| `USE_FIXTURES=false` + anahtarlar | Gerçek veri. Futbol: `FOOTBALL_DATA_API_KEY` (ücretsiz katman: PL, La Liga, Serie A, Bundesliga, Şampiyonlar Ligi; 10 istek/dk). NBA: `BALLDONTLIE_API_KEY` (ücretsiz katman 5 istek/dk; kadro ücretli katmanda). F1: anahtarsız (Jolpica, 500 istek/saat). Anahtarı olmayan adapter fixture'a düşer; zamanlayıcı onu atlar. |
-
-Elle senkronizasyon: `POST /api/v1/admin/sync/{football-data, balldontlie, jolpica}` (`X-Admin-Token: $ADMIN_TOKEN`). Fixture'ları yeniden üretmek: `cd api && uv run python tools/generate_fixtures.py` (+ `generate_basketball_fixtures.py`; F1 fixture'ları gerçek Jolpica yanıtlarından `tools/capture_jolpica.py` ile üretilir, `tools/live_check.py` gerçek API duman testidir). Yeni spor eklemek: [docs/adding-a-sport.md](docs/adding-a-sport.md).
+**Anahtarsız deneme:**
+- `DATA_MODE=demo` ve `uv run python -m app.scripts.seed` ile örnek veri yüklenir; her sayfada
+  "Örnek veri" şeridi görünür.
+- Docker ile: `docker compose up --build`. Compose varsayılan olarak demo modunda açılır;
+  `DATA_MODE=live` ile gerçek veriye geçer.
 
 ## Test ve kalite
 
@@ -90,16 +134,23 @@ cd api && uv run pytest --cov=app && uv run ruff check . && uv run ruff format -
 cd web && npm run lint && npx tsc --noEmit && npm test && npm run build
 ```
 
-API testleri varsayılan olarak SQLite'ta koşar; gerçek PostgreSQL için `TEST_DATABASE_URL=postgresql+asyncpg://...` (ve Redis için `TEST_REDIS_URL`) verin. CI (`.github/workflows/ci.yml`) testleri her push ve PR'da **PostgreSQL + Redis servisleriyle** çalıştırır.
+- Testler internetsiz koşar ve geliştiricinin `.env` dosyasını **okumaz**.
+- Varsayılan veritabanı SQLite'tır. PostgreSQL için `TEST_DATABASE_URL`, Redis için
+  `TEST_REDIS_URL` verin.
+- CI (`.github/workflows/ci.yml`) testleri PostgreSQL + Redis ile çalıştırır.
 
 ## Teknoloji
 
-**Backend:** Python 3.12, FastAPI, Pydantic v2, SQLAlchemy 2 (async) + asyncpg, Alembic, httpx, tenacity, APScheduler, Redis, pytest, respx, ruff
-**Frontend:** Next.js (App Router), TypeScript (strict), Tailwind CSS, lucide-react, next-themes, Vitest + Testing Library
-**Altyapı:** Docker Compose, GitHub Actions; hedef barındırma Vercel (web), Render (api), Neon (PostgreSQL)
+**Backend:** Python 3.12, FastAPI, Pydantic v2, SQLAlchemy 2 (async) + asyncpg, Alembic, httpx,
+tenacity, APScheduler, defusedxml, Redis, pytest, respx, ruff
 
-## Yol haritası
-Kullanıcı hesapları ve favoriler (Aşama 4) → canlı skor (SSE), AI maç özeti (Aşama 5) → v1.0. Ayrıntı: [docs/PROGRESS.md](docs/PROGRESS.md).
+**Frontend:** Next.js (App Router), TypeScript (strict), Tailwind CSS, Auth.js, Recharts,
+lucide-react, next-themes, Vitest + Testing Library
+
+**Barındırma:** Vercel (web), Render (api), Neon (PostgreSQL), Upstash (Redis). Bkz.
+[DEPLOY](docs/DEPLOY.md).
 
 ## Lisans
-[MIT](LICENSE)
+
+[MIT](LICENSE). Veriler üçüncü taraf sağlayıcılara, haberler yayıncılarına aittir; atıflar
+`/sources` sayfasındadır.

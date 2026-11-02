@@ -1,6 +1,6 @@
 # CLAUDE.md — Just Sport
 
-Çok sporlu, modüler spor veri platformu. Python servisi dış API'lerden veri çeker, ortak şemaya normalize edip PostgreSQL'e yazar; Next.js arayüzü yalnızca kendi API'mizi okur. **Frontend asla dış spor API'lerine doğrudan istek atmaz.** Yeni spor eklemek = yeni adapter sınıfı + registry satırı.
+Çok sporlu, modüler spor veri platformu. **Varsayılan `DATA_MODE=live`: yalnızca gerçek veri; anahtarsız sağlayıcı "yapılandırılmadı" olur, örnek veri asla gösterilmez** (`docs/DATA-SOURCES.md`). Python servisi dış API'lerden veri çeker, ortak şemaya normalize edip PostgreSQL'e yazar; Next.js arayüzü yalnızca kendi API'mizi okur. **Frontend asla dış spor API'lerine doğrudan istek atmaz.** Yeni spor eklemek = yeni adapter sınıfı + registry satırı.
 
 ## Mimari özet
 `adapters/` (dış veri → DTO, DB'ye yazmaz) → `services/sync_service.py` (upsert) → PostgreSQL. Okuma: `routers/ → services/ → repositories/ → models/`. Redis sık okunan uçları cache'ler. Ayrıntı: `docs/ARCHITECTURE.md`.
@@ -19,7 +19,9 @@ docker compose up --build
 # API (api/ içinde; uv gerekir)
 uv sync
 uv run alembic upgrade head
-uv run python -m app.scripts.seed        # fixture verisiyle doldur
+uv run python -m app.scripts.check_sources   # hangi kaynak etkin (değer göstermez)
+DATA_MODE=demo uv run python -m app.scripts.seed   # yalnızca demo: örnek veri
+uv run python -m app.scripts.purge_demo   # demo kayıtlarını sil
 uv run uvicorn app.main:app --reload
 uv run pytest --cov=app                  # test + kapsam (varsayılan SQLite)
 # Gerçek PostgreSQL/Redis ile: TEST_DATABASE_URL=postgresql+asyncpg://... TEST_REDIS_URL=redis://... uv run pytest
@@ -39,11 +41,14 @@ npm run lint && npx tsc --noEmit && npm test && npm run build
 - TypeScript: `strict: true`; tüm API çağrıları `web/lib/api.ts` üzerinden; UI metinleri `web/lib/i18n/tr.ts` (anahtarların kaynağı) + `en.ts` (aynı şekil, tip denetimli). Sunucu bileşenleri `t()`, istemci bileşenleri `useT()` kullanır; her sayfa/metadata girişi önce `await initLocale()` çağırır.
 - Zamanlar UTC saklanır, arayüzde kullanıcı saat dilimine çevrilir. Spora özel alanlar `extra` JSONB'de.
 - Her dış kayıt `(source, external_id)` ile benzersiz; sync upsert'tir, idempotenttir.
-- Loglar yapılandırılmış (JSON); gizli bilgi loglanmaz. Yeni env değişkeni `.env.example`'a açıklamasıyla eklenir.
-- Adapter'lar: rate limit saygısı, tenacity ile üstel geri çekilme, timeout. `DATA_MODE=live` (varsayılan) yalnızca gerçek veri: anahtarsız sağlayıcı "yapılandırılmadı"dır, fixture'a düşmez. Fixture'lar yalnızca testlerde ve `DATA_MODE=demo`'da; demo kayıtları `demo:` kaynak önekiyle yazılır (`purge_demo` ile silinir).
+- Loglar yapılandırılmış (JSON); gizli bilgi loglanmaz (anahtar değerleri `core/redact.py` ile maskelenir). Yeni env değişkeni `.env.example`'a açıklamasıyla eklenir.
+- Adapter'lar: istek bütçesi (`adapters/budget.py`, doğrulanmış limitler `docs/DATA-SOURCES.md`'de) ve rate limit saygısı, tenacity ile üstel geri çekilme, timeout. `DATA_MODE=live` (varsayılan) yalnızca gerçek veri: anahtarsız sağlayıcı "yapılandırılmadı"dır, fixture'a düşmez. Fixture'lar yalnızca testlerde ve `DATA_MODE=demo`'da; demo kayıtları `demo:` kaynak önekiyle yazılır (`purge_demo` ile silinir).
 - Yeni spor: `docs/adding-a-sport.md` (adapter + fixture + registry satırı + `web/lib/sports.ts` şablonu). Tüm adapter'lar `tests/test_adapter_contract.py` sözleşmesinden geçmeli.
 - Dialect'e özgü SQL yalnızca `app/db/dialect.py`; `timestamptz`e yalnızca timezone-aware datetime yazılır.
 - Web detay sayfalarında `loading.tsx` kullanma (200 döndürür): varlık kontrolü + `notFound()` stream öncesi, yavaş bölümler sayfa içi `Suspense`.
+
+- Yeni dış kaynak: limitleri ve kullanım koşulları resmî dokümandan okunup `docs/DATA-SOURCES.md`'ye kaynağıyla yazılmadan eklenmez. Haberden yalnızca başlık, ≤2 cümle akış özeti, tarih, kaynak, link saklanır.
+- Testler `.env` okumaz; `get_settings`'i adıyla içe aktaran yeni modül `tests/conftest.py` `SETTINGS_CONSUMERS`'a eklenir.
 
 ## Commit formatı
 Conventional Commits: `feat(api): ...`, `fix(web): ...`, `docs: ...`, `test: ...`, `chore: ...`.
