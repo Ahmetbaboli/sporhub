@@ -30,7 +30,11 @@ export default async function SportPage({ params }: Props) {
   const sports = await api.sports();
   const current = sports.items.find((s) => s.slug === sport);
   if (!current) notFound();
-  const competitions = (await orNotFound(api.competitions(sport))).items;
+  const [competitions, meta] = await Promise.all([
+    orNotFound(api.competitions(sport)).then((page) => page.items),
+    api.meta().catch(() => null),
+  ]);
+  const configured = meta?.sports.find((s) => s.slug === sport)?.configured ?? true;
 
   return (
     <>
@@ -41,9 +45,16 @@ export default async function SportPage({ params }: Props) {
       {competitions.length === 0 ? (
         <EmptyState
           className="mt-6"
-          title={t().sports.comingSoon}
-          body={t().sports.comingSoonBody}
-        />
+          title={configured ? t().sports.awaitingSync : t().sports.notConfigured}
+          body={configured ? t().sports.awaitingSyncBody : t().sports.notConfiguredBody}
+        >
+          <Link
+            href="/sources"
+            className="text-primary mt-2 text-sm font-medium underline"
+          >
+            {t().sports.sourcesLink}
+          </Link>
+        </EmptyState>
       ) : (
         <>
           <h2 className="font-display text-primary mt-6 mb-3 text-2xl font-semibold uppercase">

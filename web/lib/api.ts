@@ -13,6 +13,7 @@ import type {
   FavoriteKind,
   Favorites,
   HeadToHead,
+  Meta,
   NewsArchive,
   NewsCategoryFilter,
   NewsItem,
@@ -159,6 +160,7 @@ function newsParams(q: NewsQuery): Query {
 }
 
 export const api = {
+  meta: () => get<Meta>("/api/v1/meta"),
   sports: () => get<Page<Sport>>("/api/v1/sports"),
   competitions: (sport: string) =>
     get<Page<Competition>>(`/api/v1/sports/${encodeURIComponent(sport)}/competitions`),

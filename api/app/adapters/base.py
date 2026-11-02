@@ -14,11 +14,12 @@ class BaseAdapter(ABC):
     source: str
     # External competition ids the scheduler/admin sync should import by default.
     default_competitions: tuple[str, ...] = ()
-    # True when the adapter reads bundled fixtures instead of calling the external API.
+    # True only in DATA_MODE=demo: the adapter reads bundled fixtures, never the network.
     use_fixtures: bool = False
-    # True when fixtures are used only because a required API key is missing. Schedulers skip
-    # such adapters so sample data never overwrites real data in production.
-    fell_back_to_fixtures: bool = False
+    # False in live mode when a required API key is missing: nothing is fetched or written.
+    configured: bool = True
+    # Value written to the database `source` columns ("demo:<source>" in demo mode).
+    record_source: str = ""
 
     @abstractmethod
     async def fetch_competitions(self) -> list[CompetitionDTO]: ...

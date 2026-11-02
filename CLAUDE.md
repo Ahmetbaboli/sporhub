@@ -40,7 +40,7 @@ npm run lint && npx tsc --noEmit && npm test && npm run build
 - Zamanlar UTC saklanır, arayüzde kullanıcı saat dilimine çevrilir. Spora özel alanlar `extra` JSONB'de.
 - Her dış kayıt `(source, external_id)` ile benzersiz; sync upsert'tir, idempotenttir.
 - Loglar yapılandırılmış (JSON); gizli bilgi loglanmaz. Yeni env değişkeni `.env.example`'a açıklamasıyla eklenir.
-- Adapter'lar: rate limit saygısı, tenacity ile üstel geri çekilme, timeout, `USE_FIXTURES=true` desteği.
+- Adapter'lar: rate limit saygısı, tenacity ile üstel geri çekilme, timeout. `DATA_MODE=live` (varsayılan) yalnızca gerçek veri: anahtarsız sağlayıcı "yapılandırılmadı"dır, fixture'a düşmez. Fixture'lar yalnızca testlerde ve `DATA_MODE=demo`'da; demo kayıtları `demo:` kaynak önekiyle yazılır (`purge_demo` ile silinir).
 - Yeni spor: `docs/adding-a-sport.md` (adapter + fixture + registry satırı + `web/lib/sports.ts` şablonu). Tüm adapter'lar `tests/test_adapter_contract.py` sözleşmesinden geçmeli.
 - Dialect'e özgü SQL yalnızca `app/db/dialect.py`; `timestamptz`e yalnızca timezone-aware datetime yazılır.
 - Web detay sayfalarında `loading.tsx` kullanma (200 döndürür): varlık kontrolü + `notFound()` stream öncesi, yavaş bölümler sayfa içi `Suspense`.

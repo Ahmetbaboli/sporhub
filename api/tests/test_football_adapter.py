@@ -96,16 +96,16 @@ def test_season_label() -> None:
     assert season_label(2099) == "2099/00"
 
 
-def test_missing_api_key_falls_back_to_fixtures(settings: Settings) -> None:
+def test_missing_api_key_is_not_configured(settings: Settings) -> None:
     adapter = FootballDataAdapter(
-        settings.model_copy(update={"use_fixtures": False, "football_data_api_key": ""})
+        settings.model_copy(update={"data_mode": "live", "football_data_api_key": ""})
     )
-    assert adapter.use_fixtures
+    assert not adapter.use_fixtures and not adapter.configured
 
 
 @respx.mock
 async def test_live_mode_sends_token_and_retries_on_429(settings: Settings) -> None:
-    live = settings.model_copy(update={"use_fixtures": False, "football_data_api_key": "secret"})
+    live = settings.model_copy(update={"data_mode": "live", "football_data_api_key": "secret"})
     route = respx.get(f"{BASE_URL}/competitions").mock(
         side_effect=[
             httpx.Response(429),
@@ -135,7 +135,7 @@ async def test_http_error_is_raised_after_retries() -> None:
 async def test_live_mode_never_shifts_dates(settings: Settings) -> None:
     """Date shifting is a fixture-only feature; real API timestamps must pass through untouched."""
     live = settings.model_copy(
-        update={"use_fixtures": False, "football_data_api_key": "k", "fixture_today": "2030-01-01"}
+        update={"data_mode": "live", "football_data_api_key": "k", "fixture_today": "2030-01-01"}
     )
     raw = {
         "_fixture": {"reference_date": "2026-10-26"},  # even if a payload looked like a fixture
@@ -190,7 +190,7 @@ async def test_scorers_fixture_is_sorted(adapter: FootballDataAdapter) -> None:
 
 @respx.mock
 async def test_scorers_forbidden_on_plan_is_not_fatal(settings: Settings) -> None:
-    live = settings.model_copy(update={"use_fixtures": False, "football_data_api_key": "k"})
+    live = settings.model_copy(update={"data_mode": "live", "football_data_api_key": "k"})
     respx.get(f"{BASE_URL}/competitions/PL/scorers").mock(return_value=httpx.Response(403))
     adapter = FootballDataAdapter(live)
     adapter._http = RateLimitedClient(BASE_URL, min_interval=0, backoff_min=0.01)

@@ -39,6 +39,13 @@ export const tr = {
     "formula-1": "Formula 1",
     comingSoon: "Yakında",
     comingSoonBody: "Bu spor için veri kaynağı henüz bağlanmadı.",
+    notConfigured: "Bu veri kaynağı henüz yapılandırılmadı",
+    notConfiguredBody:
+      "Bu spor için gerçek veri sağlayıcısının anahtarı tanımlı değil. Örnek veri göstermiyoruz.",
+    awaitingSync: "Henüz veri yok",
+    awaitingSyncBody:
+      "Kaynak yapılandırıldı; ilk senkronizasyon tamamlanınca veriler burada görünecek.",
+    sourcesLink: "Veri kaynakları",
   },
   home: {
     title: "Bugünün karşılaşmaları",
@@ -398,6 +405,11 @@ export const tr = {
     notFoundTitle: "Sayfa bulunamadı",
     notFoundBody: "Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir.",
     backHome: "Ana sayfaya dön",
+  },
+  demo: {
+    banner: "Örnek veri",
+    bannerBody:
+      "Bu sitede gösterilen bilgiler gerçek değildir; geliştirme amaçlı örnek veridir.",
   },
   footer: {
     note: "Veriler üçüncü taraf kaynaklardan derlenir; gösterim amaçlı örnek veri içerebilir.",

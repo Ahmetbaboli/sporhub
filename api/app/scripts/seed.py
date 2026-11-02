@@ -6,6 +6,7 @@ import logging
 from app.adapters.news_rss import RssNewsAdapter
 from app.adapters.registry import adapter_names, create_adapter
 from app.core.config import get_settings
+from app.core.data_mode import is_demo
 from app.core.logging import configure_logging
 from app.db.session import get_engine, get_sessionmaker
 from app.services.news_service import run_news_sync
@@ -15,7 +16,11 @@ logger = logging.getLogger(__name__)
 
 
 async def seed() -> None:
-    settings = get_settings().model_copy(update={"use_fixtures": True})
+    settings = get_settings()
+    if not is_demo(settings):
+        raise SystemExit(
+            "seed yalnızca DATA_MODE=demo iken çalışır: örnek veri canlı veritabanına yazılmaz."
+        )
     maker = get_sessionmaker()
     for name in adapter_names():
         adapter = create_adapter(name, settings)

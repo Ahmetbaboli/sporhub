@@ -60,7 +60,7 @@
 - [x] Haber sayfaları: `/news`, kategori/spor filtresi, arşiv (sayfalı, tarihe göre), takım/oyuncu sayfasında ilgili haberler
 ### v0.4 — Gerçek veri (demo → canlı)
 - [x] 0. Kaynak durumu: `GET /api/v1/admin/sources`, `python -m app.scripts.check_sources`
-- [ ] 1. `DATA_MODE=live|demo`; live'da fixture/örnek haber yok; demo şeridi; `purge_demo`
+- [x] 1. `DATA_MODE=live|demo`; live'da fixture/örnek haber yok; demo şeridi; `purge_demo`
 - [ ] 2. Gerçek spor verisi: football-data ücretsiz ligler, Süper Lig sağlayıcısı, kimlik eşleme, istek bütçesi, akıllı zamanlayıcı, tazelik/gecikme göstergesi, `/admin/status`
 - [ ] 3. Gerçek haberler: doğrulanmış RSS listesi, kısa özet, kopya birleştirme, ≥100 gerçek başlıkla sınıflandırma değerlendirmesi
 - [ ] 4. Gerçek giriş: dev login yalnızca development + ENABLE_DEV_LOGIN; AUTH-SETUP.md; hesap silme; gizlilik sayfası

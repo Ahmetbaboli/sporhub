@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Geist } from "next/font/google";
+import { DemoBanner } from "@/components/layout/demo-banner";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
@@ -52,6 +53,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             >
               {t().app.skipToContent}
             </a>
+            <DemoBanner />
             <Header />
             <main id="main" className="mx-auto w-full max-w-5xl flex-1 px-4 py-6 sm:py-8">
               {children}

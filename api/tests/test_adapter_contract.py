@@ -13,6 +13,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from app.adapters.base import BaseAdapter
 from app.adapters.dto import CompetitionDTO, EventDTO, StandingDTO, TeamDTO
+from app.adapters.http_fixture import SourceNotConfiguredError
 from app.adapters.registry import ADAPTERS, adapter_names, create_adapter
 from app.core.config import Settings
 from app.models import Event, Sport, Standing, SyncRun, Team
@@ -49,7 +50,8 @@ def test_registry_identity(name: str, settings: Settings) -> None:
     assert adapter.source == name, "registry key must equal adapter.source"
     assert adapter.sport_slug and adapter.sport_name
     assert adapter.default_competitions
-    assert adapter.use_fixtures and not adapter.fell_back_to_fixtures
+    assert adapter.use_fixtures and adapter.configured
+    assert adapter.record_source == f"demo:{name}"
 
 
 async def test_competitions(name: str, settings: Settings) -> None:
@@ -155,16 +157,20 @@ async def test_sync_roundtrip_is_idempotent(
     assert adapter.sport_slug in slugs
 
 
-async def test_missing_key_falls_back_and_scheduler_skips(
+async def test_missing_key_is_not_configured_and_never_uses_fixtures(
     name: str, settings: Settings, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     live = settings.model_copy(
-        update={"use_fixtures": False, "football_data_api_key": "", "balldontlie_api_key": ""}
+        update={"data_mode": "live", "football_data_api_key": "", "balldontlie_api_key": ""}
     )
     adapter = _adapter(name, live)
     needs_key = ADAPTERS[name].requires_api_key  # type: ignore[attr-defined]
-    assert adapter.fell_back_to_fixtures is needs_key
-    assert adapter.use_fixtures is needs_key
+    assert adapter.use_fixtures is False  # live mode never reads sample data
+    assert adapter.configured is not needs_key
+    assert adapter.record_source == name
+    if needs_key:
+        with pytest.raises(SourceNotConfiguredError):  # the single network entry point
+            await adapter._request("/any", "any")  # type: ignore[attr-defined]
     await adapter.aclose()
 
     calls: list[str] = []

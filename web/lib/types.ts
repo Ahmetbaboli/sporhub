@@ -278,3 +278,26 @@ export interface NewsItem {
 export interface NewsArchive {
   months: { month: string; count: number }[];
 }
+
+/** Data mode and source freshness (api/app/schemas/meta.py). */
+export interface SourceMeta {
+  name: string;
+  sport: string | null;
+  configured: boolean;
+  last_success_at: string | null;
+  last_attempt_at: string | null;
+  last_status: string | null;
+}
+
+export interface SportMeta {
+  slug: string;
+  name: string;
+  configured: boolean;
+  sources: string[];
+}
+
+export interface Meta {
+  data_mode: "live" | "demo";
+  sports: SportMeta[];
+  sources: SourceMeta[];
+}

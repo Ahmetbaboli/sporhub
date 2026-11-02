@@ -13,7 +13,7 @@ def adapter(settings: Settings) -> JolpicaAdapter:
 
 
 def _live(settings: Settings, **update: object) -> JolpicaAdapter:
-    adapter = JolpicaAdapter(settings.model_copy(update={"use_fixtures": False, **update}))
+    adapter = JolpicaAdapter(settings.model_copy(update={"data_mode": "live", **update}))
     adapter._http = RateLimitedClient(
         BASE_URL, headers={"User-Agent": USER_AGENT}, min_interval=0, backoff_min=0.01
     )

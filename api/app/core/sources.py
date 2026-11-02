@@ -25,6 +25,7 @@ class SourceSpec:
     description: str
     requires_key: bool
     is_configured: Callable[[Settings], bool]
+    sport: str | None  # sport slug it feeds; None for news
     # One cheap request proving the source answers with our configuration.
     probe_url: str
     probe_headers: Callable[[Settings], dict[str, str]]
@@ -36,6 +37,7 @@ SOURCES: tuple[SourceSpec, ...] = (
         kind="sports",
         description="football-data.org v4 (futbol)",
         requires_key=True,
+        sport="football",
         is_configured=lambda s: bool(s.football_data_api_key),
         probe_url="https://api.football-data.org/v4/competitions/PL",
         probe_headers=lambda s: {"X-Auth-Token": s.football_data_api_key},
@@ -45,6 +47,7 @@ SOURCES: tuple[SourceSpec, ...] = (
         kind="sports",
         description="API-Football / API-Sports v3 (Süper Lig)",
         requires_key=True,
+        sport="football",
         is_configured=lambda s: bool(s.api_football_key),
         # /status reports the account and does not count towards the daily quota.
         probe_url="https://v3.football.api-sports.io/status",
@@ -55,6 +58,7 @@ SOURCES: tuple[SourceSpec, ...] = (
         kind="sports",
         description="balldontlie NBA v1 (basketbol)",
         requires_key=True,
+        sport="basketball",
         is_configured=lambda s: bool(s.balldontlie_api_key),
         probe_url="https://api.balldontlie.io/v1/teams",
         probe_headers=lambda s: {"Authorization": s.balldontlie_api_key},
@@ -64,6 +68,7 @@ SOURCES: tuple[SourceSpec, ...] = (
         kind="sports",
         description="Jolpica-F1, Ergast uyumlu (Formula 1)",
         requires_key=False,
+        sport="formula-1",
         is_configured=lambda s: True,
         probe_url="https://api.jolpi.ca/ergast/f1/current/?limit=1",
         probe_headers=lambda s: {},
@@ -73,6 +78,7 @@ SOURCES: tuple[SourceSpec, ...] = (
         kind="news",
         description="RSS/Atom haber akışları (NEWS_FEEDS)",
         requires_key=False,
+        sport=None,
         is_configured=lambda s: bool(s.news_feeds),
         probe_url="",  # probed per feed, see probe_news_feeds
         probe_headers=lambda s: {},

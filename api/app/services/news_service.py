@@ -12,6 +12,7 @@ from sqlalchemy.orm import joinedload, selectinload
 
 from app.adapters.news_rss import SOURCE_PREFIX, NewsDTO, RssNewsAdapter
 from app.core.cache import cached, invalidate_all
+from app.core.data_mode import display_source
 from app.core.errors import NotFoundError
 from app.models import Competition, NewsArticle, NewsTag, Player, Sport, SyncRun, Team
 from app.repositories.upsert import upsert_row
@@ -300,7 +301,7 @@ def news_out(article: NewsArticle) -> NewsOut:
         url=article.url,
         image_url=article.image_url,
         author=article.author,
-        source=article.source.removeprefix(SOURCE_PREFIX),
+        source=display_source(article.source).removeprefix(SOURCE_PREFIX),
         published_at=article.published_at,
         category=article.category,  # type: ignore[arg-type]
         is_breaking=article.is_breaking,

@@ -23,10 +23,10 @@ FEED = FeedConfig(name="test", url="https://example.com/rss", sport="football")
 
 RSS = """<?xml version="1.0"?>
 <rss version="2.0"><channel>
-<item><title>A &amp; B signs for Club</title><link>https://example.com/a</link>
+<item><title>A &amp; B signs for Club</title><link>https://publisher.test/a</link>
 <guid>1</guid><pubDate>Mon, 02 Nov 2026 08:30:00 +0200</pubDate>
 <description><![CDATA[<p>Hello <b>world</b></p>]]></description>
-<enclosure url="https://example.com/a.jpg" type="image/jpeg"/></item>
+<enclosure url="https://publisher.test/a.jpg" type="image/jpeg"/></item>
 <item><title>No link</title></item>
 <item><title>Bad scheme</title><link>javascript:alert(1)</link></item>
 </channel></rss>"""
@@ -42,7 +42,7 @@ def test_parse_rss_keeps_safe_links_and_strips_html() -> None:
     item = items[0]
     assert item.title == "A & B signs for Club"
     assert item.summary == "Hello world"
-    assert item.image_url == "https://example.com/a.jpg"
+    assert item.image_url == "https://publisher.test/a.jpg"
     assert item.published_at == datetime(2026, 11, 2, 6, 30, tzinfo=UTC)
     assert item.category == "transfer_official"
     assert item.source == "rss:test" and item.sport_slug == "football"
@@ -248,7 +248,7 @@ async def test_live_feed_failure_is_recorded_not_fatal(
 ) -> None:
     live = settings.model_copy(
         update={
-            "use_fixtures": False,
+            "data_mode": "live",
             "news_feeds": [
                 {"name": "ok", "url": "https://feeds.example.com/ok"},
                 {"name": "down", "url": "https://feeds.example.com/down"},
@@ -262,3 +262,17 @@ async def test_live_feed_failure_is_recorded_not_fatal(
     await adapter.aclose()
     assert run.status == "partial" and run.items_upserted == 1
     assert "down" in (run.error or "")
+
+
+@respx.mock
+async def test_live_mode_drops_placeholder_links(
+    maker: async_sessionmaker[AsyncSession], settings: Settings
+) -> None:
+    feed = RSS.replace("https://publisher.test/a", "https://www.example.com/story")
+    live = settings.model_copy(
+        update={"data_mode": "live", "news_feeds": [{"name": "x", "url": "https://p.test/rss"}]}
+    )
+    respx.get("https://p.test/rss").mock(return_value=httpx.Response(200, text=feed))
+    adapter = RssNewsAdapter(live)
+    assert await adapter.fetch() == []
+    await adapter.aclose()

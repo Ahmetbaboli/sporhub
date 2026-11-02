@@ -70,7 +70,7 @@ async def _create_tables(engine: AsyncEngine) -> None:
 @pytest.fixture
 def settings() -> Settings:
     return Settings(
-        use_fixtures=True,
+        data_mode="demo",
         fixture_today=FIXTURE_TODAY,
         admin_token="test-admin-token",
         api_token_secret=TOKEN_SECRET,
@@ -85,6 +85,7 @@ def _isolate(settings: Settings, monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr("app.core.config.get_settings", lambda: settings)
     monkeypatch.setattr("app.core.cache.get_settings", lambda: settings)
     monkeypatch.setattr("app.routers.admin.get_settings", lambda: settings)
+    monkeypatch.setattr("app.routers.v1.get_settings", lambda: settings)
     monkeypatch.setattr("app.core.auth.get_settings", lambda: settings)
     cache.reset_cache()
 
@@ -111,7 +112,7 @@ async def session(maker: async_sessionmaker[AsyncSession]) -> AsyncIterator[Asyn
 
 
 async def _seed(engine: AsyncEngine) -> None:
-    settings = Settings(use_fixtures=True, fixture_today=FIXTURE_TODAY, redis_url="")
+    settings = Settings(data_mode="demo", fixture_today=FIXTURE_TODAY, redis_url="")
     await _create_tables(engine)
     maker = async_sessionmaker(engine, expire_on_commit=False)
     await run_sync(maker, FootballDataAdapter(settings), ("PL", "CL"))

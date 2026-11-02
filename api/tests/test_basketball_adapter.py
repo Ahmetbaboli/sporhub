@@ -20,7 +20,7 @@ def adapter(settings: Settings) -> BallDontLieAdapter:
 
 
 def _live(settings: Settings, key: str = "bdl-key") -> BallDontLieAdapter:
-    live = settings.model_copy(update={"use_fixtures": False, "balldontlie_api_key": key})
+    live = settings.model_copy(update={"data_mode": "live", "balldontlie_api_key": key})
     adapter = BallDontLieAdapter(live)
     adapter._http = RateLimitedClient(
         BASE_URL, headers={"Authorization": key}, min_interval=0, backoff_min=0.01
@@ -187,7 +187,7 @@ async def test_free_tier_without_active_players_still_syncs_teams(settings: Sett
 @respx.mock
 async def test_live_mode_never_shifts_dates(settings: Settings) -> None:
     live = settings.model_copy(
-        update={"use_fixtures": False, "balldontlie_api_key": "k", "fixture_today": "2030-01-01"}
+        update={"data_mode": "live", "balldontlie_api_key": "k", "fixture_today": "2030-01-01"}
     )
     adapter = BallDontLieAdapter(live)
     adapter._http = RateLimitedClient(BASE_URL, min_interval=0, backoff_min=0.01)

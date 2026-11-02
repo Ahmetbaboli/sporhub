@@ -22,6 +22,7 @@ from pydantic import BaseModel, Field
 
 from app.adapters.http import RateLimitedClient
 from app.core.config import Settings
+from app.core.data_mode import is_demo, is_placeholder_url, record_source
 
 logger = logging.getLogger(__name__)
 
@@ -242,7 +243,8 @@ class RssNewsAdapter:
     source = "news"
 
     def __init__(self, settings: Settings, client: httpx.AsyncClient | None = None) -> None:
-        self.use_fixtures = settings.use_fixtures
+        self._settings = settings
+        self.use_fixtures = is_demo(settings)
         self._fixtures = settings.fixtures_dir / FIXTURE_DIR
         self._fixture_today = (
             date.fromisoformat(settings.fixture_today) if settings.fixture_today else None
@@ -294,8 +296,12 @@ class RssNewsAdapter:
                 self.errors.append(f"{feed.name}: {exc}")
                 continue
             for item in items:
+                # Live mode never stores placeholder links (sample data, broken feeds).
+                if not self.use_fixtures and is_placeholder_url(item.url):
+                    continue
                 item.published_at += shift
-            news.extend(items)
+                item.source = record_source(item.source, self._settings)
+                news.append(item)
         return news
 
     async def aclose(self) -> None:

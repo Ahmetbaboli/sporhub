@@ -73,7 +73,7 @@ async def _upsert_competition(ctx: SyncContext, dto: CompetitionDTO) -> int:
         Competition,
         {
             "sport_id": ctx.sport_id,
-            "source": ctx.adapter.source,
+            "source": ctx.adapter.record_source,
             "external_id": dto.external_id,
             "slug": slugify(dto.name),
             "name": dto.name,
@@ -110,7 +110,7 @@ async def _upsert_team(ctx: SyncContext, ref: TeamRef, country: str | None = Non
         Team,
         {
             "sport_id": ctx.sport_id,
-            "source": ctx.adapter.source,
+            "source": ctx.adapter.record_source,
             "external_id": ref.external_id,
             "name": ref.name,
             "short_name": ref.short_name,
@@ -130,7 +130,7 @@ async def _team_id(ctx: SyncContext, ref: TeamRef) -> int:
         return ctx.team_ids[ref.external_id]
     existing = await ctx.session.scalar(
         select(Team.id).where(
-            Team.source == ctx.adapter.source, Team.external_id == ref.external_id
+            Team.source == ctx.adapter.record_source, Team.external_id == ref.external_id
         )
     )
     if existing is not None:
@@ -145,7 +145,7 @@ async def _upsert_player(ctx: SyncContext, player: PlayerDTO, team_id: int | Non
         Player,
         {
             "sport_id": ctx.sport_id,
-            "source": ctx.adapter.source,
+            "source": ctx.adapter.record_source,
             "external_id": player.external_id,
             "name": player.name,
             "position": player.position,
@@ -175,7 +175,7 @@ async def _player_id(ctx: SyncContext, external_id: str | None) -> int | None:
         return ctx.player_ids[external_id]
     existing = await ctx.session.scalar(
         select(Player.id).where(
-            Player.source == ctx.adapter.source, Player.external_id == external_id
+            Player.source == ctx.adapter.record_source, Player.external_id == external_id
         )
     )
     if existing is not None:
@@ -207,7 +207,7 @@ async def _upsert_events(ctx: SyncContext, season_id: int, events: list[EventDTO
             Event,
             {
                 "season_id": season_id,
-                "source": ctx.adapter.source,
+                "source": ctx.adapter.record_source,
                 "external_id": dto.external_id,
                 "kind": dto.kind,
                 "name": dto.name,
@@ -287,6 +287,24 @@ async def _sync_competition(ctx: SyncContext, dto: CompetitionDTO) -> None:
     await _replace_player_stats(ctx, season_id, await ctx.adapter.fetch_player_stats(ext, season))
 
 
+STATUS_SKIPPED = "skipped"
+
+
+async def _record_skipped(
+    maker: async_sessionmaker[AsyncSession], adapter: str, reason: str
+) -> SyncRun:
+    """A visible trace that nothing was synced (and why) — nothing else is written."""
+    now = datetime.now(UTC)
+    async with maker() as session:
+        run = SyncRun(
+            adapter=adapter, started_at=now, finished_at=now, status=STATUS_SKIPPED, error=reason
+        )
+        session.add(run)
+        await session.commit()
+    logger.warning("sync skipped", extra={"adapter": adapter, "reason": reason})
+    return run
+
+
 async def run_sync(
     maker: async_sessionmaker[AsyncSession],
     adapter: BaseAdapter,
@@ -294,6 +312,8 @@ async def run_sync(
 ) -> SyncRun:
     """Sync every wanted competition of `adapter`; a failing competition does not stop the rest."""
     wanted = set(competitions or adapter.default_competitions)
+    if not adapter.configured:
+        return await _record_skipped(maker, adapter.source, "API anahtarı yapılandırılmadı")
     async with maker() as session:
         run = SyncRun(adapter=adapter.source, started_at=datetime.now(UTC), status=STATUS_RUNNING)
         session.add(run)

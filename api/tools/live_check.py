@@ -13,9 +13,9 @@ from app.core.config import Settings
 
 
 async def main(name: str) -> None:
-    settings = Settings(use_fixtures=False)
+    settings = Settings(data_mode="live")
     adapter = create_adapter(name, settings)
-    if adapter.use_fixtures:
+    if not adapter.configured:
         sys.exit(f"{name}: no API key configured; refusing to 'check' fixtures")
     try:
         comps = {c.external_id: c for c in await adapter.fetch_competitions()}

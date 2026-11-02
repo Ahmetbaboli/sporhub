@@ -4,6 +4,7 @@ from typing import Annotated, Literal
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.config import get_settings
 from app.core.errors import ErrorResponse
 from app.db.session import get_session
 from app.schemas.analysis import HeadToHead, TeamAnalysis
@@ -14,8 +15,9 @@ from app.schemas.api import (
     SearchResults,
     TeamDetail,
 )
+from app.schemas.meta import MetaOut
 from app.schemas.stats import CompetitionStats, PlayerStatsList
-from app.services import analysis_service, stats_service
+from app.services import analysis_service, meta_service, stats_service
 from app.services import read_service as svc
 
 DEFAULT_PAGE_SIZE = 20
@@ -247,3 +249,13 @@ async def competition_stats(ref: str, session: Session) -> CompetitionStats:
 )
 async def player_stats(player_id: int, session: Session) -> PlayerStatsList:
     return await stats_service.get_player_stats(session, player_id)
+
+
+@router.get(
+    "/meta",
+    response_model=MetaOut,
+    tags=["meta"],
+    summary="Veri modu (live/demo), sporların yapılandırma durumu ve kaynak tazeliği",
+)
+async def meta(session: Session) -> MetaOut:
+    return await meta_service.get_meta(session, get_settings())

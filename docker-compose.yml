@@ -29,7 +29,8 @@ services:
     environment:
       DATABASE_URL: postgresql+asyncpg://justsport:justsport@postgres:5432/justsport
       REDIS_URL: redis://redis:6379/0
-      USE_FIXTURES: "true"
+      # Local sandbox without keys: labelled sample data. Set DATA_MODE=live for real data.
+      DATA_MODE: ${DATA_MODE:-demo}
       SEED_ON_START: "true"
       ADMIN_TOKEN: ${ADMIN_TOKEN:-dev-admin-token}
       API_TOKEN_SECRET: ${API_TOKEN_SECRET:-}

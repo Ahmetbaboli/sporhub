@@ -14,9 +14,9 @@ logger = logging.getLogger(__name__)
 
 async def sync_job(name: str, settings: Settings) -> None:
     adapter = create_adapter(name, settings)
-    if adapter.fell_back_to_fixtures:
-        # Missing API key in a real deployment: never overwrite real data with sample data.
-        logger.warning("scheduled sync skipped: API key missing", extra={"adapter": name})
+    if not adapter.configured or adapter.use_fixtures:
+        # Unconfigured sources are skipped; demo data is only ever loaded by the seed command.
+        logger.info("scheduled sync skipped", extra={"adapter": name})
         await adapter.aclose()
         return
     try:
@@ -50,7 +50,7 @@ def build_scheduler(settings: Settings) -> AsyncIOScheduler:
             coalesce=True,
         )
     # Only real feeds are polled on a schedule; sample news is loaded by the seed command.
-    if settings.news_feeds and not settings.use_fixtures:
+    if settings.news_feeds and settings.data_mode == "live":
         scheduler.add_job(
             news_job,
             "interval",

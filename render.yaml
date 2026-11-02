@@ -18,8 +18,8 @@ services:
         sync: false
       - key: ADMIN_TOKEN
         generateValue: true
-      - key: USE_FIXTURES
-        value: "false"
+      - key: DATA_MODE
+        value: live
       - key: SEED_ON_START
         value: "false"
       - key: SCHEDULER_ENABLED

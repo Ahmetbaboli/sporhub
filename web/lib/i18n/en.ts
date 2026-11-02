@@ -37,6 +37,12 @@ export const en: Messages = {
     "formula-1": "Formula 1",
     comingSoon: "Coming soon",
     comingSoonBody: "No data source is connected for this sport yet.",
+    notConfigured: "This data source is not configured yet",
+    notConfiguredBody:
+      "No API key is set for this sport's real data provider. We don't show sample data instead.",
+    awaitingSync: "No data yet",
+    awaitingSyncBody: "The source is configured; data will appear after the first sync.",
+    sourcesLink: "Data sources",
   },
   home: {
     title: "Today's events",
@@ -393,6 +399,10 @@ export const en: Messages = {
     notFoundTitle: "Page not found",
     notFoundBody: "The page you are looking for may have moved or never existed.",
     backHome: "Back to home",
+  },
+  demo: {
+    banner: "Sample data",
+    bannerBody: "Everything shown on this site is made-up sample data for development.",
   },
   footer: {
     note: "Data is compiled from third-party sources and may include sample data for demonstration.",

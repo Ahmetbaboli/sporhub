@@ -1,6 +1,6 @@
 from functools import lru_cache
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -23,9 +23,10 @@ class Settings(BaseSettings):
     football_data_api_key: str = Field(default="", repr=False)
     balldontlie_api_key: str = Field(default="", repr=False)
     api_football_key: str = Field(default="", repr=False)
-    use_fixtures: bool = True
+    # live = real provider data only; demo = bundled fixtures + sample news, clearly labelled.
+    data_mode: Literal["live", "demo"] = "live"
     fixtures_dir: Path = DEFAULT_FIXTURES_DIR
-    # Pins "today" for fixture date shifting (YYYY-MM-DD); used by tests.
+    # Pins "today" for demo-mode fixture date shifting (YYYY-MM-DD); used by tests.
     fixture_today: str = ""
 
     admin_token: str = Field(default="", repr=False)
