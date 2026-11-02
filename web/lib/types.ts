@@ -181,3 +181,49 @@ export interface HeadToHead {
   summary: SplitStats;
   matches: SportEvent[];
 }
+
+/** Competition statistics (api/app/schemas/stats.py). */
+export interface LeaderRow {
+  rank: number;
+  player: Player | null;
+  team: Team | null;
+  value: number;
+  played: number | null;
+}
+
+export interface LeaderCategory {
+  key: string;
+  subject: "player" | "team";
+  rows: LeaderRow[];
+}
+
+export interface MatchSummary {
+  played: number;
+  total_scored: number;
+  avg_per_match: number;
+  home_win_pct: number;
+  draw_pct: number;
+  away_win_pct: number;
+  biggest_win: SportEvent | null;
+  highest_scoring: SportEvent | null;
+}
+
+export interface RaceSummary {
+  completed: number;
+  scheduled: number;
+  distinct_winners: number;
+  pole_to_win: number;
+}
+
+export interface SeasonHistoryRow {
+  season: Season;
+  leader: Standing | null;
+}
+
+export interface CompetitionStats {
+  season: Season | null;
+  matches: MatchSummary | null;
+  races: RaceSummary | null;
+  leaders: LeaderCategory[];
+  history: SeasonHistoryRow[];
+}

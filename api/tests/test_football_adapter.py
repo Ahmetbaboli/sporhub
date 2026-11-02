@@ -7,6 +7,7 @@ from app.adapters.football_data import (
     STATUS_MAP,
     FootballDataAdapter,
     normalize_match,
+    normalize_scorer,
     normalize_standings,
     season_label,
 )
@@ -158,4 +159,40 @@ async def test_live_mode_never_shifts_dates(settings: Settings) -> None:
     adapter._http = RateLimitedClient(BASE_URL, min_interval=0, backoff_min=0.01)
     (event,) = await adapter.fetch_events("PL", "2026")
     assert event.start_time.isoformat() == "2026-03-01T15:00:00+00:00"
+    await adapter.aclose()
+
+
+def test_normalize_scorer_keeps_nulls_out() -> None:
+    raw = {
+        "player": {
+            "id": 7,
+            "name": "A. Forvet",
+            "section": "Offence",
+            "position": "Centre-Forward",
+        },
+        "team": {"id": 1, "name": "Kulüp FC", "shortName": "Kulüp", "tla": "KUL", "crest": None},
+        "playedMatches": 9,
+        "goals": 8,
+        "assists": None,
+        "penalties": 2,
+    }
+    dto = normalize_scorer(raw)
+    assert dto.player.external_id == "7" and dto.player.position == "Offence"
+    assert dto.team is not None and dto.team.external_id == "1"
+    assert dto.stats == {"goals": 8.0, "penalties": 2.0, "played": 9.0}
+
+
+async def test_scorers_fixture_is_sorted(adapter: FootballDataAdapter) -> None:
+    stats = await adapter.fetch_player_stats("PL", "2026")
+    goals = [s.stats["goals"] for s in stats]
+    assert goals and goals == sorted(goals, reverse=True)
+
+
+@respx.mock
+async def test_scorers_forbidden_on_plan_is_not_fatal(settings: Settings) -> None:
+    live = settings.model_copy(update={"use_fixtures": False, "football_data_api_key": "k"})
+    respx.get(f"{BASE_URL}/competitions/PL/scorers").mock(return_value=httpx.Response(403))
+    adapter = FootballDataAdapter(live)
+    adapter._http = RateLimitedClient(BASE_URL, min_interval=0, backoff_min=0.01)
+    assert await adapter.fetch_player_stats("PL", "2026") == []
     await adapter.aclose()

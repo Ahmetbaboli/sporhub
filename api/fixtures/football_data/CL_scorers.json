@@ -1,0 +1,1058 @@
+{
+ "_fixture": {
+  "note": "Synthetic scorers derived from the sample matches."
+ },
+ "count": 50,
+ "scorers": [
+  {
+   "player": {
+    "id": 103904,
+    "name": "Arda Kaya",
+    "position": "Centre-Back",
+    "nationality": "Portugal",
+    "dateOfBirth": "2003-02-08",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 4,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 100711,
+    "name": "Hugo Costa",
+    "position": "Left Winger",
+    "nationality": "Brazil",
+    "dateOfBirth": "2001-06-01",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 4,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104909,
+    "name": "Hugo Hoffmann",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "1996-05-01",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 4,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 108802,
+    "name": "Ivan Costa",
+    "position": "Centre-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "1997-11-05",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 4,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103913,
+    "name": "Omar Brandt",
+    "position": "Centre-Forward",
+    "nationality": "Argentina",
+    "dateOfBirth": "1993-09-08",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 4,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104908,
+    "name": "Yusuf Almeida",
+    "position": "Central Midfield",
+    "nationality": "France",
+    "dateOfBirth": "1996-09-10",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 4,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106113,
+    "name": "Diego Costa",
+    "position": "Centre-Forward",
+    "nationality": "Spain",
+    "dateOfBirth": "2002-07-28",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 4,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 105412,
+    "name": "Viktor Weber",
+    "position": "Right Winger",
+    "nationality": "Germany",
+    "dateOfBirth": "2003-05-22",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 4,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 109107,
+    "name": "Jonas Tanaka",
+    "position": "Central Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "1999-06-16",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100111,
+    "name": "Hugo Quinn",
+    "position": "Left Winger",
+    "nationality": "Argentina",
+    "dateOfBirth": "2002-08-01",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 109510,
+    "name": "Leo Almeida",
+    "position": "Attacking Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "1997-09-28",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 108905,
+    "name": "Mateo Hoffmann",
+    "position": "Left-Back",
+    "nationality": "Portugal",
+    "dateOfBirth": "1994-01-02",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1089,
+    "name": "Celtic FC",
+    "shortName": "Celtic",
+    "tla": "CEL",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 109108,
+    "name": "Arda Brandt",
+    "position": "Central Midfield",
+    "nationality": "Germany",
+    "dateOfBirth": "1992-05-17",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101304,
+    "name": "Diego Moretti",
+    "position": "Centre-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "2001-11-22",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102107,
+    "name": "Karim Ilic",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "1997-03-21",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 108414,
+    "name": "Karim Vidal",
+    "position": "Centre-Forward",
+    "nationality": "Brazil",
+    "dateOfBirth": "2004-03-20",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105414,
+    "name": "Leo Moretti",
+    "position": "Centre-Forward",
+    "nationality": "Spain",
+    "dateOfBirth": "1997-04-08",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1054,
+    "name": "SSC Napoli",
+    "shortName": "SSC Napoli",
+    "tla": "NAP",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 108409,
+    "name": "Rafael Lemaire",
+    "position": "Central Midfield",
+    "nationality": "England",
+    "dateOfBirth": "2005-02-08",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 109505,
+    "name": "Rafael Petrov",
+    "position": "Left-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "2001-04-20",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101309,
+    "name": "Sami Costa",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "1999-05-14",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102705,
+    "name": "Viktor Silva",
+    "position": "Left-Back",
+    "nationality": "France",
+    "dateOfBirth": "1991-08-17",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 101303,
+    "name": "Jonas Garcia",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "2000-12-25",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 109309,
+    "name": "Karim Rossi",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1992-07-06",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 108405,
+    "name": "Marco Novak",
+    "position": "Left-Back",
+    "nationality": "Spain",
+    "dateOfBirth": "2005-04-20",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106507,
+    "name": "Mateo Quinn",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2001-06-27",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 108705,
+    "name": "Omar Kaya",
+    "position": "Left-Back",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1994-03-17",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106211,
+    "name": "Omar Zielinski",
+    "position": "Left Winger",
+    "nationality": "Turkey",
+    "dateOfBirth": "1998-08-06",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 101812,
+    "name": "Pedro Demir",
+    "position": "Right Winger",
+    "nationality": "England",
+    "dateOfBirth": "2006-04-03",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 108611,
+    "name": "Rafael Eriksen",
+    "position": "Left Winger",
+    "nationality": "Turkey",
+    "dateOfBirth": "1997-10-07",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1086,
+    "name": "Club Brugge KV",
+    "shortName": "Club Brugge KV",
+    "tla": "CLB",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 108712,
+    "name": "Rafael Novak",
+    "position": "Right Winger",
+    "nationality": "Brazil",
+    "dateOfBirth": "2004-06-18",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1087,
+    "name": "Galatasaray SK",
+    "shortName": "Galatasaray SK",
+    "tla": "GAL",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102114,
+    "name": "Tomas Demir",
+    "position": "Centre-Forward",
+    "nationality": "England",
+    "dateOfBirth": "2006-04-18",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 109311,
+    "name": "Tomas Kaya",
+    "position": "Left Winger",
+    "nationality": "France",
+    "dateOfBirth": "1991-12-05",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1093,
+    "name": "Royale Union Saint-Gilloise",
+    "shortName": "Royale Union Saint-Gilloise",
+    "tla": "USG",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 109013,
+    "name": "Tomas Quinn",
+    "position": "Centre-Forward",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2004-01-13",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1090,
+    "name": "SK Slavia Praha",
+    "shortName": "SK Slavia Praha",
+    "tla": "SLA",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 109408,
+    "name": "Viktor Okafor",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "1996-07-27",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1094,
+    "name": "FC København",
+    "shortName": "FC København",
+    "tla": "FCK",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 108012,
+    "name": "Sami Jansen",
+    "position": "Right Winger",
+    "nationality": "France",
+    "dateOfBirth": "2006-12-28",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1080,
+    "name": "Olympique de Marseille",
+    "shortName": "Olympique de Marseille",
+    "tla": "OM",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100108,
+    "name": "Emre Rossi",
+    "position": "Central Midfield",
+    "nationality": "Portugal",
+    "dateOfBirth": "1997-10-02",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 108406,
+    "name": "Ivan Eriksen",
+    "position": "Right-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "1995-04-16",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 104111,
+    "name": "Marco Okafor",
+    "position": "Left Winger",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2000-09-24",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103409,
+    "name": "Nico Okafor",
+    "position": "Central Midfield",
+    "nationality": "Turkey",
+    "dateOfBirth": "1991-11-07",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104112,
+    "name": "Sami Petrov",
+    "position": "Right Winger",
+    "nationality": "Turkey",
+    "dateOfBirth": "2003-10-27",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 109511,
+    "name": "Tomas Tanaka",
+    "position": "Left Winger",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1993-08-16",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 106510,
+    "name": "Yusuf Lemaire",
+    "position": "Attacking Midfield",
+    "nationality": "Portugal",
+    "dateOfBirth": "1996-10-24",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 109113,
+    "name": "Yusuf Quinn",
+    "position": "Centre-Forward",
+    "nationality": "Brazil",
+    "dateOfBirth": "1994-10-08",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1091,
+    "name": "FK Bodø/Glimt",
+    "shortName": "FK Bodø/Glimt",
+    "tla": "BOD",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102208,
+    "name": "Arda Costa",
+    "position": "Central Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "2002-10-21",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 108806,
+    "name": "Arda Moretti",
+    "position": "Right-Back",
+    "nationality": "England",
+    "dateOfBirth": "1995-01-22",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1088,
+    "name": "Olympiacos FC",
+    "shortName": "Olympiacos",
+    "tla": "OLY",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103408,
+    "name": "Arda Novak",
+    "position": "Central Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "2005-12-09",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106406,
+    "name": "Arda Quinn",
+    "position": "Right-Back",
+    "nationality": "Italy",
+    "dateOfBirth": "2005-03-24",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 108408,
+    "name": "Arda Rossi",
+    "position": "Central Midfield",
+    "nationality": "Spain",
+    "dateOfBirth": "2004-10-07",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1084,
+    "name": "PSV",
+    "shortName": "PSV",
+    "tla": "PSV",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 109506,
+    "name": "Arda Silva",
+    "position": "Right-Back",
+    "nationality": "Spain",
+    "dateOfBirth": "1999-07-28",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1095,
+    "name": "Pafos FC",
+    "shortName": "Pafos",
+    "tla": "PAF",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102210,
+    "name": "Diego Jansen",
+    "position": "Attacking Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "1993-06-19",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  }
+ ]
+}

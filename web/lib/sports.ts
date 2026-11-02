@@ -11,7 +11,7 @@ export type StandingsLayout = "league" | "conference" | "championship";
 export interface SportTemplate {
   icon: LucideIcon;
   standings: StandingsLayout;
-  tabs: { fixtures: string; results: string; standings: string };
+  tabs: { fixtures: string; results: string; standings: string; stats: string };
   /** Events per page on the fixtures/results tabs (race cards are tall, so fewer). */
   pageSize: number;
   /** How team form/analysis is shown; null = sport has no two-sided matches (races). */

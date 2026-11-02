@@ -14,7 +14,8 @@ from app.schemas.api import (
     SearchResults,
     TeamDetail,
 )
-from app.services import analysis_service
+from app.schemas.stats import CompetitionStats
+from app.services import analysis_service, stats_service
 from app.services import read_service as svc
 
 DEFAULT_PAGE_SIZE = 20
@@ -226,3 +227,13 @@ async def head_to_head(
     limit: Annotated[int, Query(ge=1, le=MAX_H2H_SIZE)] = analysis_service.DEFAULT_H2H_SIZE,
 ) -> HeadToHead:
     return await analysis_service.get_head_to_head(session, team_id, opponent_id, limit)
+
+
+@router.get(
+    "/competitions/{ref}/stats",
+    response_model=CompetitionStats,
+    tags=["competitions"],
+    summary="Lig özeti, liderlik tabloları (gol krallığı vb.) ve sezon geçmişi",
+)
+async def competition_stats(ref: str, session: Session) -> CompetitionStats:
+    return await stats_service.get_competition_stats(session, ref)

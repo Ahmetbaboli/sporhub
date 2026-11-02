@@ -11,6 +11,7 @@ from app.models import (
     Event,
     EventParticipant,
     Player,
+    PlayerStat,
     Season,
     Sport,
     Standing,
@@ -280,3 +281,30 @@ async def search(
         .limit(SEARCH_LIMIT)
     )
     return list(comps.all()), list(teams.all()), list(players.all())
+
+
+async def list_season_events(session: AsyncSession, season_id: int) -> list[Event]:
+    stmt = _event_select().where(Event.season_id == season_id).order_by(Event.start_time, Event.id)
+    return list((await session.scalars(stmt)).unique().all())
+
+
+async def list_player_stats(session: AsyncSession, season_id: int) -> list[PlayerStat]:
+    stmt = (
+        select(PlayerStat)
+        .where(PlayerStat.season_id == season_id)
+        .options(
+            joinedload(PlayerStat.player).joinedload(Player.team).joinedload(Team.sport),
+            joinedload(PlayerStat.team).joinedload(Team.sport),
+        )
+        .order_by(PlayerStat.id)
+    )
+    return list((await session.scalars(stmt)).unique().all())
+
+
+async def list_seasons(session: AsyncSession, competition_id: int) -> list[Season]:
+    stmt = (
+        select(Season)
+        .where(Season.competition_id == competition_id)
+        .order_by(Season.year_label.desc())
+    )
+    return list((await session.scalars(stmt)).all())

@@ -9,6 +9,7 @@ from app.models import (
     Event,
     EventParticipant,
     Player,
+    PlayerStat,
     Season,
     Sport,
     Standing,
@@ -17,7 +18,17 @@ from app.models import (
 )
 from app.services.sync_service import run_sync, slugify
 
-TABLES = (Sport, Competition, Season, Team, Player, Event, EventParticipant, Standing)
+TABLES = (
+    Sport,
+    Competition,
+    Season,
+    Team,
+    Player,
+    Event,
+    EventParticipant,
+    Standing,
+    PlayerStat,
+)
 
 
 async def counts(session: AsyncSession) -> dict[str, int]:
@@ -41,6 +52,7 @@ async def test_sync_populates_tables(
     assert c["events"] == 120
     assert c["event_participants"] == 240
     assert c["standings"] == 20
+    assert c["player_stats"] == 50
 
 
 async def test_sync_is_idempotent(

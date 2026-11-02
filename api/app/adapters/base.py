@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from app.adapters.dto import CompetitionDTO, EventDTO, StandingDTO, TeamDTO
+from app.adapters.dto import CompetitionDTO, EventDTO, PlayerStatDTO, StandingDTO, TeamDTO
 
 
 class BaseAdapter(ABC):
@@ -31,6 +31,10 @@ class BaseAdapter(ABC):
 
     @abstractmethod
     async def fetch_teams(self, competition_ext_id: str, season: str) -> list[TeamDTO]: ...
+
+    async def fetch_player_stats(self, competition_ext_id: str, season: str) -> list[PlayerStatDTO]:
+        """Optional: per-player season totals. Sources without them return nothing."""
+        return []
 
     async def aclose(self) -> None:  # noqa: B027 - optional hook
         """Release network resources."""

@@ -4,6 +4,7 @@ Docs: https://docs.football-data.org/general/v4/ — auth via `X-Auth-Token`,
 free tier allows 10 requests/minute.
 """
 
+import logging
 from datetime import UTC, date, datetime, timedelta
 from typing import Any
 
@@ -15,6 +16,7 @@ from app.adapters.dto import (
     EventStatus,
     ParticipantDTO,
     PlayerDTO,
+    PlayerStatDTO,
     StandingDTO,
     TeamDTO,
     TeamRef,
@@ -22,10 +24,15 @@ from app.adapters.dto import (
 from app.adapters.http_fixture import HttpFixtureAdapter
 from app.core.config import Settings
 
+logger = logging.getLogger(__name__)
+
 BASE_URL = "https://api.football-data.org/v4"
 # Free tier: 10 requests per minute -> one request every 6 s, plus a safety margin.
 MIN_REQUEST_INTERVAL_SECONDS = 6.5
 TOTAL_STANDING_TYPE = "TOTAL"
+# Scorers list length requested per competition (one request, the API caps it).
+SCORERS_LIMIT = 50
+UNAVAILABLE = frozenset({401, 403, 404})
 
 STATUS_MAP: dict[str, EventStatus] = {
     "SCHEDULED": "scheduled",
@@ -84,6 +91,28 @@ def normalize_player(raw: dict[str, Any]) -> PlayerDTO:
         position=raw.get("position"),
         nationality=raw.get("nationality"),
         extra={"date_of_birth": raw["dateOfBirth"]} if raw.get("dateOfBirth") else {},
+    )
+
+
+SCORER_STATS = {
+    "goals": "goals",
+    "assists": "assists",
+    "penalties": "penalties",
+    "playedMatches": "played",
+}
+
+
+def normalize_scorer(raw: dict[str, Any]) -> PlayerStatDTO:
+    """One row of /competitions/{code}/scorers; null counters are left out, not zeroed."""
+    player = dict(raw["player"])
+    # Scorer rows carry the squad "section" (Offence...) next to a detailed position.
+    player["position"] = player.get("section") or player.get("position")
+    return PlayerStatDTO(
+        player=normalize_player(player),
+        team=normalize_team_ref(raw["team"]) if raw.get("team") else None,
+        stats={
+            key: float(raw[src]) for src, key in SCORER_STATS.items() if raw.get(src) is not None
+        },
     )
 
 
@@ -186,6 +215,21 @@ class FootballDataAdapter(HttpFixtureAdapter):
             {"season": season},
         )
         return normalize_standings(data)
+
+    async def fetch_player_stats(self, competition_ext_id: str, season: str) -> list[PlayerStatDTO]:
+        try:
+            data = await self._request(
+                f"/competitions/{competition_ext_id}/scorers",
+                f"{competition_ext_id}_scorers",
+                {"season": season, "limit": SCORERS_LIMIT},
+            )
+        except httpx.HTTPStatusError as exc:
+            # Scorers are a bonus: a plan/competition without them must not fail the sync.
+            if exc.response.status_code not in UNAVAILABLE:
+                raise
+            logger.warning("scorers unavailable", extra={"competition": competition_ext_id})
+            return []
+        return [normalize_scorer(s) for s in data.get("scorers", [])]
 
     async def fetch_teams(self, competition_ext_id: str, season: str) -> list[TeamDTO]:
         data = await self._request(

@@ -1,0 +1,1058 @@
+{
+ "_fixture": {
+  "note": "Synthetic scorers derived from the sample matches."
+ },
+ "count": 50,
+ "scorers": [
+  {
+   "player": {
+    "id": 105903,
+    "name": "Nico Zielinski",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "1997-04-03",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1059,
+    "name": "Torino FC",
+    "shortName": "Torino",
+    "tla": "TOR",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 4,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104914,
+    "name": "Emre Brandt",
+    "position": "Centre-Forward",
+    "nationality": "France",
+    "dateOfBirth": "1996-07-13",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104310,
+    "name": "Ivan Jansen",
+    "position": "Attacking Midfield",
+    "nationality": "Spain",
+    "dateOfBirth": "2000-12-14",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105514,
+    "name": "Jonas Moretti",
+    "position": "Centre-Forward",
+    "nationality": "Italy",
+    "dateOfBirth": "1992-04-03",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 104808,
+    "name": "Jonas Okafor",
+    "position": "Central Midfield",
+    "nationality": "Turkey",
+    "dateOfBirth": "2005-09-01",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104111,
+    "name": "Marco Okafor",
+    "position": "Left Winger",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2000-09-24",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 105303,
+    "name": "Omar Lemaire",
+    "position": "Centre-Back",
+    "nationality": "England",
+    "dateOfBirth": "1996-10-15",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 104606,
+    "name": "Sami Rossi",
+    "position": "Right-Back",
+    "nationality": "Spain",
+    "dateOfBirth": "1995-11-13",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105305,
+    "name": "Marco Silva",
+    "position": "Left-Back",
+    "nationality": "Italy",
+    "dateOfBirth": "1998-12-09",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105807,
+    "name": "Noah Almeida",
+    "position": "Central Midfield",
+    "nationality": "France",
+    "dateOfBirth": "1999-12-06",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 105509,
+    "name": "Omar Novak",
+    "position": "Central Midfield",
+    "nationality": "Portugal",
+    "dateOfBirth": "1998-11-20",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 104912,
+    "name": "Rafael Petrov",
+    "position": "Right Winger",
+    "nationality": "Brazil",
+    "dateOfBirth": "1994-10-19",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104112,
+    "name": "Sami Petrov",
+    "position": "Right Winger",
+    "nationality": "Turkey",
+    "dateOfBirth": "2003-10-27",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1041,
+    "name": "Atalanta BC",
+    "shortName": "Atalanta BC",
+    "tla": "ATA",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 104314,
+    "name": "Tomas Brandt",
+    "position": "Centre-Forward",
+    "nationality": "Turkey",
+    "dateOfBirth": "2001-10-27",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105506,
+    "name": "Karim Tanaka",
+    "position": "Right-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "2002-07-22",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 4,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105709,
+    "name": "Ivan Eriksen",
+    "position": "Central Midfield",
+    "nationality": "England",
+    "dateOfBirth": "1991-09-18",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 105513,
+    "name": "Noah Vidal",
+    "position": "Centre-Forward",
+    "nationality": "England",
+    "dateOfBirth": "2003-10-15",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105202,
+    "name": "Pedro Ilic",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "2003-05-25",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104904,
+    "name": "Sami Demir",
+    "position": "Centre-Back",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2006-04-04",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105711,
+    "name": "Tomas Eriksen",
+    "position": "Left Winger",
+    "nationality": "Italy",
+    "dateOfBirth": "1995-10-06",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105705,
+    "name": "Arda Brandt",
+    "position": "Left-Back",
+    "nationality": "Germany",
+    "dateOfBirth": "2001-09-27",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105813,
+    "name": "Arda Silva",
+    "position": "Centre-Forward",
+    "nationality": "Italy",
+    "dateOfBirth": "1997-12-20",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105306,
+    "name": "Hugo Demir",
+    "position": "Right-Back",
+    "nationality": "Spain",
+    "dateOfBirth": "2002-10-03",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 104309,
+    "name": "Hugo Rossi",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2003-01-18",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105309,
+    "name": "Ivan Moretti",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1992-10-26",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1053,
+    "name": "AC Milan",
+    "shortName": "AC Milan",
+    "tla": "MIL",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105507,
+    "name": "Karim Moretti",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1993-07-25",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1055,
+    "name": "Parma Calcio 1913",
+    "shortName": "Parma Calcio 1913",
+    "tla": "PAR",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106008,
+    "name": "Leo Silva",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2006-08-28",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1060,
+    "name": "Udinese Calcio",
+    "shortName": "Udinese Calcio",
+    "tla": "UDI",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104903,
+    "name": "Luca Lemaire",
+    "position": "Centre-Back",
+    "nationality": "Turkey",
+    "dateOfBirth": "1992-06-18",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105109,
+    "name": "Luca Zielinski",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2004-11-01",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 104905,
+    "name": "Marco Tanaka",
+    "position": "Left-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "2002-12-14",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1049,
+    "name": "FC Internazionale Milano",
+    "shortName": "FC Internazionale Milano",
+    "tla": "INT",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104613,
+    "name": "Noah Tanaka",
+    "position": "Centre-Forward",
+    "nationality": "Argentina",
+    "dateOfBirth": "1997-06-03",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1046,
+    "name": "ACF Fiorentina",
+    "shortName": "ACF Fiorentina",
+    "tla": "FIO",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105108,
+    "name": "Omar Fofana",
+    "position": "Central Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "1998-09-19",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104212,
+    "name": "Rafael Fofana",
+    "position": "Right Winger",
+    "nationality": "Germany",
+    "dateOfBirth": "2000-02-18",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105808,
+    "name": "Viktor Novak",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2000-10-05",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1058,
+    "name": "US Sassuolo Calcio",
+    "shortName": "US Sassuolo Calcio",
+    "tla": "SAS",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104506,
+    "name": "Yusuf Garcia",
+    "position": "Right-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "1993-03-01",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105103,
+    "name": "Yusuf Garcia",
+    "position": "Centre-Back",
+    "nationality": "Portugal",
+    "dateOfBirth": "2004-09-05",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1051,
+    "name": "SS Lazio",
+    "shortName": "SS Lazio",
+    "tla": "LAZ",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104202,
+    "name": "Diego Kaya",
+    "position": "Centre-Back",
+    "nationality": "Italy",
+    "dateOfBirth": "2006-05-01",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1042,
+    "name": "Bologna FC 1909",
+    "shortName": "Bologna",
+    "tla": "BOL",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 105613,
+    "name": "Hugo Petrov",
+    "position": "Centre-Forward",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2002-06-12",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1056,
+    "name": "AC Pisa 1909",
+    "shortName": "AC Pisa 1909",
+    "tla": "PIS",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104807,
+    "name": "Ivan Demir",
+    "position": "Central Midfield",
+    "nationality": "England",
+    "dateOfBirth": "2002-04-17",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1048,
+    "name": "Hellas Verona FC",
+    "shortName": "Hellas Verona",
+    "tla": "HEL",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104412,
+    "name": "Ivan Lemaire",
+    "position": "Right Winger",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2006-06-21",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1044,
+    "name": "Como 1907",
+    "shortName": "Como 1907",
+    "tla": "COM",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104709,
+    "name": "Ivan Tanaka",
+    "position": "Central Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "1993-11-20",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104306,
+    "name": "Jonas Demir",
+    "position": "Right-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "1999-10-17",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1043,
+    "name": "Cagliari Calcio",
+    "shortName": "Cagliari Calcio",
+    "tla": "CAG",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105011,
+    "name": "Jonas Petrov",
+    "position": "Left Winger",
+    "nationality": "France",
+    "dateOfBirth": "1993-12-16",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1050,
+    "name": "Juventus FC",
+    "shortName": "Juventus",
+    "tla": "JUV",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104508,
+    "name": "Karim Kaya",
+    "position": "Central Midfield",
+    "nationality": "Spain",
+    "dateOfBirth": "2005-01-11",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105204,
+    "name": "Karim Lemaire",
+    "position": "Centre-Back",
+    "nationality": "Italy",
+    "dateOfBirth": "1993-07-19",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104504,
+    "name": "Marco Hoffmann",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "1997-02-16",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 104703,
+    "name": "Marco Okafor",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "1999-02-11",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1047,
+    "name": "Genoa CFC",
+    "shortName": "Genoa CFC",
+    "tla": "GEN",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105208,
+    "name": "Marco Okafor",
+    "position": "Central Midfield",
+    "nationality": "Turkey",
+    "dateOfBirth": "1993-04-07",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1052,
+    "name": "US Lecce",
+    "shortName": "US Lecce",
+    "tla": "LEC",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 105707,
+    "name": "Pedro Petrov",
+    "position": "Central Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "2002-02-18",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1057,
+    "name": "AS Roma",
+    "shortName": "AS Roma",
+    "tla": "ROM",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104514,
+    "name": "Pedro Yildiz",
+    "position": "Centre-Forward",
+    "nationality": "Turkey",
+    "dateOfBirth": "1991-09-21",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1045,
+    "name": "US Cremonese",
+    "shortName": "US Cremonese",
+    "tla": "CRE",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  }
+ ]
+}

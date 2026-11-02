@@ -6,6 +6,7 @@ import type {
   ApiErrorBody,
   Competition,
   CompetitionDetail,
+  CompetitionStats,
   Dashboard,
   EventStatus,
   FavoriteIds,
@@ -137,6 +138,8 @@ export const api = {
       page: q.page,
       page_size: q.pageSize,
     }),
+  competitionStats: (ref: string) =>
+    get<CompetitionStats>(`/api/v1/competitions/${encodeURIComponent(ref)}/stats`),
   standings: (ref: string) =>
     get<Page<Standing>>(`/api/v1/competitions/${encodeURIComponent(ref)}/standings`),
   todayEvents: (opts: { sport?: string; date?: string; tz?: string } = {}) =>

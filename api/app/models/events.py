@@ -72,6 +72,22 @@ class EventParticipant(Base):
     player: Mapped[Player | None] = relationship()
 
 
+class PlayerStat(Base):
+    """A player's season totals in one competition; replaced wholesale on every sync."""
+
+    __tablename__ = "player_stats"
+    __table_args__ = (UniqueConstraint("season_id", "player_id"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    season_id: Mapped[int] = mapped_column(ForeignKey("seasons.id"), index=True)
+    player_id: Mapped[int] = mapped_column(ForeignKey("players.id"), index=True)
+    team_id: Mapped[int | None] = mapped_column(ForeignKey("teams.id"))
+    stats: Mapped[dict] = mapped_column(JSONType, default=dict)
+
+    player: Mapped[Player] = relationship()
+    team: Mapped[Team | None] = relationship()
+
+
 class Standing(Base):
     __tablename__ = "standings"
 

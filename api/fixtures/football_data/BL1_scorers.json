@@ -1,0 +1,1058 @@
+{
+ "_fixture": {
+  "note": "Synthetic scorers derived from the sample matches."
+ },
+ "count": 50,
+ "scorers": [
+  {
+   "player": {
+    "id": 107602,
+    "name": "Emre Tanaka",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "1997-02-12",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1076,
+    "name": "1. FC Köln",
+    "shortName": "1.",
+    "tla": "KOE",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 5,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106414,
+    "name": "Karim Silva",
+    "position": "Centre-Forward",
+    "nationality": "France",
+    "dateOfBirth": "1994-05-05",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 4,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107111,
+    "name": "Luca Silva",
+    "position": "Left Winger",
+    "nationality": "Portugal",
+    "dateOfBirth": "1995-03-24",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1071,
+    "name": "TSG 1899 Hoffenheim",
+    "shortName": "TSG 1899 Hoffenheim",
+    "tla": "TSG",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106402,
+    "name": "Karim Lemaire",
+    "position": "Centre-Back",
+    "nationality": "Portugal",
+    "dateOfBirth": "2001-03-13",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 107605,
+    "name": "Luca Garcia",
+    "position": "Left-Back",
+    "nationality": "France",
+    "dateOfBirth": "1991-12-18",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1076,
+    "name": "1. FC Köln",
+    "shortName": "1.",
+    "tla": "KOE",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106503,
+    "name": "Emre Rossi",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "1992-10-03",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 107408,
+    "name": "Karim Eriksen",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2003-05-01",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1074,
+    "name": "1. FSV Mainz 05",
+    "shortName": "1. FSV Mainz 05",
+    "tla": "M05",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106306,
+    "name": "Leo Okafor",
+    "position": "Right-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "2004-02-22",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1063,
+    "name": "RB Leipzig",
+    "shortName": "RB Leipzig",
+    "tla": "RBL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106113,
+    "name": "Diego Costa",
+    "position": "Centre-Forward",
+    "nationality": "Spain",
+    "dateOfBirth": "2002-07-28",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 107706,
+    "name": "Ivan Weber",
+    "position": "Right-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "2003-08-24",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1077,
+    "name": "Hamburger SV",
+    "shortName": "Hamburger SV",
+    "tla": "HSV",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106709,
+    "name": "Nico Ilic",
+    "position": "Central Midfield",
+    "nationality": "Germany",
+    "dateOfBirth": "1996-02-22",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1067,
+    "name": "SC Freiburg",
+    "shortName": "SC Freiburg",
+    "tla": "SCF",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 107107,
+    "name": "Pedro Lemaire",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "2005-06-24",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1071,
+    "name": "TSG 1899 Hoffenheim",
+    "shortName": "TSG 1899 Hoffenheim",
+    "tla": "TSG",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106912,
+    "name": "Viktor Garcia",
+    "position": "Right Winger",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2002-03-12",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1069,
+    "name": "VfL Wolfsburg",
+    "shortName": "VfL Wolfsburg",
+    "tla": "WOB",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107103,
+    "name": "Viktor Vidal",
+    "position": "Centre-Back",
+    "nationality": "England",
+    "dateOfBirth": "1991-06-26",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1071,
+    "name": "TSG 1899 Hoffenheim",
+    "shortName": "TSG 1899 Hoffenheim",
+    "tla": "TSG",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107805,
+    "name": "Hugo Demir",
+    "position": "Left-Back",
+    "nationality": "England",
+    "dateOfBirth": "2000-05-11",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1078,
+    "name": "1. FC Heidenheim 1846",
+    "shortName": "1.",
+    "tla": "HDH",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106405,
+    "name": "Mateo Novak",
+    "position": "Left-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "2004-02-06",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107010,
+    "name": "Nico Novak",
+    "position": "Attacking Midfield",
+    "nationality": "Spain",
+    "dateOfBirth": "1999-11-16",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1070,
+    "name": "Borussia Mönchengladbach",
+    "shortName": "Borussia Mönchengladbach",
+    "tla": "BMG",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106711,
+    "name": "Tomas Jansen",
+    "position": "Left Winger",
+    "nationality": "England",
+    "dateOfBirth": "1994-09-11",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1067,
+    "name": "SC Freiburg",
+    "shortName": "SC Freiburg",
+    "tla": "SCF",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107508,
+    "name": "Viktor Kaya",
+    "position": "Central Midfield",
+    "nationality": "Spain",
+    "dateOfBirth": "1992-04-04",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1075,
+    "name": "FC St. Pauli 1910",
+    "shortName": "FC St. Pauli 1910",
+    "tla": "STP",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106914,
+    "name": "Diego Ilic",
+    "position": "Centre-Forward",
+    "nationality": "Argentina",
+    "dateOfBirth": "2001-05-02",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1069,
+    "name": "VfL Wolfsburg",
+    "shortName": "VfL Wolfsburg",
+    "tla": "WOB",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107113,
+    "name": "Diego Petrov",
+    "position": "Centre-Forward",
+    "nationality": "Brazil",
+    "dateOfBirth": "1995-02-22",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1071,
+    "name": "TSG 1899 Hoffenheim",
+    "shortName": "TSG 1899 Hoffenheim",
+    "tla": "TSG",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106305,
+    "name": "Emre Ilic",
+    "position": "Left-Back",
+    "nationality": "Germany",
+    "dateOfBirth": "1994-07-08",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1063,
+    "name": "RB Leipzig",
+    "shortName": "RB Leipzig",
+    "tla": "RBL",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107007,
+    "name": "Emre Okafor",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "1993-09-06",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1070,
+    "name": "Borussia Mönchengladbach",
+    "shortName": "Borussia Mönchengladbach",
+    "tla": "BMG",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106902,
+    "name": "Emre Rossi",
+    "position": "Centre-Back",
+    "nationality": "Portugal",
+    "dateOfBirth": "1992-09-08",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1069,
+    "name": "VfL Wolfsburg",
+    "shortName": "VfL Wolfsburg",
+    "tla": "WOB",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106104,
+    "name": "Jonas Okafor",
+    "position": "Centre-Back",
+    "nationality": "Portugal",
+    "dateOfBirth": "2005-01-09",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106103,
+    "name": "Leo Okafor",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "2002-11-03",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106407,
+    "name": "Leo Quinn",
+    "position": "Central Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "2005-09-03",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1064,
+    "name": "Bayer 04 Leverkusen",
+    "shortName": "Bayer 04 Leverkusen",
+    "tla": "B04",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107212,
+    "name": "Luca Silva",
+    "position": "Right Winger",
+    "nationality": "Portugal",
+    "dateOfBirth": "1996-09-13",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1072,
+    "name": "FC Augsburg",
+    "shortName": "FC Augsburg",
+    "tla": "FCA",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107707,
+    "name": "Luca Vidal",
+    "position": "Central Midfield",
+    "nationality": "France",
+    "dateOfBirth": "2001-06-02",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1077,
+    "name": "Hamburger SV",
+    "shortName": "Hamburger SV",
+    "tla": "HSV",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106908,
+    "name": "Luca Yildiz",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1996-01-21",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1069,
+    "name": "VfL Wolfsburg",
+    "shortName": "VfL Wolfsburg",
+    "tla": "WOB",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106702,
+    "name": "Marco Garcia",
+    "position": "Centre-Back",
+    "nationality": "Portugal",
+    "dateOfBirth": "2000-08-20",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1067,
+    "name": "SC Freiburg",
+    "shortName": "SC Freiburg",
+    "tla": "SCF",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106102,
+    "name": "Marco Novak",
+    "position": "Centre-Back",
+    "nationality": "Portugal",
+    "dateOfBirth": "2000-09-09",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107210,
+    "name": "Marco Vidal",
+    "position": "Attacking Midfield",
+    "nationality": "Turkey",
+    "dateOfBirth": "1993-06-01",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1072,
+    "name": "FC Augsburg",
+    "shortName": "FC Augsburg",
+    "tla": "FCA",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107504,
+    "name": "Omar Kaya",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "1998-05-24",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1075,
+    "name": "FC St. Pauli 1910",
+    "shortName": "FC St. Pauli 1910",
+    "tla": "STP",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106612,
+    "name": "Rafael Novak",
+    "position": "Right Winger",
+    "nationality": "Brazil",
+    "dateOfBirth": "2004-12-25",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1066,
+    "name": "VfB Stuttgart",
+    "shortName": "VfB Stuttgart",
+    "tla": "VFB",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106212,
+    "name": "Arda Quinn",
+    "position": "Right Winger",
+    "nationality": "Argentina",
+    "dateOfBirth": "2004-04-26",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1062,
+    "name": "Borussia Dortmund",
+    "shortName": "Borussia Dortmund",
+    "tla": "BVB",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106310,
+    "name": "Arda Zielinski",
+    "position": "Attacking Midfield",
+    "nationality": "Spain",
+    "dateOfBirth": "2000-08-06",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1063,
+    "name": "RB Leipzig",
+    "shortName": "RB Leipzig",
+    "tla": "RBL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106712,
+    "name": "Ivan Ilic",
+    "position": "Right Winger",
+    "nationality": "Brazil",
+    "dateOfBirth": "1998-07-04",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1067,
+    "name": "SC Freiburg",
+    "shortName": "SC Freiburg",
+    "tla": "SCF",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106607,
+    "name": "Jonas Demir",
+    "position": "Central Midfield",
+    "nationality": "France",
+    "dateOfBirth": "1993-02-06",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1066,
+    "name": "VfB Stuttgart",
+    "shortName": "VfB Stuttgart",
+    "tla": "VFB",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106905,
+    "name": "Jonas Demir",
+    "position": "Left-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "1997-07-11",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1069,
+    "name": "VfL Wolfsburg",
+    "shortName": "VfL Wolfsburg",
+    "tla": "WOB",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107005,
+    "name": "Jonas Vidal",
+    "position": "Left-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "1992-11-27",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1070,
+    "name": "Borussia Mönchengladbach",
+    "shortName": "Borussia Mönchengladbach",
+    "tla": "BMG",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106511,
+    "name": "Karim Silva",
+    "position": "Left Winger",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1995-12-03",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106810,
+    "name": "Leo Costa",
+    "position": "Attacking Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2000-04-22",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1068,
+    "name": "SV Werder Bremen",
+    "shortName": "SV Werder Bremen",
+    "tla": "SVW",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107810,
+    "name": "Leo Demir",
+    "position": "Attacking Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "2002-08-18",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1078,
+    "name": "1. FC Heidenheim 1846",
+    "shortName": "1.",
+    "tla": "HDH",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 107214,
+    "name": "Marco Petrov",
+    "position": "Centre-Forward",
+    "nationality": "France",
+    "dateOfBirth": "2004-02-15",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1072,
+    "name": "FC Augsburg",
+    "shortName": "FC Augsburg",
+    "tla": "FCA",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 107705,
+    "name": "Mateo Vidal",
+    "position": "Left-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "1991-04-08",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1077,
+    "name": "Hamburger SV",
+    "shortName": "Hamburger SV",
+    "tla": "HSV",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 106512,
+    "name": "Nico Demir",
+    "position": "Right Winger",
+    "nationality": "Italy",
+    "dateOfBirth": "2003-05-26",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1065,
+    "name": "Eintracht Frankfurt",
+    "shortName": "Eintracht Frankfurt",
+    "tla": "SGE",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 107409,
+    "name": "Nico Zielinski",
+    "position": "Central Midfield",
+    "nationality": "Portugal",
+    "dateOfBirth": "1997-12-24",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1074,
+    "name": "1. FSV Mainz 05",
+    "shortName": "1. FSV Mainz 05",
+    "tla": "M05",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 106111,
+    "name": "Noah Okafor",
+    "position": "Left Winger",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1993-08-05",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1061,
+    "name": "FC Bayern München",
+    "shortName": "FC Bayern München",
+    "tla": "BAY",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 107813,
+    "name": "Omar Yildiz",
+    "position": "Centre-Forward",
+    "nationality": "England",
+    "dateOfBirth": "1992-09-25",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1078,
+    "name": "1. FC Heidenheim 1846",
+    "shortName": "1.",
+    "tla": "HDH",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  }
+ ]
+}

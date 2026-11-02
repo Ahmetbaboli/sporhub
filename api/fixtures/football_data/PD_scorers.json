@@ -1,0 +1,1058 @@
+{
+ "_fixture": {
+  "note": "Synthetic scorers derived from the sample matches."
+ },
+ "count": 50,
+ "scorers": [
+  {
+   "player": {
+    "id": 103805,
+    "name": "Hugo Fofana",
+    "position": "Left-Back",
+    "nationality": "Germany",
+    "dateOfBirth": "1998-08-23",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 7,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103205,
+    "name": "Jonas Lemaire",
+    "position": "Left-Back",
+    "nationality": "England",
+    "dateOfBirth": "2004-01-08",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 6,
+   "assists": 0,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 103504,
+    "name": "Mateo Eriksen",
+    "position": "Centre-Back",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2000-01-07",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 5,
+   "assists": 4,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102308,
+    "name": "Omar Garcia",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "1998-01-08",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 4,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103806,
+    "name": "Leo Almeida",
+    "position": "Right-Back",
+    "nationality": "Spain",
+    "dateOfBirth": "1991-05-16",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 4,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102503,
+    "name": "Noah Silva",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "1994-02-17",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 4,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102911,
+    "name": "Noah Quinn",
+    "position": "Left Winger",
+    "nationality": "Argentina",
+    "dateOfBirth": "2002-03-02",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 4,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102904,
+    "name": "Rafael Garcia",
+    "position": "Centre-Back",
+    "nationality": "England",
+    "dateOfBirth": "1999-01-23",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 3,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103610,
+    "name": "Emre Ilic",
+    "position": "Attacking Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2006-06-13",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102114,
+    "name": "Tomas Demir",
+    "position": "Centre-Forward",
+    "nationality": "England",
+    "dateOfBirth": "2006-04-18",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1021,
+    "name": "Athletic Club",
+    "shortName": "Athletic Club",
+    "tla": "ATH",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103513,
+    "name": "Viktor Quinn",
+    "position": "Centre-Forward",
+    "nationality": "Portugal",
+    "dateOfBirth": "1992-01-10",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103408,
+    "name": "Arda Novak",
+    "position": "Central Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "2005-12-09",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102407,
+    "name": "Diego Costa",
+    "position": "Central Midfield",
+    "nationality": "Germany",
+    "dateOfBirth": "1994-08-22",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103912,
+    "name": "Noah Weber",
+    "position": "Right Winger",
+    "nationality": "Portugal",
+    "dateOfBirth": "2001-06-13",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 102702,
+    "name": "Sami Brandt",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "1999-06-24",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102802,
+    "name": "Arda Weber",
+    "position": "Centre-Back",
+    "nationality": "Spain",
+    "dateOfBirth": "1997-10-03",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 104002,
+    "name": "Diego Tanaka",
+    "position": "Centre-Back",
+    "nationality": "Turkey",
+    "dateOfBirth": "1997-04-12",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1040,
+    "name": "RCD Espanyol de Barcelona",
+    "shortName": "RCD Espanyol de Barcelona",
+    "tla": "ESP",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 102508,
+    "name": "Hugo Zielinski",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "2001-05-20",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103306,
+    "name": "Ivan Rossi",
+    "position": "Right-Back",
+    "nationality": "Italy",
+    "dateOfBirth": "2005-12-10",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103903,
+    "name": "Karim Rossi",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "1994-12-14",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1039,
+    "name": "Villarreal CF",
+    "shortName": "Villarreal CF",
+    "tla": "VIL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103214,
+    "name": "Nico Novak",
+    "position": "Centre-Forward",
+    "nationality": "Spain",
+    "dateOfBirth": "1992-06-07",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103110,
+    "name": "Sami Petrov",
+    "position": "Attacking Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "1999-12-17",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103602,
+    "name": "Yusuf Demir",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "1999-08-09",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1036,
+    "name": "Real Sociedad de Fútbol",
+    "shortName": "Real Sociedad de Fútbol",
+    "tla": "RSO",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102511,
+    "name": "Luca Jansen",
+    "position": "Left Winger",
+    "nationality": "Spain",
+    "dateOfBirth": "1997-03-21",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 4,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103310,
+    "name": "Jonas Lemaire",
+    "position": "Attacking Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "1999-12-10",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 3,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 102907,
+    "name": "Emre Silva",
+    "position": "Central Midfield",
+    "nationality": "France",
+    "dateOfBirth": "1993-05-12",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103114,
+    "name": "Hugo Hoffmann",
+    "position": "Centre-Forward",
+    "nationality": "Brazil",
+    "dateOfBirth": "1999-04-05",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1031,
+    "name": "RCD Mallorca",
+    "shortName": "RCD Mallorca",
+    "tla": "MLL",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 102713,
+    "name": "Jonas Almeida",
+    "position": "Centre-Forward",
+    "nationality": "Portugal",
+    "dateOfBirth": "2004-01-16",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102406,
+    "name": "Karim Fofana",
+    "position": "Right-Back",
+    "nationality": "Italy",
+    "dateOfBirth": "1996-07-10",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 102609,
+    "name": "Sami Zielinski",
+    "position": "Central Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "1999-07-03",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1026,
+    "name": "Elche CF",
+    "shortName": "Elche CF",
+    "tla": "ELC",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 102903,
+    "name": "Tomas Petrov",
+    "position": "Centre-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "2005-12-04",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103309,
+    "name": "Yusuf Garcia",
+    "position": "Central Midfield",
+    "nationality": "England",
+    "dateOfBirth": "2002-01-18",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103213,
+    "name": "Yusuf Lemaire",
+    "position": "Centre-Forward",
+    "nationality": "Brazil",
+    "dateOfBirth": "2005-11-05",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1032,
+    "name": "Rayo Vallecano de Madrid",
+    "shortName": "Rayo Vallecano de Madrid",
+    "tla": "RAY",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102207,
+    "name": "Arda Hoffmann",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1995-04-14",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102414,
+    "name": "Arda Ilic",
+    "position": "Centre-Forward",
+    "nationality": "England",
+    "dateOfBirth": "1993-10-06",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1024,
+    "name": "RC Celta de Vigo",
+    "shortName": "RC Celta de Vigo",
+    "tla": "CEL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102510,
+    "name": "Diego Ilic",
+    "position": "Attacking Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1997-04-28",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1025,
+    "name": "Deportivo Alavés",
+    "shortName": "Deportivo Alavés",
+    "tla": "ALA",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102210,
+    "name": "Diego Jansen",
+    "position": "Attacking Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "1993-06-19",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103313,
+    "name": "Diego Rossi",
+    "position": "Centre-Forward",
+    "nationality": "Brazil",
+    "dateOfBirth": "1999-03-12",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1033,
+    "name": "Real Betis Balompié",
+    "shortName": "Real Betis Balompié",
+    "tla": "BET",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102708,
+    "name": "Karim Jansen",
+    "position": "Central Midfield",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1991-03-13",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103008,
+    "name": "Leo Almeida",
+    "position": "Central Midfield",
+    "nationality": "Turkey",
+    "dateOfBirth": "1999-11-25",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102205,
+    "name": "Leo Silva",
+    "position": "Left-Back",
+    "nationality": "Italy",
+    "dateOfBirth": "2006-08-12",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1022,
+    "name": "Club Atlético de Madrid",
+    "shortName": "Club Atlético de Madrid",
+    "tla": "ATM",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103704,
+    "name": "Mateo Ilic",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "1991-07-14",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1037,
+    "name": "Sevilla FC",
+    "shortName": "Sevilla",
+    "tla": "SEV",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103403,
+    "name": "Pedro Zielinski",
+    "position": "Centre-Back",
+    "nationality": "Germany",
+    "dateOfBirth": "2006-08-05",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1034,
+    "name": "Real Madrid CF",
+    "shortName": "Real Madrid CF",
+    "tla": "RMA",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103804,
+    "name": "Rafael Kaya",
+    "position": "Centre-Back",
+    "nationality": "Spain",
+    "dateOfBirth": "1996-10-15",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1038,
+    "name": "Valencia CF",
+    "shortName": "Valencia CF",
+    "tla": "VAL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 102707,
+    "name": "Viktor Brandt",
+    "position": "Central Midfield",
+    "nationality": "Spain",
+    "dateOfBirth": "1995-03-22",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1027,
+    "name": "FC Barcelona",
+    "shortName": "FC Barcelona",
+    "tla": "FCB",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102804,
+    "name": "Diego Lemaire",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "2004-04-17",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1028,
+    "name": "Getafe CF",
+    "shortName": "Getafe CF",
+    "tla": "GET",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 103014,
+    "name": "Diego Lemaire",
+    "position": "Centre-Forward",
+    "nationality": "Germany",
+    "dateOfBirth": "1995-11-24",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1030,
+    "name": "Levante UD",
+    "shortName": "Levante UD",
+    "tla": "LEV",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 103511,
+    "name": "Hugo Tanaka",
+    "position": "Left Winger",
+    "nationality": "Italy",
+    "dateOfBirth": "2005-06-11",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1035,
+    "name": "Real Oviedo",
+    "shortName": "Real Oviedo",
+    "tla": "OVI",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102908,
+    "name": "Jonas Rossi",
+    "position": "Central Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "1992-02-24",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1029,
+    "name": "Girona FC",
+    "shortName": "Girona",
+    "tla": "GIR",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102314,
+    "name": "Karim Lemaire",
+    "position": "Centre-Forward",
+    "nationality": "Brazil",
+    "dateOfBirth": "2003-07-02",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1023,
+    "name": "CA Osasuna",
+    "shortName": "CA Osasuna",
+    "tla": "OSA",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  }
+ ]
+}

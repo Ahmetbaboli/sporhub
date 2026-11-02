@@ -13,6 +13,8 @@ from app.adapters.base import BaseAdapter
 from app.adapters.dto import (
     CompetitionDTO,
     EventDTO,
+    PlayerDTO,
+    PlayerStatDTO,
     StandingDTO,
     TeamDTO,
     TeamRef,
@@ -23,6 +25,7 @@ from app.models import (
     Event,
     EventParticipant,
     Player,
+    PlayerStat,
     Season,
     Sport,
     Standing,
@@ -136,27 +139,32 @@ async def _team_id(ctx: SyncContext, ref: TeamRef) -> int:
     return await _upsert_team(ctx, ref)
 
 
+async def _upsert_player(ctx: SyncContext, player: PlayerDTO, team_id: int | None) -> int:
+    player_id = await upsert_row(
+        ctx.session,
+        Player,
+        {
+            "sport_id": ctx.sport_id,
+            "source": ctx.adapter.source,
+            "external_id": player.external_id,
+            "name": player.name,
+            "position": player.position,
+            "nationality": player.nationality,
+            "team_id": team_id,
+            "extra": player.extra,
+        },
+        ["source", "external_id"],
+    )
+    ctx.player_ids[player.external_id] = player_id
+    ctx.upserted += 1
+    return player_id
+
+
 async def _upsert_teams(ctx: SyncContext, teams: list[TeamDTO]) -> None:
     for dto in teams:
         team_id = await _upsert_team(ctx, dto, dto.country)
         for player in dto.squad:
-            player_id = await upsert_row(
-                ctx.session,
-                Player,
-                {
-                    "sport_id": ctx.sport_id,
-                    "source": ctx.adapter.source,
-                    "external_id": player.external_id,
-                    "name": player.name,
-                    "position": player.position,
-                    "nationality": player.nationality,
-                    "team_id": team_id,
-                    "extra": player.extra,
-                },
-                ["source", "external_id"],
-            )
-            ctx.player_ids[player.external_id] = player_id
-            ctx.upserted += 1
+            await _upsert_player(ctx, player, team_id)
 
 
 async def _player_id(ctx: SyncContext, external_id: str | None) -> int | None:
@@ -244,6 +252,28 @@ async def _replace_standings(
         ctx.upserted += 1
 
 
+async def _replace_player_stats(
+    ctx: SyncContext, season_id: int, stats: list[PlayerStatDTO]
+) -> None:
+    """Players unknown to the squad import are created; known ones are not overwritten."""
+    if not stats:
+        return
+    await ctx.session.execute(delete(PlayerStat).where(PlayerStat.season_id == season_id))
+    seen: set[int] = set()
+    for dto in stats:
+        team_id = await _team_id(ctx, dto.team) if dto.team else None
+        player_id = await _player_id(ctx, dto.player.external_id)
+        if player_id is None:
+            player_id = await _upsert_player(ctx, dto.player, team_id)
+        if player_id in seen:
+            continue
+        seen.add(player_id)
+        ctx.session.add(
+            PlayerStat(season_id=season_id, player_id=player_id, team_id=team_id, stats=dto.stats)
+        )
+        ctx.upserted += 1
+
+
 async def _sync_competition(ctx: SyncContext, dto: CompetitionDTO) -> None:
     competition_id = await _upsert_competition(ctx, dto)
     ctx.upserted += 1
@@ -254,6 +284,7 @@ async def _sync_competition(ctx: SyncContext, dto: CompetitionDTO) -> None:
     await _upsert_teams(ctx, await ctx.adapter.fetch_teams(ext, season))
     await _upsert_events(ctx, season_id, await ctx.adapter.fetch_events(ext, season))
     await _replace_standings(ctx, season_id, await ctx.adapter.fetch_standings(ext, season))
+    await _replace_player_stats(ctx, season_id, await ctx.adapter.fetch_player_stats(ext, season))
 
 
 async def run_sync(

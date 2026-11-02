@@ -74,3 +74,15 @@ class StandingDTO(BaseModel):
     lost: int = 0
     points: float = 0
     extra: dict = Field(default_factory=dict)
+
+
+class PlayerStatDTO(BaseModel):
+    """Season totals of one player in one competition (e.g. a scorers list).
+
+    `player` carries enough to create the player when the squad import did not include them.
+    `stats` keys are sport-neutral names: goals, assists, penalties, played, ...
+    """
+
+    player: PlayerDTO
+    team: TeamRef | None = None
+    stats: dict[str, float] = Field(default_factory=dict)

@@ -1,0 +1,1058 @@
+{
+ "_fixture": {
+  "note": "Synthetic scorers derived from the sample matches."
+ },
+ "count": 50,
+ "scorers": [
+  {
+   "player": {
+    "id": 100704,
+    "name": "Jonas Demir",
+    "position": "Centre-Back",
+    "nationality": "England",
+    "dateOfBirth": "1999-12-21",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 6,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 100309,
+    "name": "Emre Silva",
+    "position": "Central Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "1999-03-01",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 5,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100504,
+    "name": "Arda Ilic",
+    "position": "Centre-Back",
+    "nationality": "Germany",
+    "dateOfBirth": "1993-05-21",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 4,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100305,
+    "name": "Tomas Rossi",
+    "position": "Left-Back",
+    "nationality": "England",
+    "dateOfBirth": "1995-07-11",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 4,
+   "assists": 2,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 100513,
+    "name": "Noah Kaya",
+    "position": "Centre-Forward",
+    "nationality": "Italy",
+    "dateOfBirth": "1998-03-10",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1005,
+    "name": "Brighton & Hove Albion FC",
+    "shortName": "Brighton & Hove Albion",
+    "tla": "BHA",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 4,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101510,
+    "name": "Rafael Moretti",
+    "position": "Attacking Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "2001-03-18",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 4,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 102007,
+    "name": "Emre Fofana",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "1998-05-12",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101506,
+    "name": "Ivan Kaya",
+    "position": "Right-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "1997-07-05",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100310,
+    "name": "Nico Garcia",
+    "position": "Attacking Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "2005-11-12",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100710,
+    "name": "Pedro Tanaka",
+    "position": "Attacking Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "2006-04-04",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 3,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 101908,
+    "name": "Karim Fofana",
+    "position": "Central Midfield",
+    "nationality": "Turkey",
+    "dateOfBirth": "1997-05-21",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1019,
+    "name": "West Ham United FC",
+    "shortName": "West Ham United",
+    "tla": "WHU",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102013,
+    "name": "Tomas Fofana",
+    "position": "Centre-Forward",
+    "nationality": "Brazil",
+    "dateOfBirth": "1999-10-09",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101803,
+    "name": "Diego Eriksen",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "2003-01-19",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 2
+  },
+  {
+   "player": {
+    "id": 100604,
+    "name": "Luca Brandt",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "2000-02-03",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100203,
+    "name": "Luca Silva",
+    "position": "Centre-Back",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1995-10-06",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100614,
+    "name": "Mateo Hoffmann",
+    "position": "Centre-Forward",
+    "nationality": "Brazil",
+    "dateOfBirth": "2004-08-06",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1006,
+    "name": "Burnley FC",
+    "shortName": "Burnley",
+    "tla": "BUR",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100405,
+    "name": "Mateo Jansen",
+    "position": "Left-Back",
+    "nationality": "Netherlands",
+    "dateOfBirth": "1991-04-01",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1004,
+    "name": "Brentford FC",
+    "shortName": "Brentford",
+    "tla": "BRE",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101108,
+    "name": "Noah Ilic",
+    "position": "Central Midfield",
+    "nationality": "France",
+    "dateOfBirth": "1996-02-17",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 101109,
+    "name": "Rafael Novak",
+    "position": "Central Midfield",
+    "nationality": "England",
+    "dateOfBirth": "1996-03-12",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 101206,
+    "name": "Tomas Jansen",
+    "position": "Right-Back",
+    "nationality": "Germany",
+    "dateOfBirth": "1994-12-06",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 3,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 101605,
+    "name": "Karim Hoffmann",
+    "position": "Left-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "2002-05-24",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101302,
+    "name": "Leo Costa",
+    "position": "Centre-Back",
+    "nationality": "Argentina",
+    "dateOfBirth": "2005-11-11",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 100707,
+    "name": "Mateo Silva",
+    "position": "Central Midfield",
+    "nationality": "Portugal",
+    "dateOfBirth": "1994-08-13",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 102006,
+    "name": "Nico Hoffmann",
+    "position": "Right-Back",
+    "nationality": "Italy",
+    "dateOfBirth": "2000-02-26",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100103,
+    "name": "Yusuf Eriksen",
+    "position": "Centre-Back",
+    "nationality": "England",
+    "dateOfBirth": "1994-11-14",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 3,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100708,
+    "name": "Karim Novak",
+    "position": "Central Midfield",
+    "nationality": "France",
+    "dateOfBirth": "1992-07-09",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100312,
+    "name": "Noah Brandt",
+    "position": "Right Winger",
+    "nationality": "Turkey",
+    "dateOfBirth": "1996-09-09",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101509,
+    "name": "Rafael Eriksen",
+    "position": "Central Midfield",
+    "nationality": "Spain",
+    "dateOfBirth": "2006-04-13",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102002,
+    "name": "Sami Quinn",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "2000-07-02",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 3,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100905,
+    "name": "Emre Eriksen",
+    "position": "Left-Back",
+    "nationality": "Portugal",
+    "dateOfBirth": "1997-07-01",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1009,
+    "name": "Everton FC",
+    "shortName": "Everton",
+    "tla": "EVE",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101504,
+    "name": "Hugo Tanaka",
+    "position": "Centre-Back",
+    "nationality": "Turkey",
+    "dateOfBirth": "1994-02-09",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101710,
+    "name": "Nico Moretti",
+    "position": "Attacking Midfield",
+    "nationality": "England",
+    "dateOfBirth": "1994-02-05",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1017,
+    "name": "Sunderland AFC",
+    "shortName": "Sunderland AFC",
+    "tla": "SUN",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 100808,
+    "name": "Omar Weber",
+    "position": "Central Midfield",
+    "nationality": "Brazil",
+    "dateOfBirth": "2002-07-25",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 102009,
+    "name": "Sami Eriksen",
+    "position": "Central Midfield",
+    "nationality": "Argentina",
+    "dateOfBirth": "2003-03-22",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1020,
+    "name": "Wolverhampton Wanderers FC",
+    "shortName": "Wolverhampton Wanderers",
+    "tla": "WOL",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 2,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100804,
+    "name": "Arda Hoffmann",
+    "position": "Centre-Back",
+    "nationality": "Turkey",
+    "dateOfBirth": "2002-02-28",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100711,
+    "name": "Hugo Costa",
+    "position": "Left Winger",
+    "nationality": "Brazil",
+    "dateOfBirth": "2001-06-01",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1007,
+    "name": "Chelsea FC",
+    "shortName": "Chelsea",
+    "tla": "CHE",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101806,
+    "name": "Ivan Almeida",
+    "position": "Right-Back",
+    "nationality": "Brazil",
+    "dateOfBirth": "1995-01-11",
+    "section": "Right-Back"
+   },
+   "team": {
+    "id": 1018,
+    "name": "Tottenham Hotspur FC",
+    "shortName": "Tottenham Hotspur",
+    "tla": "TOT",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101112,
+    "name": "Ivan Zielinski",
+    "position": "Right Winger",
+    "nationality": "England",
+    "dateOfBirth": "1999-08-03",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 100314,
+    "name": "Leo Zielinski",
+    "position": "Centre-Forward",
+    "nationality": "Turkey",
+    "dateOfBirth": "1995-09-01",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1003,
+    "name": "AFC Bournemouth",
+    "shortName": "AFC Bournemouth",
+    "tla": "BOU",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101214,
+    "name": "Mateo Ilic",
+    "position": "Centre-Forward",
+    "nationality": "France",
+    "dateOfBirth": "2001-10-27",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101212,
+    "name": "Mateo Yildiz",
+    "position": "Right Winger",
+    "nationality": "Italy",
+    "dateOfBirth": "1991-04-23",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1012,
+    "name": "Liverpool FC",
+    "shortName": "Liverpool",
+    "tla": "LIV",
+    "crest": null
+   },
+   "playedMatches": 6,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100112,
+    "name": "Pedro Brandt",
+    "position": "Right Winger",
+    "nationality": "Italy",
+    "dateOfBirth": "1995-02-24",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1001,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": null
+   },
+   "playedMatches": 9,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101114,
+    "name": "Rafael Okafor",
+    "position": "Centre-Forward",
+    "nationality": "France",
+    "dateOfBirth": "2005-06-05",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1011,
+    "name": "Leeds United FC",
+    "shortName": "Leeds United",
+    "tla": "LEE",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101513,
+    "name": "Tomas Eriksen",
+    "position": "Centre-Forward",
+    "nationality": "Netherlands",
+    "dateOfBirth": "2004-07-24",
+    "section": "Centre-Forward"
+   },
+   "team": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "playedMatches": 8,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100812,
+    "name": "Tomas Vidal",
+    "position": "Right Winger",
+    "nationality": "England",
+    "dateOfBirth": "1994-02-18",
+    "section": "Right Winger"
+   },
+   "team": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 1,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 101507,
+    "name": "Arda Almeida",
+    "position": "Central Midfield",
+    "nationality": "Italy",
+    "dateOfBirth": "1991-07-13",
+    "section": "Central Midfield"
+   },
+   "team": {
+    "id": 1015,
+    "name": "Newcastle United FC",
+    "shortName": "Newcastle United",
+    "tla": "NEW",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 1
+  },
+  {
+   "player": {
+    "id": 100805,
+    "name": "Arda Eriksen",
+    "position": "Left-Back",
+    "nationality": "Germany",
+    "dateOfBirth": "2002-04-08",
+    "section": "Left-Back"
+   },
+   "team": {
+    "id": 1008,
+    "name": "Crystal Palace FC",
+    "shortName": "Crystal Palace",
+    "tla": "CRY",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101610,
+    "name": "Diego Garcia",
+    "position": "Attacking Midfield",
+    "nationality": "France",
+    "dateOfBirth": "2000-02-03",
+    "section": "Attacking Midfield"
+   },
+   "team": {
+    "id": 1016,
+    "name": "Nottingham Forest FC",
+    "shortName": "Nottingham Forest",
+    "tla": "NFO",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 101311,
+    "name": "Karim Fofana",
+    "position": "Left Winger",
+    "nationality": "Brazil",
+    "dateOfBirth": "1999-03-24",
+    "section": "Left Winger"
+   },
+   "team": {
+    "id": 1013,
+    "name": "Manchester City FC",
+    "shortName": "Manchester City",
+    "tla": "MCI",
+    "crest": null
+   },
+   "playedMatches": 5,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  },
+  {
+   "player": {
+    "id": 100204,
+    "name": "Karim Okafor",
+    "position": "Centre-Back",
+    "nationality": "France",
+    "dateOfBirth": "1993-09-19",
+    "section": "Centre-Back"
+   },
+   "team": {
+    "id": 1002,
+    "name": "Aston Villa FC",
+    "shortName": "Aston Villa",
+    "tla": "AVL",
+    "crest": null
+   },
+   "playedMatches": 7,
+   "goals": 2,
+   "assists": 0,
+   "penalties": 0
+  }
+ ]
+}

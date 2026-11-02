@@ -5,6 +5,7 @@ import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { DayGroupedEvents } from "@/components/sport/event-list";
 import { TableSkeleton } from "@/components/sport/skeletons";
 import { ChampionshipTables } from "@/components/sport/championship-tables";
+import { CompetitionStatsView } from "@/components/sport/competition-stats";
 import { ConferenceStandings } from "@/components/sport/conference-standings";
 import { StandingsTable } from "@/components/sport/standings-table";
 import { EmptyState } from "@/components/ui/states";
@@ -13,11 +14,11 @@ import { TabNav } from "@/components/ui/tab-nav";
 import { api } from "@/lib/api";
 import { orNotFound, parsePage } from "@/lib/api-helpers";
 import { tr } from "@/lib/i18n/tr";
-import { templateFor, type StandingsLayout } from "@/lib/sports";
+import { templateFor, type SportTemplate, type StandingsLayout } from "@/lib/sports";
 
 export const dynamic = "force-dynamic";
 
-const TABS = ["fixtures", "results", "standings"] as const;
+const TABS = ["fixtures", "results", "standings", "stats"] as const;
 type Tab = (typeof TABS)[number];
 
 type Props = {
@@ -83,6 +84,8 @@ export default async function CompetitionPage({ params, searchParams }: Props) {
       <Suspense key={`${tab}-${page}`} fallback={<TableSkeleton />}>
         {tab === "standings" ? (
           <StandingsTab competition={competition.slug} layout={template.standings} />
+        ) : tab === "stats" ? (
+          <StatsTab competition={competition.slug} template={template} />
         ) : (
           <EventsTab
             competition={competition.slug}
@@ -115,6 +118,17 @@ async function StandingsTab({
     default:
       return <StandingsTable rows={standings.items} />;
   }
+}
+
+async function StatsTab({
+  competition,
+  template,
+}: {
+  competition: string;
+  template: SportTemplate;
+}) {
+  const stats = await api.competitionStats(competition);
+  return <CompetitionStatsView stats={stats} template={template} />;
 }
 
 async function EventsTab({
