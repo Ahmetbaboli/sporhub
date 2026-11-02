@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { UserMenu } from "@/components/account/user-menu";
+import { PalettePicker } from "@/components/layout/palette-picker";
 import { SearchForm } from "@/components/layout/search-form";
 import { SportNav } from "@/components/layout/sport-nav";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
@@ -33,6 +34,7 @@ export async function Header() {
           <SearchForm />
         </div>
         <div className="order-2 ml-auto flex items-center sm:order-3 sm:ml-0">
+          <PalettePicker />
           <ThemeToggle />
           <UserMenu />
         </div>

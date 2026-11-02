@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { tr } from "@/lib/i18n/tr";
+import { PALETTE_BOOT_SCRIPT } from "@/lib/palettes";
 import "./globals.css";
 
 const sans = Geist({ variable: "--font-geist-sans", subsets: ["latin", "latin-ext"] });
@@ -35,6 +36,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
       className={`${sans.variable} ${display.variable}`}
     >
+      <head>
+        {/* Applies the saved colour palette before first paint. */}
+        <script dangerouslySetInnerHTML={{ __html: PALETTE_BOOT_SCRIPT }} />
+      </head>
       <body className="flex min-h-dvh flex-col antialiased">
         <ThemeProvider>
           <a

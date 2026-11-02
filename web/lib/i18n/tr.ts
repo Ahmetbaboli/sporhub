@@ -19,6 +19,15 @@ export const tr = {
     toggleTheme: "Temayı değiştir",
     themeLight: "Açık tema",
     themeDark: "Koyu tema",
+    palette: "Renk paleti",
+  },
+  palettes: {
+    pitch: "Çim yeşili",
+    ocean: "Okyanus",
+    crimson: "Kırmızı",
+    violet: "Mor",
+    sunset: "Gün batımı",
+    contrast: "Yüksek kontrast",
   },
   sports: {
     football: "Futbol",

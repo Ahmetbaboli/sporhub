@@ -32,6 +32,75 @@
   --ring: #c8f23a;
 }
 
+/* Colour palettes (lib/palettes.ts). Only the brand colours change; "contrast" also
+   sharpens text and borders for low-vision users. */
+[data-palette="ocean"] {
+  --primary: #0b4f8a;
+  --ring: #0b4f8a;
+  --accent: #e0752d;
+}
+.dark[data-palette="ocean"] {
+  --primary: #5cc8ff;
+  --ring: #5cc8ff;
+  --accent: #ffb057;
+}
+[data-palette="crimson"] {
+  --primary: #a3122a;
+  --ring: #a3122a;
+  --accent: #1d5fa8;
+}
+.dark[data-palette="crimson"] {
+  --primary: #ff5c72;
+  --ring: #ff5c72;
+  --accent: #6fb2ff;
+}
+[data-palette="violet"] {
+  --primary: #5b2a9e;
+  --ring: #5b2a9e;
+  --accent: #c9246f;
+}
+.dark[data-palette="violet"] {
+  --primary: #c3a1ff;
+  --ring: #c3a1ff;
+  --accent: #ff7ab6;
+}
+[data-palette="sunset"] {
+  --primary: #b4430b;
+  --ring: #b4430b;
+  --accent: #6a3fb5;
+}
+.dark[data-palette="sunset"] {
+  --primary: #ffa24a;
+  --ring: #ffa24a;
+  --accent: #c49bff;
+}
+[data-palette="contrast"] {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --muted: #eeeeee;
+  --muted-foreground: #222222;
+  --border: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --accent: #b00020;
+  --accent-foreground: #ffffff;
+  --ring: #0050d0;
+}
+.dark[data-palette="contrast"] {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #000000;
+  --muted: #1a1a1a;
+  --muted-foreground: #e6e6e6;
+  --border: #ffffff;
+  --primary: #ffe600;
+  --primary-foreground: #000000;
+  --accent: #ff8a8a;
+  --accent-foreground: #000000;
+  --ring: #ffe600;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
