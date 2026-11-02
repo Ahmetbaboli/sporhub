@@ -167,6 +167,11 @@ export const api = {
     get<Page<StandingEntry>>(`/api/v1/teams/${id}/standings`),
   playerStandings: (id: number) =>
     get<Page<StandingEntry>>(`/api/v1/players/${id}/standings`),
+  playerEvents: (id: number, q: Pick<EventsQuery, "order" | "pageSize"> = {}) =>
+    get<Page<SportEvent>>(`/api/v1/players/${id}/events`, {
+      order: q.order,
+      page_size: q.pageSize,
+    }),
   playerStats: (id: number) => get<PlayerStatsList>(`/api/v1/players/${id}/stats`),
   search: (q: string) => get<SearchResults>("/api/v1/search", { q }),
   me: {

@@ -51,7 +51,7 @@
 - [x] 4c Takım analizi: son 5-10 maç formu, ev/deplasman performansı, geçmiş karşılaşmalar (H2H)
 - [x] 4d Karşılaştırma: iki takım, iki sporcu (`/compare`)
 - [x] 4e Lig istatistikleri + liderlik tabloları (gol krallığı / sayı / şampiyona puanı), sezon geçmişi
-- [ ] 4f Oyuncu sezonluk performans grafikleri (Recharts), branşa özel gelişmiş istatistikler
+- [x] 4f Oyuncu sezonluk performans grafikleri (Recharts), branşa özel gelişmiş istatistikler
 - [ ] 4g TR/EN dil seçeneği (next-intl; `tr.ts` → `messages/{tr,en}`)
 ### Aşama 4.5 — Haber modülü
 - [ ] Veri modeli: `news_articles` (spor, kategori, etiketli takım/oyuncu/lig, kaynak, yayın zamanı), `(source, external_id)` benzersiz

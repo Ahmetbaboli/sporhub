@@ -179,13 +179,22 @@ export function Contenders({
   );
 }
 
-/** Mirrored bars: each side's share of the pair, the better side highlighted. */
-function MetricRow({ metric }: { metric: CompareMetric }) {
-  const best = winner(metric);
+/** Bar lengths: each side's share of the pair; when lower is better the shares swap, so the
+ *  longer bar always belongs to the better side. */
+export function barShares(metric: CompareMetric): [number, number] {
   const a = Math.abs(metric.a ?? 0);
   const b = Math.abs(metric.b ?? 0);
   const total = a + b;
-  const share = (v: number) => (total ? Math.round((v / total) * PERCENT) : 0);
+  if (!total) return [0, 0];
+  const pa = Math.round((a / total) * PERCENT);
+  const pb = Math.round((b / total) * PERCENT);
+  return metric.better === "lower" ? [pb, pa] : [pa, pb];
+}
+
+/** Mirrored bars, the better side highlighted. */
+function MetricRow({ metric }: { metric: CompareMetric }) {
+  const best = winner(metric);
+  const [shareA, shareB] = barShares(metric);
   const value = (side: "a" | "b") => (
     <span
       className={cn(
@@ -207,13 +216,13 @@ function MetricRow({ metric }: { metric: CompareMetric }) {
         <span className="bg-muted flex h-2 flex-1 justify-end overflow-hidden rounded-l-full">
           <span
             className={cn(best === "a" ? "bg-primary" : "bg-muted-foreground/40")}
-            style={{ width: `${share(a)}%` }}
+            style={{ width: `${shareA}%` }}
           />
         </span>
         <span className="bg-muted flex h-2 flex-1 overflow-hidden rounded-r-full">
           <span
             className={cn(best === "b" ? "bg-primary" : "bg-muted-foreground/40")}
-            style={{ width: `${share(b)}%` }}
+            style={{ width: `${shareB}%` }}
           />
         </span>
         {value("b")}

@@ -113,3 +113,12 @@ describe("parseCompareType", () => {
     expect(parseCompareType(undefined)).toBe("teams");
   });
 });
+
+describe("barShares", () => {
+  it("gives the longer bar to the better side", async () => {
+    const { barShares } = await import("@/components/compare/compare-parts");
+    expect(barShares(metric({ a: 1, b: 3 }))).toEqual([25, 75]);
+    expect(barShares(metric({ a: 11, b: 4, better: "lower" }))).toEqual([27, 73]);
+    expect(barShares(metric({ a: 0, b: 0 }))).toEqual([0, 0]);
+  });
+});

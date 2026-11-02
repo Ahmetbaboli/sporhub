@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { EventCard } from "@/components/sport/event-list";
 import { EventCardsSkeleton } from "@/components/sport/skeletons";
+import { SeriesChart } from "@/components/charts/series-chart";
 import { CompareLink } from "@/components/compare/compare-link";
 import { HeadToHeadCard, TeamAnalysisPanel } from "@/components/sport/team-analysis";
 import { TeamBadge } from "@/components/sport/team-badge";
@@ -12,12 +13,14 @@ import { api } from "@/lib/api";
 import { orNotFound, parseId } from "@/lib/api-helpers";
 import { groupSquad, splitTeamEvents } from "@/lib/events";
 import { tr } from "@/lib/i18n/tr";
+import { teamProgression } from "@/lib/series";
 import { templateFor } from "@/lib/sports";
 import type { TeamDetail } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
 const EVENTS_FETCH_SIZE = 100;
+const MIN_CHART_POINTS = 2;
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -118,9 +121,24 @@ async function TeamInsights({ teamId, sport }: { teamId: number; sport: string |
   const h2h = opponent
     ? await api.headToHead(teamId, opponent.id).catch(() => null)
     : null;
+  const progression = teamProgression(events.items, teamId, rules.draws);
   return (
     <>
       <TeamAnalysisPanel analysis={analysis} rules={rules} />
+      {progression.length >= MIN_CHART_POINTS ? (
+        <div className="mt-4">
+          <SeriesChart
+            title={tr.charts.progressionTitle}
+            description={
+              rules.draws ? tr.charts.progressionPoints : tr.charts.progressionWinPct
+            }
+            data={progression}
+            valueLabel={rules.draws ? tr.charts.points : tr.charts.winPct}
+            xLabel={tr.charts.match}
+            format={rules.draws ? "int" : "pct"}
+          />
+        </div>
+      ) : null}
       {h2h && opponent ? (
         <HeadToHeadCard
           h2h={h2h}
