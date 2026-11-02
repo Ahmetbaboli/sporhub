@@ -84,6 +84,7 @@ class PlayerStat(Base):
     team_id: Mapped[int | None] = mapped_column(ForeignKey("teams.id"))
     stats: Mapped[dict] = mapped_column(JSONType, default=dict)
 
+    season: Mapped[Season] = relationship()
     player: Mapped[Player] = relationship()
     team: Mapped[Team | None] = relationship()
 

@@ -308,3 +308,35 @@ async def list_seasons(session: AsyncSession, competition_id: int) -> list[Seaso
         .order_by(Season.year_label.desc())
     )
     return list((await session.scalars(stmt)).all())
+
+
+async def player_stat_sheets(session: AsyncSession, player_id: int) -> list[PlayerStat]:
+    """The player's stat sheets in current seasons, with competition and team loaded."""
+    stmt = (
+        select(PlayerStat)
+        .join(Season, PlayerStat.season_id == Season.id)
+        .where(PlayerStat.player_id == player_id, Season.is_current)
+        .options(
+            joinedload(PlayerStat.season)
+            .joinedload(Season.competition)
+            .joinedload(Competition.sport),
+            joinedload(PlayerStat.team).joinedload(Team.sport),
+        )
+        .order_by(PlayerStat.id)
+    )
+    return list((await session.scalars(stmt)).unique().all())
+
+
+async def player_finished_races(session: AsyncSession, player_id: int) -> list[Event]:
+    involved = select(EventParticipant.event_id).where(EventParticipant.player_id == player_id)
+    stmt = (
+        _event_select()
+        .where(
+            Event.id.in_(involved),
+            Event.kind == "race",
+            Event.status == "finished",
+            Season.is_current,
+        )
+        .order_by(Event.start_time)
+    )
+    return list((await session.scalars(stmt)).unique().all())

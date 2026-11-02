@@ -6,7 +6,7 @@ from app.adapters.jolpica import JolpicaAdapter
 from app.core import cache
 from app.core.config import Settings
 from app.repositories import queries
-from app.services.stats_service import race_leaders, race_summary
+from app.services.stats_service import get_player_stats, race_leaders, race_summary
 from app.services.sync_service import run_sync
 
 V1 = "/api/v1"
@@ -67,3 +67,42 @@ async def test_f1_race_leaders(maker: async_sessionmaker[AsyncSession], settings
     assert sum(r.value for r in boards["wins"].rows) == summary.completed
     finish = [r.value for r in boards["avg_finish"].rows]
     assert finish == sorted(finish)
+
+
+async def test_football_player_stats_from_scorers(
+    seeded: async_sessionmaker, client: AsyncClient
+) -> None:
+    body = (await client.get(f"{V1}/competitions/premier-league/stats")).json()
+    top = next(c for c in body["leaders"] if c["key"] == "goals")["rows"][0]
+    r = await client.get(f"{V1}/players/{top['player']['id']}/stats")
+    assert r.status_code == 200
+    items = r.json()["items"]
+    pl = next(i for i in items if i["competition"]["slug"] == "premier-league")
+    assert pl["stats"]["goals"] == top["value"]
+    assert pl["stats"]["goals_per_match"] == pytest.approx(
+        pl["stats"]["goals"] / pl["stats"]["played"], abs=0.01
+    )
+
+
+async def test_player_stats_unknown_is_404(seeded: async_sessionmaker, client: AsyncClient) -> None:
+    assert (await client.get(f"{V1}/players/999999/stats")).status_code == 404
+
+
+async def test_driver_season_stats(
+    maker: async_sessionmaker[AsyncSession], settings: Settings
+) -> None:
+    adapter = JolpicaAdapter(settings)
+    await run_sync(maker, adapter, adapter.default_competitions)
+    async with maker() as s:
+        comp = (await queries.list_competitions(s, "formula-1"))[0]
+        season = await queries.current_season(s, comp.id)
+        assert season is not None
+        leader = next(
+            r for r in await queries.list_standings(s, season.id) if r.player_id is not None
+        )
+        stats = await get_player_stats(s, leader.player_id)
+    sheet = stats.items[0].stats
+    assert 0 < sheet["race_points"] <= leader.points  # standings add sprint points
+    assert sheet["wins"] == leader.won
+    assert sheet["podiums"] >= sheet["wins"]
+    assert 1 <= sheet["best_finish"] <= sheet["avg_finish"]

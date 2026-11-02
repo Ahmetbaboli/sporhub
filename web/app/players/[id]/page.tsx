@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
+import { CompareLink } from "@/components/compare/compare-link";
 import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { TeamBadge } from "@/components/sport/team-badge";
 import { api } from "@/lib/api";
@@ -64,14 +65,17 @@ export default async function PlayerPage({ params }: Props) {
         <h1 className="font-display text-4xl font-bold tracking-tight uppercase">
           {player.name}
         </h1>
-        <Suspense fallback={null}>
-          <FavoriteToggle
-            kind="players"
-            id={player.id}
-            name={player.name}
-            returnTo={`/players/${player.id}`}
-          />
-        </Suspense>
+        <div className="flex flex-wrap items-center gap-2">
+          <CompareLink href={`/compare?type=players&a=${player.id}`} />
+          <Suspense fallback={null}>
+            <FavoriteToggle
+              kind="players"
+              id={player.id}
+              name={player.name}
+              returnTo={`/players/${player.id}`}
+            />
+          </Suspense>
+        </div>
       </div>
       <dl className="bg-card mt-6 grid max-w-xl gap-px overflow-hidden rounded-lg border sm:grid-cols-2">
         {facts.map(([label, value]) => (

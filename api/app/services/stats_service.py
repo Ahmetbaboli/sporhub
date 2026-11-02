@@ -11,6 +11,7 @@ from dataclasses import dataclass
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.cache import cached
+from app.core.errors import NotFoundError
 from app.models import Event, EventParticipant, Player, PlayerStat, Season, Standing, Team
 from app.repositories import queries
 from app.schemas.api import SeasonOut
@@ -19,11 +20,14 @@ from app.schemas.stats import (
     LeaderCategory,
     LeaderRow,
     MatchSummary,
+    PlayerSeasonStats,
+    PlayerStatsList,
     RaceSummary,
     SeasonHistoryRow,
 )
 from app.services.read_service import (
     _require_competition,
+    competition_out,
     event_out,
     player_out,
     standing_out,
@@ -320,3 +324,70 @@ async def get_competition_stats(session: AsyncSession, ref: str) -> CompetitionS
         )
 
     return await cached(f"cstats:{ref}", CompetitionStats, load)
+
+
+# ---- one player ------------------------------------------------------------------------------
+
+CLASSIFIED_STATUSES = ("Finished", "Lapped")
+
+
+def _classified(result: EventParticipant) -> bool:
+    status = str((result.extra or {}).get("status") or "")
+    return status in CLASSIFIED_STATUSES or status.startswith("+")
+
+
+def driver_season_stats(results: Sequence[EventParticipant]) -> dict[str, float]:
+    """Season numbers of one driver from their race results."""
+    positions = [r.position for r in results if r.position]
+    return {
+        "races": float(len(results)),
+        # Grand Prix points only; championship totals (standings) also include sprints.
+        "race_points": float(sum(r.points or 0 for r in results)),
+        "wins": float(sum(r.position == 1 for r in results)),
+        "podiums": float(sum((r.position or 99) <= PODIUM for r in results)),
+        "poles": float(sum((r.extra or {}).get("grid") == 1 for r in results)),
+        "fastest_laps": float(sum((r.extra or {}).get("fastest_lap_rank") == 1 for r in results)),
+        "best_finish": float(min(positions)) if positions else 0.0,
+        "avg_finish": round(sum(positions) / len(positions), DECIMALS) if positions else 0.0,
+        "dnf": float(sum(not _classified(r) for r in results)),
+    }
+
+
+def _with_rates(stats: dict[str, float]) -> dict[str, float]:
+    played = stats.get("played")
+    if played and "goals" in stats:
+        return {**stats, "goals_per_match": _rate(stats["goals"], int(played))}
+    return dict(stats)
+
+
+async def get_player_stats(session: AsyncSession, player_id: int) -> PlayerStatsList:
+    async def load() -> PlayerStatsList:
+        player = await queries.get_player(session, player_id)
+        if player is None:
+            raise NotFoundError("Oyuncu")
+        items = [
+            PlayerSeasonStats(
+                competition=competition_out(sheet.season.competition),
+                season=sheet.season.year_label,
+                team=team_out(sheet.team) if sheet.team else None,
+                stats=_with_rates(sheet.stats),
+            )
+            for sheet in await queries.player_stat_sheets(session, player_id)
+        ]
+        by_season: dict[int, list[tuple[Event, EventParticipant]]] = defaultdict(list)
+        for event in await queries.player_finished_races(session, player_id):
+            mine = next(p for p in event.participants if p.player_id == player_id)
+            by_season[event.season_id].append((event, mine))
+        for races in by_season.values():
+            event, last = races[-1]
+            items.append(
+                PlayerSeasonStats(
+                    competition=competition_out(event.season.competition),
+                    season=event.season.year_label,
+                    team=team_out(last.team) if last.team else None,
+                    stats=driver_season_stats([r for _, r in races]),
+                )
+            )
+        return PlayerStatsList(player=player_out(player), items=items)
+
+    return await cached(f"pstats:{player_id}", PlayerStatsList, load)

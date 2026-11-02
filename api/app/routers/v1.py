@@ -14,7 +14,7 @@ from app.schemas.api import (
     SearchResults,
     TeamDetail,
 )
-from app.schemas.stats import CompetitionStats
+from app.schemas.stats import CompetitionStats, PlayerStatsList
 from app.services import analysis_service, stats_service
 from app.services import read_service as svc
 
@@ -237,3 +237,13 @@ async def head_to_head(
 )
 async def competition_stats(ref: str, session: Session) -> CompetitionStats:
     return await stats_service.get_competition_stats(session, ref)
+
+
+@router.get(
+    "/players/{player_id}/stats",
+    response_model=PlayerStatsList,
+    tags=["players"],
+    summary="Oyuncunun güncel sezon istatistikleri (gol/asist veya yarış karnesi)",
+)
+async def player_stats(player_id: int, session: Session) -> PlayerStatsList:
+    return await stats_service.get_player_stats(session, player_id)

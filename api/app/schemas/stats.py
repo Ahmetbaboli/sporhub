@@ -1,6 +1,13 @@
 from pydantic import BaseModel, Field
 
-from app.schemas.api import EventOut, PlayerOut, SeasonOut, StandingOut, TeamOut
+from app.schemas.api import (
+    CompetitionOut,
+    EventOut,
+    PlayerOut,
+    SeasonOut,
+    StandingOut,
+    TeamOut,
+)
 
 
 class LeaderRow(BaseModel):
@@ -50,3 +57,15 @@ class CompetitionStats(BaseModel):
     races: RaceSummary | None = None
     leaders: list[LeaderCategory] = Field(default_factory=list)
     history: list[SeasonHistoryRow] = Field(default_factory=list)
+
+
+class PlayerSeasonStats(BaseModel):
+    competition: CompetitionOut
+    season: str
+    team: TeamOut | None = None
+    stats: dict[str, float] = Field(default_factory=dict)
+
+
+class PlayerStatsList(BaseModel):
+    player: PlayerOut
+    items: list[PlayerSeasonStats] = Field(default_factory=list)

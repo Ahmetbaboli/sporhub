@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { EventCard } from "@/components/sport/event-list";
 import { EventCardsSkeleton } from "@/components/sport/skeletons";
+import { CompareLink } from "@/components/compare/compare-link";
 import { HeadToHeadCard, TeamAnalysisPanel } from "@/components/sport/team-analysis";
 import { TeamBadge } from "@/components/sport/team-badge";
 import { EmptyState } from "@/components/ui/states";
@@ -43,7 +44,8 @@ export default async function TeamPage({ params }: Props) {
             <p className="text-muted-foreground mt-1 text-sm">{team.country}</p>
           ) : null}
         </div>
-        <div className="ml-auto">
+        <div className="ml-auto flex flex-wrap items-center gap-2">
+          <CompareLink href={`/compare?type=teams&a=${id}`} />
           <Suspense fallback={null}>
             <FavoriteToggle
               kind="teams"

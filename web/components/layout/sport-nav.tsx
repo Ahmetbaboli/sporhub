@@ -1,5 +1,6 @@
 "use client";
 
+import { GitCompareArrows } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { tr } from "@/lib/i18n/tr";
@@ -16,6 +17,7 @@ export function SportNav({ sports }: { sports: Sport[] }) {
       label: s.name,
       Icon: templateFor(s.slug).icon,
     })),
+    { href: "/compare", label: tr.compare.title, Icon: GitCompareArrows },
   ];
 
   return (

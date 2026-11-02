@@ -18,7 +18,9 @@ import type {
   SearchResults,
   Sport,
   SportEvent,
+  PlayerStatsList,
   Standing,
+  StandingEntry,
   TeamAnalysis,
   TeamDetail,
 } from "@/lib/types";
@@ -161,6 +163,11 @@ export const api = {
     get<TeamAnalysis>(`/api/v1/teams/${id}/analysis`, { last }),
   headToHead: (id: number, opponentId: number, limit?: number) =>
     get<HeadToHead>(`/api/v1/teams/${id}/h2h/${opponentId}`, { limit }),
+  teamStandings: (id: number) =>
+    get<Page<StandingEntry>>(`/api/v1/teams/${id}/standings`),
+  playerStandings: (id: number) =>
+    get<Page<StandingEntry>>(`/api/v1/players/${id}/standings`),
+  playerStats: (id: number) => get<PlayerStatsList>(`/api/v1/players/${id}/stats`),
   search: (q: string) => get<SearchResults>("/api/v1/search", { q }),
   me: {
     favoriteIds: async (token: string) =>

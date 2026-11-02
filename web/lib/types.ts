@@ -227,3 +227,21 @@ export interface CompetitionStats {
   leaders: LeaderCategory[];
   history: SeasonHistoryRow[];
 }
+
+export interface StandingEntry {
+  competition: Competition;
+  season: string;
+  standing: Standing;
+}
+
+export interface PlayerSeasonStats {
+  competition: Competition;
+  season: string;
+  team: Team | null;
+  stats: Record<string, number>;
+}
+
+export interface PlayerStatsList {
+  player: Player;
+  items: PlayerSeasonStats[];
+}
