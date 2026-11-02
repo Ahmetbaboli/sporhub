@@ -89,7 +89,8 @@ def main() -> None:
     for code in CODES:
         payload = scorers_for(code, rng)
         path = FIXTURES / f"{code}_scorers.json"
-        path.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        text = json.dumps(payload, ensure_ascii=False, indent=1) + "\n"
+        path.write_text(text, encoding="utf-8", newline="\n")
         print(f"{path.name}: {payload['count']} scorers")
 
 
