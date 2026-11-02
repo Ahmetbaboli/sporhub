@@ -9,6 +9,11 @@ describe("initials", () => {
   it("falls back to the first two letters for single words", () => {
     expect(initials("Arsenal")).toBe("AR");
   });
+  it("skips club prefixes and numbers before falling back", () => {
+    expect(initials("FC Lorient")).toBe("LO");
+    expect(initials("SV 07 Elversberg")).toBe("EL");
+    expect(initials("1. FSV Mainz 05")).toBe("MA");
+  });
 });
 
 describe("cn", () => {

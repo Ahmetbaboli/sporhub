@@ -8,10 +8,12 @@ export function cn(...inputs: ClassValue[]): string {
 /** "Manchester City FC" -> "MC"; used when a crest is missing or fails to load. */
 export function initials(name: string): string {
   const words = name
-    .replace(/\b(FC|AFC|CF|SK|FK|AC|AS|SS|US|SC|1\.)\b/g, "")
+    .replace(/\b(FC|AFC|CF|SK|FK|AC|AS|SS|US|SC|SV|FSV)\b/g, "")
     .split(/[\s.-]+/)
-    .filter(Boolean);
+    .filter((w) => w && !/^\d+$/.test(w));
   const letters =
-    words.length > 1 ? words.slice(0, 2).map((w) => w[0]) : [name.slice(0, 2)];
+    words.length > 1
+      ? words.slice(0, 2).map((w) => w[0])
+      : [(words[0] ?? name).slice(0, 2)];
   return letters.join("").toUpperCase();
 }
