@@ -25,11 +25,13 @@ from sqlalchemy.ext.asyncio import (
 from sqlalchemy.pool import NullPool, StaticPool
 
 from app.adapters.football_data import FootballDataAdapter
+from app.adapters.news_rss import RssNewsAdapter
 from app.core import cache
 from app.core.config import Settings, get_settings
 from app.db.base import Base
 from app.db.session import get_session
 from app.main import create_app
+from app.services.news_service import run_news_sync
 from app.services.sync_service import run_sync
 
 FIXTURE_TODAY = "2026-10-26"
@@ -113,6 +115,7 @@ async def _seed(engine: AsyncEngine) -> None:
     await _create_tables(engine)
     maker = async_sessionmaker(engine, expire_on_commit=False)
     await run_sync(maker, FootballDataAdapter(settings), ("PL", "CL"))
+    await run_news_sync(maker, RssNewsAdapter(settings))
     await engine.dispose()
 
 

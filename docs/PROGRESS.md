@@ -54,10 +54,10 @@
 - [x] 4f Oyuncu sezonluk performans grafikleri (Recharts), branşa özel gelişmiş istatistikler
 - [x] 4g TR/EN dil seçeneği (çerez + Accept-Language, istek bazlı `t()` / istemcide `useT()`)
 ### Aşama 4.5 — Haber modülü
-- [ ] Veri modeli: `news_articles` (spor, kategori, etiketli takım/oyuncu/lig, kaynak, yayın zamanı), `(source, external_id)` benzersiz
-- [ ] Kategoriler: genel, son dakika, transfer (resmî), transfer söylentisi, röportaj, organizasyon/turnuva
-- [ ] Haber adapter'ı (RSS/Atom; yalnızca başlık + özet + kaynağa link) + fixture modu; admin'den elle haber girişi
-- [ ] Haber sayfaları: `/news`, kategori/spor filtresi, arşiv (sayfalı, tarihe göre), takım/oyuncu sayfasında ilgili haberler
+- [x] Veri modeli: `news_articles` (spor, kategori, etiketli takım/oyuncu/lig, kaynak, yayın zamanı), `(source, external_id)` benzersiz
+- [x] Kategoriler: genel, son dakika, transfer (resmî), transfer söylentisi, röportaj, organizasyon/turnuva
+- [x] Haber adapter'ı (RSS/Atom; yalnızca başlık + özet + kaynağa link) + fixture modu; admin'den elle haber girişi
+- [x] Haber sayfaları: `/news`, kategori/spor filtresi, arşiv (sayfalı, tarihe göre), takım/oyuncu sayfasında ilgili haberler
 ### Aşama 5 — Öne çıkaran özellikler
 - [ ] SSE ile canlı skor
 - [ ] Bildirimler: Web Push (VAPID) — takip edilen maç başladı / gol / bitti, son dakika haberi; kullanıcı bazlı tercihler

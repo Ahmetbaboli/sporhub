@@ -1,5 +1,6 @@
 from functools import lru_cache
 from pathlib import Path
+from typing import Any
 
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -31,6 +32,10 @@ class Settings(BaseSettings):
     api_token_secret: str = Field(default="", repr=False)
     cors_origins: str = "http://localhost:3000"
     log_level: str = "info"
+
+    # News feeds (JSON list): [{"name", "url", "sport", "category", "language"}]. See .env.example.
+    news_feeds: list[dict[str, Any]] = Field(default_factory=list)
+    news_interval_minutes: int = 15
 
     scheduler_enabled: bool = False
     sync_interval_minutes: int = 30

@@ -58,17 +58,22 @@ class RateLimitedClient:
                 await asyncio.sleep(wait)
             self._last_request = time.monotonic()
 
-    async def _get_once(self, path: str, params: dict[str, Any] | None) -> Any:
+    async def _get_once(self, path: str, params: dict[str, Any] | None) -> httpx.Response:
         await self._throttle()
         response = await self._client.get(path, params=params)
         if response.status_code in RETRYABLE_STATUS:
             raise RetryableHTTPError(f"{path} -> HTTP {response.status_code}")
         response.raise_for_status()
-        return response.json()
+        return response
 
     async def get_json(self, path: str, params: dict[str, Any] | None = None) -> Any:
         logger.info("external request", extra={"path": path})
-        return await self._get(path, params)
+        return (await self._get(path, params)).json()
+
+    async def get_text(self, path: str, params: dict[str, Any] | None = None) -> str:
+        """Raw body (RSS/Atom feeds); same throttle, timeout and retry policy as JSON."""
+        logger.info("external request", extra={"path": path})
+        return (await self._get(path, params)).text
 
     async def aclose(self) -> None:
         await self._client.aclose()

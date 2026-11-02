@@ -9,9 +9,17 @@ export interface TabItem {
 }
 
 /** Server-rendered tabs: each tab is a link, the active one carries aria-current. */
-export function TabNav({ tabs, active }: { tabs: TabItem[]; active: string }) {
+export function TabNav({
+  tabs,
+  active,
+  label = t().competition.tabsLabel,
+}: {
+  tabs: TabItem[];
+  active: string;
+  label?: string;
+}) {
   return (
-    <nav aria-label={t().competition.tabsLabel} className="mb-4 overflow-x-auto border-b">
+    <nav aria-label={label} className="mb-4 overflow-x-auto border-b">
       <ul className="flex gap-1">
         {tabs.map((tab) => (
           <li key={tab.id}>

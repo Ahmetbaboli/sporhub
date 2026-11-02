@@ -3,10 +3,12 @@
 import asyncio
 import logging
 
+from app.adapters.news_rss import RssNewsAdapter
 from app.adapters.registry import adapter_names, create_adapter
 from app.core.config import get_settings
 from app.core.logging import configure_logging
 from app.db.session import get_engine, get_sessionmaker
+from app.services.news_service import run_news_sync
 from app.services.sync_service import run_sync
 
 logger = logging.getLogger(__name__)
@@ -24,6 +26,14 @@ async def seed() -> None:
             )
         finally:
             await adapter.aclose()
+    news = RssNewsAdapter(settings)
+    try:
+        run = await run_news_sync(maker, news)
+        logger.info(
+            "seeded", extra={"adapter": "news", "status": run.status, "items": run.items_upserted}
+        )
+    finally:
+        await news.aclose()
     await get_engine().dispose()
 
 

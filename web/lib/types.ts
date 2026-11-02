@@ -245,3 +245,36 @@ export interface PlayerStatsList {
   player: Player;
   items: PlayerSeasonStats[];
 }
+
+/** News (api/app/schemas/news.py). */
+export type NewsCategory =
+  "general" | "transfer_official" | "transfer_rumour" | "interview" | "tournament";
+export type NewsCategoryFilter = NewsCategory | "transfer";
+
+export interface NewsTag {
+  kind: "team" | "player" | "competition";
+  id: number;
+  name: string;
+  sport_slug: string | null;
+  slug: string | null;
+}
+
+export interface NewsItem {
+  id: number;
+  title: string;
+  summary: string;
+  url: string;
+  image_url: string | null;
+  author: string | null;
+  source: string;
+  published_at: string;
+  category: NewsCategory;
+  is_breaking: boolean;
+  language: string;
+  sport_slug: string | null;
+  tags: NewsTag[];
+}
+
+export interface NewsArchive {
+  months: { month: string; count: number }[];
+}

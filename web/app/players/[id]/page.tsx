@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { CompareLink } from "@/components/compare/compare-link";
 import { FavoriteToggle } from "@/components/account/favorite-toggle";
+import { RelatedNews } from "@/components/news/related-news";
 import { TableSkeleton } from "@/components/sport/skeletons";
 import { PlayerPerformance } from "@/components/sport/player-performance";
 import { TeamBadge } from "@/components/sport/team-badge";
@@ -93,6 +94,9 @@ export default async function PlayerPage({ params }: Props) {
           </div>
         ))}
       </dl>
+      <Suspense fallback={null}>
+        <RelatedNews kind="player" id={player.id} name={player.name} />
+      </Suspense>
       <Suspense fallback={<TableSkeleton rows={4} />}>
         <PlayerPerformance player={player} />
       </Suspense>

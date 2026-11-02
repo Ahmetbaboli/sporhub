@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Örnek Spor Haberleri (sentetik)</title>
+    <link>https://example.com/haber</link>
+    <description>Just Sport geliştirme verisi. Gerçek haber değildir.</description>
+    <item>
+      <title>Son dakika: Jonas Demir sakatlık nedeniyle kadroda yok</title>
+      <link>https://example.com/haber/demir-sakatlik</link>
+      <guid>ornek-001</guid>
+      <pubDate>Mon, 02 Nov 2026 08:30:00 +0000</pubDate>
+      <description><![CDATA[<p>Chelsea FC golcüsü <b>Jonas Demir</b>, antrenmanda yaşadığı sakatlık nedeniyle hafta sonu oynanacak Premier League maçında forma giyemeyecek.</p>]]></description>
+      <media:content url="https://example.com/img/demir.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>Chelsea, AFC Bournemouth forması giyen Emre Silva transferini resmen açıkladı</title>
+      <link>https://example.com/haber/emre-silva-chelsea</link>
+      <guid>ornek-002</guid>
+      <pubDate>Sun, 01 Nov 2026 17:05:00 +0000</pubDate>
+      <description>Kulüp, 4 yıllık sözleşmenin imzalandığını duyurdu.</description>
+    </item>
+    <item>
+      <title>Valencia CF, Hugo Fofana için gelen teklifleri değerlendiriyor iddiası</title>
+      <link>https://example.com/haber/fofana-iddia</link>
+      <guid>ornek-003</guid>
+      <pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
+      <description>Primera Division gol krallığında zirvede olan oyuncu birçok kulübün listesinde.</description>
+    </item>
+    <item>
+      <title>Arda Ilic röportajda konuştu: "Hedefimiz Avrupa"</title>
+      <link>https://example.com/haber/arda-ilic-roportaj</link>
+      <guid>ornek-004</guid>
+      <pubDate>Fri, 30 Oct 2026 09:15:00 +0000</pubDate>
+      <description>Brighton &amp; Hove Albion orta saha oyuncusu sezonun ilk yarısını değerlendirdi.</description>
+    </item>
+    <item>
+      <title>UEFA Champions League son 16 turu kura çekimi tarihi belli oldu</title>
+      <link>https://example.com/haber/sampiyonlar-ligi-kura</link>
+      <guid>ornek-005</guid>
+      <pubDate>Thu, 29 Oct 2026 14:00:00 +0000</pubDate>
+      <description>Kura çekimi aralık ayında yapılacak; organizasyon takvimi de netleşti.</description>
+    </item>
+    <item>
+      <title>Premier League haftanın özeti: Jonas Demir zirvede</title>
+      <link>https://example.com/haber/premier-league-hafta-ozeti</link>
+      <guid>ornek-006</guid>
+      <pubDate>Mon, 26 Oct 2026 07:45:00 +0000</pubDate>
+      <description>Haftanın en çok konuşulan maçları ve öne çıkan isimler.</description>
+    </item>
+    <item>
+      <title>Nico Zielinski yeni sözleşmesi Torino yönetiminin masasında</title>
+      <link>https://example.com/haber/zielinski-sozlesme</link>
+      <guid>ornek-007</guid>
+      <pubDate>Thu, 15 Oct 2026 19:30:00 +0000</pubDate>
+      <description>Serie A ekibi forvetinin sözleşmesini uzatmak istiyor.</description>
+    </item>
+    <item>
+      <title>Bundesliga kış arası takvim açıklandı</title>
+      <link>https://example.com/haber/bundesliga-takvim</link>
+      <guid>ornek-008</guid>
+      <pubDate>Tue, 06 Oct 2026 10:00:00 +0000</pubDate>
+      <description>Lig, aralık ortasında başlayacak aranın ardından ocak ayında yeniden başlayacak.</description>
+    </item>
+    <item>
+      <title>Mateo Eriksen, Real Oviedo ile imzayı attı</title>
+      <link>https://example.com/haber/eriksen-oviedo</link>
+      <guid>ornek-009</guid>
+      <pubDate>Mon, 21 Sep 2026 16:20:00 +0000</pubDate>
+      <description>Oyuncu, transfer döneminin son gününde yeni takımına katıldı.</description>
+    </item>
+    <item>
+      <title>Bağlantısı olmayan bozuk kayıt (atlanmalı)</title>
+      <guid>ornek-010</guid>
+      <pubDate>Mon, 21 Sep 2026 16:20:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

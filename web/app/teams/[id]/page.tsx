@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { EventCard } from "@/components/sport/event-list";
 import { EventCardsSkeleton } from "@/components/sport/skeletons";
+import { RelatedNews } from "@/components/news/related-news";
 import { SeriesChart } from "@/components/charts/series-chart";
 import { CompareLink } from "@/components/compare/compare-link";
 import { HeadToHeadCard, TeamAnalysisPanel } from "@/components/sport/team-analysis";
@@ -67,6 +68,9 @@ export default async function TeamPage({ params }: Props) {
       </Suspense>
       <Suspense fallback={null}>
         <TeamInsights teamId={id} sport={team.sport_slug} />
+      </Suspense>
+      <Suspense fallback={null}>
+        <RelatedNews kind="team" id={id} name={team.name} />
       </Suspense>
       <Squad team={team} />
     </>

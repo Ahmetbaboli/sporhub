@@ -1,6 +1,6 @@
 "use client";
 
-import { GitCompareArrows } from "lucide-react";
+import { GitCompareArrows, Newspaper } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useT } from "@/lib/i18n/client";
@@ -13,6 +13,7 @@ export function SportNav({ sports }: { sports: Sport[] }) {
   const pathname = usePathname();
   const items = [
     { href: "/", label: tr.nav.home, Icon: null },
+    { href: "/news", label: tr.nav.news, Icon: Newspaper },
     ...sports.map((s) => ({
       href: `/${s.slug}`,
       label: s.name,

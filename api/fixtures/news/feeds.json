@@ -1,0 +1,11 @@
+{
+  "_fixture": {
+    "reference_date": "2026-11-02",
+    "note": "Synthetic sample news about the synthetic players in the other fixtures. Not real reporting."
+  },
+  "feeds": [
+    {"name": "Örnek Spor Haberleri", "file": "ornek_futbol.rss.xml", "sport": "football", "category": "general", "language": "tr"},
+    {"name": "Sample Sports Wire", "file": "sample_wire.atom.xml", "sport": null, "category": "general", "language": "en"},
+    {"name": "Örnek Basketbol", "file": "ornek_basketbol.rss.xml", "sport": "basketball", "category": "general", "language": "tr"}
+  ]
+}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { TeamActivityCard } from "@/components/account/dashboard";
+import { BreakingStrip, NewsBox } from "@/components/news/news-parts";
 import { competitionHref, EventCard } from "@/components/sport/event-list";
 import { EventCardsSkeleton } from "@/components/sport/skeletons";
 import { EmptyState } from "@/components/ui/states";
@@ -57,6 +58,26 @@ async function TodayEvents() {
 }
 
 const HOME_TEAM_CARDS = 2;
+const BREAKING_LIMIT = 3;
+const BREAKING_MAX_AGE_HOURS = 48;
+const LATEST_NEWS = 6;
+
+/** Breaking headlines from the last two days, above everything else. */
+async function Breaking() {
+  const page = await api
+    .news({
+      breaking: true,
+      maxAgeHours: BREAKING_MAX_AGE_HOURS,
+      pageSize: BREAKING_LIMIT,
+    })
+    .catch(() => null);
+  return <BreakingStrip items={page?.items ?? []} />;
+}
+
+async function LatestNews() {
+  const page = await api.news({ pageSize: LATEST_NEWS }).catch(() => null);
+  return <NewsBox title={t().news.latest} items={page?.items ?? []} moreHref="/news" />;
+}
 
 /** Signed-in users see their own teams first; renders nothing for everyone else. */
 async function PersonalAgenda() {
@@ -91,6 +112,9 @@ export default async function HomePage() {
   return (
     <>
       <Suspense fallback={null}>
+        <Breaking />
+      </Suspense>
+      <Suspense fallback={null}>
         <PersonalAgenda />
       </Suspense>
       <h1 className="font-display text-4xl font-bold tracking-tight uppercase">
@@ -99,6 +123,9 @@ export default async function HomePage() {
       <p className="text-muted-foreground mt-1 mb-6 text-sm">{t().home.subtitle}</p>
       <Suspense fallback={<EventCardsSkeleton cards={3} />}>
         <TodayEvents />
+      </Suspense>
+      <Suspense fallback={null}>
+        <LatestNews />
       </Suspense>
     </>
   );

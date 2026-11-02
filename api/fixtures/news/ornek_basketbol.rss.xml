@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Örnek Basketbol (sentetik)</title>
+    <link>https://example.com/basketbol</link>
+    <description>Just Sport geliştirme verisi. Gerçek haber değildir.</description>
+    <item>
+      <title>Nikola Knight, Atlanta Hawks galibiyetinde 31 sayıyla yıldızlaştı</title>
+      <link>https://example.com/basketbol/knight-31</link>
+      <guid>basket-001</guid>
+      <pubDate>Sun, 01 Nov 2026 05:00:00 +0000</pubDate>
+      <description>Genç guard sezonun en iyi performansını sergiledi.</description>
+    </item>
+    <item>
+      <title>Boston Celtics, Paolo Tate ile ilgileniyor iddiası</title>
+      <link>https://example.com/basketbol/tate-celtics</link>
+      <guid>basket-002</guid>
+      <pubDate>Wed, 28 Oct 2026 21:00:00 +0000</pubDate>
+      <description>Takas döneminden önce kulübün gündeminde olduğu konuşuluyor.</description>
+    </item>
+    <item>
+      <title>Malik Owens röportajda konuştu: "Brooklyn Nets takımında liderlik istiyorum"</title>
+      <link>https://example.com/basketbol/owens-roportaj</link>
+      <guid>basket-003</guid>
+      <pubDate>Tue, 20 Oct 2026 13:00:00 +0000</pubDate>
+      <description>Forvet, sezon hedeflerini anlattı.</description>
+    </item>
+  </channel>
+</rss>

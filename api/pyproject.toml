@@ -17,6 +17,7 @@ dependencies = [
   "redis>=5.2",
   "tzdata>=2024.2",
   "pyjwt>=2.9",
+  "defusedxml>=0.7.1",
 ]
 
 [dependency-groups]
@@ -28,6 +29,7 @@ dev = [
   "ruff>=0.8",
   "aiosqlite>=0.20",
   "fakeredis>=2.26",
+  "types-defusedxml>=0.7.0.20260504",
 ]
 
 [tool.uv]

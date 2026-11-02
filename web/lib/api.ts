@@ -13,6 +13,9 @@ import type {
   FavoriteKind,
   Favorites,
   HeadToHead,
+  NewsArchive,
+  NewsCategoryFilter,
+  NewsItem,
   Page,
   Player,
   SearchResults,
@@ -125,6 +128,36 @@ export interface EventsQuery {
   pageSize?: number;
 }
 
+export interface NewsQuery {
+  category?: NewsCategoryFilter;
+  sport?: string;
+  team?: number;
+  player?: number;
+  competition?: number;
+  breaking?: boolean;
+  month?: string;
+  q?: string;
+  maxAgeHours?: number;
+  page?: number;
+  pageSize?: number;
+}
+
+function newsParams(q: NewsQuery): Query {
+  return {
+    category: q.category,
+    sport: q.sport,
+    team: q.team,
+    player: q.player,
+    competition: q.competition,
+    breaking: q.breaking === undefined ? undefined : String(q.breaking),
+    month: q.month,
+    q: q.q,
+    max_age_hours: q.maxAgeHours,
+    page: q.page,
+    page_size: q.pageSize,
+  };
+}
+
 export const api = {
   sports: () => get<Page<Sport>>("/api/v1/sports"),
   competitions: (sport: string) =>
@@ -173,6 +206,10 @@ export const api = {
       page_size: q.pageSize,
     }),
   playerStats: (id: number) => get<PlayerStatsList>(`/api/v1/players/${id}/stats`),
+  news: (q: NewsQuery = {}) => get<Page<NewsItem>>("/api/v1/news", newsParams(q)),
+  newsArchive: (q: Omit<NewsQuery, "month" | "page" | "pageSize"> = {}) =>
+    get<NewsArchive>("/api/v1/news/archive", newsParams(q)),
+  newsArticle: (id: number) => get<NewsItem>(`/api/v1/news/${id}`),
   search: (q: string) => get<SearchResults>("/api/v1/search", { q }),
   me: {
     favoriteIds: async (token: string) =>

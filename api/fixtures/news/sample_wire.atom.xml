@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sample Sports Wire (synthetic)</title>
+  <id>urn:justsport:sample-wire</id>
+  <updated>2026-11-02T09:00:00Z</updated>
+  <entry>
+    <title>Breaking: Ivan Costa completes move to Olympiacos</title>
+    <link rel="alternate" href="https://example.com/wire/ivan-costa-olympiacos"/>
+    <id>urn:justsport:wire:1</id>
+    <published>2026-11-02T06:10:00Z</published>
+    <summary>The forward has signed a three-year deal, the club said on Monday.</summary>
+    <author><name>Wire Desk</name></author>
+  </entry>
+  <entry>
+    <title>Interview: Karim Silva opens up on the Bayer 04 Leverkusen season</title>
+    <link rel="alternate" href="https://example.com/wire/karim-silva-interview"/>
+    <id>urn:justsport:wire:2</id>
+    <published>2026-10-31T11:00:00Z</published>
+    <summary>&lt;p&gt;"We can still win the Bundesliga," the striker says.&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Hugo Hoffmann linked with move away from FC Internazionale Milano</title>
+    <link rel="alternate" href="https://example.com/wire/hoffmann-linked"/>
+    <id>urn:justsport:wire:3</id>
+    <updated>2026-10-28T15:30:00Z</updated>
+    <summary>Several clubs are monitoring the situation ahead of the winter window.</summary>
+  </entry>
+  <entry>
+    <title>Serie A calendar announced for the winter break</title>
+    <link rel="alternate" href="https://example.com/wire/serie-a-calendar"/>
+    <id>urn:justsport:wire:4</id>
+    <published>2026-10-12T08:00:00Z</published>
+    <summary>The league confirmed the dates of the final rounds before the break.</summary>
+  </entry>
+  <entry>
+    <title>Season preview: what to expect from the UEFA Champions League</title>
+    <link rel="alternate" href="https://example.com/wire/ucl-preview"/>
+    <id>urn:justsport:wire:5</id>
+    <published>2026-09-14T08:00:00Z</published>
+    <summary>Contenders, dark horses and the players to watch this season.</summary>
+  </entry>
+</feed>
