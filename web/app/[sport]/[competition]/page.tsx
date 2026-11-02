@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { Freshness } from "@/components/layout/freshness";
 import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { DayGroupedEvents } from "@/components/sport/event-list";
 import { TableSkeleton } from "@/components/sport/skeletons";
@@ -97,6 +98,9 @@ export default async function CompetitionPage({ params, searchParams }: Props) {
             hrefFor={(p) => `${base}?tab=${tab}&page=${p}`}
           />
         )}
+      </Suspense>
+      <Suspense fallback={null}>
+        <Freshness sport={sport} />
       </Suspense>
     </>
   );

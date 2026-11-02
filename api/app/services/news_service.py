@@ -14,6 +14,7 @@ from app.adapters.news_rss import SOURCE_PREFIX, NewsDTO, RssNewsAdapter
 from app.core.cache import cached, invalidate_all
 from app.core.data_mode import display_source
 from app.core.errors import NotFoundError
+from app.core.redact import redact
 from app.models import Competition, NewsArticle, NewsTag, Player, Sport, SyncRun, Team
 from app.repositories.upsert import upsert_row
 from app.schemas.news import ArchiveMonth, NewsArchive, NewsList, NewsOut, NewsTagOut
@@ -179,7 +180,7 @@ async def run_news_sync(
         except Exception as exc:
             await session.rollback()
             logger.exception("news sync failed")
-            errors.append(str(exc))
+            errors.append(redact(str(exc)))
             saved = 0
         run = await session.get(SyncRun, run.id) or run
         run.finished_at = datetime.now(UTC)

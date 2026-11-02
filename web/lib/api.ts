@@ -3,6 +3,7 @@
  * through this module; the frontend never talks to external sports APIs.
  */
 import type {
+  AdminStatus,
   ApiErrorBody,
   Competition,
   CompetitionDetail,
@@ -116,6 +117,15 @@ async function authed<T>(
   return response.status === 204 ? undefined : ((await response.json()) as T);
 }
 
+/** Admin-only request; the token is a server-side secret and never reaches the browser. */
+async function adminGet<T>(path: string, adminToken: string): Promise<T> {
+  const response = await send(buildUrl(path), {
+    headers: { Accept: "application/json", "X-Admin-Token": adminToken },
+    cache: "no-store",
+  });
+  return (await response.json()) as T;
+}
+
 function favoritePath(kind: FavoriteKind, id: number): string {
   return `/api/v1/me/favorites/${kind}/${id}`;
 }
@@ -213,6 +223,10 @@ export const api = {
     get<NewsArchive>("/api/v1/news/archive", newsParams(q)),
   newsArticle: (id: number) => get<NewsItem>(`/api/v1/news/${id}`),
   search: (q: string) => get<SearchResults>("/api/v1/search", { q }),
+  admin: {
+    status: (adminToken: string) =>
+      adminGet<AdminStatus>("/api/v1/admin/status", adminToken),
+  },
   me: {
     favoriteIds: async (token: string) =>
       (await authed<FavoriteIds>(token, "/api/v1/me/favorites/ids"))!,

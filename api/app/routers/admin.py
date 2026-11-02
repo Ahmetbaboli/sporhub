@@ -14,7 +14,9 @@ from app.core.errors import AppError, ErrorResponse
 from app.core.sources import source_status
 from app.db.session import get_session, get_sessionmaker
 from app.schemas.api import SyncAccepted
+from app.schemas.meta import AdminStatus
 from app.schemas.news import ManualNewsCreated, ManualNewsIn
+from app.services.meta_service import get_admin_status
 from app.services.news_service import MANUAL_SOURCE, create_manual_article, run_news_sync
 from app.services.sync_service import run_sync
 
@@ -114,3 +116,16 @@ async def sources(
 ) -> list[SourceStatusOut]:
     require_admin(x_admin_token)
     return [SourceStatusOut(**vars(s)) for s in source_status(get_settings())]
+
+
+@router.get(
+    "/status",
+    response_model=AdminStatus,
+    summary="Senkron durumu: son başarı, 24 saatlik hata oranı, kalan istek bütçesi",
+)
+async def status(
+    session: Annotated[AsyncSession, Depends(get_session)],
+    x_admin_token: Annotated[str | None, Header(description="ADMIN_TOKEN değeri")] = None,
+) -> AdminStatus:
+    require_admin(x_admin_token)
+    return await get_admin_status(session, get_settings())

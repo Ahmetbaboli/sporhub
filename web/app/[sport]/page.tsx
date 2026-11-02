@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { Freshness } from "@/components/layout/freshness";
 import { competitionHref, EventCard } from "@/components/sport/event-list";
 import { EventCardsSkeleton } from "@/components/sport/skeletons";
 import { TeamBadge } from "@/components/sport/team-badge";
@@ -87,6 +88,9 @@ export default async function SportPage({ params }: Props) {
           </Suspense>
         </>
       )}
+      <Suspense fallback={null}>
+        <Freshness sport={sport} />
+      </Suspense>
     </>
   );
 }

@@ -15,7 +15,7 @@ from app.routers import admin, me, news, v1
 from app.schemas.api import HealthOut
 from app.services.demo_data import has_demo_rows, purge_demo
 from app.services.meta_service import ensure_registered_sports
-from app.services.scheduler import build_scheduler
+from app.services.scheduler import TICK_SECONDS, build_scheduler
 
 logger = logging.getLogger(__name__)
 
@@ -37,7 +37,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     scheduler = build_scheduler(settings) if settings.scheduler_enabled else None
     if scheduler:
         scheduler.start()
-        logger.info("scheduler started", extra={"interval_min": settings.sync_interval_minutes})
+        logger.info("scheduler started", extra={"tick_seconds": TICK_SECONDS})
     yield
     if scheduler:
         scheduler.shutdown(wait=False)

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Suspense } from "react";
+import { Freshness } from "@/components/layout/freshness";
 import { TeamActivityCard } from "@/components/account/dashboard";
 import { BreakingStrip, NewsBox } from "@/components/news/news-parts";
 import { competitionHref, EventCard } from "@/components/sport/event-list";
@@ -126,6 +127,9 @@ export default async function HomePage() {
       </Suspense>
       <Suspense fallback={null}>
         <LatestNews />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Freshness />
       </Suspense>
     </>
   );

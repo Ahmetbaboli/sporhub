@@ -1,6 +1,6 @@
 {
  "_fixture": {
-  "reference_date": "2026-10-26",
+  "reference_date": "2026-11-02",
   "note": "Anonymized capture of real Jolpica-F1 responses (urls and birth dates removed)."
  },
  "MRData": {
@@ -10,16 +10,16 @@
   "total": "11",
   "StandingsTable": {
    "season": "2026",
-   "round": "18",
+   "round": "19",
    "StandingsLists": [
     {
      "season": "2026",
-     "round": "18",
+     "round": "19",
      "ConstructorStandings": [
       {
        "position": "1",
        "positionText": "1",
-       "points": "607",
+       "points": "630",
        "wins": "12",
        "Constructor": {
         "constructorId": "mercedes",
@@ -30,7 +30,7 @@
       {
        "position": "2",
        "positionText": "2",
-       "points": "474",
+       "points": "504",
        "wins": "2",
        "Constructor": {
         "constructorId": "ferrari",
@@ -41,8 +41,8 @@
       {
        "position": "3",
        "positionText": "3",
-       "points": "355",
-       "wins": "2",
+       "points": "380",
+       "wins": "3",
        "Constructor": {
         "constructorId": "red_bull",
         "name": "Red Bull",
@@ -52,7 +52,7 @@
       {
        "position": "4",
        "positionText": "4",
-       "points": "355",
+       "points": "371",
        "wins": "2",
        "Constructor": {
         "constructorId": "mclaren",
@@ -63,7 +63,7 @@
       {
        "position": "5",
        "positionText": "5",
-       "points": "102",
+       "points": "104",
        "wins": "0",
        "Constructor": {
         "constructorId": "rb",
@@ -74,7 +74,7 @@
       {
        "position": "6",
        "positionText": "6",
-       "points": "69",
+       "points": "74",
        "wins": "0",
        "Constructor": {
         "constructorId": "alpine",

@@ -40,7 +40,6 @@ class Settings(BaseSettings):
     news_interval_minutes: int = 15
 
     scheduler_enabled: bool = False
-    sync_interval_minutes: int = 30
     cache_ttl_seconds: int = 60
 
     @property

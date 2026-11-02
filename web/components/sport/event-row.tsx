@@ -4,6 +4,7 @@ import { StatusBadge } from "@/components/sport/status-badge";
 import { TeamBadge } from "@/components/sport/team-badge";
 import { sideOf } from "@/lib/events";
 import { t } from "@/lib/i18n";
+import { scoreMayBeDelayed } from "@/lib/sources";
 import type { Participant, SportEvent } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -83,6 +84,9 @@ export function EventRow({
       </div>
       <div className="text-muted-foreground mt-1 flex items-center justify-center gap-2 text-xs">
         {event.status !== "scheduled" ? <StatusBadge status={event.status} /> : null}
+        {event.status === "live" && scoreMayBeDelayed(event.competition.source) ? (
+          <span className="italic">{t().freshness.scoresDelayed}</span>
+        ) : null}
         {showRound && event.round ? (
           <span>
             {t().competition.round} {event.round}

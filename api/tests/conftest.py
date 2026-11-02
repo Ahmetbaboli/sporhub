@@ -24,6 +24,7 @@ from sqlalchemy.ext.asyncio import (
 )
 from sqlalchemy.pool import NullPool, StaticPool
 
+from app.adapters.budget import reset_budgets
 from app.adapters.football_data import FootballDataAdapter
 from app.adapters.news_rss import RssNewsAdapter
 from app.core import cache
@@ -88,6 +89,7 @@ def _isolate(settings: Settings, monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr("app.routers.v1.get_settings", lambda: settings)
     monkeypatch.setattr("app.core.auth.get_settings", lambda: settings)
     cache.reset_cache()
+    reset_budgets()
 
 
 @pytest.fixture

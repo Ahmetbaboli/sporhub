@@ -23,6 +23,7 @@ export interface Competition {
   sport_slug: string;
   country: string | null;
   logo_url: string | null;
+  source?: string | null;
 }
 
 export interface Season {
@@ -287,6 +288,8 @@ export interface SourceMeta {
   last_success_at: string | null;
   last_attempt_at: string | null;
   last_status: string | null;
+  stale: boolean;
+  scores_delayed: boolean;
 }
 
 export interface SportMeta {
@@ -300,4 +303,24 @@ export interface Meta {
   data_mode: "live" | "demo";
   sports: SportMeta[];
   sources: SourceMeta[];
+}
+
+export interface BudgetWindow {
+  limit: number;
+  used: number;
+  remaining: number;
+}
+
+export interface SourceStatusDetail extends SourceMeta {
+  runs_24h: number;
+  failures_24h: number;
+  error_rate_24h: number;
+  last_error: string | null;
+  budget: Record<string, BudgetWindow>;
+}
+
+export interface AdminStatus {
+  data_mode: "live" | "demo";
+  scheduler_enabled: boolean;
+  sources: SourceStatusDetail[];
 }

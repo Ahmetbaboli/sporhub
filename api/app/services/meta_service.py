@@ -1,16 +1,45 @@
 """What the UI needs to be honest: data mode, which sports are configured, data freshness."""
 
+from datetime import UTC, datetime, timedelta
+
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.adapters.budget import all_budgets
 from app.adapters.registry import ADAPTERS
 from app.core.config import Settings
+from app.core.redact import redact
 from app.core.sources import SOURCES
 from app.models import SyncRun
-from app.schemas.meta import MetaOut, SourceMeta, SportMeta
-from app.services.sync_service import STATUS_PARTIAL, STATUS_SUCCESS, ensure_sport
+from app.schemas.meta import AdminStatus, MetaOut, SourceMeta, SourceStatusDetail, SportMeta
+from app.services.sync_service import (
+    STATUS_PARTIAL,
+    STATUS_SKIPPED,
+    STATUS_SUCCESS,
+    ensure_sport,
+)
 
 SUCCESS_STATUSES = (STATUS_SUCCESS, STATUS_PARTIAL)
+FAILED_STATUSES = ("failed", STATUS_PARTIAL)
+# The slowest regular refresh is 12 h (F1 off-weekend); older data is shown as delayed.
+STALE_AFTER = timedelta(hours=13)
+
+
+def is_stale(
+    configured: bool,
+    last_success: datetime | None,
+    last_attempt: datetime | None,
+    last_status: str | None,
+    now: datetime,
+) -> bool:
+    if not configured or last_attempt is None:
+        return False  # nothing expected yet
+    if last_success is None:
+        return last_status in FAILED_STATUSES
+    if last_success.tzinfo is None:
+        last_success = last_success.replace(tzinfo=UTC)
+    failed_since = last_status in FAILED_STATUSES
+    return failed_since or now - last_success > STALE_AFTER
 
 
 def registered_sports() -> dict[str, str]:
@@ -52,17 +81,24 @@ async def _last_runs(session: AsyncSession) -> dict[str, tuple]:
 
 async def get_meta(session: AsyncSession, settings: Settings) -> MetaOut:
     runs = await _last_runs(session)
-    sources = [
-        SourceMeta(
-            name=spec.name,
-            sport=spec.sport,
-            configured=spec.is_configured(settings),
-            last_success_at=runs.get(spec.name, (None, None, None))[0],
-            last_attempt_at=runs.get(spec.name, (None, None, None))[1],
-            last_status=runs.get(spec.name, (None, None, None))[2],
+    now = datetime.now(UTC)
+    sources = []
+    for spec in SOURCES:
+        success, attempt, status = runs.get(spec.name, (None, None, None))
+        configured = spec.is_configured(settings)
+        adapter = ADAPTERS.get(spec.name)
+        sources.append(
+            SourceMeta(
+                name=spec.name,
+                sport=spec.sport,
+                configured=configured,
+                last_success_at=success,
+                last_attempt_at=attempt,
+                last_status=status,
+                stale=is_stale(configured, success, attempt, status, now),
+                scores_delayed=bool(getattr(adapter, "scores_delayed", False)),
+            )
         )
-        for spec in SOURCES
-    ]
     sports = [
         SportMeta(
             slug=slug,
@@ -73,3 +109,40 @@ async def get_meta(session: AsyncSession, settings: Settings) -> MetaOut:
         for slug, name in registered_sports().items()
     ]
     return MetaOut(data_mode=settings.data_mode, sports=sports, sources=sources)
+
+
+ERROR_PREVIEW_CHARS = 300
+STATUS_WINDOW = timedelta(hours=24)
+
+
+async def get_admin_status(session: AsyncSession, settings: Settings) -> AdminStatus:
+    meta = await get_meta(session, settings)
+    since = datetime.now(UTC) - STATUS_WINDOW
+    budgets = all_budgets()
+    details = []
+    for source in meta.sources:
+        runs = (
+            await session.scalars(
+                select(SyncRun)
+                .where(SyncRun.adapter == source.name, SyncRun.started_at >= since)
+                .order_by(SyncRun.started_at.desc())
+            )
+        ).all()
+        counted = [r for r in runs if r.status != STATUS_SKIPPED]
+        failures = [r for r in counted if r.status in FAILED_STATUSES]
+        last_error = next((r.error for r in runs if r.error), None)
+        details.append(
+            SourceStatusDetail(
+                **source.model_dump(),
+                runs_24h=len(counted),
+                failures_24h=len(failures),
+                error_rate_24h=round(len(failures) / len(counted), 2) if counted else 0.0,
+                last_error=redact(last_error, settings)[:ERROR_PREVIEW_CHARS]
+                if last_error
+                else None,
+                budget=budgets.get(source.name, {}),
+            )
+        )
+    return AdminStatus(
+        data_mode=meta.data_mode, scheduler_enabled=settings.scheduler_enabled, sources=details
+    )

@@ -22,7 +22,13 @@ class JsonFormatter(logging.Formatter):
             payload[key] = "***" if key.lower() in SENSITIVE_KEYS else value
         if record.exc_info:
             payload["exc"] = self.formatException(record.exc_info)
-        return json.dumps(payload, default=str, ensure_ascii=False)
+        line = json.dumps(payload, default=str, ensure_ascii=False)
+        try:
+            from app.core.redact import redact  # late import: settings may not be ready yet
+
+            return redact(line)
+        except Exception:  # never lose a log line because settings failed to load
+            return line
 
 
 def configure_logging(level: str = "info") -> None:

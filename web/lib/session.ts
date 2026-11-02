@@ -1,9 +1,11 @@
 import "server-only";
 import { auth } from "@/auth";
 import { mintApiToken } from "@/lib/api-token";
-import { isAuthEnabled } from "@/lib/auth-config";
+import { isAdminAccount, isAuthEnabled } from "@/lib/auth-config";
 
 export interface Viewer {
+  /** "<provider>:<account id>", e.g. "github:12345". */
+  accountId: string;
   name: string | null;
   image: string | null;
   /** A fresh short-lived bearer token for the Just Sport API. */
@@ -23,9 +25,18 @@ export async function getViewer(): Promise<Viewer | null> {
   const name = session.user?.name ?? null;
   const image = session.user?.image ?? null;
   return {
+    accountId: sub,
     name,
     image,
     token: () =>
       mintApiToken({ sub, name, picture: image }, process.env.API_TOKEN_SECRET ?? ""),
   };
+}
+
+/** Comma-separated ADMIN_ACCOUNT_IDS (e.g. "github:12345") may open admin pages. */
+export function isAdmin(viewer: Viewer | null): boolean {
+  return (
+    viewer !== null &&
+    isAdminAccount(viewer.accountId, { ADMIN_ACCOUNT_IDS: process.env.ADMIN_ACCOUNT_IDS })
+  );
 }

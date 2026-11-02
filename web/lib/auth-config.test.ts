@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { devAccountId, enabledProviders, isAuthEnabled } from "@/lib/auth-config";
+import {
+  devAccountId,
+  enabledProviders,
+  isAdminAccount,
+  isAuthEnabled,
+} from "@/lib/auth-config";
+import { scoreMayBeDelayed } from "@/lib/sources";
 
 const SECRET = "x".repeat(32);
 
@@ -45,5 +51,23 @@ describe("devAccountId", () => {
   it("slugifies Turkish names", () => {
     expect(devAccountId("  Ayşe Işık Öztürk ")).toBe("ayse-isik-ozturk");
     expect(devAccountId("!!!")).toBe("");
+  });
+});
+
+describe("isAdminAccount", () => {
+  it("is an explicit allow-list", () => {
+    const env = { ADMIN_ACCOUNT_IDS: " github:1, google:2 " };
+    expect(isAdminAccount("github:1", env)).toBe(true);
+    expect(isAdminAccount("github:3", env)).toBe(false);
+    expect(isAdminAccount("github:1", {})).toBe(false);
+    expect(isAdminAccount("", { ADMIN_ACCOUNT_IDS: "" })).toBe(false);
+  });
+});
+
+describe("scoreMayBeDelayed", () => {
+  it("flags providers whose plan delays scores", () => {
+    expect(scoreMayBeDelayed("football-data")).toBe(true);
+    expect(scoreMayBeDelayed("jolpica")).toBe(false);
+    expect(scoreMayBeDelayed(null)).toBe(false);
   });
 });

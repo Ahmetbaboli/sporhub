@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
+import { Freshness } from "@/components/layout/freshness";
 import { CompareLink } from "@/components/compare/compare-link";
 import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { RelatedNews } from "@/components/news/related-news";
@@ -99,6 +100,9 @@ export default async function PlayerPage({ params }: Props) {
       </Suspense>
       <Suspense fallback={<TableSkeleton rows={4} />}>
         <PlayerPerformance player={player} />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Freshness sport={player.team?.sport_slug} />
       </Suspense>
     </>
   );

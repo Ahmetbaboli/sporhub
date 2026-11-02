@@ -32,6 +32,7 @@ class CompetitionOut(BaseModel):
     sport_slug: str
     country: str | None = None
     logo_url: str | None = None
+    source: str | None = None  # provider name, e.g. "football-data" (demo prefix removed)
 
 
 class SeasonOut(ORMModel):

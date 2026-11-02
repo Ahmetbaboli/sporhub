@@ -1,25 +1,25 @@
 {
  "_fixture": {
-  "reference_date": "2026-10-26",
+  "reference_date": "2026-11-02",
   "note": "Anonymized capture of real Jolpica-F1 responses (urls and birth dates removed)."
  },
  "MRData": {
   "series": "f1",
-  "limit": "23",
+  "limit": "24",
   "offset": "0",
-  "total": "23",
+  "total": "24",
   "StandingsTable": {
    "season": "2026",
-   "round": "18",
+   "round": "19",
    "StandingsLists": [
     {
      "season": "2026",
-     "round": "18",
+     "round": "19",
      "DriverStandings": [
       {
        "position": "1",
        "positionText": "1",
-       "points": "365",
+       "points": "380",
        "wins": "9",
        "Driver": {
         "driverId": "antonelli",
@@ -40,28 +40,28 @@
       {
        "position": "2",
        "positionText": "2",
-       "points": "242",
+       "points": "261",
        "wins": "3",
        "Driver": {
-        "driverId": "russell",
-        "permanentNumber": "63",
-        "code": "RUS",
-        "givenName": "George",
-        "familyName": "Russell",
-        "nationality": "British"
+        "driverId": "max_verstappen",
+        "permanentNumber": "3",
+        "code": "VER",
+        "givenName": "Max",
+        "familyName": "Verstappen",
+        "nationality": "Dutch"
        },
        "Constructors": [
         {
-         "constructorId": "mercedes",
-         "name": "Mercedes",
-         "nationality": "German"
+         "constructorId": "red_bull",
+         "name": "Red Bull",
+         "nationality": "Austrian"
         }
        ]
       },
       {
        "position": "3",
        "positionText": "3",
-       "points": "241",
+       "points": "259",
        "wins": "1",
        "Driver": {
         "driverId": "hamilton",
@@ -82,28 +82,28 @@
       {
        "position": "4",
        "positionText": "4",
-       "points": "236",
-       "wins": "2",
+       "points": "250",
+       "wins": "3",
        "Driver": {
-        "driverId": "max_verstappen",
-        "permanentNumber": "3",
-        "code": "VER",
-        "givenName": "Max",
-        "familyName": "Verstappen",
-        "nationality": "Dutch"
+        "driverId": "russell",
+        "permanentNumber": "63",
+        "code": "RUS",
+        "givenName": "George",
+        "familyName": "Russell",
+        "nationality": "British"
        },
        "Constructors": [
         {
-         "constructorId": "red_bull",
-         "name": "Red Bull",
-         "nationality": "Austrian"
+         "constructorId": "mercedes",
+         "name": "Mercedes",
+         "nationality": "German"
         }
        ]
       },
       {
        "position": "5",
        "positionText": "5",
-       "points": "233",
+       "points": "245",
        "wins": "1",
        "Driver": {
         "driverId": "leclerc",
@@ -124,7 +124,7 @@
       {
        "position": "6",
        "positionText": "6",
-       "points": "211",
+       "points": "221",
        "wins": "2",
        "Driver": {
         "driverId": "norris",
@@ -145,7 +145,7 @@
       {
        "position": "7",
        "positionText": "7",
-       "points": "144",
+       "points": "150",
        "wins": "0",
        "Driver": {
         "driverId": "piastri",
@@ -187,7 +187,7 @@
       {
        "position": "9",
        "positionText": "9",
-       "points": "77",
+       "points": "79",
        "wins": "0",
        "Driver": {
         "driverId": "lawson",
@@ -213,7 +213,7 @@
       {
        "position": "10",
        "positionText": "10",
-       "points": "42",
+       "points": "43",
        "wins": "0",
        "Driver": {
         "driverId": "gasly",
@@ -255,7 +255,7 @@
       {
        "position": "12",
        "positionText": "12",
-       "points": "27",
+       "points": "31",
        "wins": "0",
        "Driver": {
         "driverId": "colapinto",
@@ -486,6 +486,27 @@
       {
        "position": "23",
        "positionText": "23",
+       "points": "0",
+       "wins": "0",
+       "Driver": {
+        "driverId": "ryo_hirakawa",
+        "permanentNumber": "50",
+        "code": "HIR",
+        "givenName": "Ryo",
+        "familyName": "Hirakawa",
+        "nationality": "Japanese"
+       },
+       "Constructors": [
+        {
+         "constructorId": "haas",
+         "name": "Haas F1 Team",
+         "nationality": "American"
+        }
+       ]
+      },
+      {
+       "position": "24",
+       "positionText": "24",
        "points": "0",
        "wins": "0",
        "Driver": {

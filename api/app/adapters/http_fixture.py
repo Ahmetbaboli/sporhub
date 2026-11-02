@@ -9,6 +9,7 @@ from typing import Any
 import httpx
 
 from app.adapters.base import BaseAdapter
+from app.adapters.budget import get_budget
 from app.adapters.http import RateLimitedClient
 from app.core.config import Settings
 from app.core.data_mode import is_demo, record_source
@@ -59,7 +60,11 @@ class HttpFixtureAdapter(BaseAdapter):
         self._http: RateLimitedClient | None = None
         if self.configured and not self.use_fixtures:
             self._http = RateLimitedClient(
-                self.base_url, headers=headers, min_interval=min_interval, client=client
+                self.base_url,
+                headers=headers,
+                min_interval=min_interval,
+                client=client,
+                budget=get_budget(self.source),
             )
 
     async def _request(self, path: str, fixture: str, params: dict[str, Any] | None = None) -> Any:

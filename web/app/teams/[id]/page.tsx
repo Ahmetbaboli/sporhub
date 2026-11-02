@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
+import { Freshness } from "@/components/layout/freshness";
 import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { EventCard } from "@/components/sport/event-list";
 import { EventCardsSkeleton } from "@/components/sport/skeletons";
@@ -73,6 +74,9 @@ export default async function TeamPage({ params }: Props) {
         <RelatedNews kind="team" id={id} name={team.name} />
       </Suspense>
       <Squad team={team} />
+      <Suspense fallback={null}>
+        <Freshness sport={team.sport_slug} />
+      </Suspense>
     </>
   );
 }

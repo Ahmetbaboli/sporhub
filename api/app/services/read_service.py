@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.cache import cached
+from app.core.data_mode import display_source
 from app.core.errors import AppError, NotFoundError
 from app.models import Competition, Event, Player, Standing, Team
 from app.repositories import queries
@@ -26,6 +27,15 @@ from app.schemas.api import (
 )
 
 MIN_SEARCH_LENGTH = 2
+# No provider grants an explicit right to display crests/logos (docs/DATA-SOURCES.md, image
+# policy): URLs are kept in the database but never served, the UI shows initials instead.
+SHOW_PROVIDER_IMAGES = False
+
+
+def provider_image(url: str | None) -> str | None:
+    return url if SHOW_PROVIDER_IMAGES else None
+
+
 DEFAULT_TZ = "UTC"
 
 
@@ -41,7 +51,7 @@ def team_out(team: Team) -> TeamOut:
         id=team.id,
         name=team.name,
         short_name=team.short_name,
-        logo_url=team.logo_url,
+        logo_url=provider_image(team.logo_url),
         country=team.country,
         sport_slug=team.sport.slug if "sport" in team.__dict__ else None,
     )
@@ -66,7 +76,8 @@ def competition_out(comp: Competition) -> CompetitionOut:
         name=comp.name,
         sport_slug=comp.sport.slug,
         country=comp.country,
-        logo_url=comp.logo_url,
+        logo_url=provider_image(comp.logo_url),
+        source=display_source(comp.source),
     )
 
 

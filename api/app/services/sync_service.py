@@ -20,6 +20,7 @@ from app.adapters.dto import (
     TeamRef,
 )
 from app.core.cache import invalidate_all
+from app.core.redact import redact
 from app.models import (
     Competition,
     Event,
@@ -299,17 +300,30 @@ async def _replace_player_stats(
         ctx.upserted += 1
 
 
-async def _sync_competition(ctx: SyncContext, dto: CompetitionDTO) -> None:
+# Parts of a competition sync. Live tiers refresh only scores and tables (cheap); teams and
+# rosters change rarely and are refreshed daily (services/sync_planner.py).
+ALL_PARTS = frozenset({"teams", "events", "standings", "player_stats"})
+SCORE_PARTS = frozenset({"events", "standings"})
+
+
+async def _sync_competition(
+    ctx: SyncContext, dto: CompetitionDTO, parts: frozenset[str] = ALL_PARTS
+) -> None:
     competition_id = await _upsert_competition(ctx, dto)
     ctx.upserted += 1
     season_id = await _upsert_season(ctx, competition_id, dto)
     if season_id is None or dto.season_key is None:
         return
     ext, season = dto.external_id, dto.season_key
-    await _upsert_teams(ctx, await ctx.adapter.fetch_teams(ext, season))
-    await _upsert_events(ctx, season_id, await ctx.adapter.fetch_events(ext, season))
-    await _replace_standings(ctx, season_id, await ctx.adapter.fetch_standings(ext, season))
-    await _replace_player_stats(ctx, season_id, await ctx.adapter.fetch_player_stats(ext, season))
+    if "teams" in parts:
+        await _upsert_teams(ctx, await ctx.adapter.fetch_teams(ext, season))
+    if "events" in parts:
+        await _upsert_events(ctx, season_id, await ctx.adapter.fetch_events(ext, season))
+    if "standings" in parts:
+        await _replace_standings(ctx, season_id, await ctx.adapter.fetch_standings(ext, season))
+    if "player_stats" in parts:
+        stats = await ctx.adapter.fetch_player_stats(ext, season)
+        await _replace_player_stats(ctx, season_id, stats)
 
 
 STATUS_SKIPPED = "skipped"
@@ -334,6 +348,7 @@ async def run_sync(
     maker: async_sessionmaker[AsyncSession],
     adapter: BaseAdapter,
     competitions: tuple[str, ...] | None = None,
+    parts: frozenset[str] = ALL_PARTS,
 ) -> SyncRun:
     """Sync every wanted competition of `adapter`; a failing competition does not stop the rest."""
     wanted = set(competitions or adapter.default_competitions)
@@ -351,15 +366,17 @@ async def run_sync(
         try:
             targets = [c for c in await adapter.fetch_competitions() if c.external_id in wanted]
         except Exception as exc:
-            targets, errors = [], [f"fetch_competitions: {exc}"]
+            targets, errors = [], [redact(f"fetch_competitions: {exc}")]
         for dto in targets:
+            counted = ctx.upserted
             try:
-                await _sync_competition(ctx, dto)
+                await _sync_competition(ctx, dto, parts)
                 await session.commit()
             except Exception as exc:
                 await session.rollback()
+                ctx.upserted = counted  # rolled-back rows were never written
                 logger.exception("competition sync failed", extra={"competition": dto.external_id})
-                errors.append(f"{dto.external_id}: {exc}")
+                errors.append(redact(f"{dto.external_id}: {exc}"))
         run = await session.get(SyncRun, run_id) or run  # reload: rollbacks expire it
         run.finished_at = datetime.now(UTC)
         run.items_upserted = ctx.upserted

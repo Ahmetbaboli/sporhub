@@ -47,3 +47,15 @@ export function devAccountId(name: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 }
+
+/** ADMIN_ACCOUNT_IDS is an explicit allow-list; an empty list means nobody is admin. */
+export function isAdminAccount(
+  accountId: string,
+  env: { ADMIN_ACCOUNT_IDS?: string },
+): boolean {
+  const allowed = (env.ADMIN_ACCOUNT_IDS ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return allowed.includes(accountId);
+}
