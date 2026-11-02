@@ -23,17 +23,17 @@ describe("enabledProviders", () => {
   });
 
   it("never enables the dev login in production", () => {
-    expect(enabledProviders({ AUTH_DEV_LOGIN: "true", NODE_ENV: "development" })).toEqual(
-      ["dev"],
-    );
-    expect(enabledProviders({ AUTH_DEV_LOGIN: "true", NODE_ENV: "production" })).toEqual(
-      [],
-    );
+    expect(
+      enabledProviders({ ENABLE_DEV_LOGIN: "true", NODE_ENV: "development" }),
+    ).toEqual(["dev"]);
+    expect(
+      enabledProviders({ ENABLE_DEV_LOGIN: "true", NODE_ENV: "production" }),
+    ).toEqual([]);
   });
 });
 
 describe("isAuthEnabled", () => {
-  const base = { AUTH_DEV_LOGIN: "true", NODE_ENV: "test" };
+  const base = { ENABLE_DEV_LOGIN: "true", NODE_ENV: "development" };
 
   it("requires the session secret, a long API secret and a provider", () => {
     expect(isAuthEnabled({ ...base, AUTH_SECRET: "s", API_TOKEN_SECRET: SECRET })).toBe(
@@ -69,5 +69,19 @@ describe("scoreMayBeDelayed", () => {
     expect(scoreMayBeDelayed("football-data")).toBe(true);
     expect(scoreMayBeDelayed("jolpica")).toBe(false);
     expect(scoreMayBeDelayed(null)).toBe(false);
+  });
+});
+
+describe("developer login", () => {
+  it("needs both next dev and the explicit flag", () => {
+    for (const NODE_ENV of ["production", "test", undefined]) {
+      expect(enabledProviders({ ENABLE_DEV_LOGIN: "true", NODE_ENV })).not.toContain(
+        "dev",
+      );
+    }
+    expect(enabledProviders({ NODE_ENV: "development" })).not.toContain("dev");
+    expect(enabledProviders({ ENABLE_DEV_LOGIN: "1", NODE_ENV: "development" })).toEqual(
+      [],
+    );
   });
 });

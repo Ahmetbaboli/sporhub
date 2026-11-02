@@ -108,10 +108,20 @@ async function PersonalAgenda() {
   );
 }
 
-export default async function HomePage() {
+export default async function HomePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ account?: string }>;
+}) {
   await initLocale();
+  const { account } = await searchParams;
   return (
     <>
+      {account === "deleted" ? (
+        <p role="status" className="bg-card mb-6 rounded-lg border px-4 py-3 text-sm">
+          {t().account.deleted}
+        </p>
+      ) : null}
       <Suspense fallback={null}>
         <Breaking />
       </Suspense>

@@ -8,6 +8,7 @@ import {
   SECTION_TITLE,
   TeamActivityCard,
 } from "@/components/account/dashboard";
+import { DeleteAccountForm } from "@/components/account/delete-account-form";
 import { EventCardsSkeleton } from "@/components/sport/skeletons";
 import { EmptyState } from "@/components/ui/states";
 import { api } from "@/lib/api";
@@ -35,6 +36,23 @@ export default async function MePage() {
       <Suspense fallback={<EventCardsSkeleton cards={2} />}>
         <MyDashboard viewer={viewer} />
       </Suspense>
+      <section
+        aria-labelledby="account-danger"
+        className="border-accent/40 bg-card mt-12 max-w-xl rounded-lg border p-4"
+      >
+        <h2
+          id="account-danger"
+          className="font-display mb-2 text-xl font-semibold uppercase"
+        >
+          {t().account.deleteTitle}
+        </h2>
+        <DeleteAccountForm />
+        <p className="text-muted-foreground mt-3 text-xs">
+          <Link href="/privacy" className="underline">
+            {t().account.privacyLink}
+          </Link>
+        </p>
+      </section>
     </>
   );
 }

@@ -64,3 +64,22 @@ export async function setLocaleAction(formData: FormData): Promise<void> {
   });
   revalidatePath("/", "layout");
 }
+
+export type DeleteAccountState = { error: "confirm" | "failed" } | null;
+
+/** Deletes the account and all its data in the API, then ends the session. Irreversible. */
+export async function deleteAccountAction(
+  _previous: DeleteAccountState,
+  formData: FormData,
+): Promise<DeleteAccountState> {
+  if (formData.get("confirm") !== "yes") return { error: "confirm" };
+  const viewer = await getViewer();
+  if (!viewer) return { error: "failed" };
+  try {
+    await api.me.deleteAccount(await viewer.token());
+  } catch {
+    return { error: "failed" };
+  }
+  await signOut({ redirectTo: "/?account=deleted" });
+  return null;
+}

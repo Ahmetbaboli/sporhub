@@ -12,7 +12,7 @@ export interface AuthEnv {
   AUTH_GITHUB_SECRET?: string;
   AUTH_GOOGLE_ID?: string;
   AUTH_GOOGLE_SECRET?: string;
-  AUTH_DEV_LOGIN?: string;
+  ENABLE_DEV_LOGIN?: string;
   NODE_ENV?: string;
 }
 
@@ -22,8 +22,10 @@ export function enabledProviders(env: AuthEnv): ProviderId[] {
   const providers: ProviderId[] = [];
   if (env.AUTH_GITHUB_ID && env.AUTH_GITHUB_SECRET) providers.push("github");
   if (env.AUTH_GOOGLE_ID && env.AUTH_GOOGLE_SECRET) providers.push("google");
-  // Name-only login for local demos; never available in a production build.
-  if (env.AUTH_DEV_LOGIN === "true" && env.NODE_ENV !== "production") {
+  // Name-only login for local development: needs BOTH `next dev` (NODE_ENV=development) and an
+  // explicit ENABLE_DEV_LOGIN=true. `next build`/`next start` always run with NODE_ENV=production,
+  // so a production build can never offer it, whatever the environment says.
+  if (env.ENABLE_DEV_LOGIN === "true" && env.NODE_ENV === "development") {
     providers.push("dev");
   }
   return providers;

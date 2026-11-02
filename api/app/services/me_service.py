@@ -9,7 +9,7 @@ from sqlalchemy.orm import joinedload
 
 from app.core.errors import AppError, NotFoundError
 from app.db.dialect import insert_for
-from app.models import Competition, Favorite, Player, Team
+from app.models import Competition, Favorite, Player, Team, User
 from app.repositories import queries
 from app.schemas.api import SeasonOut
 from app.schemas.me import (
@@ -149,3 +149,10 @@ async def _competition_place(
         table=[standing_out(r) for r in top_pool[:DASHBOARD_TABLE_ROWS]],
         mine=[standing_out(r) for r in mine],
     )
+
+
+async def delete_account(session: AsyncSession, user_id: int) -> None:
+    """Remove the user and everything stored about them (favorites). Irreversible."""
+    await session.execute(delete(Favorite).where(Favorite.user_id == user_id))
+    await session.execute(delete(User).where(User.id == user_id))
+    await session.commit()

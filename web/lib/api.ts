@@ -238,5 +238,6 @@ export const api = {
       authed<void>(token, favoritePath(kind, id), "PUT"),
     removeFavorite: (token: string, kind: FavoriteKind, id: number) =>
       authed<void>(token, favoritePath(kind, id), "DELETE"),
+    deleteAccount: (token: string) => authed<void>(token, "/api/v1/me", "DELETE"),
   },
 };

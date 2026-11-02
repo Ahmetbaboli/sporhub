@@ -352,6 +352,31 @@ export const en: Messages = {
     prompt: "Type at least 2 characters to search.",
     tooShort: "Type at least 2 characters.",
   },
+  privacy: {
+    title: "Privacy",
+    intro:
+      "Just Sport is an independent hobby/portfolio project. It uses no ads, analytics or trackers and shares your data with no one.",
+    storedTitle: "What is stored and why",
+    stored: [
+      "If you sign in: the sign-in provider (GitHub/Google) and your account number there, your display name and the link to your profile picture. To recognise your account.",
+      "The teams, athletes and leagues you follow. To show your page and personal home page.",
+      "When the account was created and last seen. To keep the account working.",
+    ],
+    cookiesTitle: "Cookies and browser storage",
+    cookies: [
+      "Session cookie (encrypted): to remember that you are signed in.",
+      "Language cookie: your Turkish/English choice.",
+      "Colour palette: kept only in your browser (localStorage), never sent to the server.",
+    ],
+    notTitle: "What is not stored",
+    not: "No password (it stays with the sign-in provider), e-mail address, IP address or browsing history. Server logs contain only the request path, status code and duration.",
+    deleteTitle: "How to delete your data",
+    delete:
+      'The "Delete my account" button on My page removes your account and all your follows immediately and irreversibly, then signs you out.',
+    contactTitle: "Contact",
+    contact: "For questions, open an issue in the project's GitHub repository.",
+    updated: "Last updated: 2 November 2026",
+  },
   account: {
     signIn: "Sign in",
     signOut: "Sign out",
@@ -369,6 +394,16 @@ export const en: Messages = {
     unfollowLabel: (name: string) => `Unfollow ${name}`,
     signInToFollow: "Sign in to follow",
     favoriteError: "Could not save, please try again.",
+    dangerTitle: "Account",
+    deleteTitle: "Delete my account",
+    deleteBody:
+      "Your account and all your follows are removed for good. This cannot be undone.",
+    deleteConfirm: "I understand my account and all my data will be deleted.",
+    deleteButton: "Delete my account permanently",
+    deleteNeedsConfirm: "Tick the box to continue.",
+    deleteFailed: "The account could not be deleted, please try again.",
+    deleted: "Your account and all your data have been deleted.",
+    privacyLink: "Privacy",
   },
   me: {
     title: "My page",

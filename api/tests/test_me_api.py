@@ -265,3 +265,25 @@ async def test_team_standings_entries_and_player_events(client: AsyncClient) -> 
     # football fixtures list no players among participants: empty but valid
     assert (await client.get(f"/api/v1/players/{pid}/events")).json()["total"] == 0
     assert (await client.get("/api/v1/players/999999/events")).status_code == 404
+
+
+async def test_delete_account_removes_user_and_favorites(
+    client: AsyncClient, seeded: async_sessionmaker
+) -> None:
+    sub = "github:4242"
+    team_id = await _first_team_id(client)
+    assert (
+        await client.put(f"{ME}/favorites/teams/{team_id}", headers=auth(sub=sub))
+    ).status_code == 204
+    other = auth(sub="github:5555")
+    assert (await client.put(f"{ME}/favorites/teams/{team_id}", headers=other)).status_code == 204
+
+    assert (await client.delete(ME, headers=auth(sub=sub))).status_code == 204
+    async with seeded() as s:
+        users = (await s.scalars(select(User.provider_id))).all()
+        assert "4242" not in users and "5555" in users  # only the caller is removed
+        mine = await s.scalar(
+            select(func.count()).select_from(Favorite).join(User).where(User.provider_id == "4242")
+        )
+        assert mine == 0
+    assert (await client.delete(ME)).status_code == 401

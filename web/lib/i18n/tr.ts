@@ -356,6 +356,31 @@ export const tr = {
     prompt: "Aramak için en az 2 karakter girin.",
     tooShort: "En az 2 karakter girin.",
   },
+  privacy: {
+    title: "Gizlilik",
+    intro:
+      "Just Sport bağımsız bir hobi/portföy projesidir. Reklam, analiz veya takip aracı kullanmaz ve verinizi kimseyle paylaşmaz.",
+    storedTitle: "Neler saklanıyor ve neden",
+    stored: [
+      "Giriş yaparsanız: giriş sağlayıcısı (GitHub/Google) ve oradaki hesap numaranız, görünen adınız ve profil fotoğrafı bağlantınız. Hesabınızı tanımak için.",
+      "Takip ettiğiniz takım, sporcu ve ligler. Panelinizi ve kişisel ana sayfanızı göstermek için.",
+      "Hesabın oluşturulma ve son görülme zamanı. Hesabın çalıştığını izlemek için.",
+    ],
+    cookiesTitle: "Çerezler ve tarayıcı depolaması",
+    cookies: [
+      "Oturum çerezi (şifreli): giriş yapmış olduğunuzu hatırlamak için.",
+      "Dil çerezi: Türkçe/İngilizce seçiminiz.",
+      "Renk paleti: yalnızca tarayıcınızda (localStorage) tutulur, sunucuya gönderilmez.",
+    ],
+    notTitle: "Neler saklanmıyor",
+    not: "Şifre (giriş sağlayıcıda kalır), e-posta adresi, IP adresi veya gezinme geçmişi saklanmaz. Sunucu kayıtları yalnızca istek yolu, durum kodu ve süreyi içerir.",
+    deleteTitle: "Verinizi nasıl silersiniz",
+    delete:
+      'Panelim sayfasındaki "Hesabımı sil" düğmesi hesabınızı ve tüm takip listenizi anında ve geri alınamaz şekilde siler; ardından oturumunuz kapanır.',
+    contactTitle: "İletişim",
+    contact: "Sorular için projenin GitHub deposunda bir konu (issue) açabilirsiniz.",
+    updated: "Son güncelleme: 2 Kasım 2026",
+  },
   account: {
     signIn: "Giriş yap",
     signOut: "Çıkış yap",
@@ -374,6 +399,16 @@ export const tr = {
     unfollowLabel: (name: string) => `${name} takibi bırak`,
     signInToFollow: "Takip etmek için giriş yap",
     favoriteError: "Kaydedilemedi, tekrar deneyin.",
+    dangerTitle: "Hesap",
+    deleteTitle: "Hesabımı sil",
+    deleteBody:
+      "Hesabınız ve tüm takip listeniz kalıcı olarak silinir. Bu işlem geri alınamaz.",
+    deleteConfirm: "Hesabımın ve tüm verimin silineceğini anlıyorum.",
+    deleteButton: "Hesabımı kalıcı olarak sil",
+    deleteNeedsConfirm: "Devam etmek için onay kutusunu işaretleyin.",
+    deleteFailed: "Hesap silinemedi, lütfen tekrar deneyin.",
+    deleted: "Hesabınız ve tüm veriniz silindi.",
+    privacyLink: "Gizlilik",
   },
   me: {
     title: "Panelim",

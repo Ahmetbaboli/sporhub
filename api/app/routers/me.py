@@ -66,3 +66,13 @@ async def remove_favorite(
 @router.get("/dashboard", response_model=Dashboard, summary="Kişisel panel")
 async def dashboard(user: CurrentUser, session: Session) -> Dashboard:
     return await me_service.dashboard(session, user.id)
+
+
+@router.delete(
+    "",
+    status_code=204,
+    summary="Hesabı ve tüm verisini sil (geri alınamaz)",
+)
+async def delete_me(user: CurrentUser, session: Session) -> Response:
+    await me_service.delete_account(session, user.id)
+    return Response(status_code=204)
