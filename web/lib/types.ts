@@ -301,10 +301,19 @@ export interface SportMeta {
   sources: string[];
 }
 
+export interface NewsFeedMeta {
+  name: string;
+  url: string;
+  site: string;
+  language: string;
+  sport: string | null;
+}
+
 export interface Meta {
   data_mode: "live" | "demo";
   sports: SportMeta[];
   sources: SourceMeta[];
+  news_feeds: NewsFeedMeta[];
 }
 
 export interface BudgetWindow {

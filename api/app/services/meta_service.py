@@ -1,6 +1,7 @@
 """What the UI needs to be honest: data mode, which sports are configured, data freshness."""
 
 from datetime import UTC, datetime, timedelta
+from urllib.parse import urlsplit
 
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -11,7 +12,14 @@ from app.core.config import Settings
 from app.core.redact import redact
 from app.core.sources import SOURCES
 from app.models import SyncRun
-from app.schemas.meta import AdminStatus, MetaOut, SourceMeta, SourceStatusDetail, SportMeta
+from app.schemas.meta import (
+    AdminStatus,
+    MetaOut,
+    NewsFeedMeta,
+    SourceMeta,
+    SourceStatusDetail,
+    SportMeta,
+)
 from app.services.sync_service import (
     STATUS_PARTIAL,
     STATUS_SKIPPED,
@@ -79,6 +87,11 @@ async def _last_runs(session: AsyncSession) -> dict[str, tuple]:
     return {a: (success.get(a), latest.get(a), statuses.get(a)) for a in latest}
 
 
+def _site(url: str) -> str:
+    parts = urlsplit(url)
+    return f"{parts.scheme}://{parts.netloc}"
+
+
 async def get_meta(session: AsyncSession, settings: Settings) -> MetaOut:
     runs = await _last_runs(session)
     now = datetime.now(UTC)
@@ -108,7 +121,20 @@ async def get_meta(session: AsyncSession, settings: Settings) -> MetaOut:
         )
         for slug, name in registered_sports().items()
     ]
-    return MetaOut(data_mode=settings.data_mode, sports=sports, sources=sources)
+    feeds = [] if settings.data_mode == "demo" else settings.news_feeds
+    news_feeds = [
+        NewsFeedMeta(
+            name=str(f.get("name", "")),
+            url=str(f.get("url", "")),
+            site=_site(str(f.get("url", ""))),
+            language=str(f.get("language", "tr")),
+            sport=f.get("sport"),
+        )
+        for f in feeds
+    ]
+    return MetaOut(
+        data_mode=settings.data_mode, sports=sports, sources=sources, news_feeds=news_feeds
+    )
 
 
 ERROR_PREVIEW_CHARS = 300

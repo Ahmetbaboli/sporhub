@@ -64,7 +64,7 @@
 - [x] 2. Gerçek spor verisi: football-data ücretsiz ligler, Süper Lig sağlayıcısı, kimlik eşleme, istek bütçesi, akıllı zamanlayıcı, tazelik/gecikme göstergesi, `/admin/status`
 - [x] 3. Gerçek haberler: doğrulanmış RSS listesi, kısa özet, kopya birleştirme, ≥100 gerçek başlıkla sınıflandırma değerlendirmesi
 - [x] 4. Gerçek giriş: dev login yalnızca development + ENABLE_DEV_LOGIN; AUTH-SETUP.md; hesap silme; gizlilik sayfası
-- [ ] 5. Kaynak gösterimi: /sources, atıflar, görsel politikası, Hakkında
+- [x] 5. Kaynak gösterimi: /sources, atıflar, görsel politikası, Hakkında
 - [ ] 6. Üretime hazırlık: Neon/Upstash, zamanlayıcı kilidi, açılışta env doğrulama, zengin /health
 - [ ] Belgeler + v0.4.0 etiketi
 ### Aşama 5 — Öne çıkaran özellikler (v0.4 sonrası; bu oturumda başlanmadı)

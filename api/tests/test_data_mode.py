@@ -133,3 +133,16 @@ async def test_meta_reports_mode_and_configuration(
     assert {s["slug"]: s["configured"] for s in body["sports"]}["basketball"] is True
     sources = {s["name"]: s for s in body["sources"]}
     assert sources["football-data"]["last_success_at"]  # the seeded test sync
+
+
+async def test_meta_lists_live_news_feeds_for_attribution(
+    seeded: async_sessionmaker[AsyncSession], client, settings: Settings, monkeypatch
+) -> None:
+    monkeypatch.setattr("app.routers.v1.get_settings", lambda: live(settings, news_feeds=[
+        {"name": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/football/rss.xml",
+         "language": "en", "sport": "football"}]))  # fmt: skip
+    feeds = (await client.get("/api/v1/meta")).json()["news_feeds"]
+    assert feeds == [
+        {"name": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/football/rss.xml",
+         "site": "https://feeds.bbci.co.uk", "language": "en", "sport": "football"}
+    ]  # fmt: skip

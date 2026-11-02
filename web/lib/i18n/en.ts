@@ -467,8 +467,40 @@ export const en: Messages = {
     banner: "Sample data",
     bannerBody: "Everything shown on this site is made-up sample data for development.",
   },
+  sources: {
+    title: "Data sources",
+    intro:
+      "Everything on this site comes from the sources below. For a sport whose source isn't configured we show nothing; we never use sample or estimated data.",
+    dataTitle: "Sports data",
+    configured: "active",
+    notConfigured: "not configured",
+    licence: "Licence",
+    newsTitle: "News sources",
+    newsIntro:
+      "News shows only the headline, the publisher's own short summary, the date and a link to the original article. All rights remain with the publishers.",
+    newsNone: "No news feeds configured.",
+    imagesTitle: "Images",
+    images:
+      "No provider grants an explicit right to display club crests or player photos, so we show initials instead.",
+    details: "Limits, terms of use and verification dates:",
+    detailsLink: "docs/DATA-SOURCES.md",
+  },
+  about: {
+    title: "About",
+    body: [
+      "Just Sport is an independent hobby and portfolio project. It is not affiliated with any club, league, federation or data provider and is not commercial.",
+      "Fixtures, results, standings and statistics come from third-party data providers; news comes from publishers' public RSS feeds. Data may be delayed or incomplete and is no substitute for official sources.",
+      "The code is open source (MIT licence). Team and league names and marks belong to their owners.",
+    ],
+    sourcesLink: "Data sources and attribution",
+    privacyLink: "Privacy",
+  },
   footer: {
-    note: "Data is compiled from third-party sources and may include sample data for demonstration.",
+    note: "Independent hobby project. Data comes from third-party sources and may be delayed.",
+    sources: "Sources",
+    about: "About",
+    privacy: "Privacy",
+    newsRights: "News belongs to its publishers.",
     openSource: "Open source · MIT licence",
   },
 };

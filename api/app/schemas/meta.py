@@ -24,10 +24,19 @@ class SportMeta(BaseModel):
     sources: list[str]
 
 
+class NewsFeedMeta(BaseModel):
+    name: str  # publisher, as credited on every card
+    url: str  # the feed itself
+    site: str  # publisher home page (scheme + host of the feed)
+    language: str
+    sport: str | None = None
+
+
 class MetaOut(BaseModel):
     data_mode: Literal["live", "demo"]
     sports: list[SportMeta]
     sources: list[SourceMeta]
+    news_feeds: list[NewsFeedMeta] = []
 
 
 class BudgetWindow(BaseModel):

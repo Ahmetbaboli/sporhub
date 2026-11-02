@@ -474,8 +474,40 @@ export const tr = {
     bannerBody:
       "Bu sitede gösterilen bilgiler gerçek değildir; geliştirme amaçlı örnek veridir.",
   },
+  sources: {
+    title: "Veri kaynakları",
+    intro:
+      "Sitedeki her bilgi aşağıdaki kaynaklardan gelir. Kaynağı yapılandırılmamış bir spor için veri göstermiyoruz; örnek veya tahmini veri kullanmıyoruz.",
+    dataTitle: "Spor verisi",
+    configured: "etkin",
+    notConfigured: "yapılandırılmadı",
+    licence: "Lisans",
+    newsTitle: "Haber kaynakları",
+    newsIntro:
+      "Haberlerde yalnızca başlık, yayıncının kendi kısa özeti, tarih ve orijinal habere bağlantı gösterilir. Haberlerin tüm hakları yayıncılarına aittir.",
+    newsNone: "Haber akışı yapılandırılmadı.",
+    imagesTitle: "Görseller",
+    images:
+      "Hiçbir sağlayıcı kulüp logoları ve oyuncu fotoğrafları için açık bir gösterim izni vermediğinden görsel yerine baş harfli yer tutucular kullanıyoruz.",
+    details: "Limitler, kullanım koşulları ve doğrulama tarihleri:",
+    detailsLink: "docs/DATA-SOURCES.md",
+  },
+  about: {
+    title: "Hakkında",
+    body: [
+      "Just Sport bağımsız bir hobi ve portföy projesidir; hiçbir kulüp, lig, federasyon ya da veri sağlayıcısıyla bağlantısı yoktur ve ticari amaç gütmez.",
+      "Maç, sonuç, puan durumu ve istatistikler üçüncü taraf veri sağlayıcılarından, haberler yayıncıların herkese açık RSS akışlarından gelir. Veriler gecikmeli veya eksik olabilir; resmî kaynak yerine geçmez.",
+      "Kod açık kaynaktır (MIT lisansı). Takım ve lig adları ile markalar sahiplerine aittir.",
+    ],
+    sourcesLink: "Veri kaynakları ve atıflar",
+    privacyLink: "Gizlilik",
+  },
   footer: {
-    note: "Veriler üçüncü taraf kaynaklardan derlenir; gösterim amaçlı örnek veri içerebilir.",
+    note: "Bağımsız hobi projesi. Veriler üçüncü taraf kaynaklardan gelir; gecikmeli olabilir.",
+    sources: "Kaynaklar",
+    about: "Hakkında",
+    privacy: "Gizlilik",
+    newsRights: "Haberlerin hakları yayıncılarına aittir.",
     openSource: "Açık kaynak · MIT lisansı",
   },
 } as const;
