@@ -73,7 +73,31 @@ export function TagChips({ tags }: { tags: NewsTag[] }) {
   );
 }
 
-/** One headline in a list; the title opens our detail page, which links to the source. */
+/** The original article at the publisher (new tab); we only show headline + short summary. */
+function ExternalNewsLink({
+  item,
+  children,
+}: {
+  item: NewsItem;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      className="hover:underline"
+    >
+      {children}
+      <span className="sr-only">
+        {" "}
+        — {item.source} ({t().news.externalNote})
+      </span>
+    </a>
+  );
+}
+
+/** One headline in a list; the title opens the original article at the publisher. */
 export function NewsCard({
   item,
   compact = false,
@@ -85,12 +109,28 @@ export function NewsCard({
     <article className="space-y-1.5 px-3 py-3">
       <Meta item={item} />
       <h3 className={cn("leading-snug font-semibold", compact ? "text-sm" : "text-base")}>
-        <Link href={`/news/${item.id}`} className="hover:underline">
-          {item.title}
-        </Link>
+        <ExternalNewsLink item={item}>{item.title}</ExternalNewsLink>
       </h3>
       {!compact && item.summary ? (
         <p className="text-muted-foreground text-sm">{item.summary}</p>
+      ) : null}
+      {item.also_sources.length ? (
+        <p className="text-muted-foreground text-xs">
+          {t().news.alsoReported}{" "}
+          {item.also_sources.map((other, i) => (
+            <span key={other.url}>
+              {i > 0 ? ", " : null}
+              <a
+                href={other.url}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:underline"
+              >
+                {other.source}
+              </a>
+            </span>
+          ))}
+        </p>
       ) : null}
       {!compact ? <TagChips tags={item.tags} /> : null}
     </article>
@@ -150,9 +190,7 @@ export function BreakingStrip({ items }: { items: NewsItem[] }) {
       <ul className="min-w-0 flex-1 space-y-1">
         {items.map((item) => (
           <li key={item.id} className="truncate text-sm font-medium">
-            <Link href={`/news/${item.id}`} className="hover:underline">
-              {item.title}
-            </Link>
+            <ExternalNewsLink item={item}>{item.title}</ExternalNewsLink>
           </li>
         ))}
       </ul>

@@ -46,24 +46,51 @@ MEDIA = "{http://search.yahoo.com/mrss/}"
 TAG_RE = re.compile(r"<[^>]+>")
 SPACE_RE = re.compile(r"\s+")
 
-# Keyword rules, checked in priority order. Lower-cased (casefold) Turkish + English phrases.
-OFFICIAL_WORDS = (
-    "resmi", "resmen", "imzaladı", "imzayı attı", "kadrosuna kattı", "transferini açıkladı",
-    "official", "has signed", "signs for", "completes move", "completes transfer", "unveiled",
+
+# Headline rules (casefolded text, word-boundary regexes), checked in priority order:
+# rumour BEFORE official ("…believe X will sign for them" is a rumour), then interview, then
+# tournament/organisation. Tuned on 140 real hand-labelled headlines
+# (tests/data/real_headlines_2026-11-02.json); results are in docs/DECISIONS.md.
+def _rx(*patterns: str) -> re.Pattern[str]:
+    return re.compile("|".join(rf"(?<!\w)(?:{p})(?!\w)" for p in patterns))
+
+
+RUMOUR_RX = _rx(
+    r"söylenti\w*", r"iddia\w*", r"gündemin\w*", r"ilgileniyor", r"ilgilen\w+", r"peşinde",
+    r"masa(?:da|sında)", r"listesinde", r"transfer haberi", r"teklif\w*", r"radarında",
+    r"rumou?rs?", r"gossip", r"papers", r"linked", r"eyes?", r"eyeing", r"keen",
+    r"monitoring", r"interest(?:ed)?(?: in)?", r"in talks", r"could (?:join|sign|leave)",
+    r"set to (?:join|sign|leave|raid)", r"close to (?:joining|signing)", r"want(?:s)?",
+    r"reportedly", r"believe", r"transfer target", r"bid for",
 )  # fmt: skip
-RUMOUR_WORDS = (
-    "söylenti", "iddia", "gündeminde", "ilgileniyor", "masada", "masasında", "listesinde",
-    "transfer için",
-    "rumour", "rumor", "linked with", "in talks", "eyeing", "monitoring", "interest in",
-    "could join", "target",
+OFFICIAL_RX = _rx(
+    r"resm(?:en|i olarak|î olarak)", r"imzaladı", r"imzayı attı", r"kadrosuna kattı",
+    r"transferini açıkladı", r"ile anlaştı", r"göreve getirildi", r"sözleşme(?:si)? uzatıldı",
+    r"officially", r"ha(?:s|ve) signed", r"signs? (?:for|with|new deal)", r"signed for",
+    r"completes? (?:move|transfer|signing)", r"(?:to )?joins?(?= (?!the\b))", r"appoints?",
+    r"appointed",
+    r"new deal", r"contract extension", r"done deals", r"pick up (?:team )?options",
+    r"unveiled",
 )  # fmt: skip
-INTERVIEW_WORDS = (
-    "röportaj", "konuştu", "açıklamalarda bulundu", "anlattı",
-    "interview", "speaks", "exclusive:", "q&a", "opens up",
+INTERVIEW_RX = _rx(
+    r"röportaj\w*", r"konuştu", r"açıklama\w*", r"yorumu", r"anlattı", r"sözler\w*",
+    r"interview", r"exclusive with", r"q&a", r"opens up", r"says", r"speaks",
 )  # fmt: skip
-TOURNAMENT_WORDS = (
-    "kura", "turnuva", "organizasyon", "fikstür açıklandı", "ev sahipliği", "takvim açıklandı",
-    "draw", "tournament", "fixtures announced", "host city", "hosts", "calendar announced",
+# A quotation of at least two words: double quotes anywhere (Turkish style), single quotes only
+# at the start or after a colon ("Ten Hag on X: 'From …'"). One-word scare quotes ('lucky') and
+# possessives ("Man Utd's") are not quotations; apostrophes inside words ("it's") are allowed.
+_IN_QUOTE = r"(?:[^\"'”’‘“]|(?<=\w)['’](?=\w))"
+QUOTE_RX = re.compile(
+    rf"[\"“]{_IN_QUOTE}+\s{_IN_QUOTE}+[\"”]"
+    rf"|(?:^|:\s*)['‘]{_IN_QUOTE}+\s{_IN_QUOTE}+['’](?!\w)"
+)
+# BBC style attribution: "F1 has never had anyone like me - Hamilton".
+ATTRIBUTION_RX = re.compile(r"\s[-–]\s[A-ZÇĞİÖŞÜ][\w'’.]+$")
+TOURNAMENT_RX = _rx(
+    r"kura\w*", r"turnuva\w*", r"organizasyon\w*", r"fikstür\w*", r"takvim\w*", r"hakem\w*",
+    r"ev sahipliği\w*", r"tören\w*", r"geri sayım",
+    r"draw", r"tournament", r"fixtures announced", r"schedule", r"calendar",
+    r"host(?:s|ed|ing)?", r"season start",
 )  # fmt: skip
 BREAKING_PREFIXES = ("son dakika", "flaş", "breaking")
 
@@ -74,6 +101,9 @@ class FeedConfig(BaseModel):
     sport: str | None = None  # sport slug, or None for multi-sport feeds
     category: NewsCategory = "general"  # used when no keyword rule matches
     language: str = "tr"
+    # "sentences": the feed's own summary cut to MAX_SUMMARY_SENTENCES.
+    # "verbatim_or_none": publishers that forbid modification (Yahoo) - whole or nothing.
+    summary: Literal["sentences", "verbatim_or_none"] = "sentences"
     file: str | None = None  # fixture mode only
 
 
@@ -93,6 +123,22 @@ class NewsDTO(BaseModel):
     keywords: list[str] = Field(default_factory=list)
 
 
+SENTENCE_END_RE = re.compile(r"(?<=[.!?…])\s+(?=[\"'“‘(]?[A-ZÇĞİÖŞÜ0-9])")
+MAX_SUMMARY_SENTENCES = 2
+
+
+def short_summary(value: str | None, policy: str = "sentences") -> str:
+    """At most two sentences of the feed's own summary (never the article itself).
+
+    "verbatim_or_none" keeps the text untouched or drops it when it is too long to show.
+    """
+    text = plain_text(value, limit=10_000)
+    if policy == "verbatim_or_none":
+        return text if len(text) <= SUMMARY_MAX_CHARS else ""
+    sentences = SENTENCE_END_RE.split(text)
+    return plain_text(" ".join(sentences[:MAX_SUMMARY_SENTENCES]))
+
+
 def plain_text(value: str | None, limit: int = SUMMARY_MAX_CHARS) -> str:
     """Strip markup and entities; cut at a word boundary with an ellipsis."""
     text = SPACE_RE.sub(" ", html.unescape(TAG_RE.sub(" ", value or ""))).strip()
@@ -102,26 +148,27 @@ def plain_text(value: str | None, limit: int = SUMMARY_MAX_CHARS) -> str:
     return f"{cut}…"
 
 
-def _has(text: str, words: tuple[str, ...]) -> bool:
-    return any(w in text for w in words)
-
-
 def fold(text: str) -> str:
     """Case-insensitive form; Turkish İ folds to plain i (casefold would add a dot)."""
     return text.replace("İ", "i").casefold()
 
 
 def classify(title: str, summary: str, default: NewsCategory) -> tuple[NewsCategory, bool]:
-    """(category, is_breaking) from keywords; falls back to the feed's category."""
-    text = f"{fold(title)} {fold(summary)}"
-    breaking = fold(title).lstrip("🔴 ").startswith(BREAKING_PREFIXES)
-    if _has(text, OFFICIAL_WORDS):
-        return "transfer_official", breaking
-    if _has(text, RUMOUR_WORDS):
+    """(category, is_breaking) from the headline; falls back to the feed's category.
+
+    Only the headline is used: summaries mention transfers/quotes in passing far too often.
+    """
+    del summary  # kept in the signature for callers; see docstring
+    text = fold(title)
+    breaking = text.lstrip("🔴 ").startswith(BREAKING_PREFIXES)
+    if RUMOUR_RX.search(text):
         return "transfer_rumour", breaking
-    if _has(text, INTERVIEW_WORDS):
+    # A question is never a confirmation ("Were any players signed…?").
+    if OFFICIAL_RX.search(text) and not text.rstrip().endswith("?"):
+        return "transfer_official", breaking
+    if INTERVIEW_RX.search(text) or QUOTE_RX.search(title) or ATTRIBUTION_RX.search(title):
         return "interview", breaking
-    if _has(text, TOURNAMENT_WORDS):
+    if TOURNAMENT_RX.search(text):
         return "tournament", breaking
     return default, breaking
 
@@ -175,7 +222,7 @@ def _build(
     if not link or not title or not link.startswith(("http://", "https://")):
         return None
     clean_title = plain_text(title, TITLE_MAX_CHARS)
-    clean_summary = plain_text(summary)
+    clean_summary = short_summary(summary, feed.summary)
     category, breaking = classify(clean_title, clean_summary, feed.category)
     return NewsDTO(
         source=f"{SOURCE_PREFIX}{feed.name}",
@@ -183,7 +230,8 @@ def _build(
         url=link,
         title=clean_title,
         summary=clean_summary,
-        image_url=image if image and image.startswith("https://") else None,
+        # Publisher images are never stored or shown (several feeds forbid image reuse).
+        image_url=None,
         author=plain_text(author, 120) or None,
         published_at=published or datetime.now(UTC),
         category=category,
@@ -193,7 +241,7 @@ def _build(
     )
 
 
-def parse_feed(xml_text: str, feed: FeedConfig) -> list[NewsDTO]:
+def parse_feed(xml_text: str | bytes, feed: FeedConfig) -> list[NewsDTO]:
     """RSS 2.0 (<item>) or Atom (<entry>) into NewsDTOs; malformed entries are skipped."""
     root = ElementTree.fromstring(xml_text)
     items: list[NewsDTO | None] = []
@@ -226,7 +274,8 @@ def parse_feed(xml_text: str, feed: FeedConfig) -> list[NewsDTO]:
                 guid=_text(entry, f"{ATOM}id"),
                 link=link,
                 title=_text(entry, f"{ATOM}title"),
-                summary=_text(entry, f"{ATOM}summary") or _text(entry, f"{ATOM}content"),
+                # <content> is the full article: never used, only the summary.
+                summary=_text(entry, f"{ATOM}summary"),
                 published=_parse_date(
                     _text(entry, f"{ATOM}published") or _text(entry, f"{ATOM}updated")
                 ),
@@ -274,10 +323,11 @@ class RssNewsAdapter:
         today = self._fixture_today or datetime.now(UTC).date()
         return timedelta(days=(today - date.fromisoformat(reference)).days)
 
-    async def _read(self, feed: FeedConfig) -> str:
+    async def _read(self, feed: FeedConfig) -> bytes:
+        # Bytes, so the XML declaration decides the encoding (Sporx is windows-1254).
         if self._http is None:
-            return (self._fixtures / str(feed.file)).read_text(encoding="utf-8")
-        return await self._http.get_text(feed.url)
+            return (self._fixtures / str(feed.file)).read_bytes()
+        return await self._http.get_bytes(feed.url)
 
     async def fetch(self) -> list[NewsDTO]:
         shift = self._fixture_shift() if self.use_fixtures else timedelta(0)

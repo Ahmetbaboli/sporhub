@@ -6,6 +6,29 @@ from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 API_ROOT = Path(__file__).resolve().parents[2]
+
+# Publisher-run feeds whose terms allow showing headline + short summary + link with attribution
+# (audit with quotes and URLs: docs/DATA-SOURCES.md, 2026-11-02). Override with NEWS_FEEDS.
+DEFAULT_NEWS_FEEDS: list[dict[str, Any]] = [
+    {"name": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/football/rss.xml",
+     "sport": "football", "language": "en"},
+    {"name": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/formula1/rss.xml",
+     "sport": "formula-1", "language": "en"},
+    {"name": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/basketball/rss.xml",
+     "sport": "basketball", "language": "en"},
+    {"name": "ESPN", "url": "https://www.espn.com/espn/rss/soccer/news",
+     "sport": "football", "language": "en"},
+    {"name": "ESPN", "url": "https://www.espn.com/espn/rss/nba/news",
+     "sport": "basketball", "language": "en"},
+    {"name": "ESPN", "url": "https://www.espn.com/espn/rss/f1/news",
+     "sport": "formula-1", "language": "en"},
+    {"name": "Yahoo Sports", "url": "https://sports.yahoo.com/nba/rss/",
+     "sport": "basketball", "language": "en", "summary": "verbatim_or_none"},
+    {"name": "Habertürk", "url": "https://www.haberturk.com/rss/spor.xml",
+     "sport": None, "language": "tr"},
+    {"name": "Sporx", "url": "https://www.sporx.com/_xml/rss.php",
+     "sport": None, "language": "tr"},
+]  # fmt: skip
 DEFAULT_FIXTURES_DIR = API_ROOT / "fixtures"
 
 
@@ -36,7 +59,7 @@ class Settings(BaseSettings):
     log_level: str = "info"
 
     # News feeds (JSON list): [{"name", "url", "sport", "category", "language"}]. See .env.example.
-    news_feeds: list[dict[str, Any]] = Field(default_factory=list)
+    news_feeds: list[dict[str, Any]] = Field(default_factory=lambda: list(DEFAULT_NEWS_FEEDS))
     news_interval_minutes: int = 15
 
     scheduler_enabled: bool = False

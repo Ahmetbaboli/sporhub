@@ -3,7 +3,7 @@ from datetime import datetime
 from sqlalchemy import Boolean, CheckConstraint, ForeignKey, Index, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.db.base import Base, UTCDateTime
+from app.db.base import Base, JSONType, UTCDateTime
 from app.models.catalog import Competition, Player, Sport, Team
 
 NEWS_CATEGORIES = ("general", "transfer_official", "transfer_rumour", "interview", "tournament")
@@ -32,6 +32,8 @@ class NewsArticle(Base):
     category: Mapped[str] = mapped_column(String(32), index=True)
     is_breaking: Mapped[bool] = mapped_column(Boolean, default=False)
     language: Mapped[str] = mapped_column(String(8), default="tr")
+    # Other publishers that ran the same story: [{"source": ..., "url": ...}] (merged copies).
+    also_sources: Mapped[list] = mapped_column(JSONType, default=list)
 
     sport: Mapped[Sport | None] = relationship()
     tags: Mapped[list["NewsTag"]] = relationship(

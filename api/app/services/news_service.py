@@ -10,14 +10,21 @@ from sqlalchemy import delete, func, select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 from sqlalchemy.orm import joinedload, selectinload
 
-from app.adapters.news_rss import SOURCE_PREFIX, NewsDTO, RssNewsAdapter
+from app.adapters.news_rss import SOURCE_PREFIX, NewsDTO, RssNewsAdapter, fold
 from app.core.cache import cached, invalidate_all
 from app.core.data_mode import display_source
 from app.core.errors import NotFoundError
 from app.core.redact import redact
 from app.models import Competition, NewsArticle, NewsTag, Player, Sport, SyncRun, Team
 from app.repositories.upsert import upsert_row
-from app.schemas.news import ArchiveMonth, NewsArchive, NewsList, NewsOut, NewsTagOut
+from app.schemas.news import (
+    AlsoSource,
+    ArchiveMonth,
+    NewsArchive,
+    NewsList,
+    NewsOut,
+    NewsTagOut,
+)
 from app.services.sync_service import (
     MAX_ERROR_LENGTH,
     STATUS_FAILED,
@@ -54,8 +61,14 @@ def _aliases(kind: str, name: str, short_name: str | None = None) -> set[str]:
         names.add(CLUB_AFFIXES.sub("", name).strip())
         if short_name:
             names.add(short_name)
-    if kind == "player_id" and " " not in name.strip():
-        return set()  # single-word player names match far too much
+    if kind == "player_id":
+        words = name.split()
+        if len(words) < 2:
+            return set()  # single-word player names match far too much
+        if len(words) >= 3:
+            # "Andrea Kimi Antonelli" is "Kimi Antonelli" in headlines; surnames alone are not
+            # used (too many shared surnames).
+            names.add(" ".join(words[-2:]))
     return {n for n in names if len(n) >= MIN_ALIAS_LENGTH}
 
 
@@ -130,10 +143,97 @@ async def _sport_ids(session: AsyncSession) -> dict[str, int]:
     return {slug: i for i, slug in await session.execute(select(Sport.id, Sport.slug))}
 
 
+DUPLICATE_WINDOW = timedelta(hours=48)
+DUPLICATE_SIMILARITY = 0.6
+MIN_TITLE_TOKENS = 4
+STOPWORDS = frozenset(
+    [
+        "a",
+        "an",
+        "the",
+        "of",
+        "to",
+        "in",
+        "on",
+        "at",
+        "for",
+        "and",
+        "or",
+        "is",
+        "as",
+        "by",
+        "with",
+        "from",
+        "after",
+        "before",
+        "vs",
+        "v",
+        "ve",
+        "ile",
+        "bir",
+        "bu",
+        "da",
+        "de",
+        "mi",
+        "mı",
+        "için",
+        "ile",
+    ]
+)
+TOKEN_RE = re.compile(r"[\w']+")
+
+
+def title_tokens(title: str) -> frozenset[str]:
+    words = (w.strip("'") for w in TOKEN_RE.findall(fold(title)))
+    return frozenset(w for w in words if w and w not in STOPWORDS)
+
+
+def similarity(a: str, b: str) -> float:
+    """Jaccard similarity of meaningful headline words (0..1)."""
+    ta, tb = title_tokens(a), title_tokens(b)
+    if min(len(ta), len(tb)) < MIN_TITLE_TOKENS:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+async def _duplicate_of(session: AsyncSession, dto: NewsDTO) -> NewsArticle | None:
+    """An already stored story from ANOTHER source with a near-identical headline."""
+    exists = await session.scalar(
+        select(NewsArticle.id).where(
+            NewsArticle.source == dto.source, NewsArticle.external_id == dto.external_id
+        )
+    )
+    if exists is not None:
+        return None  # our own item: a normal update
+    recent = await session.scalars(
+        select(NewsArticle).where(
+            NewsArticle.source != dto.source,
+            NewsArticle.language == dto.language,
+            NewsArticle.published_at >= dto.published_at - DUPLICATE_WINDOW,
+            NewsArticle.published_at <= dto.published_at + DUPLICATE_WINDOW,
+        )
+    )
+    best = max(recent, key=lambda a: similarity(a.title, dto.title), default=None)
+    if best is not None and similarity(best.title, dto.title) >= DUPLICATE_SIMILARITY:
+        return best
+    return None
+
+
 async def save_article(
     session: AsyncSession, dto: NewsDTO, sport_id: int | None, tagger: _Tagger
 ) -> int:
-    """Upsert one article and rewrite its tags (idempotent)."""
+    """Upsert one article and rewrite its tags (idempotent).
+
+    The same story from another publisher is merged into the first one: its source and link
+    are added to `also_sources` instead of a second card.
+    """
+    original = await _duplicate_of(session, dto)
+    if original is not None:
+        others = list(original.also_sources or [])
+        name = display_source(dto.source).removeprefix(SOURCE_PREFIX)
+        if all(o.get("url") != dto.url for o in others):
+            original.also_sources = [*others, {"source": name, "url": dto.url}]
+        return original.id
     article_id = await upsert_row(
         session,
         NewsArticle,
@@ -309,6 +409,7 @@ def news_out(article: NewsArticle) -> NewsOut:
         language=article.language,
         sport_slug=article.sport.slug if article.sport else None,
         tags=[t for tag in article.tags if (t := _tag_out(tag))],
+        also_sources=[AlsoSource(**o) for o in article.also_sources or []],
     )
 
 

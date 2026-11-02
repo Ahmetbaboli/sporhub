@@ -328,6 +328,7 @@ export const en: Messages = {
     mentioned: "Mentioned",
     newsAbout: (name: string) => `News about ${name}`,
     externalNote: "Opens in a new tab",
+    alsoReported: "Also reported by:",
     searchPlaceholder: "Search news…",
   },
   player: {

@@ -74,7 +74,7 @@ const item: NewsItem = {
   id: 5,
   title: "Kulüp yıldızını resmen açıkladı",
   summary: "Özet metni.",
-  url: "https://example.com/a",
+  url: "https://publisher.test/a",
   image_url: null,
   author: null,
   source: "Örnek",
@@ -83,6 +83,7 @@ const item: NewsItem = {
   is_breaking: true,
   language: "tr",
   sport_slug: "football",
+  also_sources: [{ source: "ESPN", url: "https://espn.test/x" }],
   tags: [
     { kind: "team", id: 1, name: "Kulüp FC", sport_slug: "football", slug: null },
     { kind: "competition", id: 2, name: "Lig", sport_slug: "football", slug: "lig" },
@@ -92,9 +93,12 @@ const item: NewsItem = {
 describe("NewsCard", () => {
   it("links the headline to our page and tags to entity pages", () => {
     render(<NewsCard item={item} />);
-    expect(screen.getByRole("link", { name: item.title })).toHaveAttribute(
+    const headline = screen.getByRole("link", { name: new RegExp(item.title) });
+    expect(headline).toHaveAttribute("href", "https://publisher.test/a");
+    expect(headline).toHaveAttribute("rel", "noopener noreferrer nofollow");
+    expect(screen.getByRole("link", { name: "ESPN" })).toHaveAttribute(
       "href",
-      "/news/5",
+      "https://espn.test/x",
     );
     expect(screen.getByText("Son dakika")).toBeInTheDocument();
     expect(screen.getByText("Resmî transfer")).toBeInTheDocument();

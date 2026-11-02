@@ -274,6 +274,8 @@ export interface NewsItem {
   language: string;
   sport_slug: string | null;
   tags: NewsTag[];
+  /** Other publishers that ran the same story (merged by headline similarity). */
+  also_sources: { source: string; url: string }[];
 }
 
 export interface NewsArchive {

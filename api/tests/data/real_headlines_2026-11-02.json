@@ -1,0 +1,845 @@
+{
+ "_note": "Real headlines from the default NEWS_FEEDS, fetched 2026-11-02, hand-labelled for classifier evaluation. Labelling guide: docs/DECISIONS.md.",
+ "items": [
+  {
+   "feed": "bbc-basketball",
+   "lang": "en",
+   "title": "Trump says NBA star LeBron James 'disrespected' US anthem",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "'We've got big problems' - Hamilton says Ferrari need 'serious talks'",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Andrew Benson Q&A: Send us your questions",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Approach African GP with humility, says Hamilton",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Will Lindblad and Lawson be retained by Racing Bulls? F1 Q&A",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Brazilian Camara to join Haas for F1 debut in 2027",
+   "category": "transfer_official"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Red Bull F1 boss Mekies gets new deal to 2031",
+   "category": "transfer_official"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "McLaren talks, 'numb' cars and being 'captain of the ship' - Verstappen Q&A",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Arsenal move clear at the top with a rare win at Liverpool",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Man Utd eye Barcelona's Balde - Monday's gossip",
+   "category": "transfer_rumour"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Retired Sheff Utd legend Sharp signs for Rushden",
+   "category": "transfer_official"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Glasner fears he will be next Forest sacking if wins don't follow",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Wednesday appoint former Stockport boss Challinor",
+   "category": "transfer_official"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "'We fell behind' - what does new San Siro deal mean for AC Milan and Inter?",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "All done deals in September & October 2026",
+   "category": "transfer_official"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Were any current Man City players signed during charges period?",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "How to become a football referee",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "'Dundee Utd want permanent Cameron signing' - gossip",
+   "category": "transfer_rumour"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Life as a Wag in the transfer window",
+   "category": "general"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Antonelli on title: 'A day I will remember forever'",
+   "category": "interview"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Hamilton: 'Big problems' amid Leclerc incident",
+   "category": "interview"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+   "category": "tournament"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Russell on 2026 season: 'It will not break me'",
+   "category": "interview"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Ferrari protege Câmara joins Haas for F1 2027",
+   "category": "transfer_official"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "F1 2027 driver lineups: From Hamilton to Verstappen, who has a seat - and who's out of contract?",
+   "category": "general"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Could Malaysia return to F1 calendar? The state of play despite Sepang travel chaos",
+   "category": "tournament"
+  },
+  {
+   "feed": "espn-nba",
+   "lang": "en",
+   "title": "On 45-point night, Luka's defense steals show: 'This year, I really took a step forward'",
+   "category": "interview"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Gotham win first NWSL Shield, No. 1 seed: 'That should be the standard'",
+   "category": "interview"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Iraola says he'll tell Isak to go down after VAR misses Arsenal foul",
+   "category": "interview"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Ten Hag on Ronaldo's Utd ability: 'From Juventus onwards it's simply over'",
+   "category": "interview"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Mbappé, Bellingham on target as Madrid win 4th straight",
+   "category": "general"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Transfer rumors, news: Man United meltdown edition. Balogun the latest to be linked",
+   "category": "transfer_rumour"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Transfer rumors, news: Real Madrid believe Man Utd's JJ Gabriel will sign for them",
+   "category": "transfer_rumour"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Fenerbahçe - Liverpool maçına Fransız hakem!",
+   "category": "tournament"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "\"Dünya Kupası'na gitmeyi garantileyen ilk ülkeyiz\"",
+   "category": "interview"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Devler Ligi'nde 4. hafta heyecanı!",
+   "category": "general"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Türkoğlu, 2027 Dünya Kupası geri sayım törenine katıldı",
+   "category": "tournament"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Galatasaray'da Abdullah Kavukcu da istifa etti!",
+   "category": "general"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Galatasaray'da Metin Öztürk istifa etti!",
+   "category": "general"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Okan Buruk: \"Onun olmaması bize avantaj\"",
+   "category": "interview"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "George: \"Tek aradığım şey şampiyonluk\"",
+   "category": "interview"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Wembanyama: \"Bu yıl MVP'yi kazanmalıyım\"",
+   "category": "interview"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Ismail Jakobs: \"Bizi zorlayacaklar\"",
+   "category": "interview"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Fabian Wohlgemuth: \"Galatasaray'a karşı bir şeyler bekliyoruz\"",
+   "category": "interview"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Fenerbahçe - Liverpool maçına Fransız hakem!",
+   "category": "tournament"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Şampiyonlar Ligi'nde 4. hafta heyecanı",
+   "category": "general"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Beşiktaş'ta Cerny'ye sert sözler: \"İnanılmaz kötüydü!\"",
+   "category": "interview"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Mike Brown knows why Knicks championship chemistry hasn’t carried over: ‘Climbing a mountain’",
+   "category": "interview"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Kings star center reportedly isn’t happy playing with top draft pick as trade rumors swirl",
+   "category": "transfer_rumour"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Week 2 Fantasy Basketball Aftermath: Anthony Edwards, Kawhi Leonard and others join the dreaded injury list",
+   "category": "general"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "A look at the Suns’ schedule for November",
+   "category": "tournament"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Norris calls for race ban after Colapinto collision",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "A stand-alone, critically-acclaimed film by Jimmy McGovern",
+   "category": "general"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Arsenal zirvenin yeni sahibi!",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Hamilton takes first pole for Ferrari at Mexico City Grand Prix",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Antonelli stands on brink of history in Austin",
+   "category": "general"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Hawks rookie Kingston Flemings suspended one game for elbowing Pelicans Bryce McGowens",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Episode 1: All at Risk",
+   "category": "general"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Ronaldo off Al Nassr's ACL squad due to Saudi security concerns",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "'Utter chaos at Ferrari right now'",
+   "category": "interview"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Player Grades: Lakers vs. Raptors",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Clinical Man City edge past London City in WSL thriller",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Antonelli clinched the title - but who shone most in Mexico? Driver ratings",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Briton Slater, 18, to make practice debut in Mexico",
+   "category": "general"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "\"Tüm dünya yaptıklarımızı konuşuyor!\"",
+   "category": "interview"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Kimi Antonelli dünya şampiyonu!",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Antonelli wins in US but has to wait to secure title",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Ever wondered what it's like to work on Match of the Day?",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "A 'landmark' moment - why has Rwanda been chosen to host F1?",
+   "category": "tournament"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Nets get first win of season with strong defensive effort, beating Pacers, 98-90",
+   "category": "general"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Deplasman değil dertlasman!",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "'He doesn't feel pressure!' - how Antonelli is cruising to title",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "The F1 pit stop that helped save lives",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Kane beat Mbappe to Ballon d'Or by just 28 points",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "'They've thrown away a double podium' - what went wrong for Hamilton?",
+   "category": "interview"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Thomas Reis'ten Boateng için açıklama!",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Ocon denies reports of physical altercation behind dropping",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "More goals for Lankshear, home woes for Hammers - Aaron McLean's EFL Takeaways",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "How much do you know about F1 champion Antonelli?",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Prost",
+   "category": "general"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Antonelli crowned F1's youngest-ever world champion",
+   "category": "general"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Importance of patience being reinforced for Lakers early in season after 25-point collapse",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "When does the 2026 F1 season start?",
+   "category": "tournament"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Dutch GP in pictures as F1 prepares for Zandvoort farewell",
+   "category": "general"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "How Kimi Antonelli can win F1 title at Mexico City GP -- or why he may already be champion",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "The pathway promise: Why Scottish football is struggling to produce young talent",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Episode 5: A Mountain to Climb",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Non-league clubs tackle teen trouble at matches",
+   "category": "general"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "🏅 James Milner runs NYC Marathon in just over three hours",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Episode 2: Master v Apprentice",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "F1 has never had anyone like me - Hamilton",
+   "category": "interview"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "3 bright spots hiding beneath the Suns’ ugly start",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Returning Estevao brings X-factor to strikerless Chelsea",
+   "category": "general"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "NBA'de Lakers, Luka Doncic'in 45 sayı attığı maçta Raptors'ı yendi",
+   "category": "general"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "Beşiktaş'a Kasımpaşa şoku!",
+   "category": "general"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Verstappen finishes 9th in GT World Challenge",
+   "category": "general"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Beşiktaş'ta deplasmanda kötü tablo!",
+   "category": "general"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Bahçeşehir Koleji, Ratiopharm Ulm deplasmanında!",
+   "category": "general"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Luka Dončić carries Lakers to win over Raptors",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "What is a super licence in Formula 1?",
+   "category": "general"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Luka Dončić knows the Lakers have to be ‘way better’ when teams blitz him",
+   "category": "interview"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Nets notch first win of season over Indiana Pacers",
+   "category": "general"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Knicks Injury Tracker: Jose Alvarado questionable for Monday's tilt against Nets",
+   "category": "general"
+  },
+  {
+   "feed": "espn-nba",
+   "lang": "en",
+   "title": "An exclusive with Kevin Durant: On his time in OKC, his legacy and the Thunder's 2025 title",
+   "category": "interview"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Man City, Bayern among the good, bad and lucky in Europe's top leagues",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Best images of F1 in the US through the years",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "The Chequered Flag Podcast",
+   "category": "general"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Verstappen wins in Mexico; Antonelli clinches title",
+   "category": "general"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Rıdvan Dilmen'den Galatasaray yorumu",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Spence 'very proud' to break WSL appearance record",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Ten unusual jobs in football",
+   "category": "general"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Beşiktaş'ta Orkun'un yokluğu ağır geldi!",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Were Arsenal 'lucky' not to concede penalty at Liverpool?",
+   "category": "general"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Messi brings Miami back to stun Revs, clinch Champions Cup spot",
+   "category": "general"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Wizards pick up team options for 2024 and 2025 first-round picks",
+   "category": "transfer_official"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Yaxel Lendeborg scores 37, carries Warriors to 124-112 win over Clippers",
+   "category": "general"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "'They smoke us': Why a moon astronaut thinks F1 is ahead of NASA",
+   "category": "interview"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Antonelli - the boy 'born in a garage' who became world champion",
+   "category": "general"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "A pattern emerges in Raptors losses, as do bright spots in LA",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Are Celtic club in regression amid run of six defeats in 10?",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "Arteta credits Fleetwood loss for spirited win at Anfield",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "5 Live Sport: All About...",
+   "category": "general"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "What soccer stars did for Halloween: James the Joker, DracuLucas, more",
+   "category": "general"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Galatasaray, Stuttgart ile ilki yaşayacak!",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-f1",
+   "lang": "en",
+   "title": "Kimi Antonelli wins US GP but title must wait",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "'I persuaded my club to give me a job as a content creator'",
+   "category": "interview"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Sergio Conceiçao nasıl biri?",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-basketball",
+   "lang": "en",
+   "title": "Britain beat Germany to win World Championship bronze",
+   "category": "general"
+  },
+  {
+   "feed": "espn-nba",
+   "lang": "en",
+   "title": "Warriors' Lendeborg dazzles with 37, regrets 'falling into peer pressure' to chase 40",
+   "category": "interview"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "How to watch Warriors vs. Clippers",
+   "category": "general"
+  },
+  {
+   "feed": "espn-soccer",
+   "lang": "en",
+   "title": "Man United implode at Chelsea, and, make no mistake, they are in a Premier League relegation battle",
+   "category": "general"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "How Antonelli overcame Russell, Ferrari to become F1's youngest champion",
+   "category": "general"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Wolff: Russell faces 'catastrophic moment'",
+   "category": "interview"
+  },
+  {
+   "feed": "yahoo-nba",
+   "lang": "en",
+   "title": "Nets vs. Pacers preview: Brooklyn searches for answers after 0-5 start",
+   "category": "general"
+  },
+  {
+   "feed": "haberturk",
+   "lang": "tr",
+   "title": "F.Bahçe Tarfin'in konuğu Valencia!",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "From Fleetwood embarrassment to 'magical' Anfield win 14 years in making",
+   "category": "general"
+  },
+  {
+   "feed": "sporx",
+   "lang": "tr",
+   "title": "Hawks çaylağı Flemings'e 1 maç ceza",
+   "category": "general"
+  },
+  {
+   "feed": "espn-nba",
+   "lang": "en",
+   "title": "Thunder's $500 million problem: Execs on what they could -- and should -- do",
+   "category": "general"
+  },
+  {
+   "feed": "bbc-football",
+   "lang": "en",
+   "title": "'He's been fantastic' - how Konsa has fitted in seamlessly at Arsenal",
+   "category": "interview"
+  },
+  {
+   "feed": "espn-f1",
+   "lang": "en",
+   "title": "Verstappen, Lawson given grid penalty in Mexico",
+   "category": "general"
+  }
+ ]
+}

@@ -332,6 +332,7 @@ export const tr = {
     mentioned: "Haberde geçenler",
     newsAbout: (name: string) => `${name} hakkında haberler`,
     externalNote: "Yeni sekmede açılır",
+    alsoReported: "Ayrıca:",
     searchPlaceholder: "Haberlerde ara…",
   },
   player: {

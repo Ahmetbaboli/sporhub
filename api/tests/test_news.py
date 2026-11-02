@@ -42,7 +42,7 @@ def test_parse_rss_keeps_safe_links_and_strips_html() -> None:
     item = items[0]
     assert item.title == "A & B signs for Club"
     assert item.summary == "Hello world"
-    assert item.image_url == "https://publisher.test/a.jpg"
+    assert item.image_url is None  # publisher images are never kept
     assert item.published_at == datetime(2026, 11, 2, 6, 30, tzinfo=UTC)
     assert item.category == "transfer_official"
     assert item.source == "rss:test" and item.sport_slug == "football"
@@ -276,3 +276,9 @@ async def test_live_mode_drops_placeholder_links(
     adapter = RssNewsAdapter(live)
     assert await adapter.fetch() == []
     await adapter.aclose()
+
+
+def test_three_word_names_also_match_their_last_two_words() -> None:
+    targets = build_targets([("player_id", 7, "Andrea Kimi Antonelli", None, None)])
+    assert find_tags("Kimi Antonelli crowned champion", targets) == [("player_id", 7)]
+    assert find_tags("Antonelli crowned champion", targets) == []

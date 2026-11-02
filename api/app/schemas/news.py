@@ -17,6 +17,11 @@ class NewsTagOut(BaseModel):
     slug: str | None = None  # competitions only (web route)
 
 
+class AlsoSource(BaseModel):
+    source: str
+    url: str
+
+
 class NewsOut(BaseModel):
     id: int
     title: str
@@ -31,6 +36,7 @@ class NewsOut(BaseModel):
     language: str
     sport_slug: str | None = None
     tags: list[NewsTagOut] = Field(default_factory=list)
+    also_sources: list[AlsoSource] = Field(default_factory=list)
 
 
 class NewsList(Page[NewsOut]):

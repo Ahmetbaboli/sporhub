@@ -121,6 +121,10 @@ class RateLimitedClient:
         logger.info("external request", extra={"path": path})
         return (await self._get(path, params)).json()
 
+    async def get_bytes(self, path: str, params: dict[str, Any] | None = None) -> bytes:
+        logger.info("external request", extra={"path": path})
+        return (await self._get(path, params)).content
+
     async def get_text(self, path: str, params: dict[str, Any] | None = None) -> str:
         """Raw body (RSS/Atom feeds); same throttle, timeout and retry policy as JSON."""
         logger.info("external request", extra={"path": path})

@@ -60,7 +60,7 @@ async function TodayEvents() {
 
 const HOME_TEAM_CARDS = 2;
 const BREAKING_LIMIT = 3;
-const BREAKING_MAX_AGE_HOURS = 48;
+const BREAKING_MAX_AGE_HOURS = 6;
 const LATEST_NEWS = 6;
 
 /** Breaking headlines from the last two days, above everything else. */
