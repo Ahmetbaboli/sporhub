@@ -4,12 +4,14 @@ from datetime import UTC, datetime
 from typing import Annotated
 
 from fastapi import APIRouter, BackgroundTasks, Depends, Header
+from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.adapters.news_rss import NewsDTO, RssNewsAdapter
 from app.adapters.registry import adapter_names, create_adapter
 from app.core.config import get_settings
 from app.core.errors import AppError, ErrorResponse
+from app.core.sources import source_status
 from app.db.session import get_session, get_sessionmaker
 from app.schemas.api import SyncAccepted
 from app.schemas.news import ManualNewsCreated, ManualNewsIn
@@ -92,3 +94,23 @@ async def create_news(
         sport_slug=body.sport,
     )
     return ManualNewsCreated(id=await create_manual_article(session, dto))
+
+
+class SourceStatusOut(BaseModel):
+    name: str
+    kind: str
+    description: str
+    requires_key: bool
+    configured: bool
+
+
+@router.get(
+    "/sources",
+    response_model=list[SourceStatusOut],
+    summary="Veri kaynakları: yapılandırıldı mı (yalnızca evet/hayır, anahtar değeri asla)",
+)
+async def sources(
+    x_admin_token: Annotated[str | None, Header(description="ADMIN_TOKEN değeri")] = None,
+) -> list[SourceStatusOut]:
+    require_admin(x_admin_token)
+    return [SourceStatusOut(**vars(s)) for s in source_status(get_settings())]

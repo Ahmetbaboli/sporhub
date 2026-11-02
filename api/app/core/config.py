@@ -22,6 +22,7 @@ class Settings(BaseSettings):
 
     football_data_api_key: str = Field(default="", repr=False)
     balldontlie_api_key: str = Field(default="", repr=False)
+    api_football_key: str = Field(default="", repr=False)
     use_fixtures: bool = True
     fixtures_dir: Path = DEFAULT_FIXTURES_DIR
     # Pins "today" for fixture date shifting (YYYY-MM-DD); used by tests.
