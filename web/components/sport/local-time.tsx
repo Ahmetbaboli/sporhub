@@ -3,6 +3,7 @@
 import { useSyncExternalStore } from "react";
 import { DEFAULT_TIME_ZONE } from "@/lib/api";
 import { formatTime } from "@/lib/format";
+import { useIntlLocale } from "@/lib/i18n/client";
 
 const subscribe = () => () => {};
 
@@ -16,9 +17,10 @@ export function LocalTime({ iso, className }: { iso: string; className?: string 
     () => Intl.DateTimeFormat().resolvedOptions().timeZone,
     () => DEFAULT_TIME_ZONE,
   );
+  const locale = useIntlLocale();
   return (
     <time dateTime={iso} className={className}>
-      {formatTime(iso, zone)}
+      {formatTime(iso, zone, locale)}
     </time>
   );
 }

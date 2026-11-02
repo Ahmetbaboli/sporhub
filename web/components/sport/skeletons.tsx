@@ -1,5 +1,5 @@
 import { LoadingRegion, Skeleton } from "@/components/ui/skeleton";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 
 export function TitleSkeleton() {
   return (
@@ -35,7 +35,7 @@ export function EventCardSkeleton({ rows = 4 }: { rows?: number }) {
 /** Suspense fallback for a block of event cards (no page title: the page renders its own). */
 export function EventCardsSkeleton({ cards = 2 }: { cards?: number }) {
   return (
-    <LoadingRegion label={tr.states.loading}>
+    <LoadingRegion label={t().states.loading}>
       <div className="space-y-4">
         {Array.from({ length: cards }, (_, i) => (
           <EventCardSkeleton key={i} />
@@ -58,7 +58,7 @@ export function EventListSkeleton({ cards = 2 }: { cards?: number }) {
 /** Suspense fallback for a table block. */
 export function TableSkeleton({ rows = 10 }: { rows?: number }) {
   return (
-    <LoadingRegion label={tr.states.loading}>
+    <LoadingRegion label={t().states.loading}>
       <div className="bg-card space-y-3 rounded-lg border p-3">
         {Array.from({ length: rows }, (_, i) => (
           <Skeleton key={i} className="h-6 w-full" />

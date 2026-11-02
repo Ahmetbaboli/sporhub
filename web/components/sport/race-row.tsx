@@ -2,7 +2,7 @@ import Link from "next/link";
 import { LocalTime } from "@/components/sport/local-time";
 import { StatusBadge } from "@/components/sport/status-badge";
 import { formatDay } from "@/lib/format";
-import { tr } from "@/lib/i18n/tr";
+import { intlLocale, t } from "@/lib/i18n";
 import type { Participant, SportEvent } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -24,7 +24,7 @@ function DriverLink({ p }: { p: Participant }) {
 
 function Podium({ participants }: { participants: Participant[] }) {
   return (
-    <ol aria-label={tr.race.podium} className="mt-3 grid gap-1.5 sm:grid-cols-3">
+    <ol aria-label={t().race.podium} className="mt-3 grid gap-1.5 sm:grid-cols-3">
       {participants.slice(0, PODIUM_SIZE).map((p) => (
         <li
           key={p.position}
@@ -57,35 +57,35 @@ function FullResults({ participants }: { participants: Participant[] }) {
   return (
     <details className="mt-3 text-sm">
       <summary className="text-primary cursor-pointer font-medium">
-        {tr.race.results}
+        {t().race.results}
       </summary>
       <div
         className="mt-2 overflow-x-auto"
         tabIndex={0}
         role="region"
-        aria-label={tr.race.resultsTable}
+        aria-label={t().race.resultsTable}
       >
         <table className="num w-full min-w-[30rem] border-collapse text-xs">
-          <caption className="sr-only">{tr.race.resultsTable}</caption>
+          <caption className="sr-only">{t().race.resultsTable}</caption>
           <thead className="text-muted-foreground uppercase">
             <tr>
               <th scope="col" className="px-2 py-1 text-center">
-                {tr.race.position}
+                {t().race.position}
               </th>
               <th scope="col" className="px-2 py-1 text-left">
-                {tr.race.driver}
+                {t().race.driver}
               </th>
               <th scope="col" className="px-2 py-1 text-left">
-                {tr.race.team}
+                {t().race.team}
               </th>
               <th scope="col" className="px-2 py-1 text-right">
-                {tr.race.grid}
+                {t().race.grid}
               </th>
               <th scope="col" className="px-2 py-1 text-left">
-                {tr.race.result}
+                {t().race.result}
               </th>
               <th scope="col" className="px-2 py-1 text-right">
-                {tr.race.points}
+                {t().race.points}
               </th>
             </tr>
           </thead>
@@ -120,7 +120,7 @@ export function RaceRow({ event }: { event: SportEvent }) {
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="min-w-0">
           <p className="text-muted-foreground text-xs font-semibold uppercase">
-            {event.round ? tr.race.round(event.round) : null}
+            {event.round ? t().race.round(event.round) : null}
           </p>
           <p className="font-display text-xl leading-tight font-semibold">{event.name}</p>
           {event.venue ? (
@@ -130,7 +130,7 @@ export function RaceRow({ event }: { event: SportEvent }) {
         <div className="text-right text-sm">
           <StatusBadge status={event.status} />
           <p className="text-muted-foreground mt-1 text-xs">
-            {formatDay(event.start_time)}
+            {formatDay(event.start_time, undefined, intlLocale())}
           </p>
           <LocalTime
             iso={event.start_time}
@@ -147,7 +147,7 @@ export function RaceRow({ event }: { event: SportEvent }) {
         </>
       ) : sessions.qualifying ? (
         <p className="text-muted-foreground mt-2 text-xs">
-          {tr.race.qualifying}: {formatDay(sessions.qualifying)}{" "}
+          {t().race.qualifying}: {formatDay(sessions.qualifying, undefined, intlLocale())}{" "}
           <LocalTime iso={sessions.qualifying} />
         </p>
       ) : null}

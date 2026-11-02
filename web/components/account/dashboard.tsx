@@ -2,7 +2,7 @@ import Link from "next/link";
 import { competitionHref } from "@/components/sport/event-list";
 import { EventItem } from "@/components/sport/event-item";
 import { TeamBadge } from "@/components/sport/team-badge";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type {
   CompetitionPlace,
   Player,
@@ -27,8 +27,8 @@ export function TeamActivityCard({ activity }: { activity: TeamActivity }) {
           </Link>
         </h3>
       </header>
-      <EventGroup label={tr.me.recent} events={recent} />
-      <EventGroup label={tr.me.upcoming} events={upcoming} />
+      <EventGroup label={t().me.recent} events={recent} />
+      <EventGroup label={t().me.upcoming} events={upcoming} />
     </section>
   );
 }

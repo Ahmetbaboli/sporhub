@@ -52,7 +52,7 @@
 - [x] 4d Karşılaştırma: iki takım, iki sporcu (`/compare`)
 - [x] 4e Lig istatistikleri + liderlik tabloları (gol krallığı / sayı / şampiyona puanı), sezon geçmişi
 - [x] 4f Oyuncu sezonluk performans grafikleri (Recharts), branşa özel gelişmiş istatistikler
-- [ ] 4g TR/EN dil seçeneği (next-intl; `tr.ts` → `messages/{tr,en}`)
+- [x] 4g TR/EN dil seçeneği (çerez + Accept-Language, istek bazlı `t()` / istemcide `useT()`)
 ### Aşama 4.5 — Haber modülü
 - [ ] Veri modeli: `news_articles` (spor, kategori, etiketli takım/oyuncu/lig, kaynak, yayın zamanı), `(source, external_id)` benzersiz
 - [ ] Kategoriler: genel, son dakika, transfer (resmî), transfer söylentisi, röportaj, organizasyon/turnuva

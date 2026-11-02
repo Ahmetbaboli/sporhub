@@ -3,12 +3,13 @@
 import { GitCompareArrows } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { tr } from "@/lib/i18n/tr";
+import { useT } from "@/lib/i18n/client";
 import { templateFor } from "@/lib/sports";
 import type { Sport } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 export function SportNav({ sports }: { sports: Sport[] }) {
+  const tr = useT();
   const pathname = usePathname();
   const items = [
     { href: "/", label: tr.nav.home, Icon: null },

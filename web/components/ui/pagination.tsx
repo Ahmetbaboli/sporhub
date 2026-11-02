@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 const BUTTON = "inline-flex h-10 items-center rounded-md border px-4 text-sm font-medium";
@@ -20,7 +20,7 @@ export function Pagination({
   if (pages <= 1) return null;
   return (
     <nav
-      aria-label={tr.pagination.label}
+      aria-label={t().pagination.label}
       className="mt-4 flex items-center justify-between gap-3"
     >
       {page > 1 ? (
@@ -29,13 +29,13 @@ export function Pagination({
           rel="prev"
           className={cn(BUTTON, "hover:bg-muted")}
         >
-          {tr.pagination.previous}
+          {t().pagination.previous}
         </Link>
       ) : (
         <span aria-hidden />
       )}
       <span className="text-muted-foreground text-sm">
-        {tr.pagination.page(page, pages)}
+        {t().pagination.page(page, pages)}
       </span>
       {page < pages ? (
         <Link
@@ -43,7 +43,7 @@ export function Pagination({
           rel="next"
           className={cn(BUTTON, "hover:bg-muted")}
         >
-          {tr.pagination.next}
+          {t().pagination.next}
         </Link>
       ) : (
         <span aria-hidden />

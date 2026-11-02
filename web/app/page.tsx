@@ -6,7 +6,7 @@ import { EventCardsSkeleton } from "@/components/sport/skeletons";
 import { EmptyState } from "@/components/ui/states";
 import { api } from "@/lib/api";
 import { groupBySportAndCompetition, sportLabel } from "@/lib/events";
-import { tr } from "@/lib/i18n/tr";
+import { initLocale, t } from "@/lib/i18n";
 import { getViewer } from "@/lib/session";
 
 // Data changes through the day; the API client caches each request for 60 s.
@@ -18,12 +18,12 @@ async function TodayEvents() {
 
   if (groups.length === 0) {
     return (
-      <EmptyState title={tr.home.emptyTitle} body={tr.home.emptyBody}>
+      <EmptyState title={t().home.emptyTitle} body={t().home.emptyBody}>
         <Link
           href="/football"
           className="text-primary mt-2 text-sm font-medium underline"
         >
-          {tr.sports.football}
+          {t().sports.football}
         </Link>
       </EmptyState>
     );
@@ -71,10 +71,10 @@ async function PersonalAgenda() {
           id="my-agenda"
           className="font-display text-primary text-2xl font-semibold uppercase"
         >
-          {tr.me.homeSection}
+          {t().me.homeSection}
         </h2>
         <Link href="/me" className="text-primary text-sm font-medium hover:underline">
-          {tr.me.seeAll}
+          {t().me.seeAll}
         </Link>
       </div>
       <div className="grid gap-4 lg:grid-cols-2">
@@ -86,16 +86,17 @@ async function PersonalAgenda() {
   );
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  await initLocale();
   return (
     <>
       <Suspense fallback={null}>
         <PersonalAgenda />
       </Suspense>
       <h1 className="font-display text-4xl font-bold tracking-tight uppercase">
-        {tr.home.title}
+        {t().home.title}
       </h1>
-      <p className="text-muted-foreground mt-1 mb-6 text-sm">{tr.home.subtitle}</p>
+      <p className="text-muted-foreground mt-1 mb-6 text-sm">{t().home.subtitle}</p>
       <Suspense fallback={<EventCardsSkeleton cards={3} />}>
         <TodayEvents />
       </Suspense>

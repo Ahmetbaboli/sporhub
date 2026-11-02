@@ -3,7 +3,8 @@ import { Barlow_Condensed, Geist } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
-import { tr } from "@/lib/i18n/tr";
+import { initLocale, t } from "@/lib/i18n";
+import { I18nProvider } from "@/lib/i18n/client";
 import { PALETTE_BOOT_SCRIPT } from "@/lib/palettes";
 import "./globals.css";
 
@@ -14,13 +15,14 @@ const display = Barlow_Condensed({
   weight: ["500", "600", "700"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: `${tr.app.name} — ${tr.app.tagline}`,
-    template: `%s · ${tr.app.name}`,
-  },
-  description: tr.app.description,
-};
+export async function generateMetadata(): Promise<Metadata> {
+  await initLocale();
+  const { app } = t();
+  return {
+    title: { default: `${app.name} — ${app.tagline}`, template: `%s · ${app.name}` },
+    description: app.description,
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: [
@@ -29,10 +31,11 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await initLocale();
   return (
     <html
-      lang="tr"
+      lang={locale}
       suppressHydrationWarning
       className={`${sans.variable} ${display.variable}`}
     >
@@ -41,19 +44,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: PALETTE_BOOT_SCRIPT }} />
       </head>
       <body className="flex min-h-dvh flex-col antialiased">
-        <ThemeProvider>
-          <a
-            href="#main"
-            className="bg-primary text-primary-foreground sr-only z-50 rounded px-3 py-2 focus:not-sr-only focus:absolute focus:top-2 focus:left-2"
-          >
-            {tr.app.skipToContent}
-          </a>
-          <Header />
-          <main id="main" className="mx-auto w-full max-w-5xl flex-1 px-4 py-6 sm:py-8">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <I18nProvider locale={locale}>
+          <ThemeProvider>
+            <a
+              href="#main"
+              className="bg-primary text-primary-foreground sr-only z-50 rounded px-3 py-2 focus:not-sr-only focus:absolute focus:top-2 focus:left-2"
+            >
+              {t().app.skipToContent}
+            </a>
+            <Header />
+            <main id="main" className="mx-auto w-full max-w-5xl flex-1 px-4 py-6 sm:py-8">
+              {children}
+            </main>
+            <Footer />
+          </ThemeProvider>
+        </I18nProvider>
       </body>
     </html>
   );

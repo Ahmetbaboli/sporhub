@@ -1,8 +1,10 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { cookies } from "next/headers";
 import { signIn, signOut } from "@/auth";
 import { api } from "@/lib/api";
+import { LOCALE_COOKIE, LOCALE_COOKIE_MAX_AGE, parseLocale } from "@/lib/i18n/config";
 import { getViewer } from "@/lib/session";
 import type { FavoriteKind } from "@/lib/types";
 
@@ -49,4 +51,16 @@ function safeCallback(value: FormDataEntryValue | null): string {
   return typeof value === "string" && value.startsWith("/") && !value.startsWith("//")
     ? value
     : "/me";
+}
+
+/** Stores the visitor's language choice; the current page re-renders in that language. */
+export async function setLocaleAction(formData: FormData): Promise<void> {
+  const locale = parseLocale(String(formData.get("locale")));
+  if (!locale) return;
+  (await cookies()).set(LOCALE_COOKIE, locale, {
+    path: "/",
+    maxAge: LOCALE_COOKIE_MAX_AGE,
+    sameSite: "lax",
+  });
+  revalidatePath("/", "layout");
 }

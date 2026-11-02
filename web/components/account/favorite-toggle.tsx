@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 import Link from "next/link";
 import { FavoriteButton } from "@/components/account/favorite-button";
 import { api } from "@/lib/api";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import { authEnabled, getViewer } from "@/lib/session";
 import type { FavoriteKind } from "@/lib/types";
 
@@ -28,10 +28,10 @@ export async function FavoriteToggle({
       <Link
         href={`/signin?callbackUrl=${encodeURIComponent(returnTo)}`}
         className="hover:bg-muted bg-card inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-sm font-medium"
-        title={tr.account.signInToFollow}
+        title={t().account.signInToFollow}
       >
         <Star className="size-4" aria-hidden />
-        {tr.account.follow}
+        {t().account.follow}
       </Link>
     );
   }

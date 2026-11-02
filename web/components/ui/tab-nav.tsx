@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 export interface TabItem {
@@ -11,7 +11,7 @@ export interface TabItem {
 /** Server-rendered tabs: each tab is a link, the active one carries aria-current. */
 export function TabNav({ tabs, active }: { tabs: TabItem[]; active: string }) {
   return (
-    <nav aria-label={tr.competition.tabsLabel} className="mb-4 overflow-x-auto border-b">
+    <nav aria-label={t().competition.tabsLabel} className="mb-4 overflow-x-auto border-b">
       <ul className="flex gap-1">
         {tabs.map((tab) => (
           <li key={tab.id}>

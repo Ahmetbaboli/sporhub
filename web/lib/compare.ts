@@ -2,7 +2,7 @@
  * Side-by-side comparison rows. Pure functions: the /compare page renders whatever these
  * return, so the "who is better" rules live (and are tested) here.
  */
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { SportTemplate } from "@/lib/sports";
 import type { PlayerSeasonStats, StandingEntry, TeamAnalysis } from "@/lib/types";
 
@@ -78,7 +78,7 @@ function standingMetrics(shared: [StandingEntry, StandingEntry] | null): Compare
   return [
     {
       key: "position",
-      label: `${tr.compare.leaguePosition} · ${a.competition.name}`,
+      label: `${t().compare.leaguePosition} · ${a.competition.name}`,
       a: a.standing.position,
       b: b.standing.position,
       better: "lower",
@@ -86,7 +86,7 @@ function standingMetrics(shared: [StandingEntry, StandingEntry] | null): Compare
     },
     {
       key: "points",
-      label: tr.compare.leaguePoints,
+      label: t().compare.leaguePoints,
       a: a.standing.points,
       b: b.standing.points,
       better: "higher",
@@ -114,18 +114,18 @@ export function teamMetrics(
     format: CompareMetric["format"],
   ): CompareMetric => ({ key, label, a: pick(a), b: pick(b), better, format });
   metrics.push(
-    row("played", tr.analysis.played, (t) => t.overall.played, "higher", "int"),
-    row("win_pct", tr.analysis.winPct, (t) => t.overall.win_pct, "higher", "pct"),
+    row("played", t().analysis.played, (t) => t.overall.played, "higher", "int"),
+    row("win_pct", t().analysis.winPct, (t) => t.overall.win_pct, "higher", "pct"),
     row(
       "avg_scored",
-      tr.analysis.avgScored[unit],
+      t().analysis.avgScored[unit],
       (t) => t.overall.avg_scored,
       "higher",
       "decimal",
     ),
     row(
       "avg_conceded",
-      tr.analysis.avgConceded[unit],
+      t().analysis.avgConceded[unit],
       (t) => t.overall.avg_conceded,
       "lower",
       "decimal",
@@ -135,7 +135,7 @@ export function teamMetrics(
     metrics.push(
       row(
         "clean_sheets",
-        tr.analysis.cleanSheets,
+        t().analysis.cleanSheets,
         (t) => t.overall.clean_sheets,
         "higher",
         "int",
@@ -145,14 +145,14 @@ export function teamMetrics(
   metrics.push(
     row(
       "home_win_pct",
-      `${tr.analysis.home} · ${tr.analysis.winPct}`,
+      `${t().analysis.home} · ${t().analysis.winPct}`,
       (t) => t.home.win_pct,
       "higher",
       "pct",
     ),
     row(
       "away_win_pct",
-      `${tr.analysis.away} · ${tr.analysis.winPct}`,
+      `${t().analysis.away} · ${t().analysis.winPct}`,
       (t) => t.away.win_pct,
       "higher",
       "pct",
@@ -179,7 +179,7 @@ export function playerMetrics(
   shared: [StandingEntry, StandingEntry] | null,
 ): CompareMetric[] {
   const metrics = standingMetrics(shared);
-  const labels = tr.compare.metrics as Record<string, string>;
+  const labels = t().compare.metrics as Record<string, string>;
   for (const key of PLAYER_KEYS) {
     const va = a?.stats[key];
     const vb = b?.stats[key];

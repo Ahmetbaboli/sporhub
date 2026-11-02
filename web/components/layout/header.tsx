@@ -1,21 +1,20 @@
 import Link from "next/link";
 import { UserMenu } from "@/components/account/user-menu";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { PalettePicker } from "@/components/layout/palette-picker";
 import { SearchForm } from "@/components/layout/search-form";
 import { SportNav } from "@/components/layout/sport-nav";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { api } from "@/lib/api";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { Sport } from "@/lib/types";
-
-const FALLBACK_SPORTS: Sport[] = [{ id: 1, slug: "football", name: tr.sports.football }];
 
 async function loadSports(): Promise<Sport[]> {
   try {
     return (await api.sports()).items;
   } catch {
     // The header must render even when the API is down.
-    return FALLBACK_SPORTS;
+    return [{ id: 1, slug: "football", name: t().sports.football }];
   }
 }
 
@@ -34,6 +33,7 @@ export async function Header() {
           <SearchForm />
         </div>
         <div className="order-2 ml-auto flex items-center sm:order-3 sm:ml-0">
+          <LanguageSwitcher />
           <PalettePicker />
           <ThemeToggle />
           <UserMenu />

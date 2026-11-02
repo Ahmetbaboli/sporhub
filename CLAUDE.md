@@ -36,7 +36,7 @@ npm run lint && npx tsc --noEmit && npm test && npm run build
 
 ## Kod kuralları
 - Python: tip ipuçları zorunlu, ruff, kısa tek sorumluluklu fonksiyonlar, sihirli sayı yerine sabit.
-- TypeScript: `strict: true`; tüm API çağrıları `web/lib/api.ts` üzerinden; UI metinleri `web/lib/i18n/tr.ts` içinde (tek yer).
+- TypeScript: `strict: true`; tüm API çağrıları `web/lib/api.ts` üzerinden; UI metinleri `web/lib/i18n/tr.ts` (anahtarların kaynağı) + `en.ts` (aynı şekil, tip denetimli). Sunucu bileşenleri `t()`, istemci bileşenleri `useT()` kullanır; her sayfa/metadata girişi önce `await initLocale()` çağırır.
 - Zamanlar UTC saklanır, arayüzde kullanıcı saat dilimine çevrilir. Spora özel alanlar `extra` JSONB'de.
 - Her dış kayıt `(source, external_id)` ile benzersiz; sync upsert'tir, idempotenttir.
 - Loglar yapılandırılmış (JSON); gizli bilgi loglanmaz. Yeni env değişkeni `.env.example`'a açıklamasıyla eklenir.

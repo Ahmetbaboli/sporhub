@@ -1,14 +1,6 @@
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { EventStatus } from "@/lib/types";
 import { cn } from "@/lib/utils";
-
-const LABELS: Record<EventStatus, string> = {
-  live: tr.event.live,
-  finished: tr.event.finished,
-  scheduled: tr.event.scheduled,
-  postponed: tr.event.postponed,
-  cancelled: tr.event.cancelled,
-};
 
 export function StatusBadge({ status }: { status: EventStatus }) {
   return (
@@ -25,7 +17,7 @@ export function StatusBadge({ status }: { status: EventStatus }) {
       {status === "live" ? (
         <span aria-hidden className="live-dot size-1.5 rounded-full bg-current" />
       ) : null}
-      {LABELS[status]}
+      {t().event[status]}
     </span>
   );
 }

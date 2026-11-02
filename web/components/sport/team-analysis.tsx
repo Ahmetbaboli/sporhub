@@ -2,7 +2,7 @@ import Link from "next/link";
 import { EventItem } from "@/components/sport/event-item";
 import { FORM_STYLES } from "@/components/sport/standings-table";
 import { TeamBadge } from "@/components/sport/team-badge";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { SportTemplate } from "@/lib/sports";
 import type {
   FormEntry,
@@ -36,15 +36,15 @@ export function FormStrip({ form }: { form: FormEntry[] }) {
         <li key={entry.event_id}>
           <Link
             href={`/teams/${entry.opponent.id}`}
-            title={`${tr.analysis.resultNames[entry.result]} · ${score(entry)} · ${entry.opponent.name}`}
+            title={`${t().analysis.resultNames[entry.result]} · ${score(entry)} · ${entry.opponent.name}`}
             className={cn(
               "inline-flex size-8 items-center justify-center rounded-md text-xs font-bold",
               FORM_STYLES[entry.result],
             )}
           >
-            <span aria-hidden>{tr.analysis.results[entry.result]}</span>
+            <span aria-hidden>{t().analysis.results[entry.result]}</span>
             <span className="sr-only">
-              {`${tr.analysis.resultNames[entry.result]}, ${score(entry)}, ${entry.opponent.name}`}
+              {`${t().analysis.resultNames[entry.result]}, ${score(entry)}, ${entry.opponent.name}`}
             </span>
           </Link>
         </li>
@@ -57,7 +57,7 @@ function streakText(streak: string | null): string | null {
   if (!streak) return null;
   const kind = streak[0] as MatchResult;
   const length = Number(streak.slice(1));
-  return tr.analysis.streaks[kind]?.(length) ?? null;
+  return t().analysis.streaks[kind]?.(length) ?? null;
 }
 
 function SplitRow({
@@ -88,8 +88,8 @@ function SplitRow({
 /** Home vs away win rate as two labelled bars. */
 function HomeAwayBars({ home, away }: { home: SplitStats; away: SplitStats }) {
   const bars: [string, SplitStats][] = [
-    [tr.analysis.home, home],
-    [tr.analysis.away, away],
+    [t().analysis.home, home],
+    [t().analysis.away, away],
   ];
   return (
     <div className="space-y-2 px-3 py-3">
@@ -120,7 +120,7 @@ function Highlight({ label, entry }: { label: string; entry: FormEntry | null })
       >
         <span className="num font-bold">{score(entry)}</span>
         <TeamBadge team={entry.opponent} size="sm" />
-        {tr.analysis.vs(entry.opponent.short_name ?? entry.opponent.name)}
+        {t().analysis.vs(entry.opponent.short_name ?? entry.opponent.name)}
       </Link>
     </div>
   );
@@ -142,89 +142,91 @@ export function TeamAnalysisPanel({
         id="analysis"
         className="font-display text-primary mb-3 text-2xl font-semibold uppercase"
       >
-        {tr.analysis.title}
+        {t().analysis.title}
       </h2>
       <div className="grid gap-4 lg:grid-cols-2">
         <div className={CARD}>
-          <h3 className={CARD_TITLE}>{tr.analysis.lastN(analysis.form.length)}</h3>
+          <h3 className={CARD_TITLE}>{t().analysis.lastN(analysis.form.length)}</h3>
           <div className="space-y-3 px-3 py-3">
             <FormStrip form={analysis.form} />
             <p className="num text-sm">
               <span className="font-semibold">
                 {rules.draws
-                  ? tr.analysis.h2hSummary(recent.won, recent.drawn, recent.lost)
-                  : `${recent.won}G · ${recent.lost}M`}
+                  ? t().analysis.h2hSummary(recent.won, recent.drawn, recent.lost)
+                  : t().analysis.winLoss(recent.won, recent.lost)}
               </span>
               {streak ? <span className="text-muted-foreground"> · {streak}</span> : null}
             </p>
           </div>
           <div className="divide-y border-t">
-            <Highlight label={tr.analysis.biggestWin} entry={analysis.biggest_win} />
-            <Highlight label={tr.analysis.biggestLoss} entry={analysis.biggest_loss} />
+            <Highlight label={t().analysis.biggestWin} entry={analysis.biggest_win} />
+            <Highlight label={t().analysis.biggestLoss} entry={analysis.biggest_loss} />
           </div>
         </div>
         <div className={CARD}>
           <h3 className={CARD_TITLE}>
-            {analysis.season ? tr.analysis.season(analysis.season) : tr.analysis.overall}
+            {analysis.season
+              ? t().analysis.season(analysis.season)
+              : t().analysis.overall}
           </h3>
           <HomeAwayBars home={analysis.home} away={analysis.away} />
           <div className="overflow-x-auto border-t">
             <table className="num w-full text-sm">
-              <caption className="sr-only">{tr.analysis.title}</caption>
+              <caption className="sr-only">{t().analysis.title}</caption>
               <thead className="text-muted-foreground text-xs">
                 <tr>
                   <th scope="col" className="px-3 py-2 text-left">
-                    <span className="sr-only">{tr.analysis.overall}</span>
+                    <span className="sr-only">{t().analysis.overall}</span>
                   </th>
                   <th scope="col" className="px-2 py-2 text-right">
-                    {tr.analysis.played}
+                    {t().analysis.played}
                   </th>
                   <th scope="col" className="px-2 py-2 text-right">
-                    {tr.analysis.won}
+                    {t().analysis.won}
                   </th>
                   {rules.draws ? (
                     <th scope="col" className="px-2 py-2 text-right">
-                      {tr.analysis.drawn}
+                      {t().analysis.drawn}
                     </th>
                   ) : null}
                   <th scope="col" className="px-2 py-2 text-right">
-                    {tr.analysis.lost}
+                    {t().analysis.lost}
                   </th>
                   <th
                     scope="col"
                     className="px-2 py-2 text-right"
-                    title={tr.analysis.avgScored[rules.unit]}
+                    title={t().analysis.avgScored[rules.unit]}
                   >
                     +/M
                   </th>
                   <th
                     scope="col"
                     className="px-2 py-2 text-right"
-                    title={tr.analysis.avgConceded[rules.unit]}
+                    title={t().analysis.avgConceded[rules.unit]}
                   >
                     −/M
                   </th>
                   <th scope="col" className="px-3 py-2 text-right">
-                    {tr.analysis.winPct}
+                    {t().analysis.winPct}
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y">
                 <SplitRow
-                  label={tr.analysis.overall}
+                  label={t().analysis.overall}
                   stats={analysis.overall}
                   rules={rules}
                 />
-                <SplitRow label={tr.analysis.home} stats={analysis.home} rules={rules} />
-                <SplitRow label={tr.analysis.away} stats={analysis.away} rules={rules} />
+                <SplitRow label={t().analysis.home} stats={analysis.home} rules={rules} />
+                <SplitRow label={t().analysis.away} stats={analysis.away} rules={rules} />
               </tbody>
             </table>
           </div>
           <p className="text-muted-foreground border-t px-3 py-2 text-xs">
-            +/M: {tr.analysis.avgScored[rules.unit]} · −/M:{" "}
-            {tr.analysis.avgConceded[rules.unit]}
+            +/M: {t().analysis.avgScored[rules.unit]} · −/M:{" "}
+            {t().analysis.avgConceded[rules.unit]}
             {rules.cleanSheets
-              ? ` · ${tr.analysis.cleanSheets}: ${analysis.overall.clean_sheets}`
+              ? ` · ${t().analysis.cleanSheets}: ${analysis.overall.clean_sheets}`
               : null}
           </p>
         </div>
@@ -252,8 +254,8 @@ export function HeadToHeadCard({
         {s.played ? (
           <span className="num text-sm font-semibold">
             {rules.draws
-              ? tr.analysis.h2hSummary(s.won, s.drawn, s.lost)
-              : `${s.won}G · ${s.lost}M`}{" "}
+              ? t().analysis.h2hSummary(s.won, s.drawn, s.lost)
+              : t().analysis.winLoss(s.won, s.lost)}{" "}
             <span className="text-muted-foreground font-normal">
               ({s.scored}-{s.conceded})
             </span>
@@ -267,7 +269,7 @@ export function HeadToHeadCard({
           ))}
         </ul>
       ) : (
-        <p className="text-muted-foreground px-3 py-4 text-sm">{tr.analysis.h2hEmpty}</p>
+        <p className="text-muted-foreground px-3 py-4 text-sm">{t().analysis.h2hEmpty}</p>
       )}
     </section>
   );

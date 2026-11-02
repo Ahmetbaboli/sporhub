@@ -1,6 +1,6 @@
 import { AlertTriangle, Inbox } from "lucide-react";
 import Link from "next/link";
-import { tr } from "@/lib/i18n/tr";
+import { type Messages, tr } from "@/lib/i18n/tr";
 import { cn } from "@/lib/utils";
 
 interface StateProps {
@@ -36,12 +36,15 @@ export function EmptyState(props: StateProps) {
   return <StateShell {...props} icon={<Inbox className="size-8" aria-hidden />} />;
 }
 
+/** Also rendered by the client error boundary, so labels come in as a prop (not t()). */
 export function ErrorState({
-  title = tr.states.errorTitle,
-  body = tr.states.errorBody,
+  labels = tr.states,
+  title = labels.errorTitle,
+  body = labels.errorBody,
   onRetry,
   className,
 }: {
+  labels?: Messages["states"];
   title?: string;
   body?: string;
   onRetry?: () => void;
@@ -61,11 +64,11 @@ export function ErrorState({
             onClick={onRetry}
             className="bg-primary text-primary-foreground mt-2 h-10 rounded-md px-4 text-sm font-medium"
           >
-            {tr.states.retry}
+            {labels.retry}
           </button>
         ) : (
           <Link href="/" className="text-primary mt-2 text-sm font-medium underline">
-            {tr.states.backHome}
+            {labels.backHome}
           </Link>
         )}
       </StateShell>

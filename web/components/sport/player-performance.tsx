@@ -1,6 +1,6 @@
 import { SeriesChart } from "@/components/charts/series-chart";
 import { api } from "@/lib/api";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import { driverPoints, driverPositions } from "@/lib/series";
 import type { Player, PlayerSeasonStats } from "@/lib/types";
 
@@ -25,7 +25,7 @@ const TILE_KEYS = [
 const DECIMAL_KEYS = new Set(["goals_per_match", "avg_finish"]);
 
 function StatTiles({ sheet }: { sheet: PlayerSeasonStats }) {
-  const labels = tr.compare.metrics as Record<string, string>;
+  const labels = t().compare.metrics as Record<string, string>;
   const tiles = TILE_KEYS.filter((k) => sheet.stats[k] !== undefined);
   return (
     <div className="bg-card overflow-hidden rounded-lg border">
@@ -66,7 +66,7 @@ export async function PlayerPerformance({ player }: { player: Player }) {
         id="season-stats"
         className="font-display text-primary text-2xl font-semibold uppercase"
       >
-        {tr.charts.seasonStats}
+        {t().charts.seasonStats}
       </h2>
       {stats.items.map((sheet) => (
         <StatTiles key={`${sheet.competition.id}-${sheet.season}`} sheet={sheet} />
@@ -74,19 +74,19 @@ export async function PlayerPerformance({ player }: { player: Player }) {
       {positions.length >= MIN_CHART_POINTS ? (
         <div className="grid gap-4 lg:grid-cols-2">
           <SeriesChart
-            title={tr.charts.positionTitle}
-            description={tr.charts.positionDescription}
+            title={t().charts.positionTitle}
+            description={t().charts.positionDescription}
             data={positions}
-            valueLabel={tr.charts.position}
-            xLabel={tr.charts.race}
+            valueLabel={t().charts.position}
+            xLabel={t().charts.race}
             format="position"
           />
           <SeriesChart
-            title={tr.charts.driverPointsTitle}
-            description={tr.charts.driverPointsDescription}
+            title={t().charts.driverPointsTitle}
+            description={t().charts.driverPointsDescription}
             data={points}
-            valueLabel={tr.charts.points}
-            xLabel={tr.charts.race}
+            valueLabel={t().charts.points}
+            xLabel={t().charts.race}
           />
         </div>
       ) : null}

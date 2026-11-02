@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useOptimistic, useState, useTransition } from "react";
 import { setFavorite } from "@/app/actions/account";
-import { tr } from "@/lib/i18n/tr";
+import { useT } from "@/lib/i18n/client";
 import type { FavoriteKind } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +20,7 @@ export function FavoriteButton({
   name: string;
   initial: boolean;
 }) {
+  const tr = useT();
   const router = useRouter();
   const [saved, setSaved] = useState(initial);
   const [shown, setShown] = useOptimistic(saved);

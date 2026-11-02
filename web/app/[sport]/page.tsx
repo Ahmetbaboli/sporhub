@@ -9,7 +9,7 @@ import { EmptyState } from "@/components/ui/states";
 import { api } from "@/lib/api";
 import { orNotFound } from "@/lib/api-helpers";
 import { sportLabel } from "@/lib/events";
-import { tr } from "@/lib/i18n/tr";
+import { initLocale, t } from "@/lib/i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -18,11 +18,13 @@ const UPCOMING_PER_COMPETITION = 4;
 type Props = { params: Promise<{ sport: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  await initLocale();
   const { sport } = await params;
   return { title: sportLabel(sport) };
 }
 
 export default async function SportPage({ params }: Props) {
+  await initLocale();
   const { sport } = await params;
   // Existence is checked before anything streams so an unknown sport is a real HTTP 404.
   const sports = await api.sports();
@@ -39,13 +41,13 @@ export default async function SportPage({ params }: Props) {
       {competitions.length === 0 ? (
         <EmptyState
           className="mt-6"
-          title={tr.sports.comingSoon}
-          body={tr.sports.comingSoonBody}
+          title={t().sports.comingSoon}
+          body={t().sports.comingSoonBody}
         />
       ) : (
         <>
           <h2 className="font-display text-primary mt-6 mb-3 text-2xl font-semibold uppercase">
-            {tr.sport.competitions}
+            {t().sport.competitions}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {competitions.map((c) => (
@@ -67,7 +69,7 @@ export default async function SportPage({ params }: Props) {
           </ul>
 
           <h2 className="font-display text-primary mt-8 mb-3 text-2xl font-semibold uppercase">
-            {tr.sport.upcoming}
+            {t().sport.upcoming}
           </h2>
           <Suspense fallback={<EventCardsSkeleton />}>
             <Upcoming competitions={competitions} />
@@ -95,7 +97,7 @@ async function Upcoming({
     })),
   );
   const nonEmpty = upcoming.filter((u) => u.events.length > 0);
-  if (nonEmpty.length === 0) return <EmptyState title={tr.sport.noUpcoming} />;
+  if (nonEmpty.length === 0) return <EmptyState title={t().sport.noUpcoming} />;
   return (
     <div className="space-y-4">
       {nonEmpty.map(({ competition, events }) => (

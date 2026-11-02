@@ -23,11 +23,14 @@ import {
   sharedEntry,
   teamMetrics,
 } from "@/lib/compare";
-import { tr } from "@/lib/i18n/tr";
+import { initLocale, t } from "@/lib/i18n";
 import { templateFor } from "@/lib/sports";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: tr.compare.title };
+export async function generateMetadata(): Promise<Metadata> {
+  await initLocale();
+  return { title: t().compare.title };
+}
 
 const MIN_QUERY_LENGTH = 2;
 const SUGGESTION_LIMIT = 20;
@@ -76,6 +79,7 @@ async function loadSide(type: CompareSelection["type"], id: number): Promise<Loa
 }
 
 export default async function ComparePage({ searchParams }: Props) {
+  await initLocale();
   const params = await searchParams;
   const selection: CompareSelection = {
     type: parseCompareType(params.type),
@@ -89,7 +93,7 @@ export default async function ComparePage({ searchParams }: Props) {
   return (
     <>
       <h1 className="font-display mb-4 text-4xl font-bold tracking-tight uppercase">
-        {tr.compare.title}
+        {t().compare.title}
       </h1>
       <TypeSwitch active={selection.type} />
       {a && b ? (
@@ -109,8 +113,8 @@ async function Picker({
   a: Loaded | null;
 }) {
   const heading = a
-    ? tr.compare.pickSecond(a.side.name)
-    : tr.compare.pickFirst[selection.type];
+    ? t().compare.pickSecond(a.side.name)
+    : t().compare.pickFirst[selection.type];
   const hrefFor = (id: number) =>
     compareHref(
       a ? { type: selection.type, a: a.side.id, b: id } : { type: selection.type, a: id },
@@ -168,7 +172,7 @@ async function SearchResultsList({
             team: p.team,
             detail: p.team?.name ?? null,
           }));
-  return <PickList title={tr.compare.results} items={items} hrefFor={hrefFor} />;
+  return <PickList title={t().compare.results} items={items} hrefFor={hrefFor} />;
 }
 
 /** Same-table rivals (league/championship), or teammates when there is no shared table. */
@@ -205,7 +209,7 @@ async function Suggestions({
   }
   return (
     <PickList
-      title={tr.compare.suggestions}
+      title={t().compare.suggestions}
       items={items.slice(0, SUGGESTION_LIMIT)}
       hrefFor={hrefFor}
     />
@@ -221,9 +225,9 @@ function Comparison({
   a: Loaded;
   b: Loaded;
 }) {
-  if (a.side.id === b.side.id) return <EmptyState title={tr.compare.sameEntity} />;
+  if (a.side.id === b.side.id) return <EmptyState title={t().compare.sameEntity} />;
   if (a.sport && b.sport && a.sport !== b.sport) {
-    return <EmptyState title={tr.compare.differentSports} />;
+    return <EmptyState title={t().compare.differentSports} />;
   }
   return (
     <>
@@ -260,7 +264,7 @@ async function TeamComparison({ a, b }: { a: Loaded; b: Loaded }) {
       {analysisA?.form.length || analysisB?.form.length ? (
         <section className="bg-card mt-4 rounded-lg border p-3">
           <h2 className="text-muted-foreground mb-2 text-center text-xs font-semibold uppercase">
-            {tr.compare.formTitle}
+            {t().compare.formTitle}
           </h2>
           <div className="flex flex-wrap justify-between gap-3">
             <FormStrip form={analysisA?.form ?? []} />
@@ -269,7 +273,7 @@ async function TeamComparison({ a, b }: { a: Loaded; b: Loaded }) {
         </section>
       ) : null}
       {h2h && rules ? (
-        <HeadToHeadCard h2h={h2h} rules={rules} title={tr.analysis.h2hTitle} />
+        <HeadToHeadCard h2h={h2h} rules={rules} title={t().analysis.h2hTitle} />
       ) : null}
     </>
   );
@@ -293,7 +297,7 @@ async function PlayerComparison({ a, b }: { a: Loaded; b: Loaded }) {
     <>
       {season ? (
         <p className="text-muted-foreground mt-4 text-center text-xs">
-          {season.competition.name} · {tr.compare.season} {season.season}
+          {season.competition.name} · {t().compare.season} {season.season}
         </p>
       ) : null}
       <MetricList metrics={metrics} />

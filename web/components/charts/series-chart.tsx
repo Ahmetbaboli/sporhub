@@ -9,7 +9,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { tr } from "@/lib/i18n/tr";
+import { useT } from "@/lib/i18n/client";
 import { positionTicks, type SeriesPoint } from "@/lib/series";
 
 const HEIGHT = 220;
@@ -67,6 +67,7 @@ export function SeriesChart({
   xLabel: string;
   format?: ValueFormat;
 }) {
+  const tr = useT();
   const reversed = format === "position";
   const max = Math.max(...data.map((d) => d.value), 1);
   return (

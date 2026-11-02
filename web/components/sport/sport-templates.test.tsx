@@ -1,3 +1,5 @@
+import { en } from "@/lib/i18n/en";
+import { tr } from "@/lib/i18n/tr";
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { ChampionshipTables } from "@/components/sport/championship-tables";
@@ -61,7 +63,8 @@ describe("templateFor", () => {
     expect(templateFor("football").standings).toBe("league");
     expect(templateFor("basketball").standings).toBe("conference");
     expect(templateFor("formula-1").standings).toBe("championship");
-    expect(templateFor("formula-1").tabs.standings).toBe("Şampiyona");
+    expect(templateFor("formula-1").tabs(tr).standings).toBe("Şampiyona");
+    expect(templateFor("formula-1").tabs(en).standings).toBe("Championship");
     expect(templateFor("unknown-sport").standings).toBe("league");
   });
 });

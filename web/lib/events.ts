@@ -1,5 +1,6 @@
 import { dayKey } from "@/lib/format";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
+import type { Messages } from "@/lib/i18n/tr";
 import type { Competition, Participant, Player, SportEvent } from "@/lib/types";
 
 export interface CompetitionGroup {
@@ -49,7 +50,7 @@ export function sideOf(
 }
 
 export function sportLabel(slug: string): string {
-  return (tr.sports as Record<string, string>)[slug] ?? slug;
+  return (t().sports as Record<string, string>)[slug] ?? slug;
 }
 
 /** Splits a team's events into recent results (newest first) and upcoming (soonest first). */
@@ -67,7 +68,7 @@ export function splitTeamEvents(events: SportEvent[], limit = 5) {
   return { recent, upcoming };
 }
 
-export type PositionGroup = keyof typeof tr.team.positions;
+export type PositionGroup = keyof Messages["team"]["positions"];
 
 const BASKETBALL_POSITION = /^[gfc](-[gfc])?$/; // balldontlie: "G", "F-C", "G-F", ...
 const BASKETBALL_GROUPS = { g: "guard", f: "forward", c: "center" } as const;

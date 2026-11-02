@@ -3,11 +3,14 @@ import { redirect } from "next/navigation";
 import { signInWith } from "@/app/actions/account";
 import { EmptyState } from "@/components/ui/states";
 import { enabledProviders, type ProviderId } from "@/lib/auth-config";
-import { tr } from "@/lib/i18n/tr";
+import { initLocale, t } from "@/lib/i18n";
 import { authEnabled, getViewer } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: tr.account.signIn };
+export async function generateMetadata(): Promise<Metadata> {
+  await initLocale();
+  return { title: t().account.signIn };
+}
 
 const OAUTH_LABELS: Partial<Record<ProviderId, string>> = {
   github: "GitHub",
@@ -20,17 +23,18 @@ const BUTTON =
 type Props = { searchParams: Promise<{ callbackUrl?: string }> };
 
 export default async function SignInPage({ searchParams }: Props) {
+  await initLocale();
   const { callbackUrl = "/me" } = await searchParams;
-  if (!authEnabled()) return <EmptyState title={tr.account.unavailable} />;
+  if (!authEnabled()) return <EmptyState title={t().account.unavailable} />;
   if (await getViewer()) redirect("/me");
 
   const providers = enabledProviders(process.env);
   return (
     <div className="mx-auto max-w-sm py-8">
       <h1 className="font-display text-4xl font-bold tracking-tight uppercase">
-        {tr.account.signInTitle}
+        {t().account.signInTitle}
       </h1>
-      <p className="text-muted-foreground mt-2 mb-6 text-sm">{tr.account.signInBody}</p>
+      <p className="text-muted-foreground mt-2 mb-6 text-sm">{t().account.signInBody}</p>
       <div className="space-y-3">
         {providers.map((provider) => {
           const label = OAUTH_LABELS[provider];
@@ -43,12 +47,12 @@ export default async function SignInPage({ searchParams }: Props) {
               <input type="hidden" name="callbackUrl" value={callbackUrl} />
               {label ? (
                 <button type="submit" className={BUTTON}>
-                  {tr.account.continueWith(label)}
+                  {t().account.continueWith(label)}
                 </button>
               ) : (
                 <fieldset className="space-y-2 rounded-md border border-dashed p-3">
                   <label htmlFor="dev-name" className="block text-xs font-medium">
-                    {tr.account.devName}
+                    {t().account.devName}
                   </label>
                   <input
                     id="dev-name"
@@ -58,7 +62,7 @@ export default async function SignInPage({ searchParams }: Props) {
                     className="bg-background h-10 w-full rounded-md border px-3 text-sm"
                   />
                   <button type="submit" className={BUTTON}>
-                    {tr.account.devSubmit}
+                    {t().account.devSubmit}
                   </button>
                 </fieldset>
               )}

@@ -1,7 +1,7 @@
 import { LogIn, LogOut, UserRound } from "lucide-react";
 import Link from "next/link";
 import { signOutAction } from "@/app/actions/account";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import { authEnabled, getViewer } from "@/lib/session";
 
 const ICON_BUTTON =
@@ -18,12 +18,12 @@ export async function UserMenu() {
         className="hover:bg-muted inline-flex h-10 items-center gap-1.5 rounded-md px-3 text-sm font-medium"
       >
         <LogIn className="size-4" aria-hidden />
-        {tr.account.signIn}
+        {t().account.signIn}
       </Link>
     );
   }
   return (
-    <nav aria-label={tr.account.menu} className="flex items-center">
+    <nav aria-label={t().account.menu} className="flex items-center">
       <Link
         href="/me"
         className="hover:bg-muted inline-flex h-10 items-center gap-2 rounded-md px-2 text-sm font-medium"
@@ -34,14 +34,14 @@ export async function UserMenu() {
         ) : (
           <UserRound className="size-5" aria-hidden />
         )}
-        <span className="hidden sm:inline">{tr.account.myPage}</span>
+        <span className="hidden sm:inline">{t().account.myPage}</span>
       </Link>
       <form action={signOutAction}>
         <button
           type="submit"
           className={ICON_BUTTON}
-          aria-label={tr.account.signOut}
-          title={tr.account.signOut}
+          aria-label={t().account.signOut}
+          title={t().account.signOut}
         >
           <LogOut className="size-5" aria-hidden />
         </button>

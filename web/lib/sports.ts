@@ -1,5 +1,5 @@
 import { Flag, Goal, CircleDot, Trophy, type LucideIcon } from "lucide-react";
-import { tr } from "@/lib/i18n/tr";
+import type { Messages } from "@/lib/i18n/tr";
 
 /**
  * Per-sport presentation rules. The API returns the same shapes for every sport; this table
@@ -11,7 +11,8 @@ export type StandingsLayout = "league" | "conference" | "championship";
 export interface SportTemplate {
   icon: LucideIcon;
   standings: StandingsLayout;
-  tabs: { fixtures: string; results: string; standings: string; stats: string };
+  /** Tab labels picked from the active language's messages (resolved at render time). */
+  tabs: (m: Messages) => Messages["competition"]["tabs"];
   /** Events per page on the fixtures/results tabs (race cards are tall, so fewer). */
   pageSize: number;
   /** How team form/analysis is shown; null = sport has no two-sided matches (races). */
@@ -21,7 +22,7 @@ export interface SportTemplate {
 const DEFAULT_TEMPLATE: SportTemplate = {
   icon: Trophy,
   standings: "league",
-  tabs: tr.competition.tabs,
+  tabs: (m) => m.competition.tabs,
   pageSize: 20,
   analysis: { draws: true, cleanSheets: true, unit: "goals" },
 };
@@ -31,14 +32,14 @@ const TEMPLATES: Record<string, SportTemplate> = {
   basketball: {
     icon: CircleDot,
     standings: "conference",
-    tabs: tr.competition.tabsBySport.basketball,
+    tabs: (m) => m.competition.tabsBySport.basketball,
     pageSize: 20,
     analysis: { draws: false, cleanSheets: false, unit: "points" },
   },
   "formula-1": {
     icon: Flag,
     standings: "championship",
-    tabs: tr.competition.tabsBySport["formula-1"],
+    tabs: (m) => m.competition.tabsBySport["formula-1"],
     pageSize: 6,
     analysis: null,
   },

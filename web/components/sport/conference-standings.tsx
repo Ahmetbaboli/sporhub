@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { TeamBadge } from "@/components/sport/team-badge";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { Standing } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -46,12 +46,12 @@ export function ConferenceStandings({ rows }: { rows: Standing[] }) {
   return (
     <div className="grid gap-8 lg:grid-cols-2">
       {CONFERENCES.map((conference) => {
-        const title = tr.conference[conference];
+        const title = t().conference[conference];
         const table = rows
           .filter((r) => conferenceOf(r) === conference)
           .sort((a, b) => rankOf(a) - rankOf(b));
         return (
-          <section key={conference} aria-label={tr.conference.caption(title)}>
+          <section key={conference} aria-label={t().conference.caption(title)}>
             <h2 className="font-display text-primary mb-2 text-2xl font-semibold uppercase">
               {title}
             </h2>
@@ -59,32 +59,32 @@ export function ConferenceStandings({ rows }: { rows: Standing[] }) {
               className="bg-card overflow-x-auto rounded-lg border"
               tabIndex={0}
               role="region"
-              aria-label={tr.conference.caption(title)}
+              aria-label={t().conference.caption(title)}
             >
               <table className="num w-full min-w-[24rem] border-collapse text-sm">
-                <caption className="sr-only">{tr.conference.caption(title)}</caption>
+                <caption className="sr-only">{t().conference.caption(title)}</caption>
                 <thead className="bg-muted/60 text-muted-foreground text-xs uppercase">
                   <tr>
                     <th scope="col" className={cn(TH, "w-10 text-center")}>
                       #
                     </th>
                     <th scope="col" className={cn(TH, "text-left")}>
-                      {tr.standings.team}
+                      {t().standings.team}
                     </th>
                     <th scope="col" className={cn(TH, "text-right")}>
-                      {tr.standings.played}
+                      {t().standings.played}
                     </th>
                     <th scope="col" className={cn(TH, "text-right")}>
-                      {tr.standings.won}
+                      {t().standings.won}
                     </th>
                     <th scope="col" className={cn(TH, "text-right")}>
-                      {tr.standings.lost}
+                      {t().standings.lost}
                     </th>
                     <th scope="col" className={cn(TH, "text-right")}>
-                      {tr.conference.winPct}
+                      {t().conference.winPct}
                     </th>
                     <th scope="col" className={cn(TH, "text-left")}>
-                      {tr.conference.form}
+                      {t().conference.form}
                     </th>
                   </tr>
                 </thead>
@@ -123,7 +123,7 @@ export function ConferenceStandings({ rows }: { rows: Standing[] }) {
         );
       })}
       <p className="text-muted-foreground text-xs lg:col-span-2">
-        {tr.conference.legend}
+        {t().conference.legend}
       </p>
     </div>
   );

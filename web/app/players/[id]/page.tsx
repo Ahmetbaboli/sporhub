@@ -9,44 +9,48 @@ import { TeamBadge } from "@/components/sport/team-badge";
 import { api } from "@/lib/api";
 import { orNotFound, parseId } from "@/lib/api-helpers";
 import { formatDate } from "@/lib/format";
-import { tr } from "@/lib/i18n/tr";
+import { initLocale, intlLocale, t } from "@/lib/i18n";
+import type { Messages } from "@/lib/i18n/tr";
 
 export const dynamic = "force-dynamic";
 
 type Props = { params: Promise<{ id: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  await initLocale();
   const { id } = await params;
   const player = await api.player(parseId(id)).catch(() => null);
-  return { title: player?.name ?? tr.app.name };
+  return { title: player?.name ?? t().app.name };
 }
 
 /** Sport-specific profile facts stored in `player.extra` (shown only when present). */
-const SPORT_FACTS: [string, string][] = [
-  ["number", tr.player.number], // F1 permanent number
-  ["code", tr.player.code], // F1 three-letter code
-  ["jersey_number", tr.player.number], // basketball
-  ["height", tr.player.height],
-  ["weight", tr.player.weight],
+const SPORT_FACTS: [string, keyof Messages["player"]][] = [
+  ["number", "number"], // F1 permanent number
+  ["code", "code"], // F1 three-letter code
+  ["jersey_number", "number"], // basketball
+  ["height", "height"],
+  ["weight", "weight"],
 ];
 
 export default async function PlayerPage({ params }: Props) {
+  await initLocale();
   const player = await orNotFound(api.player(parseId((await params).id)));
   const birth =
     typeof player.extra.date_of_birth === "string" ? player.extra.date_of_birth : null;
 
   const facts: [string, React.ReactNode][] = [
-    [tr.player.position, player.position ?? tr.player.unknown],
-    [tr.player.nationality, player.nationality ?? tr.player.unknown],
-    [tr.player.birthDate, birth ? formatDate(birth) : tr.player.unknown],
-    ...SPORT_FACTS.flatMap(([key, label]): [string, React.ReactNode][] => {
+    [t().player.position, player.position ?? t().player.unknown],
+    [t().player.nationality, player.nationality ?? t().player.unknown],
+    [t().player.birthDate, birth ? formatDate(birth, intlLocale()) : t().player.unknown],
+    ...SPORT_FACTS.flatMap(([key, labelKey]): [string, React.ReactNode][] => {
+      const label = t().player[labelKey];
       const value = player.extra[key];
       return typeof value === "string" || typeof value === "number"
         ? [[label, String(value)]]
         : [];
     }),
     [
-      tr.player.team,
+      t().player.team,
       player.team ? (
         <Link
           href={`/teams/${player.team.id}`}
@@ -56,7 +60,7 @@ export default async function PlayerPage({ params }: Props) {
           {player.team.name}
         </Link>
       ) : (
-        tr.player.unknown
+        t().player.unknown
       ),
     ],
   ];

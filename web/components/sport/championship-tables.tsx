@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { TeamBadge } from "@/components/sport/team-badge";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { Standing } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -41,23 +41,23 @@ export function ChampionshipTables({ rows }: { rows: Standing[] }) {
   const constructors = rows.filter((r) => !r.player && r.team);
   return (
     <div className="space-y-8">
-      <Table caption={tr.championship.drivers} className="min-w-[28rem]">
+      <Table caption={t().championship.drivers} className="min-w-[28rem]">
         <thead className="bg-muted/60 text-muted-foreground text-xs uppercase">
           <tr>
             <th scope="col" className={cn(TH, "w-10 text-center")}>
               #
             </th>
             <th scope="col" className={cn(TH, "text-left")}>
-              {tr.championship.driver}
+              {t().championship.driver}
             </th>
             <th scope="col" className={cn(TH, "text-left")}>
-              {tr.championship.team}
+              {t().championship.team}
             </th>
             <th scope="col" className={cn(TH, "text-right")}>
-              {tr.championship.wins}
+              {t().championship.wins}
             </th>
             <th scope="col" className={cn(TH, "text-right")}>
-              {tr.championship.points}
+              {t().championship.points}
             </th>
           </tr>
         </thead>
@@ -86,20 +86,20 @@ export function ChampionshipTables({ rows }: { rows: Standing[] }) {
         </tbody>
       </Table>
 
-      <Table caption={tr.championship.constructors} className="min-w-[22rem]">
+      <Table caption={t().championship.constructors} className="min-w-[22rem]">
         <thead className="bg-muted/60 text-muted-foreground text-xs uppercase">
           <tr>
             <th scope="col" className={cn(TH, "w-10 text-center")}>
               #
             </th>
             <th scope="col" className={cn(TH, "text-left")}>
-              {tr.championship.team}
+              {t().championship.team}
             </th>
             <th scope="col" className={cn(TH, "text-right")}>
-              {tr.championship.wins}
+              {t().championship.wins}
             </th>
             <th scope="col" className={cn(TH, "text-right")}>
-              {tr.championship.points}
+              {t().championship.points}
             </th>
           </tr>
         </thead>
@@ -122,7 +122,7 @@ export function ChampionshipTables({ rows }: { rows: Standing[] }) {
           ))}
         </tbody>
       </Table>
-      <p className="text-muted-foreground text-xs">{tr.championship.legend}</p>
+      <p className="text-muted-foreground text-xs">{t().championship.legend}</p>
     </div>
   );
 }

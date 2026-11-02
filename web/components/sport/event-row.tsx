@@ -3,7 +3,7 @@ import { LocalTime } from "@/components/sport/local-time";
 import { StatusBadge } from "@/components/sport/status-badge";
 import { TeamBadge } from "@/components/sport/team-badge";
 import { sideOf } from "@/lib/events";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { Participant, SportEvent } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -85,7 +85,7 @@ export function EventRow({
         {event.status !== "scheduled" ? <StatusBadge status={event.status} /> : null}
         {showRound && event.round ? (
           <span>
-            {tr.competition.round} {event.round}
+            {t().competition.round} {event.round}
           </span>
         ) : null}
       </div>

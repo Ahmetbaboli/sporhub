@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { TeamBadge } from "@/components/sport/team-badge";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { Standing } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -49,14 +49,14 @@ export function StandingsTable({ rows }: { rows: Standing[] }) {
       className="bg-card overflow-x-auto rounded-lg border"
       tabIndex={0}
       role="region"
-      aria-label={tr.standings.caption}
+      aria-label={t().standings.caption}
     >
       <table className="num w-full min-w-[34rem] border-collapse text-sm">
-        <caption className="sr-only">{tr.standings.caption}</caption>
+        <caption className="sr-only">{t().standings.caption}</caption>
         <thead className="bg-muted/60 text-muted-foreground text-xs uppercase">
           <tr>
             <th scope="col" className="w-10 px-2 py-2 text-center font-semibold">
-              <abbr title={tr.standings.position} className="no-underline">
+              <abbr title={t().standings.position} className="no-underline">
                 #
               </abbr>
             </th>
@@ -64,31 +64,31 @@ export function StandingsTable({ rows }: { rows: Standing[] }) {
               scope="col"
               className="bg-muted sticky left-0 px-2 py-2 text-left font-semibold"
             >
-              {tr.standings.team}
+              {t().standings.team}
             </th>
             <th scope="col" className={HEAD}>
-              {tr.standings.played}
+              {t().standings.played}
             </th>
             <th scope="col" className={HEAD}>
-              {tr.standings.won}
+              {t().standings.won}
             </th>
             <th scope="col" className={HEAD}>
-              {tr.standings.drawn}
+              {t().standings.drawn}
             </th>
             <th scope="col" className={HEAD}>
-              {tr.standings.lost}
+              {t().standings.lost}
             </th>
             <th scope="col" className={HEAD}>
-              {tr.standings.goalsFor}:{tr.standings.goalsAgainst}
+              {t().standings.goalsFor}:{t().standings.goalsAgainst}
             </th>
             <th scope="col" className={HEAD}>
-              {tr.standings.goalDifference}
+              {t().standings.goalDifference}
             </th>
             <th scope="col" className={cn(HEAD, "text-foreground")}>
-              {tr.standings.points}
+              {t().standings.points}
             </th>
             <th scope="col" className="px-2 py-2 text-left font-semibold">
-              {tr.standings.form}
+              {t().standings.form}
             </th>
           </tr>
         </thead>
@@ -141,7 +141,7 @@ export function StandingsTable({ rows }: { rows: Standing[] }) {
         </tbody>
       </table>
       <p className="text-muted-foreground border-t px-3 py-2 text-xs">
-        {tr.standings.legend}
+        {t().standings.legend}
       </p>
     </div>
   );

@@ -1,6 +1,7 @@
 /**
- * All user-facing strings live here so a TR/EN switch (next-intl, Stage 4) only has to
- * replace this one module. Keep keys grouped by screen.
+ * Turkish UI strings (the source of truth for keys). en.ts must have the same shape; the
+ * `Messages` type enforces it. Read them through `t()` (server) or `useT()` (client),
+ * never by importing this object directly in components. Keep keys grouped by screen.
  */
 export const tr = {
   app: {
@@ -20,7 +21,9 @@ export const tr = {
     themeLight: "Açık tema",
     themeDark: "Koyu tema",
     palette: "Renk paleti",
+    language: "Dil",
   },
+  languages: { tr: "Türkçe", en: "English" },
   palettes: {
     pitch: "Çim yeşili",
     ocean: "Okyanus",
@@ -188,6 +191,7 @@ export const tr = {
     h2hNext: (name: string) => `Sıradaki rakip: ${name}`,
     h2hEmpty: "Bu iki takım arasında oynanmış maç yok.",
     h2hSummary: (w: number, d: number, l: number) => `${w}G · ${d}B · ${l}M`,
+    winLoss: (w: number, l: number) => `${w}G · ${l}M`,
     noData: "Analiz için yeterli maç yok.",
   },
   stats: {
@@ -372,5 +376,11 @@ export const tr = {
   },
 } as const;
 
-export type Messages = typeof tr;
-export const t = tr;
+/** Same keys and function signatures, any string values (so en.ts can differ). */
+type Widen<T> = T extends string
+  ? string
+  : T extends (...args: infer A) => string
+    ? (...args: A) => string
+    : { readonly [K in keyof T]: Widen<T[K]> };
+
+export type Messages = Widen<typeof tr>;

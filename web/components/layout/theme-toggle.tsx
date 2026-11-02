@@ -3,11 +3,12 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useSyncExternalStore } from "react";
-import { tr } from "@/lib/i18n/tr";
+import { useT } from "@/lib/i18n/client";
 
 const subscribe = () => () => {};
 
 export function ThemeToggle() {
+  const tr = useT();
   const { resolvedTheme, setTheme } = useTheme();
   // Avoid a hydration mismatch: the real theme is only known on the client.
   const mounted = useSyncExternalStore(

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { EventItem } from "@/components/sport/event-item";
 import { groupByDay } from "@/lib/events";
 import { formatDay } from "@/lib/format";
+import { intlLocale } from "@/lib/i18n";
 import type { Competition, SportEvent } from "@/lib/types";
 
 /** A titled card holding event rows (used per competition). */
@@ -56,7 +57,7 @@ export function DayGroupedEvents({ events }: { events: SportEvent[] }) {
       {groupByDay(events).map(({ day, events: dayEvents }) => (
         <EventCard
           key={day}
-          title={formatDay(day)}
+          title={formatDay(day, undefined, intlLocale())}
           events={dayEvents}
           showRound
           heading="h2"

@@ -6,7 +6,7 @@ import {
   formatMetric,
   winner,
 } from "@/lib/compare";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { Team } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -30,7 +30,7 @@ export function compareHref({ type, a, b, q }: CompareSelection): string {
 export function TypeSwitch({ active }: { active: CompareType }) {
   const types: CompareType[] = ["teams", "players"];
   return (
-    <nav aria-label={tr.compare.typeLabel} className="mb-6 flex gap-1">
+    <nav aria-label={t().compare.typeLabel} className="mb-6 flex gap-1">
       {types.map((type) => (
         <Link
           key={type}
@@ -43,7 +43,7 @@ export function TypeSwitch({ active }: { active: CompareType }) {
               : "bg-card hover:bg-muted",
           )}
         >
-          {tr.compare[type]}
+          {t().compare[type]}
         </Link>
       ))}
     </nav>
@@ -89,7 +89,7 @@ export function PickList({
           ))}
         </ul>
       ) : (
-        <p className="text-muted-foreground px-3 py-4 text-sm">{tr.compare.noResults}</p>
+        <p className="text-muted-foreground px-3 py-4 text-sm">{t().compare.noResults}</p>
       )}
     </section>
   );
@@ -101,7 +101,7 @@ export function SearchBox({ selection }: { selection: CompareSelection }) {
       <input type="hidden" name="type" value={selection.type} />
       {selection.a ? <input type="hidden" name="a" value={selection.a} /> : null}
       <label htmlFor="compare-q" className="sr-only">
-        {tr.compare.searchLabel}
+        {t().compare.searchLabel}
       </label>
       <input
         id="compare-q"
@@ -109,14 +109,14 @@ export function SearchBox({ selection }: { selection: CompareSelection }) {
         type="search"
         minLength={2}
         defaultValue={selection.q}
-        placeholder={tr.compare.searchPlaceholder[selection.type]}
+        placeholder={t().compare.searchPlaceholder[selection.type]}
         className="bg-card h-10 flex-1 rounded-md border px-3 text-sm"
       />
       <button
         type="submit"
         className="bg-primary text-primary-foreground h-10 rounded-md px-4 text-sm font-semibold"
       >
-        {tr.compare.searchLabel}
+        {t().compare.searchLabel}
       </button>
     </form>
   );
@@ -161,7 +161,7 @@ export function Contenders({
         href={compareHref(clear)}
         className="text-primary text-xs font-medium underline"
       >
-        {tr.compare.change}
+        {t().compare.change}
       </Link>
     </div>
   );
@@ -172,7 +172,7 @@ export function Contenders({
         href={compareHref({ type: selection.type, a: b.id, b: a.id })}
         className="text-muted-foreground hover:bg-muted mt-6 shrink-0 rounded-md border px-2 py-1 text-xs"
       >
-        {tr.compare.swap}
+        {t().compare.swap}
       </Link>
       {card(b, { type: selection.type, a: a.id }, "right")}
     </div>
@@ -233,7 +233,7 @@ function MetricRow({ metric }: { metric: CompareMetric }) {
 
 export function MetricList({ metrics }: { metrics: CompareMetric[] }) {
   if (metrics.length === 0) {
-    return <p className="text-muted-foreground mt-4 text-sm">{tr.compare.noStats}</p>;
+    return <p className="text-muted-foreground mt-4 text-sm">{t().compare.noStats}</p>;
   }
   return (
     <ul className="bg-card mt-4 divide-y rounded-lg border">

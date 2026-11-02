@@ -2,7 +2,7 @@
 
 import { Check, Palette as PaletteIcon } from "lucide-react";
 import { useRef, useSyncExternalStore } from "react";
-import { tr } from "@/lib/i18n/tr";
+import { useT } from "@/lib/i18n/client";
 import {
   DEFAULT_PALETTE,
   PALETTE_STORAGE_KEY,
@@ -37,6 +37,7 @@ function apply(palette: Palette) {
 }
 
 export function PalettePicker() {
+  const tr = useT();
   const active = useSyncExternalStore(subscribe, current, () => DEFAULT_PALETTE);
   const details = useRef<HTMLDetailsElement>(null);
 

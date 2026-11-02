@@ -2,7 +2,7 @@ import Link from "next/link";
 import { EventItem } from "@/components/sport/event-item";
 import { TeamBadge } from "@/components/sport/team-badge";
 import { EmptyState } from "@/components/ui/states";
-import { tr } from "@/lib/i18n/tr";
+import { t } from "@/lib/i18n";
 import type { SportTemplate } from "@/lib/sports";
 import type {
   CompetitionStats,
@@ -24,7 +24,7 @@ const CARD_TITLE =
 const SECTION_TITLE = "font-display text-primary mb-3 text-2xl font-semibold uppercase";
 
 export function boardTitle(key: string, unit: Unit): string {
-  const label = (tr.stats.boards as Record<string, string | Record<Unit, string>>)[key];
+  const label = (t().stats.boards as Record<string, string | Record<Unit, string>>)[key];
   if (label === undefined) return key;
   return typeof label === "string" ? label : label[unit];
 }
@@ -51,20 +51,20 @@ function Stat({ label, value }: { label: string; value: string | number }) {
 function MatchSummaryCard({ summary, unit }: { summary: MatchSummary; unit: Unit }) {
   return (
     <div className={CARD}>
-      <h3 className={CARD_TITLE}>{tr.stats.summary}</h3>
+      <h3 className={CARD_TITLE}>{t().stats.summary}</h3>
       <dl className="grid grid-cols-3 divide-x border-b">
-        <Stat label={tr.stats.matches} value={summary.played} />
-        <Stat label={tr.stats.total[unit]} value={summary.total_scored} />
-        <Stat label={tr.stats.perMatch[unit]} value={summary.avg_per_match.toFixed(2)} />
+        <Stat label={t().stats.matches} value={summary.played} />
+        <Stat label={t().stats.total[unit]} value={summary.total_scored} />
+        <Stat label={t().stats.perMatch[unit]} value={summary.avg_per_match.toFixed(2)} />
       </dl>
       <OutcomeBar summary={summary} />
       <ul className="divide-y border-t">
         {summary.biggest_win ? (
-          <SummaryEvent label={tr.stats.biggestWin} event={summary.biggest_win} />
+          <SummaryEvent label={t().stats.biggestWin} event={summary.biggest_win} />
         ) : null}
         {summary.highest_scoring ? (
           <SummaryEvent
-            label={tr.stats.highestScoring[unit]}
+            label={t().stats.highestScoring[unit]}
             event={summary.highest_scoring}
           />
         ) : null}
@@ -95,13 +95,13 @@ function SummaryEvent({
 /** Home win / draw / away win shares as one stacked bar with a text legend. */
 function OutcomeBar({ summary }: { summary: MatchSummary }) {
   const parts = [
-    { label: tr.stats.homeWin, value: summary.home_win_pct, className: "bg-primary" },
+    { label: t().stats.homeWin, value: summary.home_win_pct, className: "bg-primary" },
     {
-      label: tr.stats.draw,
+      label: t().stats.draw,
       value: summary.draw_pct,
       className: "bg-muted-foreground/40",
     },
-    { label: tr.stats.awayWin, value: summary.away_win_pct, className: "bg-accent" },
+    { label: t().stats.awayWin, value: summary.away_win_pct, className: "bg-accent" },
   ].filter((p) => p.value > 0);
   return (
     <div className="space-y-2 px-3 py-3">
@@ -130,12 +130,12 @@ function OutcomeBar({ summary }: { summary: MatchSummary }) {
 function RaceSummaryCard({ summary }: { summary: RaceSummary }) {
   return (
     <div className={CARD}>
-      <h3 className={CARD_TITLE}>{tr.stats.summary}</h3>
+      <h3 className={CARD_TITLE}>{t().stats.summary}</h3>
       <dl className="grid grid-cols-2 divide-x divide-y sm:grid-cols-4 sm:divide-y-0">
-        <Stat label={tr.stats.races} value={summary.completed} />
-        <Stat label={tr.stats.racesLeft} value={summary.scheduled} />
-        <Stat label={tr.stats.winners} value={summary.distinct_winners} />
-        <Stat label={tr.stats.poleToWin} value={summary.pole_to_win} />
+        <Stat label={t().stats.races} value={summary.completed} />
+        <Stat label={t().stats.racesLeft} value={summary.scheduled} />
+        <Stat label={t().stats.winners} value={summary.distinct_winners} />
+        <Stat label={t().stats.poleToWin} value={summary.pole_to_win} />
       </dl>
     </div>
   );
@@ -218,7 +218,7 @@ function SeasonHistory({ rows }: { rows: SeasonHistoryRow[] }) {
   return (
     <section aria-labelledby="season-history">
       <h2 id="season-history" className={SECTION_TITLE}>
-        {tr.stats.history}
+        {t().stats.history}
       </h2>
       <ul className={`${CARD} divide-y`}>
         {rows.map(({ season, leader }) => {
@@ -232,14 +232,14 @@ function SeasonHistory({ rows }: { rows: SeasonHistoryRow[] }) {
                 {season.year_label}
                 {season.is_current ? (
                   <span className="text-muted-foreground ml-2 text-xs font-normal">
-                    {tr.stats.current}
+                    {t().stats.current}
                   </span>
                 ) : null}
               </span>
               {subject && leader ? (
                 <span className="flex items-center gap-2 text-sm">
                   <span className="text-muted-foreground text-xs uppercase">
-                    {season.is_current ? tr.stats.leader : tr.stats.champion}
+                    {season.is_current ? t().stats.leader : t().stats.champion}
                   </span>
                   <Link
                     href={
@@ -271,10 +271,10 @@ export function CompetitionStatsView({
   const players = stats.leaders.filter((c) => c.subject === "player");
   const teams = stats.leaders.filter((c) => c.subject === "team");
   const isRace = template.analysis === null;
-  const playedLabel = isRace ? tr.stats.races_ : tr.stats.played;
+  const playedLabel = isRace ? t().stats.races_ : t().stats.played;
 
   if (!stats.matches && !stats.races && stats.leaders.length === 0) {
-    return <EmptyState title={tr.stats.empty} />;
+    return <EmptyState title={t().stats.empty} />;
   }
   return (
     <div className="space-y-8">
@@ -282,7 +282,7 @@ export function CompetitionStatsView({
       {stats.races ? <RaceSummaryCard summary={stats.races} /> : null}
       <section aria-labelledby="player-leaders">
         <h2 id="player-leaders" className={SECTION_TITLE}>
-          {isRace ? tr.stats.driverLeaders : tr.stats.playerLeaders}
+          {isRace ? t().stats.driverLeaders : t().stats.playerLeaders}
         </h2>
         {players.length ? (
           <div className="grid gap-4 lg:grid-cols-2">
@@ -296,13 +296,13 @@ export function CompetitionStatsView({
             ))}
           </div>
         ) : (
-          <EmptyState title={tr.stats.noPlayerStats} />
+          <EmptyState title={t().stats.noPlayerStats} />
         )}
       </section>
       {teams.length ? (
         <section aria-labelledby="team-leaders">
           <h2 id="team-leaders" className={SECTION_TITLE}>
-            {tr.stats.teamLeaders}
+            {t().stats.teamLeaders}
           </h2>
           <div className="grid gap-4 lg:grid-cols-2">
             {teams.map((c) => (

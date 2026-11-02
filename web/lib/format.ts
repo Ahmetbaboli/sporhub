@@ -1,17 +1,25 @@
 import { DEFAULT_TIME_ZONE } from "@/lib/api";
 
-const LOCALE = "tr-TR";
+const DEFAULT_INTL_LOCALE = "tr-TR";
 
-export function formatTime(iso: string, timeZone: string = DEFAULT_TIME_ZONE): string {
-  return new Intl.DateTimeFormat(LOCALE, {
+export function formatTime(
+  iso: string,
+  timeZone: string = DEFAULT_TIME_ZONE,
+  locale: string = DEFAULT_INTL_LOCALE,
+): string {
+  return new Intl.DateTimeFormat(locale, {
     hour: "2-digit",
     minute: "2-digit",
     timeZone,
   }).format(new Date(iso));
 }
 
-export function formatDay(iso: string, timeZone: string = DEFAULT_TIME_ZONE): string {
-  return new Intl.DateTimeFormat(LOCALE, {
+export function formatDay(
+  iso: string,
+  timeZone: string = DEFAULT_TIME_ZONE,
+  locale: string = DEFAULT_INTL_LOCALE,
+): string {
+  return new Intl.DateTimeFormat(locale, {
     weekday: "long",
     day: "numeric",
     month: "long",
@@ -24,8 +32,11 @@ export function dayKey(iso: string, timeZone: string = DEFAULT_TIME_ZONE): strin
   return new Intl.DateTimeFormat("sv-SE", { timeZone }).format(new Date(iso));
 }
 
-export function formatDate(isoDate: string): string {
-  return new Intl.DateTimeFormat(LOCALE, {
+export function formatDate(
+  isoDate: string,
+  locale: string = DEFAULT_INTL_LOCALE,
+): string {
+  return new Intl.DateTimeFormat(locale, {
     day: "numeric",
     month: "long",
     year: "numeric",

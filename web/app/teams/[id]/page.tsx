@@ -12,7 +12,7 @@ import { EmptyState } from "@/components/ui/states";
 import { api } from "@/lib/api";
 import { orNotFound, parseId } from "@/lib/api-helpers";
 import { groupSquad, splitTeamEvents } from "@/lib/events";
-import { tr } from "@/lib/i18n/tr";
+import { initLocale, t } from "@/lib/i18n";
 import { teamProgression } from "@/lib/series";
 import { templateFor } from "@/lib/sports";
 import type { TeamDetail } from "@/lib/types";
@@ -25,12 +25,14 @@ const MIN_CHART_POINTS = 2;
 type Props = { params: Promise<{ id: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  await initLocale();
   const { id } = await params;
   const team = await api.team(parseId(id)).catch(() => null);
-  return { title: team?.name ?? tr.app.name };
+  return { title: team?.name ?? t().app.name };
 }
 
 export default async function TeamPage({ params }: Props) {
+  await initLocale();
   const id = parseId((await params).id);
   // Existence is checked before anything streams so a missing team is a real HTTP 404.
   const team = await orNotFound(api.team(id));
@@ -83,25 +85,25 @@ async function TeamEvents({ teamId, sport }: { teamId: number; sport: string | n
       <div>
         {recent.length ? (
           <EventCard
-            title={isRace ? tr.team.recentRaces : tr.team.recent}
+            title={isRace ? t().team.recentRaces : t().team.recent}
             events={recent}
             showRound
             heading="h2"
           />
         ) : (
-          <EmptyState title={tr.team.noRecent} />
+          <EmptyState title={t().team.noRecent} />
         )}
       </div>
       <div>
         {upcoming.length ? (
           <EventCard
-            title={isRace ? tr.team.upcomingRaces : tr.team.upcoming}
+            title={isRace ? t().team.upcomingRaces : t().team.upcoming}
             events={upcoming}
             showRound
             heading="h2"
           />
         ) : (
-          <EmptyState title={tr.team.noUpcoming} />
+          <EmptyState title={t().team.noUpcoming} />
         )}
       </div>
     </div>
@@ -128,13 +130,13 @@ async function TeamInsights({ teamId, sport }: { teamId: number; sport: string |
       {progression.length >= MIN_CHART_POINTS ? (
         <div className="mt-4">
           <SeriesChart
-            title={tr.charts.progressionTitle}
+            title={t().charts.progressionTitle}
             description={
-              rules.draws ? tr.charts.progressionPoints : tr.charts.progressionWinPct
+              rules.draws ? t().charts.progressionPoints : t().charts.progressionWinPct
             }
             data={progression}
-            valueLabel={rules.draws ? tr.charts.points : tr.charts.winPct}
-            xLabel={tr.charts.match}
+            valueLabel={rules.draws ? t().charts.points : t().charts.winPct}
+            xLabel={t().charts.match}
             format={rules.draws ? "int" : "pct"}
           />
         </div>
@@ -143,7 +145,7 @@ async function TeamInsights({ teamId, sport }: { teamId: number; sport: string |
         <HeadToHeadCard
           h2h={h2h}
           rules={rules}
-          title={`${tr.analysis.h2hTitle} · ${tr.analysis.h2hNext(opponent.name)}`}
+          title={`${t().analysis.h2hTitle} · ${t().analysis.h2hNext(opponent.name)}`}
         />
       ) : null}
     </>
@@ -158,16 +160,16 @@ function Squad({ team }: { team: TeamDetail }) {
         id="squad"
         className="font-display text-primary mb-3 text-2xl font-semibold uppercase"
       >
-        {team.sport_slug === "formula-1" ? tr.team.drivers : tr.team.squad}
+        {team.sport_slug === "formula-1" ? t().team.drivers : t().team.squad}
       </h2>
       {squad.length === 0 ? (
-        <EmptyState title={tr.team.noSquad} />
+        <EmptyState title={t().team.noSquad} />
       ) : (
         <div className="grid gap-4 sm:grid-cols-2">
           {squad.map(({ group, players }) => (
             <div key={group} className="bg-card rounded-lg border">
               <h3 className="bg-muted/60 border-b px-3 py-2 text-sm font-semibold">
-                {tr.team.positions[group]}
+                {t().team.positions[group]}
               </h3>
               <ul className="divide-y">
                 {players.map((p) => (
