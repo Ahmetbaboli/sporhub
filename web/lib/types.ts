@@ -134,3 +134,50 @@ export interface Dashboard {
   teams: TeamActivity[];
   competitions: CompetitionPlace[];
 }
+
+/** Team analysis (api/app/schemas/analysis.py). */
+export type MatchResult = "W" | "D" | "L";
+
+export interface SplitStats {
+  played: number;
+  won: number;
+  drawn: number;
+  lost: number;
+  scored: number;
+  conceded: number;
+  win_pct: number;
+  avg_scored: number;
+  avg_conceded: number;
+  clean_sheets: number;
+}
+
+export interface FormEntry {
+  event_id: number;
+  start_time: string;
+  competition: string;
+  side: "home" | "away";
+  opponent: Team;
+  scored: number;
+  conceded: number;
+  result: MatchResult;
+}
+
+export interface TeamAnalysis {
+  team: Team;
+  season: string | null;
+  form: FormEntry[];
+  form_stats: SplitStats;
+  streak: string | null;
+  overall: SplitStats;
+  home: SplitStats;
+  away: SplitStats;
+  biggest_win: FormEntry | null;
+  biggest_loss: FormEntry | null;
+}
+
+export interface HeadToHead {
+  team: Team;
+  opponent: Team;
+  summary: SplitStats;
+  matches: SportEvent[];
+}

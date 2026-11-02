@@ -14,6 +14,8 @@ export interface SportTemplate {
   tabs: { fixtures: string; results: string; standings: string };
   /** Events per page on the fixtures/results tabs (race cards are tall, so fewer). */
   pageSize: number;
+  /** How team form/analysis is shown; null = sport has no two-sided matches (races). */
+  analysis: { draws: boolean; cleanSheets: boolean; unit: "goals" | "points" } | null;
 }
 
 const DEFAULT_TEMPLATE: SportTemplate = {
@@ -21,6 +23,7 @@ const DEFAULT_TEMPLATE: SportTemplate = {
   standings: "league",
   tabs: tr.competition.tabs,
   pageSize: 20,
+  analysis: { draws: true, cleanSheets: true, unit: "goals" },
 };
 
 const TEMPLATES: Record<string, SportTemplate> = {
@@ -30,12 +33,14 @@ const TEMPLATES: Record<string, SportTemplate> = {
     standings: "conference",
     tabs: tr.competition.tabsBySport.basketball,
     pageSize: 20,
+    analysis: { draws: false, cleanSheets: false, unit: "points" },
   },
   "formula-1": {
     icon: Flag,
     standings: "championship",
     tabs: tr.competition.tabsBySport["formula-1"],
     pageSize: 6,
+    analysis: null,
   },
 };
 

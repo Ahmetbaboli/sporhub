@@ -11,12 +11,14 @@ import type {
   FavoriteIds,
   FavoriteKind,
   Favorites,
+  HeadToHead,
   Page,
   Player,
   SearchResults,
   Sport,
   SportEvent,
   Standing,
+  TeamAnalysis,
   TeamDetail,
 } from "@/lib/types";
 
@@ -152,6 +154,10 @@ export const api = {
       page_size: q.pageSize,
     }),
   player: (id: number) => get<Player>(`/api/v1/players/${id}`),
+  teamAnalysis: (id: number, last?: number) =>
+    get<TeamAnalysis>(`/api/v1/teams/${id}/analysis`, { last }),
+  headToHead: (id: number, opponentId: number, limit?: number) =>
+    get<HeadToHead>(`/api/v1/teams/${id}/h2h/${opponentId}`, { limit }),
   search: (q: string) => get<SearchResults>("/api/v1/search", { q }),
   me: {
     favoriteIds: async (token: string) =>

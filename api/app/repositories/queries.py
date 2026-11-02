@@ -145,6 +145,21 @@ async def list_team_events(
     return await _paginate_events(session, stmt, descending, page, page_size)
 
 
+async def list_finished_matches(
+    session: AsyncSession, team_id: int, limit: int, opponent_id: int | None = None
+) -> list[Event]:
+    """Finished matches of a team (optionally only against `opponent_id`), newest first."""
+    involved = select(EventParticipant.event_id).where(EventParticipant.team_id == team_id)
+    stmt = _event_select().where(
+        Event.id.in_(involved), Event.status == "finished", Event.kind == "match"
+    )
+    if opponent_id is not None:
+        against = select(EventParticipant.event_id).where(EventParticipant.team_id == opponent_id)
+        stmt = stmt.where(Event.id.in_(against))
+    stmt = stmt.order_by(Event.start_time.desc(), Event.id.desc()).limit(limit)
+    return list((await session.scalars(stmt)).unique().all())
+
+
 async def list_player_events(
     session: AsyncSession, player_id: int, page: int, page_size: int, descending: bool
 ) -> tuple[list[Event], int]:

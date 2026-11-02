@@ -12,7 +12,7 @@ function signed(value: number | null): string {
   return value > 0 ? `+${value}` : String(value);
 }
 
-const FORM_STYLES: Record<string, string> = {
+export const FORM_STYLES: Record<string, string> = {
   W: "bg-primary text-primary-foreground",
   D: "bg-muted text-muted-foreground",
   L: "bg-accent text-accent-foreground",

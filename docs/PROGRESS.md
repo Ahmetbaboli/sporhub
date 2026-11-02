@@ -48,7 +48,7 @@
 - [x] API: kullanıcılar, favoriler (takım/oyuncu/lig), imzalı token, panel ucu
 - [x] 4a Web: Auth.js girişi (GitHub/Google), favori yıldızları (takım/sporcu/lig), "Panelim" + giriş yapmış kullanıcıya özel ana sayfa
 - [x] 4b Farklı renk temaları (açık/koyu × 6 palet, yüksek kontrast dahil)
-- [ ] 4c Takım analizi: son 5-10 maç formu, ev/deplasman performansı, geçmiş karşılaşmalar (H2H)
+- [x] 4c Takım analizi: son 5-10 maç formu, ev/deplasman performansı, geçmiş karşılaşmalar (H2H)
 - [ ] 4d Karşılaştırma: iki takım, iki sporcu (`/compare`)
 - [ ] 4e Lig istatistikleri + liderlik tabloları (gol krallığı / sayı / şampiyona puanı), sezon geçmişi
 - [ ] 4f Oyuncu sezonluk performans grafikleri (Recharts), branşa özel gelişmiş istatistikler

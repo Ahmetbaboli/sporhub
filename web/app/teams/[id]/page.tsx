@@ -4,12 +4,14 @@ import { Suspense } from "react";
 import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { EventCard } from "@/components/sport/event-list";
 import { EventCardsSkeleton } from "@/components/sport/skeletons";
+import { HeadToHeadCard, TeamAnalysisPanel } from "@/components/sport/team-analysis";
 import { TeamBadge } from "@/components/sport/team-badge";
 import { EmptyState } from "@/components/ui/states";
 import { api } from "@/lib/api";
 import { orNotFound, parseId } from "@/lib/api-helpers";
 import { groupSquad, splitTeamEvents } from "@/lib/events";
 import { tr } from "@/lib/i18n/tr";
+import { templateFor } from "@/lib/sports";
 import type { TeamDetail } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -56,6 +58,9 @@ export default async function TeamPage({ params }: Props) {
       <Suspense fallback={<EventCardsSkeleton />}>
         <TeamEvents teamId={id} sport={team.sport_slug} />
       </Suspense>
+      <Suspense fallback={null}>
+        <TeamInsights teamId={id} sport={team.sport_slug} />
+      </Suspense>
       <Squad team={team} />
     </>
   );
@@ -95,6 +100,33 @@ async function TeamEvents({ teamId, sport }: { teamId: number; sport: string | n
         )}
       </div>
     </div>
+  );
+}
+
+/** Form, home/away split and head-to-head with the next opponent (match sports only). */
+async function TeamInsights({ teamId, sport }: { teamId: number; sport: string | null }) {
+  const rules = templateFor(sport ?? "").analysis;
+  if (!rules) return null;
+  const [analysis, events] = await Promise.all([
+    api.teamAnalysis(teamId),
+    api.teamEvents(teamId, { order: "desc", pageSize: EVENTS_FETCH_SIZE }),
+  ]);
+  const next = splitTeamEvents(events.items).upcoming[0];
+  const opponent = next?.participants.find((p) => p.team && p.team.id !== teamId)?.team;
+  const h2h = opponent
+    ? await api.headToHead(teamId, opponent.id).catch(() => null)
+    : null;
+  return (
+    <>
+      <TeamAnalysisPanel analysis={analysis} rules={rules} />
+      {h2h && opponent ? (
+        <HeadToHeadCard
+          h2h={h2h}
+          rules={rules}
+          title={`${tr.analysis.h2hTitle} · ${tr.analysis.h2hNext(opponent.name)}`}
+        />
+      ) : null}
+    </>
   );
 }
 

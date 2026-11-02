@@ -6,6 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.errors import ErrorResponse
 from app.db.session import get_session
+from app.schemas.analysis import HeadToHead, TeamAnalysis
 from app.schemas.api import (
     CompetitionDetail,
     EventOut,
@@ -13,6 +14,7 @@ from app.schemas.api import (
     SearchResults,
     TeamDetail,
 )
+from app.services import analysis_service
 from app.services import read_service as svc
 
 DEFAULT_PAGE_SIZE = 20
@@ -188,3 +190,39 @@ async def list_player_events(
     page_size: PageSizeParam = DEFAULT_PAGE_SIZE,
 ) -> svc.EventList:
     return await svc.get_player_events(session, player_id, page, page_size, order == "desc")
+
+
+MIN_FORM_SIZE = 3
+MAX_FORM_SIZE = 20
+MAX_H2H_SIZE = 50
+
+
+@router.get(
+    "/teams/{team_id}/analysis",
+    response_model=TeamAnalysis,
+    tags=["teams"],
+    summary="Form, ev/deplasman ayrımı, seri (yalnızca iki taraflı maç sporları)",
+)
+async def team_analysis(
+    team_id: int,
+    session: Session,
+    last: Annotated[
+        int, Query(ge=MIN_FORM_SIZE, le=MAX_FORM_SIZE, description="Form için son N maç")
+    ] = analysis_service.DEFAULT_FORM_SIZE,
+) -> TeamAnalysis:
+    return await analysis_service.get_team_analysis(session, team_id, last)
+
+
+@router.get(
+    "/teams/{team_id}/h2h/{opponent_id}",
+    response_model=HeadToHead,
+    tags=["teams"],
+    summary="İki takımın geçmiş karşılaşmaları",
+)
+async def head_to_head(
+    team_id: int,
+    opponent_id: int,
+    session: Session,
+    limit: Annotated[int, Query(ge=1, le=MAX_H2H_SIZE)] = analysis_service.DEFAULT_H2H_SIZE,
+) -> HeadToHead:
+    return await analysis_service.get_head_to_head(session, team_id, opponent_id, limit)
