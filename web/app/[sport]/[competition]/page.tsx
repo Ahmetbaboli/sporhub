@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { DayGroupedEvents } from "@/components/sport/event-list";
 import { TableSkeleton } from "@/components/sport/skeletons";
 import { ChampionshipTables } from "@/components/sport/championship-tables";
@@ -53,9 +54,19 @@ export default async function CompetitionPage({ params, searchParams }: Props) {
 
   return (
     <>
-      <h1 className="font-display text-4xl font-bold tracking-tight uppercase">
-        {competition.name}
-      </h1>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <h1 className="font-display text-4xl font-bold tracking-tight uppercase">
+          {competition.name}
+        </h1>
+        <Suspense fallback={null}>
+          <FavoriteToggle
+            kind="competitions"
+            id={competition.id}
+            name={competition.name}
+            returnTo={base}
+          />
+        </Suspense>
+      </div>
       <p className="text-muted-foreground mt-1 mb-6 text-sm">
         {[
           competition.country,

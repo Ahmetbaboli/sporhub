@@ -58,6 +58,14 @@ services:
         NEXT_PUBLIC_API_URL: http://localhost:8000
     environment:
       API_INTERNAL_URL: http://api:8000
+      # Sign-in is optional; empty values keep the site signed-out.
+      AUTH_SECRET: ${AUTH_SECRET:-}
+      AUTH_TRUST_HOST: "true"
+      API_TOKEN_SECRET: ${API_TOKEN_SECRET:-}
+      AUTH_GITHUB_ID: ${AUTH_GITHUB_ID:-}
+      AUTH_GITHUB_SECRET: ${AUTH_GITHUB_SECRET:-}
+      AUTH_GOOGLE_ID: ${AUTH_GOOGLE_ID:-}
+      AUTH_GOOGLE_SECRET: ${AUTH_GOOGLE_SECRET:-}
     ports:
       - "3000:3000"
     depends_on:

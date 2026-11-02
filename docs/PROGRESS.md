@@ -45,13 +45,32 @@
 - [x] docs/adding-a-sport.md
 - [x] Tüm adapter'lar için ortak sözleşme testleri
 ### Aşama 4 — Kullanıcı özellikleri
-- [ ] Auth.js girişi, favori takımlar, kişisel panel
-- [ ] İstatistik grafikleri (Recharts), karşılaştırma ekranı
-- [ ] TR/EN (next-intl)
+- [x] API: kullanıcılar, favoriler (takım/oyuncu/lig), imzalı token, panel ucu
+- [x] 4a Web: Auth.js girişi (GitHub/Google), favori yıldızları (takım/sporcu/lig), "Panelim" + giriş yapmış kullanıcıya özel ana sayfa
+- [ ] 4b Farklı renk temaları (açık/koyu × renk paleti)
+- [ ] 4c Takım analizi: son 5-10 maç formu, ev/deplasman performansı, geçmiş karşılaşmalar (H2H)
+- [ ] 4d Karşılaştırma: iki takım, iki sporcu (`/compare`)
+- [ ] 4e Lig istatistikleri + liderlik tabloları (gol krallığı / sayı / şampiyona puanı), sezon geçmişi
+- [ ] 4f Oyuncu sezonluk performans grafikleri (Recharts), branşa özel gelişmiş istatistikler
+- [ ] 4g TR/EN dil seçeneği (next-intl; `tr.ts` → `messages/{tr,en}`)
+### Aşama 4.5 — Haber modülü
+- [ ] Veri modeli: `news_articles` (spor, kategori, etiketli takım/oyuncu/lig, kaynak, yayın zamanı), `(source, external_id)` benzersiz
+- [ ] Kategoriler: genel, son dakika, transfer (resmî), transfer söylentisi, röportaj, organizasyon/turnuva
+- [ ] Haber adapter'ı (RSS/Atom; yalnızca başlık + özet + kaynağa link) + fixture modu; admin'den elle haber girişi
+- [ ] Haber sayfaları: `/news`, kategori/spor filtresi, arşiv (sayfalı, tarihe göre), takım/oyuncu sayfasında ilgili haberler
 ### Aşama 5 — Öne çıkaran özellikler
 - [ ] SSE ile canlı skor
+- [ ] Bildirimler: Web Push (VAPID) — takip edilen maç başladı / gol / bitti, son dakika haberi; kullanıcı bazlı tercihler
 - [ ] Claude API ile AI maç özeti (backend'de)
 - [ ] Spor bilgi yarışması, PWA, Playwright e2e
+### Öneri havuzu (sıraya alınmadı)
+- Maç tahmin oyunu + arkadaş ligi; maç sayfasında taraftar anketi ("kim kazanır?")
+- Takvime ekle (.ics) — favori takımın fikstürü tek tıkla
+- Maç detay sayfası: kadro/diziliş, olay zaman çizelgesi, istatistik barları
+- "Bu hafta" özet sayfası ve e-posta bülteni; favori takıma göre haftalık özet
+- Embed edilebilir puan tablosu/skor widget'ı
+- Sezon geçmişinde şampiyonlar listesi; "bugün tarihte" kartı
+- Erişilebilirlik: yüksek kontrastlı tema, klavyeyle tam gezinme
 ### Aşama 6 — Vitrin
 - [ ] README ekran görüntüleri/GIF, repo konu etiketleri, v1.0.0
 

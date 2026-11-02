@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { UserMenu } from "@/components/account/user-menu";
 import { SearchForm } from "@/components/layout/search-form";
 import { SportNav } from "@/components/layout/sport-nav";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
@@ -31,8 +32,9 @@ export async function Header() {
         <div className="order-3 w-full sm:order-2 sm:w-64 sm:flex-none md:ml-auto">
           <SearchForm />
         </div>
-        <div className="order-2 ml-auto sm:order-3 sm:ml-0">
+        <div className="order-2 ml-auto flex items-center sm:order-3 sm:ml-0">
           <ThemeToggle />
+          <UserMenu />
         </div>
         <SportNav sports={sports} />
       </div>

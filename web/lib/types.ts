@@ -105,3 +105,32 @@ export interface SearchResults {
 export interface ApiErrorBody {
   error: { code: string; message: string };
 }
+
+/** Signed-in user shapes (api/app/schemas/me.py). */
+export type FavoriteKind = "teams" | "players" | "competitions";
+
+export type FavoriteIds = Record<FavoriteKind, number[]>;
+
+export interface Favorites {
+  teams: Team[];
+  players: Player[];
+  competitions: Competition[];
+}
+
+export interface TeamActivity {
+  team: Team;
+  recent: SportEvent[];
+  upcoming: SportEvent[];
+}
+
+export interface CompetitionPlace {
+  competition: Competition;
+  season: Season | null;
+  table: Standing[];
+  mine: Standing[];
+}
+
+export interface Dashboard {
+  teams: TeamActivity[];
+  competitions: CompetitionPlace[];
+}

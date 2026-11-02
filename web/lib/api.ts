@@ -6,7 +6,11 @@ import type {
   ApiErrorBody,
   Competition,
   CompetitionDetail,
+  Dashboard,
   EventStatus,
+  FavoriteIds,
+  FavoriteKind,
+  Favorites,
   Page,
   Player,
   SearchResults,
@@ -67,19 +71,44 @@ async function parseError(response: Response): Promise<ApiError> {
   }
 }
 
-async function get<T>(path: string, query?: Query): Promise<T> {
+async function send(url: string, init: RequestInit): Promise<Response> {
   let response: Response;
   try {
-    response = await fetch(buildUrl(path, query), {
-      headers: { Accept: "application/json" },
-      next: { revalidate: REVALIDATE_SECONDS },
+    response = await fetch(url, {
+      ...init,
       signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
     });
   } catch {
     throw new ApiError(503, "unreachable", "API'ye ulaşılamıyor");
   }
   if (!response.ok) throw await parseError(response);
+  return response;
+}
+
+async function get<T>(path: string, query?: Query): Promise<T> {
+  const response = await send(buildUrl(path, query), {
+    headers: { Accept: "application/json" },
+    next: { revalidate: REVALIDATE_SECONDS },
+  });
   return (await response.json()) as T;
+}
+
+/** Per-user request: never cached, authorized with a short-lived bearer token. */
+async function authed<T>(
+  token: string,
+  path: string,
+  method: "GET" | "PUT" | "DELETE" = "GET",
+): Promise<T | undefined> {
+  const response = await send(buildUrl(path), {
+    method,
+    headers: { Accept: "application/json", Authorization: `Bearer ${token}` },
+    cache: "no-store",
+  });
+  return response.status === 204 ? undefined : ((await response.json()) as T);
+}
+
+function favoritePath(kind: FavoriteKind, id: number): string {
+  return `/api/v1/me/favorites/${kind}/${id}`;
 }
 
 export interface EventsQuery {
@@ -124,4 +153,16 @@ export const api = {
     }),
   player: (id: number) => get<Player>(`/api/v1/players/${id}`),
   search: (q: string) => get<SearchResults>("/api/v1/search", { q }),
+  me: {
+    favoriteIds: async (token: string) =>
+      (await authed<FavoriteIds>(token, "/api/v1/me/favorites/ids"))!,
+    favorites: async (token: string) =>
+      (await authed<Favorites>(token, "/api/v1/me/favorites"))!,
+    dashboard: async (token: string) =>
+      (await authed<Dashboard>(token, "/api/v1/me/dashboard"))!,
+    addFavorite: (token: string, kind: FavoriteKind, id: number) =>
+      authed<void>(token, favoritePath(kind, id), "PUT"),
+    removeFavorite: (token: string, kind: FavoriteKind, id: number) =>
+      authed<void>(token, favoritePath(kind, id), "DELETE"),
+  },
 };

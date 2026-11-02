@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
+import { FavoriteToggle } from "@/components/account/favorite-toggle";
 import { EventCard } from "@/components/sport/event-list";
 import { EventCardsSkeleton } from "@/components/sport/skeletons";
 import { TeamBadge } from "@/components/sport/team-badge";
@@ -30,7 +31,7 @@ export default async function TeamPage({ params }: Props) {
 
   return (
     <>
-      <div className="flex items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4">
         <TeamBadge team={team} size="lg" />
         <div>
           <h1 className="font-display text-4xl leading-none font-bold tracking-tight uppercase">
@@ -39,6 +40,16 @@ export default async function TeamPage({ params }: Props) {
           {team.country ? (
             <p className="text-muted-foreground mt-1 text-sm">{team.country}</p>
           ) : null}
+        </div>
+        <div className="ml-auto">
+          <Suspense fallback={null}>
+            <FavoriteToggle
+              kind="teams"
+              id={id}
+              name={team.name}
+              returnTo={`/teams/${id}`}
+            />
+          </Suspense>
         </div>
       </div>
 
