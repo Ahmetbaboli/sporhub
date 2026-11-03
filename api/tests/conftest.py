@@ -88,6 +88,7 @@ SETTINGS_CONSUMERS = (
     "app.routers.v1",
     "app.scripts.check_sources",
     "app.scripts.purge_demo",
+    "app.scripts.retag_news",
     "app.scripts.seed",
     "app.services.read_service",
 )

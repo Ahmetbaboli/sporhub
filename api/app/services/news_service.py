@@ -37,8 +37,14 @@ logger = logging.getLogger(__name__)
 
 MAX_TAGS_PER_ARTICLE = 10
 MIN_ALIAS_LENGTH = 4
-# Club-name decorations that are often dropped in headlines ("Chelsea FC" -> "Chelsea").
-CLUB_AFFIXES = re.compile(r"^(?:FC|AFC|CF|SK|FK|AC|AS|SS|US|SC|1\.)\s+|\s+(?:FC|AFC|CF|SK|FK)$")
+# Club-name decorations that are often dropped in headlines ("Chelsea FC" -> "Chelsea",
+# "VfB Stuttgart" -> "Stuttgart").
+CLUB_AFFIXES = re.compile(
+    r"^(?:FC|AFC|CF|SK|FK|AC|AS|SS|US|SC|1\.|VfB|TSG|RB|SV|FSV|RC)\s+|\s+(?:FC|AFC|CF|SK|FK)$"
+)
+# A shortened club name that is also an everyday word is not used on its own: "Sabah FK"
+# must not match "sabah" (Turkish: morning), "Manchester City" stays, "City" alone does not.
+COMMON_WORD_ALIASES = frozenset({"sabah", "city", "united", "real", "sport", "spor"})
 MANUAL_SOURCE = "manual"
 
 
@@ -58,7 +64,9 @@ def _pattern(alias: str) -> re.Pattern[str]:
 def _aliases(kind: str, name: str, short_name: str | None = None) -> set[str]:
     names = {name}
     if kind == "team_id":
-        names.add(CLUB_AFFIXES.sub("", name).strip())
+        stripped = CLUB_AFFIXES.sub("", name).strip()
+        if stripped.casefold() not in COMMON_WORD_ALIASES:
+            names.add(stripped)
         if short_name:
             names.add(short_name)
     if kind == "player_id":
@@ -453,3 +461,28 @@ async def news_archive(session: AsyncSession, filters: NewsFilters) -> NewsArchi
         return NewsArchive(months=[ArchiveMonth(month=m, count=c) for m, c in counts.items()])
 
     return await cached(f"news-archive:{filters}", NewsArchive, load)
+
+
+async def retag_all(session: AsyncSession) -> dict[str, int]:
+    """Recompute every article's tags with the current rules (after tagger changes)."""
+    tagger = _Tagger(session)
+    articles = (await session.scalars(select(NewsArticle))).all()
+    changed = 0
+    for article in articles:
+        new = await tagger.tags(article.sport_id, f"{article.title} {article.summary}")
+        old = await session.scalars(select(NewsTag).where(NewsTag.article_id == article.id))
+        before = sorted(
+            (kind, value)
+            for tag in old
+            for kind in ("team_id", "player_id", "competition_id")
+            if (value := getattr(tag, kind)) is not None
+        )
+        if before == sorted(new):
+            continue
+        changed += 1
+        await session.execute(delete(NewsTag).where(NewsTag.article_id == article.id))
+        for kind, entity_id in new:
+            session.add(NewsTag(article_id=article.id, **{kind: entity_id}))
+    await session.commit()
+    await invalidate_all()
+    return {"articles": len(articles), "retagged": changed}

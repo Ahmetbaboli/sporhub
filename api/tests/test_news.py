@@ -5,7 +5,7 @@ import httpx
 import pytest
 import respx
 from httpx import ASGITransport, AsyncClient
-from sqlalchemy import func, select
+from sqlalchemy import delete, func, select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from app.adapters.football_data import FootballDataAdapter
@@ -15,7 +15,13 @@ from app.core.config import Settings
 from app.db.session import get_session
 from app.main import create_app
 from app.models import NewsArticle, NewsTag
-from app.services.news_service import build_targets, find_tags, month_bounds, run_news_sync
+from app.services.news_service import (
+    build_targets,
+    find_tags,
+    month_bounds,
+    retag_all,
+    run_news_sync,
+)
 from app.services.sync_service import run_sync
 
 V1 = "/api/v1"
@@ -93,6 +99,18 @@ def test_tags_aliases_and_word_boundaries() -> None:
     assert find_tags("Chelseas", TARGETS) == []
 
 
+def test_club_prefixes_and_everyday_words() -> None:
+    targets = build_targets(
+        [
+            ("team_id", 7, "VfB Stuttgart", "VFB", None),
+            ("team_id", 8, "Sabah FK", "SAB", None),
+        ]
+    )
+    assert find_tags("İşte Stuttgart'ın şifreleri!", targets) == [("team_id", 7)]
+    assert find_tags("Sabah antrenmanında sakatlandı", targets) == []
+    assert find_tags("Sabah FK kazandı", targets) == [("team_id", 8)]
+
+
 def test_shared_player_name_is_resolved_by_team() -> None:
     assert ("player_id", 11) in find_tags("Ali Can stars for Inter", TARGETS)
     assert not any(k == "player_id" for k, _ in find_tags("Ali Can stars", TARGETS))
@@ -131,6 +149,22 @@ async def test_news_sync_is_idempotent_and_tags_entities(
     assert first == second
     assert first[0] == 17  # 9 + 5 + 3 valid items; the link-less one is skipped
     assert first[1] > 10
+
+
+async def test_retag_all_rewrites_only_changed_articles(
+    maker: async_sessionmaker[AsyncSession], settings: Settings
+) -> None:
+    await _seed_news(maker, settings)
+    async with maker() as s:
+        tags = await s.scalar(select(func.count()).select_from(NewsTag))
+        assert await retag_all(s) == {"articles": 17, "retagged": 0}  # rules unchanged
+        article = (await s.scalars(select(NewsArticle))).first()
+        await s.execute(delete(NewsTag).where(NewsTag.article_id == article.id))
+        await s.commit()
+    async with maker() as s:
+        result = await retag_all(s)
+        assert result["retagged"] <= 1
+        assert await s.scalar(select(func.count()).select_from(NewsTag)) == tags
 
 
 @pytest.fixture
