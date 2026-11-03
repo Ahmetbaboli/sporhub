@@ -5,7 +5,7 @@ import time
 from sqlalchemy import func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.cache import get_cache
+from app.core.cache import RedisCache, get_cache
 from app.core.config import Settings
 from app.models import SyncRun
 from app.schemas.api import HealthCheck, HealthOut
@@ -28,8 +28,12 @@ async def _redis(settings: Settings) -> HealthCheck | None:
     if not settings.redis_url:
         return None  # in-memory cache: nothing to check
     started = time.perf_counter()
+    cache = get_cache()
     try:
-        await get_cache().get(HEALTH_PROBE_KEY)
+        if isinstance(cache, RedisCache):
+            await cache.ping()
+        else:
+            await cache.get(HEALTH_PROBE_KEY)
     except Exception as exc:
         return HealthCheck(ok=False, detail=type(exc).__name__)
     return HealthCheck(ok=True, ms=round((time.perf_counter() - started) * MS, 1))

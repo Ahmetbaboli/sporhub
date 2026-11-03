@@ -67,6 +67,10 @@ class RedisCache:
             self._down_until = time.monotonic() + REDIS_COOLDOWN_SECONDS
             raise
 
+    async def ping(self) -> None:
+        """Probe Redis itself, ignoring the cooldown (for /health)."""
+        await self._guard(self._client.ping())
+
     async def get(self, key: str) -> str | None:
         if not self._available():
             return None

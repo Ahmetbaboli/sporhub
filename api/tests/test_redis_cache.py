@@ -7,7 +7,9 @@ import pytest
 
 from app.core import cache
 from app.core.cache import RedisCache, cached
+from app.core.config import get_settings
 from app.schemas.api import HealthOut
+from app.services.health import _redis
 
 REDIS_URL = os.environ.get("TEST_REDIS_URL", "")
 
@@ -86,6 +88,10 @@ class _BrokenClient:
         self.calls += 1
         raise ConnectionError("refused")
 
+    async def ping(self) -> bool:
+        self.calls += 1
+        raise ConnectionError("refused")
+
 
 async def test_unreachable_redis_is_skipped_during_cooldown(
     monkeypatch: pytest.MonkeyPatch,
@@ -106,3 +112,16 @@ async def test_unreachable_redis_is_skipped_during_cooldown(
     with pytest.raises(ConnectionError):
         await backend.get("health")
     assert client.calls == 2
+
+
+async def test_health_reports_redis_down_during_cooldown(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    backend = RedisCache("redis://localhost:6379/15")
+    backend._client = _BrokenClient()
+    backend._down_until = float("inf")
+    monkeypatch.setattr(cache, "_backend", backend)
+    settings = get_settings().model_copy(update={"redis_url": "redis://localhost:6379/15"})
+
+    check = await _redis(settings)
+    assert check is not None and check.ok is False
