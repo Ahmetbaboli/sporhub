@@ -13,6 +13,7 @@ from app.core.config import get_settings
 logger = logging.getLogger(__name__)
 KEY_PREFIX = "js:"
 T = TypeVar("T", bound=BaseModel)
+R = TypeVar("R")
 
 
 class CacheBackend(Protocol):
@@ -39,15 +40,41 @@ class MemoryCache:
         self._data.clear()
 
 
+REDIS_TIMEOUT_SECONDS = 0.5
+REDIS_COOLDOWN_SECONDS = 30.0
+
+
 class RedisCache:
+    """Redis backend with a circuit breaker: after an error it is skipped for a cooldown,
+    so an unreachable Redis costs one slow call instead of slowing every request."""
+
     def __init__(self, url: str) -> None:
-        self._client = redis.from_url(url, decode_responses=True)
+        self._client = redis.from_url(
+            url,
+            decode_responses=True,
+            socket_connect_timeout=REDIS_TIMEOUT_SECONDS,
+            socket_timeout=REDIS_TIMEOUT_SECONDS,
+        )
+        self._down_until = 0.0
+
+    def _available(self) -> bool:
+        return time.monotonic() >= self._down_until
+
+    async def _guard(self, call: Awaitable[R]) -> R:
+        try:
+            return await call
+        except Exception:
+            self._down_until = time.monotonic() + REDIS_COOLDOWN_SECONDS
+            raise
 
     async def get(self, key: str) -> str | None:
-        return await self._client.get(KEY_PREFIX + key)
+        if not self._available():
+            return None
+        return await self._guard(self._client.get(KEY_PREFIX + key))
 
     async def set(self, key: str, value: str, ttl: int) -> None:
-        await self._client.set(KEY_PREFIX + key, value, ex=ttl)
+        if self._available():
+            await self._guard(self._client.set(KEY_PREFIX + key, value, ex=ttl))
 
     async def clear(self) -> None:
         async for key in self._client.scan_iter(match=f"{KEY_PREFIX}*"):

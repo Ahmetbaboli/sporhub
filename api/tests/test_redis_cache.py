@@ -72,3 +72,37 @@ async def test_cached_wrapper_uses_redis(backend: RedisCache) -> None:
     first = await cached("health", HealthOut, loader, ttl=30)
     second = await cached("health", HealthOut, loader, ttl=30)
     assert first == second and calls == 1
+
+
+class _BrokenClient:
+    def __init__(self) -> None:
+        self.calls = 0
+
+    async def get(self, key: str) -> str | None:
+        self.calls += 1
+        raise ConnectionError("refused")
+
+    async def set(self, key: str, value: str, ex: int) -> None:
+        self.calls += 1
+        raise ConnectionError("refused")
+
+
+async def test_unreachable_redis_is_skipped_during_cooldown(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    backend = RedisCache("redis://localhost:6379/15")
+    client = _BrokenClient()
+    backend._client = client
+    monkeypatch.setattr(cache, "_backend", backend)
+
+    async def loader() -> HealthOut:
+        return HealthOut(status="ok", version="9")
+
+    for _ in range(3):
+        assert (await cached("health", HealthOut, loader)).version == "9"
+    assert client.calls == 1
+
+    backend._down_until = 0.0
+    with pytest.raises(ConnectionError):
+        await backend.get("health")
+    assert client.calls == 2
