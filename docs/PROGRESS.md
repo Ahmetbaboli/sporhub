@@ -101,6 +101,15 @@
 - [x] Nerova esintili hareket ve renk: cam kartlar, kelime kelime başlık, kaydırma belirmesi, Gece moru paleti
 - [ ] Pilot portreleri: izinli kaynak bulunamadı
 
+### Sıradaki fikirler (2026-11-03, sahibiyle konuşuldu; öneri sırası 1 → 2 → 5)
+- [ ] 1. Maç detay sayfası: Süper Lig için ESPN `summary?event=` (kadro/diziliş, olay zaman çizelgesi, istatistik çubukları)
+- [ ] 2. README ekran görüntüleri + kısa GIF (ana sayfa, F1, Süper Lig tablosu)
+- [ ] 3. Canlı demo: Vercel (web) + Render (API) ücretsiz plan — sahibinin hesabı gerekir
+- [ ] 4. Skor tahmin oyunu (cihazda, hesapsız; tam skor 3, sonuç 1 puan)
+- [ ] 5. Takım sayfasında gerçek takım renkleri (ESPN `team.color`)
+- [ ] 6. Ctrl+K hızlı arama (armalı anlık sonuçlar)
+- [ ] 7. Takvime ekle (.ics), 8. PWA, 9. Playwright e2e
+
 ### Aşama 6 — Vitrin
 - [ ] README ekran görüntüleri/GIF, repo konu etiketleri, v1.0.0
 
