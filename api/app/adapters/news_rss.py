@@ -1,7 +1,8 @@
 """News from RSS 2.0 / Atom feeds.
 
-Only the headline, a short plain-text summary, the link and an optional image are kept: the
-article itself stays on the publisher's site (we link to it, we never copy it). Feeds are
+Only the headline, a short plain-text summary, the link and the feed's own image URL are
+kept: the article itself stays on the publisher's site (we link to it, we never copy it). The
+image is never downloaded; the API serves its URL only with SHOW_PROVIDER_IMAGES=true. Feeds are
 configured in NEWS_FEEDS (JSON list); in fixture mode fixtures/news/feeds.json is used.
 XML is parsed with defusedxml (feeds are untrusted input: no entity expansion, no XXE).
 """
@@ -230,8 +231,9 @@ def _build(
         url=link,
         title=clean_title,
         summary=clean_summary,
-        # Publisher images are never stored or shown (several feeds forbid image reuse).
-        image_url=None,
+        # The feed's own picture for this story (URL only, https only); shown by the API only
+        # when the owner opted in (SHOW_PROVIDER_IMAGES), as several feeds restrict reuse.
+        image_url=image if image and image.startswith("https://") else None,
         author=plain_text(author, 120) or None,
         published_at=published or datetime.now(UTC),
         category=category,
@@ -279,7 +281,7 @@ def parse_feed(xml_text: str | bytes, feed: FeedConfig) -> list[NewsDTO]:
                 published=_parse_date(
                     _text(entry, f"{ATOM}published") or _text(entry, f"{ATOM}updated")
                 ),
-                image=None,
+                image=_rss_image(entry),
                 author=_text(entry, f"{ATOM}author/{ATOM}name"),
             )
         )

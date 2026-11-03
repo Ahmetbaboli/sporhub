@@ -25,6 +25,7 @@ from app.schemas.news import (
     NewsOut,
     NewsTagOut,
 )
+from app.services.read_service import provider_image
 from app.services.sync_service import (
     MAX_ERROR_LENGTH,
     STATUS_FAILED,
@@ -408,7 +409,7 @@ def news_out(article: NewsArticle) -> NewsOut:
         title=article.title,
         summary=article.summary,
         url=article.url,
-        image_url=article.image_url,
+        image_url=provider_image(article.image_url),
         author=article.author,
         source=display_source(article.source).removeprefix(SOURCE_PREFIX),
         published_at=article.published_at,

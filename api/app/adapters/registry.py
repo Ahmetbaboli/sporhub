@@ -4,6 +4,7 @@ from collections.abc import Callable
 
 from app.adapters.balldontlie import BallDontLieAdapter
 from app.adapters.base import BaseAdapter
+from app.adapters.espn_soccer import EspnSoccerAdapter
 from app.adapters.football_data import FootballDataAdapter
 from app.adapters.jolpica import JolpicaAdapter
 from app.adapters.thesportsdb import TheSportsDbAdapter
@@ -16,6 +17,7 @@ ADAPTERS: dict[str, AdapterFactory] = {
     "balldontlie": BallDontLieAdapter,
     "jolpica": JolpicaAdapter,
     "thesportsdb": TheSportsDbAdapter,
+    "espn": EspnSoccerAdapter,
 }
 
 

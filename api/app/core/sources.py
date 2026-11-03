@@ -54,6 +54,16 @@ SOURCES: tuple[SourceSpec, ...] = (
         probe_headers=lambda s: {},
     ),
     SourceSpec(
+        name="espn",
+        kind="sports",
+        description="ESPN site API, resmî olmayan (Süper Lig; ESPN_ENABLED ile)",
+        requires_key=False,
+        sport="football",
+        is_configured=lambda s: s.espn_enabled,
+        probe_url="https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard",
+        probe_headers=lambda s: {"User-Agent": PROBE_USER_AGENT},
+    ),
+    SourceSpec(
         name="balldontlie",
         kind="sports",
         description="balldontlie NBA v1 (basketbol)",

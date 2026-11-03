@@ -1,0 +1,228 @@
+{
+ "sports": [
+  {
+   "leagues": [
+    {
+     "teams": [
+      {
+       "team": {
+        "id": "9078",
+        "displayName": "Alanyaspor",
+        "abbreviation": "ALA",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/9078.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "132335",
+        "displayName": "Amed SFK",
+        "abbreviation": "AMED",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/132335.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "1895",
+        "displayName": "Besiktas",
+        "abbreviation": "BES",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "7656",
+        "displayName": "Caykur Rizespor",
+        "abbreviation": "CAY",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "19267",
+        "displayName": "Erzurum BB",
+        "abbreviation": "ERZ",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/19267.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "20729",
+        "displayName": "Eyupspor",
+        "abbreviation": "EYU",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "436",
+        "displayName": "Fenerbahce",
+        "abbreviation": "FEN",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "432",
+        "displayName": "Galatasaray",
+        "abbreviation": "GAL",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "20070",
+        "displayName": "Gaziantep FK",
+        "abbreviation": "GAZ",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/20070.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "996",
+        "displayName": "Genclerbirligi",
+        "abbreviation": "GEN",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/996.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "789",
+        "displayName": "Goztepe",
+        "abbreviation": "GOZ",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/789.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "7914",
+        "displayName": "Istanbul Basaksehir",
+        "abbreviation": "IBFK",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/7914.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "6870",
+        "displayName": "Kasimpasa",
+        "abbreviation": "KAS",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "995",
+        "displayName": "Kocaelispor",
+        "abbreviation": "KOC",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/995.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "7648",
+        "displayName": "Konyaspor",
+        "abbreviation": "KNY",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/7648.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "11429",
+        "displayName": "Samsunspor",
+        "abbreviation": "SAM",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/11429.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "997",
+        "displayName": "Trabzonspor",
+        "abbreviation": "TRAB",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/997.png"
+         }
+        ]
+       }
+      },
+      {
+       "team": {
+        "id": "132334",
+        "displayName": "Çorum FK",
+        "abbreviation": "COR",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/132334.png"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

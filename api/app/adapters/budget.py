@@ -42,6 +42,8 @@ PROVIDER_LIMITS: dict[str, Limits] = {
     "thesportsdb": Limits(per_minute=100),
     "balldontlie": Limits(per_minute=5),
     "jolpica": Limits(per_second=4, per_hour=500),
+    # ESPN documents no limits for its site API: stay far below anything a browser would do.
+    "espn": Limits(per_minute=20, per_hour=200),
 }
 
 

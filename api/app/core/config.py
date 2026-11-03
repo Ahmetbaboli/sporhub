@@ -67,6 +67,8 @@ class Settings(BaseSettings):
     cache_ttl_seconds: int = 60
     # Serve provider crest/logo URLs; only after the owner has the display right.
     show_provider_images: bool = False
+    # Opt-in: ESPN's unofficial, keyless site API for the Süper Lig (personal use).
+    espn_enabled: bool = False
 
     @field_validator("database_url")
     @classmethod

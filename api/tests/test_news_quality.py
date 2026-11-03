@@ -62,14 +62,15 @@ ATOM = f"""<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom"><entry
 <updated>2026-11-02T10:00:00Z</updated><content type="html">{ARTICLE}</content></entry></feed>"""
 
 
-def test_full_text_and_images_are_never_kept() -> None:
+def test_full_text_is_never_kept() -> None:
     feed = FeedConfig(name="t", url="https://publisher.test/rss")
     [rss] = parse_feed(RSS, feed)
     assert (
         rss.summary
         == "Sentence number 0 of the full article text. Sentence number 1 of the full article text."
     )
-    assert len(rss.summary) <= SUMMARY_MAX_CHARS and rss.image_url is None
+    assert len(rss.summary) <= SUMMARY_MAX_CHARS
+    assert rss.image_url == "https://publisher.test/i.jpg"  # the URL only, never the file
     assert "Sentence number 2" not in rss.model_dump_json()
     [atom] = parse_feed(ATOM, feed)
     assert atom.summary == ""  # Atom <content> is the article itself: ignored

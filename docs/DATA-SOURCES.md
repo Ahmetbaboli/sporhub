@@ -12,6 +12,7 @@ Koşullar değişebilir: canlıya almadan önce bağlantıları yeniden okuyun.
 | TheSportsDB v1 | Süper Lig, TFF 1. Lig | `THESPORTSDB_API_KEY` (ücretli) | Ücretli 100 istek/dk | Evet (yalnızca ücretli anahtarla) |
 | API-Football (API-Sports) | Süper Lig | — | Ücretsiz 100 istek/gün, eski sezonlar | Hayır |
 | balldontlie v1 | NBA | `BALLDONTLIE_API_KEY` | Ücretsiz 5 istek/dk | Evet |
+| ESPN site API (resmî olmayan) | Süper Lig | yok (`ESPN_ENABLED=true`) | belgelenmemiş; biz 20/dk, 200/saat | İsteğe bağlı, kişisel kullanım |
 | Jolpica-F1 | Formula 1 | yok | 4 istek/sn, 500 istek/saat | Evet |
 | RSS/Atom akışları | Haber | yok | yayıncıya göre | Evet, aşağıdaki liste |
 
@@ -49,6 +50,16 @@ Koşullar değişebilir: canlıya almadan önce bağlantıları yeniden okuyun.
 | API-Football (lig 203/204) | **Hayır** | 100/gün | Yayın lisansı kullanıcıda | Elendi |
 | football-data.org | Hayır | — | — | Elendi |
 | Sportmonks | Hayır | — | — | Elendi |
+| **ESPN site API** (`tur.1`) | **Evet** (2026/27: 297 maç, 18 takımlı tablo) | Belgelenmemiş | Resmî ürün değil, koşul yayımlanmamış | **İsteğe bağlı** (`ESPN_ENABLED`) |
+| FotMob / SofaScore iç API'leri | Evet | Belgelenmemiş | Otomatik erişimi yasaklıyor/koruyor | Elendi |
+| TFF resmî sitesi | Evet | — | Yalnızca HTML (kazıma) | Elendi |
+
+**ESPN (2026-11-03, canlı denendi):** `site.api.espn.com/apis/site/v2/sports/soccer/tur.1/{scoreboard,teams}`
+ve `/apis/v2/sports/soccer/tur.1/standings`; anahtar yok. Fikstür `dates=YYYYMM` ile ay ay
+(sezon ~12 istek), tablo satırlarında sağlayıcının kendi bölge notu (Şampiyonlar Ligi, küme düşme)
+ve takım logoları var. **TFF 1. Lig yok** (`tur.2` boş). ESPN'in kendi web/uygulama arka ucudur,
+üçüncü taraflar için koşul ya da limit yayımlanmamıştır: bu yüzden varsayılan kapalı, yalnızca
+kişisel/ticari olmayan kullanım için açılır; istek bütçesi bilinçli olarak düşük tutulur.
 
 Satır ayrıntıları:
 
@@ -125,8 +136,11 @@ Satır ayrıntıları:
   - football-data: doğrulanamadı.
   - TheSportsDB: kullanıcı yapımı içerik; "does not relicense … logos".
   - balldontlie ve Jolpica: görsel yok.
+- NBA logoları: balldontlie'de yok; `abbreviation` → ESPN CDN kodu açık tablosu (30/30 doğrulandı,
+  2026-11-03). Haber fotoğrafları: akışın kendi `enclosure`/`media:*` adresi (yalnızca https).
 - Bu yüzden takım ve lig görselleri varsayılan olarak **kısaltmalı rozet** ile gösterilir. API `logo_url`
-  alanını `SHOW_PROVIDER_IMAGES=true` olmadıkça boş döndürür (sahibi gösterim hakkını alınca açar).
+  alanını `SHOW_PROVIDER_IMAGES=true` olmadıkça boş döndürür; aynı anahtar haber fotoğraflarını da
+  açar. Sahibi kişisel/portföy kurulumunda (yayın değil) açabilir; herkese açık yayında hak gerekir.
 - F1 pist çizimleri: [bacinger/f1-circuits](https://github.com/bacinger/f1-circuits) (MIT, © Tomislav Bacinger), `api/tools/generate_circuits.py` ile SVG; Jolpica `circuitId` açık tabloyla eşlenir.
 - Kulüp armaları kulüplerin ticari markasıdır; hiçbir sağlayıcı marka hakkı vermez (balldontlie §11).
 

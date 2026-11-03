@@ -48,7 +48,7 @@ def test_parse_rss_keeps_safe_links_and_strips_html() -> None:
     item = items[0]
     assert item.title == "A & B signs for Club"
     assert item.summary == "Hello world"
-    assert item.image_url is None  # publisher images are never kept
+    assert item.image_url == "https://publisher.test/a.jpg"  # URL kept, served only opt-in
     assert item.published_at == datetime(2026, 11, 2, 6, 30, tzinfo=UTC)
     assert item.category == "transfer_official"
     assert item.source == "rss:test" and item.sport_slug == "football"

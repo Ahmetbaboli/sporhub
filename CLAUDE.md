@@ -49,7 +49,7 @@ npm run lint && npx tsc --noEmit && npm test && npm run build
 - Dialect'e özgü SQL yalnızca `app/db/dialect.py`; `timestamptz`e yalnızca timezone-aware datetime yazılır.
 - Web detay sayfalarında `loading.tsx` kullanma (200 döndürür): varlık kontrolü + `notFound()` stream öncesi, yavaş bölümler sayfa içi `Suspense`.
 
-- Yeni dış kaynak: limitleri ve kullanım koşulları resmî dokümandan okunup `docs/DATA-SOURCES.md`'ye kaynağıyla yazılmadan eklenmez. Haberden yalnızca başlık, ≤2 cümle akış özeti, tarih, kaynak, link saklanır.
+- Yeni dış kaynak: limitleri ve kullanım koşulları resmî dokümandan okunup `docs/DATA-SOURCES.md`'ye kaynağıyla yazılmadan eklenmez (belgesiz/resmî olmayan kaynak yalnızca isteğe bağlı bayrakla, ör. `ESPN_ENABLED`). Haberden yalnızca başlık, ≤2 cümle akış özeti, tarih, kaynak, link ve akışın görsel URL'si saklanır; görseller indirilmez, `SHOW_PROVIDER_IMAGES` olmadan sunulmaz.
 - Testler `.env` okumaz; `get_settings`'i adıyla içe aktaran yeni modül `tests/conftest.py` `SETTINGS_CONSUMERS`'a eklenir.
 
 ## Commit formatı

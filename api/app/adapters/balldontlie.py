@@ -63,11 +63,30 @@ def season_label(start_year: int) -> str:
     return f"{start_year}/{str(start_year + 1)[-2:]}"
 
 
+# balldontlie has no logos. ESPN's CDN files them under its own team codes; this table maps
+# the official NBA abbreviation (balldontlie `abbreviation`) to that code, all 30 checked
+# 2026-11-03. URLs are stored only; the API serves them with SHOW_PROVIDER_IMAGES=true.
+ESPN_LOGO_URL = "https://a.espncdn.com/i/teamlogos/nba/500/{code}.png"
+ESPN_LOGO_CODES: dict[str, str] = {
+    "ATL": "atl", "BKN": "bkn", "BOS": "bos", "CHA": "cha", "CHI": "chi", "CLE": "cle",
+    "DAL": "dal", "DEN": "den", "DET": "det", "GSW": "gs", "HOU": "hou", "IND": "ind",
+    "LAC": "lac", "LAL": "lal", "MEM": "mem", "MIA": "mia", "MIL": "mil", "MIN": "min",
+    "NOP": "no", "NYK": "ny", "OKC": "okc", "ORL": "orl", "PHI": "phi", "PHX": "phx",
+    "POR": "por", "SAC": "sac", "SAS": "sa", "TOR": "tor", "UTA": "utah", "WAS": "wsh",
+}  # fmt: skip
+
+
+def logo_url(abbreviation: str | None) -> str | None:
+    code = ESPN_LOGO_CODES.get((abbreviation or "").upper())
+    return ESPN_LOGO_URL.format(code=code) if code else None
+
+
 def normalize_team_ref(raw: dict[str, Any]) -> TeamRef:
     return TeamRef(
         external_id=str(raw["id"]),
         name=raw.get("full_name") or raw["name"],
         short_name=raw.get("abbreviation"),
+        logo_url=logo_url(raw.get("abbreviation")),
     )
 
 
