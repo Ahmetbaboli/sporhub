@@ -65,6 +65,8 @@ class Settings(BaseSettings):
 
     scheduler_enabled: bool = False
     cache_ttl_seconds: int = 60
+    # Serve provider crest/logo URLs; only after the owner has the display right.
+    show_provider_images: bool = False
 
     @field_validator("database_url")
     @classmethod

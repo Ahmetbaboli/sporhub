@@ -89,6 +89,7 @@ SETTINGS_CONSUMERS = (
     "app.scripts.check_sources",
     "app.scripts.purge_demo",
     "app.scripts.seed",
+    "app.services.read_service",
 )
 
 

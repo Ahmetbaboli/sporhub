@@ -125,8 +125,9 @@ Satır ayrıntıları:
   - football-data: doğrulanamadı.
   - TheSportsDB: kullanıcı yapımı içerik; "does not relicense … logos".
   - balldontlie ve Jolpica: görsel yok.
-- Bu yüzden **tüm takım ve lig görselleri baş harfli yer tutucu** ile gösterilir. API `logo_url`
-  alanını live modda boş döndürür.
+- Bu yüzden takım ve lig görselleri varsayılan olarak **kısaltmalı rozet** ile gösterilir. API `logo_url`
+  alanını `SHOW_PROVIDER_IMAGES=true` olmadıkça boş döndürür (sahibi gösterim hakkını alınca açar).
+- F1 pist çizimleri: [bacinger/f1-circuits](https://github.com/bacinger/f1-circuits) (MIT, © Tomislav Bacinger), `api/tools/generate_circuits.py` ile SVG; Jolpica `circuitId` açık tabloyla eşlenir.
 - Kulüp armaları kulüplerin ticari markasıdır; hiçbir sağlayıcı marka hakkı vermez (balldontlie §11).
 
 ## Haber akışları (RSS/Atom)

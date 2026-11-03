@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.cache import cached
+from app.core.config import get_settings
 from app.core.data_mode import display_source
 from app.core.errors import AppError, NotFoundError
 from app.models import Competition, Event, Player, Standing, Team
@@ -27,13 +28,15 @@ from app.schemas.api import (
 )
 
 MIN_SEARCH_LENGTH = 2
-# No provider grants an explicit right to display crests/logos (docs/DATA-SOURCES.md, image
-# policy): URLs are kept in the database but never served, the UI shows initials instead.
-SHOW_PROVIDER_IMAGES = False
 
 
 def provider_image(url: str | None) -> str | None:
-    return url if SHOW_PROVIDER_IMAGES else None
+    """Crest/logo URL of the record itself, served only when the owner opted in.
+
+    No provider grants an explicit display right (docs/DATA-SOURCES.md, image policy), so
+    SHOW_PROVIDER_IMAGES defaults to off and the UI draws its own badge instead.
+    """
+    return url if get_settings().show_provider_images else None
 
 
 DEFAULT_TZ = "UTC"
