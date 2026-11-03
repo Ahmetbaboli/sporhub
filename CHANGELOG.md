@@ -2,6 +2,38 @@
 
 Biçim [Keep a Changelog](https://keepachangelog.com/), sürümleme [SemVer](https://semver.org/).
 
+## [Unreleased] — v0.5 tasarım yenilemesi (2026-11-03)
+
+### Eklendi
+- **Yeni kimlik:** Just Sport paleti (#0B1018 zemin, #43C7F4 mavi, #FFAA45 turuncu, #FF4D5E canlı),
+  koyu varsayılan tema, Inter gövde yazısı (Barlow Condensed yalnızca büyük başlıkta), 1280 px içerik.
+- **Bugün:** tarih seçici (önceki/sonraki gün, tarih kutusu), Canlı/Yaklaşan/Biten filtresi (sayılı),
+  öne çıkan maçlar (açık kural: canlı → lig öncelik tablosu → saat), hizalı maç satırı
+  (durum · ev · skor · deplasman · yıldız), sağda kapaklı son haberler.
+- **Canlılık:** canlı maç varken sayfa dakikada bir yenilenir; yalnızca gerçekten değişen skor
+  kısa vurgulanır; canlı noktası nabız atar. Hareket azaltma tercihinde animasyon yok.
+- **Haberler:** manşet + iki ikincil haber, kapaklı akış, kompakt arşiv ayı seçici, kaydırmalı ve
+  aktif sekmeyi gösteren kategori şeridi; haber kaynağı yoksa açık mesaj.
+- **Formula 1 sayfası:** sonraki yarış kartı (pist çizimi, konum, geri sayım, seans programı),
+  Yaklaşan Yarışlar, pilot/takım şampiyonası, Yarış Takvimi (kazananlarla).
+  Pist çizimleri `api/tools/generate_circuits.py` ile bacinger/f1-circuits (MIT) verisinden.
+- **Benim Tribünüm (`/tribun`):** hesapsız favori takım/lig/pilot ve takip edilen maçlar (çerezde
+  yalnızca kimlikler); ana sayfada "Tribününden bugün", liglerde öne alma, takım kartları, haberler.
+- **`SHOW_PROVIDER_IMAGES`** (varsayılan kapalı): gösterim hakkı alınınca sağlayıcının kendi armaları.
+- **`python -m app.scripts.retag_news`:** kayıtlı haberleri güncel etiketleme kurallarıyla yeniden etiketler.
+
+### Değişti
+- Rozetler sağlayıcı kısaltmasını (GAL, ARS) gösterir; dar ekranda maç satırında yalnızca kısaltma.
+- Haber etiketleme: "VfB/RB/SV…" önekleri atılır ("Stuttgart'ın" → VfB Stuttgart); gündelik
+  kelimeye denk gelen kısa adlar tek başına eşleşmez ("sabah" → Sabah FK değil).
+
+### Düzeltildi
+- Türkçe arayüzde İngilizce adların büyük harfle "PREMİER LEAGUE / BRAZİLİAN" görünmesi
+  (veri adlarında büyük harf dönüşümü kaldırıldı).
+- Redis'e ulaşılamadığında her isteğin ~8 sn beklemesi ve sayfaların 500 vermesi; /health'in
+  bu durumda Redis'i "ok" göstermesi.
+- football-data isteklerinin kurum SSL proxy'si arkasında sertifika hatası vermesi (`truststore`).
+
 ## [0.4.0] — 2026-11-02
 
 Demo'dan gerçek veriye geçiş. (0.3 ayrı etiketlenmedi; o dönemin özellikleri de burada.)

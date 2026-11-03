@@ -22,12 +22,14 @@ export async function Header() {
   const sports = await loadSports();
   return (
     <header className="bg-background/90 sticky top-0 z-40 border-b backdrop-blur">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2">
+      <div className="mx-auto flex max-w-[80rem] flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2 sm:px-6">
         <Link
           href="/"
-          className="font-display text-primary text-2xl leading-none font-bold tracking-tight uppercase"
+          aria-label="Just Sport"
+          className="font-display text-[1.7rem] leading-none font-bold tracking-tight uppercase"
         >
-          Just<span className="text-accent">Sport</span>
+          <span className="text-primary">Just</span>
+          <span className="text-accent">Sport</span>
         </Link>
         <div className="order-3 w-full sm:order-2 sm:w-64 sm:flex-none md:ml-auto">
           <SearchForm />

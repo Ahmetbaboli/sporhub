@@ -12,6 +12,8 @@ import { StandingsTable } from "@/components/sport/standings-table";
 import { EmptyState } from "@/components/ui/states";
 import { Pagination } from "@/components/ui/pagination";
 import { TabNav } from "@/components/ui/tab-nav";
+import { TeamBadge } from "@/components/sport/team-badge";
+import { TribuneStar } from "@/components/tribune/tribune-provider";
 import { api } from "@/lib/api";
 import { orNotFound, parsePage } from "@/lib/api-helpers";
 import { initLocale, t } from "@/lib/i18n";
@@ -59,28 +61,42 @@ export default async function CompetitionPage({ params, searchParams }: Props) {
   return (
     <>
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="font-display text-4xl font-bold tracking-tight uppercase">
-          {competition.name}
-        </h1>
-        <Suspense fallback={null}>
-          <FavoriteToggle
+        <div className="flex min-w-0 items-center gap-4">
+          <TeamBadge team={competition} size="lg" variant="competition" />
+          <div className="min-w-0">
+            <h1 className="font-display text-4xl leading-none font-bold tracking-tight sm:text-5xl">
+              {competition.name}
+            </h1>
+            <p className="text-muted-foreground mt-1.5 text-sm">
+              {[
+                competition.country,
+                competition.current_season
+                  ? `${t().competition.season} ${competition.current_season.year_label}`
+                  : null,
+              ]
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <TribuneStar
             kind="competitions"
             id={competition.id}
             name={competition.name}
-            returnTo={base}
+            withText
           />
-        </Suspense>
+          <Suspense fallback={null}>
+            <FavoriteToggle
+              kind="competitions"
+              id={competition.id}
+              name={competition.name}
+              returnTo={base}
+            />
+          </Suspense>
+        </div>
       </div>
-      <p className="text-muted-foreground mt-1 mb-6 text-sm">
-        {[
-          competition.country,
-          competition.current_season
-            ? `${t().competition.season} ${competition.current_season.year_label}`
-            : null,
-        ]
-          .filter(Boolean)
-          .join(" · ")}
-      </p>
+      <div className="mb-5" />
 
       <TabNav tabs={tabs} active={tab} />
 

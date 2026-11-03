@@ -5,6 +5,14 @@ export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
 }
 
+const PROVIDER_CODE = /^[A-Z0-9]{2,4}$/;
+
+/** Badge text: the provider's own short code (TLA such as "GAL") when it has one, else initials. */
+export function badgeCode(team: { name: string; short_name?: string | null }): string {
+  const code = team.short_name?.trim().toUpperCase();
+  return code && PROVIDER_CODE.test(code) ? code : initials(team.name);
+}
+
 /** "Manchester City FC" -> "MC"; used when a crest is missing or fails to load. */
 export function initials(name: string): string {
   const words = name

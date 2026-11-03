@@ -85,14 +85,18 @@
 - Sezon geçmişinde şampiyonlar listesi; "bugün tarihte" kartı
 - Erişilebilirlik: yüksek kontrastlı tema, klavyeyle tam gezinme
 ### v0.5 — Tasarım ve deneyim yenilemesi (2026-11-03)
-- [ ] Kimlik: yeni renkler, Inter + Barlow Condensed (yalnızca büyük başlık), 1280 px içerik, koyu varsayılan
-- [ ] Rozetler: TLA rozeti; `SHOW_PROVIDER_IMAGES` ile isteğe bağlı gerçek arma (kimlikle)
-- [ ] Bugün: tarih seçici, Canlı/Yaklaşan/Biten filtresi, öne çıkanlar, hizalı maç satırı + yıldız
-- [ ] Haberler: manşet + 2 ikincil, kapaklı akış, kompakt arşiv filtresi, sekme kaydırma düzeltmesi
-- [ ] Futbol/basketbol: lig kartları, favori liglere hızlı erişim
-- [ ] F1: ayrı sayfa — sonraki yarış kartı (pist çizimi, seanslar, geri sayım), takvim, sıralamalar
-- [ ] Benim Tribünüm (çerezde favoriler, içerik önceliği)
-- [ ] Animasyon (150–200 ms, nabız, skor vurgusu, reduced-motion), erişilebilirlik ve mobil kontrolü
+- [x] Kimlik: yeni renkler, Inter + Barlow Condensed (yalnızca büyük başlık), 1280 px içerik, koyu varsayılan
+- [x] Rozetler: TLA rozeti; `SHOW_PROVIDER_IMAGES` ile isteğe bağlı gerçek arma (kimlikle)
+- [x] Bugün: tarih seçici, Canlı/Yaklaşan/Biten filtresi, öne çıkanlar, hizalı maç satırı + yıldız
+- [x] Haberler: manşet + 2 ikincil, kapaklı akış, kompakt arşiv filtresi, sekme kaydırma düzeltmesi
+- [x] Futbol/basketbol: lig kartları, favori liglere hızlı erişim
+- [x] F1: ayrı sayfa — sonraki yarış kartı (pist çizimi, seanslar, geri sayım), takvim, sıralamalar
+- [x] Benim Tribünüm (çerezde favoriler, içerik önceliği)
+- [x] Animasyon (150–200 ms, nabız, skor vurgusu, reduced-motion), erişilebilirlik ve mobil kontrolü
+- [x] Haber–takım eşleşme denetimi: 100 başlık incelendi; Sabah FK yanlış eşleşmesi ve VfB/RB önek kaçağı düzeltildi, `retag_news` ile 15 haber yeniden etiketlendi
+- [ ] Gerçek armalar: gösterim hakkı (football-data / kulüpler) alınırsa `SHOW_PROVIDER_IMAGES=true`
+- [ ] Haber fotoğrafları: yayıncılardan lisans gerekir (şu an spora özel kapak)
+- [ ] Pilot portreleri: izinli kaynak bulunamadı
 
 ### Aşama 6 — Vitrin
 - [ ] README ekran görüntüleri/GIF, repo konu etiketleri, v1.0.0

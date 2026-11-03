@@ -1,6 +1,6 @@
 "use client";
 
-import { GitCompareArrows, Newspaper } from "lucide-react";
+import { GitCompareArrows, Newspaper, Star } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useT } from "@/lib/i18n/client";
@@ -19,11 +19,15 @@ export function SportNav({ sports }: { sports: Sport[] }) {
       label: s.name,
       Icon: templateFor(s.slug).icon,
     })),
+    { href: "/tribun", label: tr.tribune.title, Icon: Star },
     { href: "/compare", label: tr.compare.title, Icon: GitCompareArrows },
   ];
 
   return (
-    <nav aria-label={tr.nav.primary} className="order-4 -mb-2 w-full overflow-x-auto">
+    <nav
+      aria-label={tr.nav.primary}
+      className="scroll-strip order-4 -mb-2 w-full overflow-x-auto"
+    >
       <ul className="flex gap-1 pb-2">
         {items.map((item) => {
           const active =
@@ -36,7 +40,7 @@ export function SportNav({ sports }: { sports: Sport[] }) {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "inline-flex h-9 items-center rounded-md px-3 text-sm font-medium whitespace-nowrap",
+                  "inline-flex h-9 items-center rounded-md px-3 text-sm font-medium whitespace-nowrap transition-colors duration-150",
                   active
                     ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground",

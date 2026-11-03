@@ -8,6 +8,7 @@ import { RelatedNews } from "@/components/news/related-news";
 import { TableSkeleton } from "@/components/sport/skeletons";
 import { PlayerPerformance } from "@/components/sport/player-performance";
 import { TeamBadge } from "@/components/sport/team-badge";
+import { TribuneStar } from "@/components/tribune/tribune-provider";
 import { api } from "@/lib/api";
 import { orNotFound, parseId } from "@/lib/api-helpers";
 import { formatDate } from "@/lib/format";
@@ -70,11 +71,10 @@ export default async function PlayerPage({ params }: Props) {
   return (
     <>
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="font-display text-4xl font-bold tracking-tight uppercase">
-          {player.name}
-        </h1>
+        <h1 className="font-display text-4xl font-bold tracking-tight">{player.name}</h1>
         <div className="flex flex-wrap items-center gap-2">
           <CompareLink href={`/compare?type=players&a=${player.id}`} />
+          <TribuneStar kind="players" id={player.id} name={player.name} withText />
           <Suspense fallback={null}>
             <FavoriteToggle
               kind="players"

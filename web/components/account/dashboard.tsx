@@ -21,7 +21,7 @@ export function TeamActivityCard({ activity }: { activity: TeamActivity }) {
     <section className="bg-card overflow-hidden rounded-lg border">
       <header className="bg-muted/60 flex items-center gap-2 border-b px-3 py-2">
         <TeamBadge team={team} size="sm" />
-        <h3 className="font-display text-lg font-semibold tracking-wide uppercase">
+        <h3 className="font-display text-lg font-semibold tracking-wide">
           <Link href={`/teams/${team.id}`} className="hover:underline">
             {team.name}
           </Link>
@@ -63,7 +63,7 @@ export function CompetitionPlaceCard({ place }: { place: CompetitionPlace }) {
   return (
     <section className="bg-card overflow-hidden rounded-lg border">
       <header className="bg-muted/60 flex items-baseline justify-between gap-2 border-b px-3 py-2">
-        <h3 className="font-display text-lg font-semibold tracking-wide uppercase">
+        <h3 className="font-display text-lg font-semibold tracking-wide">
           <Link href={competitionHref(place.competition)} className="hover:underline">
             {place.competition.name}
           </Link>

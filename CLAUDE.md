@@ -22,6 +22,8 @@ uv run alembic upgrade head
 uv run python -m app.scripts.check_sources   # hangi kaynak etkin (değer göstermez)
 DATA_MODE=demo uv run python -m app.scripts.seed   # yalnızca demo: örnek veri
 uv run python -m app.scripts.purge_demo   # demo kayıtlarını sil
+uv run python -m app.scripts.retag_news   # etiketleme kuralı değişince haberleri yeniden etiketle
+PYTHONPATH=. uv run python tools/generate_circuits.py   # F1 pist çizimleri -> web/lib/circuits.ts
 uv run uvicorn app.main:app --reload
 uv run pytest --cov=app                  # test + kapsam (varsayılan SQLite)
 # Gerçek PostgreSQL/Redis ile: TEST_DATABASE_URL=postgresql+asyncpg://... TEST_REDIS_URL=redis://... uv run pytest

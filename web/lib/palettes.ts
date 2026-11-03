@@ -4,6 +4,7 @@
  * Colours themselves are CSS variables in app/globals.css.
  */
 export const PALETTES = [
+  "justsport",
   "pitch",
   "ocean",
   "crimson",
@@ -13,11 +14,12 @@ export const PALETTES = [
 ] as const;
 export type Palette = (typeof PALETTES)[number];
 
-export const DEFAULT_PALETTE: Palette = "pitch";
+export const DEFAULT_PALETTE: Palette = "justsport";
 export const PALETTE_STORAGE_KEY = "justsport-palette";
 
 /** Swatch colour shown in the picker (the palette's light-mode primary). */
 export const PALETTE_SWATCHES: Record<Palette, string> = {
+  justsport: "#43c7f4",
   pitch: "#0e4a36",
   ocean: "#0b4f8a",
   crimson: "#a3122a",

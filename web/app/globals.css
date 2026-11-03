@@ -2,9 +2,44 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Palette: chalk paper + pitch green by day, floodlit night pitch + lime chalk by night.
-   All colours are CSS variables so a theme change is a single class toggle. */
+/* Just Sport identity: deep stadium navy, floodlight blue (#43C7F4) and kit orange
+   (#FFAA45) from the logo; red only for live. Colour is reserved for selection, key actions
+   and live states. All colours are CSS variables so a theme change is a class toggle. */
 :root {
+  --background: #f3f6fa;
+  --foreground: #0b1018;
+  --card: #ffffff;
+  --muted: #e7edf4;
+  --muted-foreground: #4b5b70;
+  --border: #d3dce7;
+  --primary: #0a78a8;
+  --primary-foreground: #ffffff;
+  --accent: #b85a00;
+  --accent-foreground: #ffffff;
+  --live: #d32f45;
+  --live-foreground: #ffffff;
+  --ring: #0a78a8;
+}
+
+.dark {
+  --background: #0b1018;
+  --foreground: #f3f6fa;
+  --card: #151e2c;
+  --muted: #1d2a3b;
+  --muted-foreground: #9daabd;
+  --border: #26354a;
+  --primary: #43c7f4;
+  --primary-foreground: #0b1018;
+  --accent: #ffaa45;
+  --accent-foreground: #0b1018;
+  --live: #ff4d5e;
+  --live-foreground: #0b1018;
+  --ring: #43c7f4;
+}
+
+/* Colour palettes (lib/palettes.ts). Only the brand colours change; "pitch" keeps the
+   original chalk-and-grass look, "contrast" sharpens text and borders for low vision. */
+[data-palette="pitch"] {
   --background: #f5f2ea;
   --foreground: #12201a;
   --card: #fffdf8;
@@ -17,8 +52,7 @@
   --accent-foreground: #ffffff;
   --ring: #0e4a36;
 }
-
-.dark {
+.dark[data-palette="pitch"] {
   --background: #0a100d;
   --foreground: #ecefe6;
   --card: #111a15;
@@ -31,9 +65,6 @@
   --accent-foreground: #0a100d;
   --ring: #c8f23a;
 }
-
-/* Colour palettes (lib/palettes.ts). Only the brand colours change; "contrast" also
-   sharpens text and borders for low-vision users. */
 [data-palette="ocean"] {
   --primary: #0b4f8a;
   --ring: #0b4f8a;
@@ -85,6 +116,8 @@
   --primary-foreground: #ffffff;
   --accent: #b00020;
   --accent-foreground: #ffffff;
+  --live: #b00020;
+  --live-foreground: #ffffff;
   --ring: #0050d0;
 }
 .dark[data-palette="contrast"] {
@@ -98,6 +131,8 @@
   --primary-foreground: #000000;
   --accent: #ff8a8a;
   --accent-foreground: #000000;
+  --live: #ff8a8a;
+  --live-foreground: #000000;
   --ring: #ffe600;
 }
 
@@ -113,8 +148,10 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-ring: var(--ring);
-  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
-  --font-display: var(--font-display), var(--font-geist-sans), sans-serif;
+  --color-live: var(--live);
+  --color-live-foreground: var(--live-foreground);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-inter), sans-serif;
 }
 
 @layer base {
@@ -144,22 +181,89 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* ---- Motion: short (150–200 ms), purposeful, and off for reduced-motion users ---- */
+
 @keyframes pulse-dot {
   0%,
   100% {
     opacity: 1;
+    transform: scale(1);
   }
   50% {
-    opacity: 0.35;
+    opacity: 0.45;
+    transform: scale(0.8);
   }
 }
 
 .live-dot {
-  animation: pulse-dot 1.4s ease-in-out infinite;
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+
+/* Cards lift slightly on hover. */
+.lift {
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+.lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px -10px rgb(0 0 0 / 0.45);
+}
+
+/* News covers zoom a touch inside their frame. */
+.zoom-media > * {
+  transition: transform 200ms ease;
+}
+.zoom-media:hover > *,
+a:hover .zoom-media > *,
+a:focus-visible .zoom-media > * {
+  transform: scale(1.04);
+}
+
+/* A score that really changed flashes once (ScoreFlash keys the element on the value). */
+@keyframes score-flash {
+  0% {
+    background-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+.score-flash {
+  animation: score-flash 1.2s ease-out 1;
+  border-radius: 6px;
+}
+
+/* Horizontally scrolling tab strips: no scrollbar, soft fade at the edges. */
+.scroll-strip {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 12px,
+    #000 calc(100% - 24px),
+    transparent 100%
+  );
+}
+.scroll-strip::-webkit-scrollbar {
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .live-dot {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .lift:hover,
+  .zoom-media:hover > *,
+  a:hover .zoom-media > * {
+    transform: none;
   }
 }

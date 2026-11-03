@@ -10,6 +10,7 @@ import { SeriesChart } from "@/components/charts/series-chart";
 import { CompareLink } from "@/components/compare/compare-link";
 import { HeadToHeadCard, TeamAnalysisPanel } from "@/components/sport/team-analysis";
 import { TeamBadge } from "@/components/sport/team-badge";
+import { TribuneStar } from "@/components/tribune/tribune-provider";
 import { EmptyState } from "@/components/ui/states";
 import { api } from "@/lib/api";
 import { orNotFound, parseId } from "@/lib/api-helpers";
@@ -44,7 +45,7 @@ export default async function TeamPage({ params }: Props) {
       <div className="flex flex-wrap items-center gap-4">
         <TeamBadge team={team} size="lg" />
         <div>
-          <h1 className="font-display text-4xl leading-none font-bold tracking-tight uppercase">
+          <h1 className="font-display text-4xl leading-none font-bold tracking-tight">
             {team.name}
           </h1>
           {team.country ? (
@@ -53,6 +54,7 @@ export default async function TeamPage({ params }: Props) {
         </div>
         <div className="ml-auto flex flex-wrap items-center gap-2">
           <CompareLink href={`/compare?type=teams&a=${id}`} />
+          <TribuneStar kind="teams" id={id} name={team.name} withText />
           <Suspense fallback={null}>
             <FavoriteToggle
               kind="teams"

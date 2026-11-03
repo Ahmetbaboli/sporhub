@@ -15,7 +15,7 @@ export async function Footer() {
   const providers = Object.entries(PROVIDERS).filter(([key]) => !meta || active.has(key));
   return (
     <footer className="text-muted-foreground border-t text-sm">
-      <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-6 sm:flex-row sm:justify-between">
+      <div className="mx-auto flex max-w-[80rem] flex-col gap-2 px-4 py-6 sm:flex-row sm:justify-between sm:px-6">
         <p>
           <span className="font-display text-foreground text-base font-semibold uppercase">
             {t().app.name}
@@ -34,7 +34,7 @@ export async function Footer() {
           </Link>
         </nav>
       </div>
-      <div className="mx-auto max-w-5xl space-y-1 px-4 pb-6 text-xs">
+      <div className="mx-auto max-w-[80rem] space-y-1 px-4 pb-6 text-xs sm:px-6">
         <p>{f.note}</p>
         <p>
           {providers.map(([key, p], i) => (

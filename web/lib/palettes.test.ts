@@ -4,14 +4,15 @@ import { PALETTE_BOOT_SCRIPT, PALETTES, parsePalette } from "@/lib/palettes";
 describe("palettes", () => {
   it("falls back to the default for unknown values", () => {
     expect(parsePalette("ocean")).toBe("ocean");
-    expect(parsePalette("<script>")).toBe("pitch");
-    expect(parsePalette(null)).toBe("pitch");
+    expect(parsePalette("<script>")).toBe("justsport");
+    expect(parsePalette(null)).toBe("justsport");
   });
 
   it("boot script applies only known, non-default palettes", () => {
     for (const [stored, expected] of [
       ["violet", "violet"],
-      ["pitch", undefined],
+      ["pitch", "pitch"],
+      ["justsport", undefined],
       ["evil", undefined],
     ] as const) {
       localStorage.setItem("justsport-palette", stored);
@@ -19,6 +20,6 @@ describe("palettes", () => {
       new Function(PALETTE_BOOT_SCRIPT)();
       expect(document.documentElement.dataset.palette).toBe(expected);
     }
-    expect(PALETTES[0]).toBe("pitch");
+    expect(PALETTES[0]).toBe("justsport");
   });
 });

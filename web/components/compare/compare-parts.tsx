@@ -150,7 +150,7 @@ export function Contenders({
       {side.badge ? <TeamBadge team={side.badge} size="lg" /> : null}
       <Link
         href={side.href}
-        className="font-display text-2xl leading-none font-bold uppercase hover:underline sm:text-3xl"
+        className="font-display text-2xl leading-none font-bold hover:underline sm:text-3xl"
       >
         {side.name}
       </Link>
