@@ -44,6 +44,8 @@ FIXTURE_INDEX = "feeds.json"
 
 ATOM = "{http://www.w3.org/2005/Atom}"
 MEDIA = "{http://search.yahoo.com/mrss/}"
+CONTENT = "{http://purl.org/rss/1.0/modules/content/}"
+IMG_SRC = re.compile(r"<img[^>]+src=[\"'](https://[^\"']+)[\"']", re.IGNORECASE)
 TAG_RE = re.compile(r"<[^>]+>")
 SPACE_RE = re.compile(r"\s+")
 
@@ -198,6 +200,16 @@ def _external_id(feed: FeedConfig, guid: str | None, link: str) -> str:
     return hashlib.sha256(f"{feed.name}|{key}".encode()).hexdigest()[:40]
 
 
+def _embedded_image(item: Element) -> str | None:
+    """Some feeds (Sporx, Yahoo) put the story's picture in the HTML of the description or
+    content:encoded; take the first https <img src> address only, never the HTML itself."""
+    for tag in ("description", f"{CONTENT}encoded"):
+        match = IMG_SRC.search(_text(item, tag) or "")
+        if match:
+            return html.unescape(match.group(1))
+    return None
+
+
 def _rss_image(item: Element) -> str | None:
     enclosure = item.find("enclosure")
     if enclosure is not None and enclosure.get("type", "").startswith("image/"):
@@ -206,7 +218,9 @@ def _rss_image(item: Element) -> str | None:
     media = item.find(f"{MEDIA}content")
     if media is None:
         media = item.find(f"{MEDIA}thumbnail")
-    return media.get("url") if media is not None else None
+    if media is not None and media.get("url"):
+        return media.get("url")
+    return _embedded_image(item)
 
 
 def _build(

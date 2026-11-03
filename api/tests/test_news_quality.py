@@ -142,3 +142,19 @@ def test_default_feeds_are_real_publishers(settings: Settings) -> None:
     assert {"football", "basketball", "formula-1"} <= sports
     for feed in DEFAULT_NEWS_FEEDS:
         assert feed["url"].startswith("https://") and not is_placeholder_url(feed["url"])
+
+
+def test_picture_embedded_in_description_html_is_found() -> None:
+    feed = FeedConfig(name="t", url="https://publisher.test/rss")
+    xml = """<?xml version="1.0"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel><item><title>A</title><link>https://publisher.test/a</link>
+<description>&lt;img src="https://cdn.publisher.test/a.jpg" /&gt; Kısa özet.</description></item>
+<item><title>B</title><link>https://publisher.test/b</link><description>Özet</description>
+<content:encoded><![CDATA[<figure><img alt="" src="https://cdn.publisher.test/b.jpg"/></figure>]]></content:encoded>
+</item><item><title>C</title><link>https://publisher.test/c</link>
+<description>&lt;img src="http://insecure.test/c.jpg"&gt;</description></item></channel></rss>"""
+    a, b, c = parse_feed(xml, feed)
+    assert a.image_url == "https://cdn.publisher.test/a.jpg"
+    assert b.image_url == "https://cdn.publisher.test/b.jpg"
+    assert c.image_url is None  # https only
+    assert "<img" not in a.summary
