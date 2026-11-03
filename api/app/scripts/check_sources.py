@@ -13,12 +13,13 @@ import httpx
 
 from app.core.config import get_settings
 from app.core.sources import PROBE_TIMEOUT_SECONDS, SOURCES, probe_source
+from app.core.tls import ssl_context
 
 
 async def check() -> int:
     settings = get_settings()
     failures = 0
-    async with httpx.AsyncClient(timeout=PROBE_TIMEOUT_SECONDS) as client:
+    async with httpx.AsyncClient(timeout=PROBE_TIMEOUT_SECONDS, verify=ssl_context()) as client:
         for spec in SOURCES:
             configured = spec.is_configured(settings)
             state = "yapılandırıldı" if configured else "YAPILANDIRILMADI"

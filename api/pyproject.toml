@@ -18,6 +18,7 @@ dependencies = [
   "tzdata>=2024.2",
   "pyjwt>=2.9",
   "defusedxml>=0.7.1",
+  "truststore>=0.10.5",
 ]
 
 [dependency-groups]

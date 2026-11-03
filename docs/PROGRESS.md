@@ -101,5 +101,5 @@
 - v0.4: PostgreSQL'e özgü testler (advisory lock dahil) yerelde atlanır (Docker/PG yok); CI'da koşar. Scheduler kilidi gerçek PG'de bu makinede denenemedi.
 - v0.4: Gerçek deploy (Render/Vercel/Neon/Upstash) yapılmadı — hesaplar sahibinde; push yok.
 - v0.4: API sonuçlarının resmî bir "yarış sonrası gecikme" değeri Jolpica'da belgelenmemiş (doğrulanamadı).
-- 2026-11-03: Bu makinede football-data isteği `CERTIFICATE_VERIFY_FAILED (self-signed certificate in chain)` ile düşüyor — büyük olasılıkla kurum ağının SSL denetim proxy'si; balldontlie/jolpica geçiyor. Çözüm adayı: `truststore` ile işletim sistemi sertifika deposunu kullanmak (henüz yapılmadı).
+- 2026-11-03: Bu makinede football-data isteği `CERTIFICATE_VERIFY_FAILED (self-signed certificate in chain)` ile düşüyor — büyük olasılıkla kurum ağının SSL denetim proxy'si; balldontlie/jolpica geçiyor. Çözüldü: adapter istemcileri `truststore` ile işletim sistemi sertifika deposunu kullanıyor (`app/core/tls.py`).
 - 2026-11-03: Yerel `.env`'de `ADMIN_TOKEN` örnek/kısa değerde (açılış doğrulaması API'yi durduruyor), `NEWS_FEEDS` boş (haber çekilmiyor), `REDIS_URL` çalışmayan bir Redis'i gösteriyor. `.env` sahibince düzeltilmeli.

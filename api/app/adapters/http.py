@@ -19,6 +19,7 @@ from tenacity import (
 )
 
 from app.adapters.budget import RequestBudget
+from app.core.tls import ssl_context
 
 logger = logging.getLogger(__name__)
 
@@ -82,7 +83,7 @@ class RateLimitedClient:
     ) -> None:
         self._budget = budget
         self._client = client or httpx.AsyncClient(
-            base_url=base_url, headers=headers, timeout=timeout
+            base_url=base_url, headers=headers, timeout=timeout, verify=ssl_context()
         )
         self._min_interval = min_interval
         self._last_request = 0.0
