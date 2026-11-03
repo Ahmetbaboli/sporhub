@@ -5,6 +5,7 @@
  */
 export const PALETTES = [
   "justsport",
+  "nerova",
   "pitch",
   "ocean",
   "crimson",
@@ -20,6 +21,7 @@ export const PALETTE_STORAGE_KEY = "justsport-palette";
 /** Swatch colour shown in the picker (the palette's light-mode primary). */
 export const PALETTE_SWATCHES: Record<Palette, string> = {
   justsport: "#43c7f4",
+  nerova: "#7c3aed",
   pitch: "#0e4a36",
   ocean: "#0b4f8a",
   crimson: "#a3122a",
@@ -33,6 +35,6 @@ export function parsePalette(value: string | null | undefined): Palette {
 }
 
 /** Runs inline in <head>; must stay self-contained (no imports, no closures). */
-export const PALETTE_BOOT_SCRIPT = `try{var p=localStorage.getItem(${JSON.stringify(
+export const PALETTE_BOOT_SCRIPT = `document.documentElement.classList.add("js");try{var p=localStorage.getItem(${JSON.stringify(
   PALETTE_STORAGE_KEY,
 )});if(${JSON.stringify(PALETTES)}.indexOf(p)>0)document.documentElement.dataset.palette=p}catch(e){}`;

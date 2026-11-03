@@ -15,6 +15,7 @@ coverage.xml
 htmlcov/
 *.egg-info/
 *.db
+*.db-journal
 *.sqlite3
 
 # Node

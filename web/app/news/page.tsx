@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
+import { SplitWords } from "@/components/motion/motion";
 import { NewsFeed, NewsHero } from "@/components/news/news-parts";
 import { NewsFeedSkeleton } from "@/components/sport/skeletons";
 import { Pagination } from "@/components/ui/pagination";
@@ -78,7 +79,7 @@ export default async function NewsPage({ searchParams }: Props) {
   return (
     <>
       <h1 className="font-display text-4xl leading-none font-bold tracking-tight uppercase sm:text-5xl">
-        {t().news.title}
+        <SplitWords text={t().news.title} />
       </h1>
       <p className="text-muted-foreground mt-1.5 mb-5 text-sm">{t().news.subtitle}</p>
       <TabNav tabs={tabs} active={state.tab} label={t().news.filters} />

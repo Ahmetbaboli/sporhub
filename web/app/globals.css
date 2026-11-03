@@ -65,6 +65,24 @@
   --accent-foreground: #0a100d;
   --ring: #c8f23a;
 }
+/* "Nerova": deep violet night with a magenta-violet glow. */
+[data-palette="nerova"] {
+  --primary: #6d28d9;
+  --ring: #6d28d9;
+  --accent: #c026d3;
+}
+.dark[data-palette="nerova"] {
+  --background: #07050d;
+  --card: #120d1f;
+  --muted: #1c1530;
+  --border: #2c2244;
+  --muted-foreground: #a99fc4;
+  --primary: #a78bfa;
+  --primary-foreground: #0b0614;
+  --ring: #a78bfa;
+  --accent: #f0abfc;
+  --accent-foreground: #0b0614;
+}
 [data-palette="ocean"] {
   --primary: #0b4f8a;
   --ring: #0b4f8a;
@@ -152,6 +170,7 @@
   --color-live-foreground: var(--live-foreground);
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-display), var(--font-inter), sans-serif;
+  --font-serif: var(--font-accent), Georgia, serif;
 }
 
 @layer base {
@@ -264,6 +283,145 @@ a:focus-visible .zoom-media > * {
   .lift:hover,
   .zoom-media:hover > *,
   a:hover .zoom-media > * {
+    transform: none;
+  }
+}
+
+/* ---- Stage (Nerova-inspired): a faint floodlight beam and pitch grid behind everything ---- */
+
+.stage {
+  position: relative;
+  isolation: isolate;
+}
+.stage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      60rem 28rem at 50% -8rem,
+      color-mix(in srgb, var(--primary) 16%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      36rem 22rem at 100% 10%,
+      color-mix(in srgb, var(--accent) 7%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(
+        to right,
+        color-mix(in srgb, var(--foreground) 4%, transparent) 1px,
+        transparent 1px
+      )
+      0 0 / 56px 56px,
+    linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--foreground) 4%, transparent) 1px,
+        transparent 1px
+      )
+      0 0 / 56px 56px;
+  mask-image: linear-gradient(to bottom, #000 0, #000 30rem, transparent 60rem);
+}
+
+/* Glass card with a soft gradient hairline border (lit from the top-left). */
+.glass {
+  position: relative;
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--primary) 7%, var(--card)),
+    var(--card) 45%
+  );
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+.glass::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  background: linear-gradient(
+    150deg,
+    color-mix(in srgb, var(--primary) 55%, transparent),
+    color-mix(in srgb, var(--border) 90%, transparent) 35%,
+    color-mix(in srgb, var(--border) 60%, transparent) 70%,
+    color-mix(in srgb, var(--accent) 40%, transparent)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Small "eyebrow" pill above big titles. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, var(--border));
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--primary) 80%, var(--foreground));
+}
+
+/* Title words rise out of a blur, one after another (SplitWords sets --i per word). */
+@keyframes word-in {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(0.35em);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+.split-word {
+  display: inline-block;
+  animation: word-in 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+
+/* Sections fade up once they scroll into view (Reveal adds .is-in). Only with JavaScript
+   running (html.js, set in <head>), so nothing is ever hidden for no-JS visitors. */
+.js .reveal {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(14px);
+  transition:
+    opacity 600ms ease,
+    filter 600ms ease,
+    transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.js .reveal.is-in {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+/* Pill button with a round arrow that nudges on hover. */
+.pill-arrow {
+  transition: transform 180ms ease;
+}
+a:hover > .pill-arrow,
+button:hover > .pill-arrow {
+  transform: translate(2px, -2px) rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .split-word,
+  .js .reveal {
+    animation: none;
+    opacity: 1;
+    filter: none;
     transform: none;
   }
 }

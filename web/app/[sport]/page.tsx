@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { SplitWords } from "@/components/motion/motion";
 import {
   ChampionshipTop,
   NextRaceCard,
@@ -65,7 +66,7 @@ export default async function SportPage({ params }: Props) {
   return (
     <>
       <h1 className="font-display text-4xl leading-none font-bold tracking-tight uppercase sm:text-5xl">
-        {current.name}
+        <SplitWords text={current.name} />
       </h1>
       {competitions.length === 0 ? (
         <EmptyState

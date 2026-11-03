@@ -4,6 +4,19 @@ Biçim [Keep a Changelog](https://keepachangelog.com/), sürümleme [SemVer](htt
 
 ## [Unreleased] — v0.5 tasarım yenilemesi (2026-11-03)
 
+### Eklendi (portföy turu)
+- **Süper Lig (ücretsiz):** `espn` adapter'ı, ESPN'in anahtarsız site API'si (`ESPN_ENABLED`);
+  2026/27 fikstürü, sağlayıcının bölge notlu puan tablosu, logolar. Galatasaray gibi takımlar
+  football-data kaydıyla otomatik eşleşir. TFF 1. Lig için ücretsiz kaynak yok.
+- **Gerçek görseller** (`SHOW_PROVIDER_IMAGES`): football-data armaları, NBA logoları (ESPN CDN,
+  açık kısaltma tablosu), haber fotoğrafları (akışın kendi görseli, HTML içine gömülü olanlar dahil).
+- **Mackolik tarzı:** ana sayfada lig sekmeli mini puan durumu ve gol krallığı; puan tablosunda
+  bölge şeritleri ve açıklaması (Şampiyonlar Ligi, küme düşme).
+- **Transfermarkt tarzı:** `/transferler` Transfer Merkezi (resmî/söylenti, en çok konuşulan takımlar).
+- **Nerova esintisi:** ızgara + ışık huzmesi zemini, cam kartlar (gradyan kenar), kelime kelime
+  bulanıklıktan çıkan başlıklar, Playfair italik vurgu, kaydırınca beliren bölümler, sayan
+  gerçek sayılar, lig arması duvarı, "Gece moru" paleti.
+
 ### Eklendi
 - **Yeni kimlik:** Just Sport paleti (#0B1018 zemin, #43C7F4 mavi, #FFAA45 turuncu, #FF4D5E canlı),
   koyu varsayılan tema, Inter gövde yazısı (Barlow Condensed yalnızca büyük başlıkta), 1280 px içerik.

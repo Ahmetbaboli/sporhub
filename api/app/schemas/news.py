@@ -15,6 +15,7 @@ class NewsTagOut(BaseModel):
     name: str
     sport_slug: str | None = None
     slug: str | None = None  # competitions only (web route)
+    logo_url: str | None = None  # team/competition crest, only with SHOW_PROVIDER_IMAGES
 
 
 class AlsoSource(BaseModel):

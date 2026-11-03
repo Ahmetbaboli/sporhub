@@ -392,14 +392,15 @@ def _with_tags(stmt):
 def _tag_out(tag: NewsTag) -> NewsTagOut | None:
     if tag.team:
         return NewsTagOut(kind="team", id=tag.team.id, name=tag.team.name,
-                          sport_slug=tag.team.sport.slug)  # fmt: skip
+                          sport_slug=tag.team.sport.slug,
+                          logo_url=provider_image(tag.team.logo_url))  # fmt: skip
     if tag.player:
         return NewsTagOut(kind="player", id=tag.player.id, name=tag.player.name,
                           sport_slug=tag.player.sport.slug)  # fmt: skip
     if tag.competition:
         c = tag.competition
         return NewsTagOut(kind="competition", id=c.id, name=c.name, sport_slug=c.sport.slug,
-                          slug=c.slug)  # fmt: skip
+                          slug=c.slug, logo_url=provider_image(c.logo_url))  # fmt: skip
     return None
 
 

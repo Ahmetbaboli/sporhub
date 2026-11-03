@@ -19,7 +19,7 @@ export function NextRaceCard({ race }: { race: SportEvent }) {
   return (
     <article
       aria-labelledby="next-race"
-      className="bg-card grid overflow-hidden rounded-2xl border md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
+      className="glass grid overflow-hidden rounded-2xl md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
     >
       <div className="relative flex min-h-56 items-center justify-center bg-[radial-gradient(90%_80%_at_30%_20%,color-mix(in_srgb,var(--primary)_14%,transparent),transparent)] p-6 sm:min-h-72">
         <CircuitMap

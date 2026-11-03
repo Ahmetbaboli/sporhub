@@ -94,8 +94,11 @@
 - [x] Benim Tribünüm (çerezde favoriler, içerik önceliği)
 - [x] Animasyon (150–200 ms, nabız, skor vurgusu, reduced-motion), erişilebilirlik ve mobil kontrolü
 - [x] Haber–takım eşleşme denetimi: 100 başlık incelendi; Sabah FK yanlış eşleşmesi ve VfB/RB önek kaçağı düzeltildi, `retag_news` ile 15 haber yeniden etiketlendi
-- [ ] Gerçek armalar: gösterim hakkı (football-data / kulüpler) alınırsa `SHOW_PROVIDER_IMAGES=true`
-- [ ] Haber fotoğrafları: yayıncılardan lisans gerekir (şu an spora özel kapak)
+- [x] Gerçek armalar ve NBA logoları (`SHOW_PROVIDER_IMAGES`, portföy kurulumunda açık)
+- [x] Haber fotoğrafları: akışın kendi görseli (aynı anahtar); görseli olmayana spora özel kapak
+- [x] Süper Lig: ESPN (`ESPN_ENABLED`); TFF 1. Lig için ücretsiz kaynak yok
+- [x] Mackolik/Transfermarkt fikirleri: mini puan durumu + gol krallığı, bölge şeritleri, Transfer Merkezi
+- [x] Nerova esintili hareket ve renk: cam kartlar, kelime kelime başlık, kaydırma belirmesi, Gece moru paleti
 - [ ] Pilot portreleri: izinli kaynak bulunamadı
 
 ### Aşama 6 — Vitrin
@@ -115,5 +118,6 @@
 - v0.4: PostgreSQL'e özgü testler (advisory lock dahil) yerelde atlanır (Docker/PG yok); CI'da koşar. Scheduler kilidi gerçek PG'de bu makinede denenemedi.
 - v0.4: Gerçek deploy (Render/Vercel/Neon/Upstash) yapılmadı — hesaplar sahibinde; push yok.
 - v0.4: API sonuçlarının resmî bir "yarış sonrası gecikme" değeri Jolpica'da belgelenmemiş (doğrulanamadı).
+- 2026-11-03: ESPN RSS akışları kurum ağının "UserCheck" portalına yönleniyor (ağ engeli); diğer akışlar çalışıyor.
 - 2026-11-03: Bu makinede football-data isteği `CERTIFICATE_VERIFY_FAILED (self-signed certificate in chain)` ile düşüyor — büyük olasılıkla kurum ağının SSL denetim proxy'si; balldontlie/jolpica geçiyor. Çözüldü: adapter istemcileri `truststore` ile işletim sistemi sertifika deposunu kullanıyor (`app/core/tls.py`).
 - 2026-11-03: Yerel `.env`'de `ADMIN_TOKEN` örnek/kısa değerde (açılış doğrulaması API'yi durduruyor), `NEWS_FEEDS` boş (haber çekilmiyor), `REDIS_URL` çalışmayan bir Redis'i gösteriyor. `.env` sahibince düzeltilmeli.

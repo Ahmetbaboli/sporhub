@@ -5,9 +5,9 @@ import type { Team } from "@/lib/types";
 import { badgeCode, cn } from "@/lib/utils";
 
 const SIZES = {
-  sm: { box: "size-7 text-[10px]", px: 28 },
-  md: { box: "size-9 text-[11px]", px: 36 },
-  lg: { box: "size-14 text-sm", px: 56 },
+  sm: { box: "size-7 text-[10px]", pad: "p-0.5", px: 28 },
+  md: { box: "size-9 text-[11px]", pad: "p-0.5", px: 36 },
+  lg: { box: "size-14 text-sm", pad: "p-1", px: 56 },
 } as const;
 
 /**
@@ -25,7 +25,7 @@ export function TeamBadge({
   variant?: "team" | "competition";
 }) {
   const [failed, setFailed] = useState(false);
-  const { box, px } = SIZES[size];
+  const { box, pad, px } = SIZES[size];
   const frame = cn(
     "inline-flex shrink-0 items-center justify-center overflow-hidden",
     variant === "competition" ? "rounded-xl" : "rounded-lg",
@@ -34,8 +34,9 @@ export function TeamBadge({
 
   if (team.logo_url && !failed) {
     return (
-      // Crests come from the provider's host; a light plate keeps dark crests visible.
-      <span aria-hidden className={cn(frame, "bg-[#f3f6fa] p-[12%]")}>
+      // Crests come from the provider's host. A faint light outline (dark theme) keeps dark
+      // crests visible without a plate; padding is fixed (a % would follow the parent).
+      <span aria-hidden className={cn(frame, pad)}>
         {/* eslint-disable-next-line @next/next/no-img-element -- crests come from arbitrary hosts */}
         <img
           src={team.logo_url}
@@ -45,7 +46,7 @@ export function TeamBadge({
           loading="lazy"
           decoding="async"
           onError={() => setFailed(true)}
-          className="size-full object-contain"
+          className="size-full object-contain dark:drop-shadow-[0_0_1px_rgba(255,255,255,0.45)]"
         />
       </span>
     );

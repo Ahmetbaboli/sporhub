@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow_Condensed, Inter } from "next/font/google";
+import { Barlow_Condensed, Inter, Playfair_Display } from "next/font/google";
 import { DemoBanner } from "@/components/layout/demo-banner";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
@@ -13,6 +13,13 @@ import "./globals.css";
 
 // Inter for reading (full Turkish coverage via latin-ext); the condensed face only for big titles.
 const sans = Inter({ variable: "--font-inter", subsets: ["latin", "latin-ext"] });
+// Italic serif for one accent word in big titles (as in editorial sports covers).
+const serif = Playfair_Display({
+  variable: "--font-accent",
+  subsets: ["latin", "latin-ext"],
+  style: ["italic"],
+  weight: ["500", "700"],
+});
 const display = Barlow_Condensed({
   variable: "--font-display",
   subsets: ["latin", "latin-ext"],
@@ -42,13 +49,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${sans.variable} ${display.variable}`}
+      className={`${sans.variable} ${display.variable} ${serif.variable}`}
     >
       <head>
         {/* Applies the saved colour palette before first paint. */}
         <script dangerouslySetInnerHTML={{ __html: PALETTE_BOOT_SCRIPT }} />
       </head>
-      <body className="flex min-h-dvh flex-col antialiased">
+      <body className="stage flex min-h-dvh flex-col antialiased">
         <I18nProvider locale={locale}>
           <ThemeProvider>
             <TribuneProvider initial={tribune}>

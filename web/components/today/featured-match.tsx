@@ -35,7 +35,7 @@ export function FeaturedMatch({ event }: { event: SportEvent }) {
   return (
     <article
       className={cn(
-        "bg-card lift relative flex h-full flex-col gap-3 rounded-xl border p-4",
+        "glass lift relative flex h-full flex-col gap-3 rounded-xl p-4",
         live && "border-live/60",
       )}
     >

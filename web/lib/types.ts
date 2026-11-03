@@ -258,6 +258,7 @@ export interface NewsTag {
   name: string;
   sport_slug: string | null;
   slug: string | null;
+  logo_url?: string | null;
 }
 
 export interface NewsItem {

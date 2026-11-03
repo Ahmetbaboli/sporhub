@@ -138,7 +138,7 @@ export function NewsHero({ items }: { items: NewsItem[] }) {
       aria-label={t().news.headline}
       className="grid gap-4 lg:grid-cols-[1.6fr_1fr]"
     >
-      <article className="bg-card lift overflow-hidden rounded-xl border">
+      <article className="glass lift overflow-hidden rounded-xl">
         <CoverLink item={lead} size="lg" className="aspect-[16/7] rounded-none" />
         <div className="space-y-2 p-4">
           <Meta item={lead} />

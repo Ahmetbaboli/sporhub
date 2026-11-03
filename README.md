@@ -69,6 +69,18 @@ Hangi kaynağın yapılandırıldığını değerleri göstermeden görmek için
 Sağlayıcılar, limitler, kullanım koşulları ve görsel politikası:
 [docs/DATA-SOURCES.md](docs/DATA-SOURCES.md).
 
+## Portföy modu (gerçek armalar, haber fotoğrafları, Süper Lig)
+
+Kendi makinende tam görünüm için `api/.env`'e iki satır ekle:
+
+```env
+SHOW_PROVIDER_IMAGES=true   # kulüp/lig armaları, NBA logoları, haber fotoğrafları (kaynağından bağlanır)
+ESPN_ENABLED=true           # Süper Lig: ESPN'in anahtarsız, resmî olmayan site API'si
+```
+
+İkisi de repo varsayılanında kapalıdır: görsellerin ve ESPN verisinin herkese açık yayında
+kullanım hakkı ayrıca gerekir (`docs/DATA-SOURCES.md`). Görseller sunucuya indirilmez.
+
 ## Mimari
 
 ```mermaid

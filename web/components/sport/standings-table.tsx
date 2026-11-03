@@ -41,12 +41,34 @@ function Form({ value }: { value: unknown }) {
 }
 
 const HEAD = "px-2 py-2 text-right font-semibold";
+const HEX_COLOR = /^#[0-9a-f]{6}$/i;
+
+/** The provider's own zone colour for a place (ESPN: CL, relegation…), if any. */
+export function zoneColor(row: Standing): string | null {
+  const color = row.extra.zone_color;
+  return typeof color === "string" && HEX_COLOR.test(color) ? color : null;
+}
+
+function zoneName(raw: string): string {
+  return (t().zones.names as Record<string, string>)[raw] ?? raw;
+}
+
+/** One entry per distinct zone, in table order. */
+function zones(rows: Standing[]): { name: string; color: string }[] {
+  const seen = new Map<string, string>();
+  for (const row of rows) {
+    const color = zoneColor(row);
+    const name = typeof row.extra.zone === "string" ? row.extra.zone : null;
+    if (color && name && !seen.has(name)) seen.set(name, color);
+  }
+  return [...seen].map(([name, color]) => ({ name: zoneName(name), color }));
+}
 
 /** Wide table that scrolls inside its own container on narrow screens. */
 export function StandingsTable({ rows }: { rows: Standing[] }) {
   return (
     <div
-      className="bg-card overflow-x-auto rounded-lg border"
+      className="bg-card overflow-x-auto rounded-xl border"
       tabIndex={0}
       role="region"
       aria-label={t().standings.caption}
@@ -104,7 +126,19 @@ export function StandingsTable({ rows }: { rows: Standing[] }) {
                 key={`${row.position}-${row.team?.id ?? row.player?.id}`}
                 className="hover:bg-muted/40"
               >
-                <td className="px-2 py-2 text-center font-semibold">{row.position}</td>
+                <td className="relative px-2 py-2 text-center font-semibold">
+                  {zoneColor(row) ? (
+                    <span
+                      aria-hidden
+                      className="absolute top-1.5 bottom-1.5 left-0 w-[3px] rounded-r"
+                      style={{ background: zoneColor(row)! }}
+                    />
+                  ) : null}
+                  {row.position}
+                  {typeof row.extra.zone === "string" ? (
+                    <span className="sr-only"> ({zoneName(row.extra.zone)})</span>
+                  ) : null}
+                </td>
                 <th
                   scope="row"
                   className="bg-card sticky left-0 px-2 py-2 text-left font-medium"
@@ -140,6 +174,23 @@ export function StandingsTable({ rows }: { rows: Standing[] }) {
           })}
         </tbody>
       </table>
+      {zones(rows).length > 0 ? (
+        <ul
+          aria-label={t().zones.title}
+          className="text-muted-foreground flex flex-wrap gap-x-4 gap-y-1 border-t px-3 py-2 text-xs"
+        >
+          {zones(rows).map((z) => (
+            <li key={z.name} className="inline-flex items-center gap-1.5">
+              <span
+                aria-hidden
+                className="size-2.5 rounded-sm"
+                style={{ background: z.color }}
+              />
+              {z.name}
+            </li>
+          ))}
+        </ul>
+      ) : null}
       <p className="text-muted-foreground border-t px-3 py-2 text-xs">
         {t().standings.legend}
       </p>

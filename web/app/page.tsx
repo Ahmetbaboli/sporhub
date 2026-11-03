@@ -2,6 +2,13 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { Freshness } from "@/components/layout/freshness";
 import { TeamActivityCard } from "@/components/account/dashboard";
+import {
+  LeagueWall,
+  ScorersWidget,
+  StandingsWidget,
+  StatsBand,
+} from "@/components/home/hub-widgets";
+import { SplitWords } from "@/components/motion/motion";
 import { BreakingStrip, NewsRail } from "@/components/news/news-parts";
 import { competitionHref, EventCard } from "@/components/sport/event-list";
 import { LiveRefresher } from "@/components/sport/live-refresher";
@@ -157,6 +164,11 @@ function DaySkeleton() {
   );
 }
 
+async function TodayStats({ date }: { date?: string }) {
+  const day = await api.todayEvents({ date }).catch(() => null);
+  return <StatsBand todayCount={day?.items.length ?? 0} />;
+}
+
 /** Breaking headlines from the last hours, above everything else. */
 async function Breaking() {
   const page = await api
@@ -224,23 +236,43 @@ export default async function HomePage({ searchParams }: Props) {
         <div className="min-w-0">
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
             <div>
-              <h1 className="font-display text-4xl leading-none font-bold tracking-tight uppercase sm:text-5xl">
-                {title}
+              <span className="eyebrow mb-3">
+                <span aria-hidden className="live-dot bg-primary size-1.5 rounded-full" />
+                {t().hub.eyebrow}
+              </span>
+              <h1 className="font-display text-5xl leading-[0.95] font-bold tracking-tight uppercase sm:text-6xl">
+                {state.date ? (
+                  <SplitWords text={title} />
+                ) : (
+                  <SplitWords text={t().hub.titleLead} accent={t().hub.titleAccent} />
+                )}
               </h1>
-              <p className="text-muted-foreground mt-1.5 text-sm">{t().home.subtitle}</p>
+              <p className="text-muted-foreground mt-2 text-sm">{t().home.subtitle}</p>
             </div>
             <DatePicker state={state} />
           </div>
+          <Suspense fallback={<div className="mb-6 h-9" />}>
+            <TodayStats date={state.date} />
+          </Suspense>
           <Suspense key={`${state.date}-${state.status}`} fallback={<DaySkeleton />}>
             <DayEvents state={state} tribune={tribune} />
           </Suspense>
         </div>
-        <aside className="min-w-0 lg:sticky lg:top-28 lg:self-start">
+        <aside className="min-w-0 space-y-6">
+          <Suspense fallback={null}>
+            <StandingsWidget />
+          </Suspense>
           <Suspense fallback={null}>
             <LatestNews />
           </Suspense>
+          <Suspense fallback={null}>
+            <ScorersWidget />
+          </Suspense>
         </aside>
       </div>
+      <Suspense fallback={null}>
+        <LeagueWall />
+      </Suspense>
       <Suspense fallback={null}>
         <Freshness />
       </Suspense>

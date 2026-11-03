@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
+import { SplitWords } from "@/components/motion/motion";
 import { NewsFeed } from "@/components/news/news-parts";
 import { competitionHref, EventCard } from "@/components/sport/event-list";
 import { EventItem } from "@/components/sport/event-item";
@@ -52,7 +53,7 @@ export default async function TribunePage() {
       <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="font-display text-4xl leading-none font-bold tracking-tight uppercase sm:text-5xl">
-            {t().tribune.title}
+            <SplitWords text={t().tribune.title} />
           </h1>
           <p className="text-muted-foreground mt-1.5 text-sm">{t().tribune.subtitle}</p>
           <p className="text-muted-foreground mt-0.5 text-xs">{t().tribune.device}</p>
