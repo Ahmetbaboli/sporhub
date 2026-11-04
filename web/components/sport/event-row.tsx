@@ -141,9 +141,19 @@ export function EventRow({
       <div className="grid grid-cols-[2.75rem_minmax(0,1fr)_5.25rem_minmax(0,1fr)_2.25rem] items-center gap-1.5 sm:grid-cols-[4rem_minmax(0,1fr)_5.5rem_minmax(0,1fr)_2.25rem] sm:gap-3">
         <StatusCell event={event} showRound={showRound} />
         <TeamCell participant={home} align="right" winner={homeWon} />
-        <div className="text-center">
-          <Score event={event} home={home} away={away} />
-        </div>
+        {event.kind === "match" ? (
+          <Link
+            href={`/matches/${event.id}`}
+            aria-label={`${t().match.open}: ${matchName(home, away)}`}
+            className="hover:ring-primary/40 rounded-md text-center transition-shadow duration-150 hover:ring-2"
+          >
+            <Score event={event} home={home} away={away} />
+          </Link>
+        ) : (
+          <div className="text-center">
+            <Score event={event} home={home} away={away} />
+          </div>
+        )}
         <TeamCell participant={away} align="left" winner={awayWon} />
         <TribuneStar kind="matches" id={event.id} name={matchName(home, away)} />
       </div>

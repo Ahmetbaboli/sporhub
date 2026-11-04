@@ -336,3 +336,62 @@ export interface AdminStatus {
   scheduler_enabled: boolean;
   sources: SourceStatusDetail[];
 }
+
+export type IncidentKind =
+  "goal" | "own_goal" | "penalty_goal" | "yellow_card" | "red_card" | "substitution";
+
+export type MatchStatKey =
+  | "possession"
+  | "shots"
+  | "shots_on_target"
+  | "corners"
+  | "fouls"
+  | "yellow_cards"
+  | "red_cards"
+  | "offsides"
+  | "saves"
+  | "passes"
+  | "pass_accuracy";
+
+export interface LineupPlayer {
+  external_id: string | null;
+  name: string;
+  number: string | null;
+  position: string | null;
+  subbed_in: boolean;
+  subbed_out: boolean;
+}
+
+export interface Lineup {
+  side: "home" | "away";
+  formation: string | null;
+  starters: LineupPlayer[];
+  substitutes: LineupPlayer[];
+}
+
+export interface Incident {
+  minute: string;
+  kind: IncidentKind;
+  side: "home" | "away" | null;
+  /** For substitutions: the player coming on; `related_player` goes off. */
+  player: string | null;
+  related_player: string | null;
+}
+
+export interface MatchStat {
+  key: MatchStatKey;
+  home: number | null;
+  away: number | null;
+}
+
+export interface MatchDetails {
+  event_id: number;
+  available: boolean;
+  reason: "unsupported" | "not_started" | "unavailable" | null;
+  source: string | null;
+  lineups: Lineup[];
+  incidents: Incident[];
+  stats: MatchStat[];
+  attendance: number | null;
+  fetched_at: string | null;
+}

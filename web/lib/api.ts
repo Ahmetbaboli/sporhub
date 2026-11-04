@@ -14,6 +14,7 @@ import type {
   FavoriteKind,
   Favorites,
   HeadToHead,
+  MatchDetails,
   Meta,
   NewsArchive,
   NewsCategoryFilter,
@@ -196,6 +197,7 @@ export const api = {
       tz: opts.tz ?? DEFAULT_TIME_ZONE,
     }),
   event: (id: number) => get<SportEvent>(`/api/v1/events/${id}`),
+  matchDetails: (id: number) => get<MatchDetails>(`/api/v1/events/${id}/details`),
   team: (id: number) => get<TeamDetail>(`/api/v1/teams/${id}`),
   teamEvents: (id: number, q: Pick<EventsQuery, "order" | "page" | "pageSize"> = {}) =>
     get<Page<SportEvent>>(`/api/v1/teams/${id}/events`, {

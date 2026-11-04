@@ -24,7 +24,7 @@ describe("EventRow", () => {
       </ul>,
     );
     expect(screen.getByLabelText("2 - 1")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /Arsenal FC/ })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Arsenal FC" })).toHaveAttribute(
       "href",
       "/teams/1",
     );

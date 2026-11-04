@@ -26,6 +26,11 @@ export const PROVIDERS: Record<string, ProviderInfo> = {
     url: "https://www.balldontlie.io/",
     attribution: "NBA verisi: balldontlie API",
   },
+  espn: {
+    name: "ESPN",
+    url: "https://www.espn.com/soccer/league/_/name/tur.1",
+    attribution: "Süper Lig verisi: ESPN (kişisel, ticari olmayan kullanım)",
+  },
   jolpica: {
     name: "Jolpica-F1",
     url: "https://github.com/jolpica/jolpica-f1",
