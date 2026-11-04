@@ -106,7 +106,7 @@
 - [ ] 2. README ekran görüntüleri + kısa GIF (ana sayfa, F1, Süper Lig tablosu)
 - [ ] 3. Canlı demo: Vercel (web) + Render (API) ücretsiz plan — sahibinin hesabı gerekir
 - [ ] 4. Skor tahmin oyunu (cihazda, hesapsız; tam skor 3, sonuç 1 puan)
-- [ ] 5. Takım sayfasında gerçek takım renkleri (ESPN `team.color`)
+- [x] 5. Gerçek takım renkleri (ESPN `team.color`; siyah/kırmızı yer tutucu atlanır): takım sayfası şeridi, maç sahasında iki forma
 - [ ] 6. Ctrl+K hızlı arama (armalı anlık sonuçlar)
 - [ ] 7. Takvime ekle (.ics), 8. PWA, 9. Playwright e2e
 
@@ -130,3 +130,4 @@
 - 2026-11-03: ESPN RSS akışları kurum ağının "UserCheck" portalına yönleniyor (ağ engeli); diğer akışlar çalışıyor.
 - 2026-11-03: Bu makinede football-data isteği `CERTIFICATE_VERIFY_FAILED (self-signed certificate in chain)` ile düşüyor — büyük olasılıkla kurum ağının SSL denetim proxy'si; balldontlie/jolpica geçiyor. Çözüldü: adapter istemcileri `truststore` ile işletim sistemi sertifika deposunu kullanıyor (`app/core/tls.py`).
 - 2026-11-03: Yerel `.env`'de `ADMIN_TOKEN` örnek/kısa değerde (açılış doğrulaması API'yi durduruyor), `NEWS_FEEDS` boş (haber çekilmiyor), `REDIS_URL` çalışmayan bir Redis'i gösteriyor. `.env` sahibince düzeltilmeli.
+- 2026-11-04: Kurum ağında `www.espn.com/espn/rss/*` haber akışları güvenlik duvarının (Check Point UserCheck, `192.168.251.2/UserCheck/PortalMain`) engel sayfasına 303 ile yönleniyor; kod hatası değil, aşılmaya çalışılmadı. ESPN veri API'si (`site.api.espn.com`) etkilenmiyor. Başka ağda/sunucuda akışlar normal çalışmalı.
