@@ -72,6 +72,7 @@ export const tr = {
       results: "Sonuçlar",
       standings: "Puan Tablosu",
       stats: "İstatistikler",
+      forecast: "Olasılıklar",
     },
     tabsBySport: {
       basketball: {
@@ -79,12 +80,14 @@ export const tr = {
         results: "Sonuçlar",
         standings: "Konferans Sıralaması",
         stats: "İstatistikler",
+        forecast: "Olasılıklar",
       },
       "formula-1": {
         fixtures: "Takvim",
         results: "Yarış Sonuçları",
         standings: "Şampiyona",
         stats: "İstatistikler",
+        forecast: "Olasılıklar",
       },
     },
     tabsLabel: "Lig bölümleri",
@@ -490,6 +493,42 @@ export const tr = {
     yourRows: "Senin takımların",
     homeSection: "Senin gündemin",
     seeAll: "Panelin tamamı",
+  },
+  forecast: {
+    title: "Sezon sonu olasılıkları",
+    intro: (sims: string, played: number, remaining: number) =>
+      `Kalan ${remaining} maç ${sims} kez oynatıldı (oynanan: ${played}). Takım gücü, bu sezonki sonuçlardan hesaplanan Elo puanıdır.`,
+    caveat:
+      "Bu bir tahmindir, kesinlik değildir. Sezonun başında sonuç az olduğu için belirsizlik yüksektir; sakatlık, transfer ve teknik direktör değişikliği hesaba girmez.",
+    team: "Takım",
+    points: "P",
+    pointsLong: "Şu anki puan",
+    expected: "Beklenen P",
+    expectedLong: "Beklenen sezon sonu puanı",
+    champion: "Şampiyon",
+    europe: "Avrupa",
+    top: (n: number) => `İlk ${n}`,
+    relegation: "Düşme",
+    distribution: "Sıra dağılımı",
+    elo: "Elo",
+    likely: (a: number, b: number) =>
+      a === b ? `Büyük olasılıkla ${a}. sıra` : `Büyük olasılıkla ${a}–${b}. sıra`,
+    place: (place: number, chance: string) => `${place}. sıra: ${chance}`,
+    legend: "Koyu kare = o sırayı bitirme olasılığı yüksek",
+    unsupported: "Bu turnuvanın biçimi (eleme/kupa) için sezon tahmini yapılmıyor.",
+    notStarted: "Sezon henüz başlamadı; tahmin için önce maç sonuçları gerekiyor.",
+    finished: "Sezon bitti; kesin sıralama Puan Tablosu sekmesinde.",
+    how: "Nasıl hesaplanıyor?",
+    howSteps: [
+      "Her takım 1500 Elo puanıyla başlar. Her maçtan sonra kazanan, kaybedenden puan alır; sürpriz sonuçta ve farklı skorda daha çok. Ev sahibine 60 puanlık avantaj verilir.",
+      "İki takımın Elo farkından galibiyet, beraberlik ve mağlubiyet olasılıkları çıkar; güçleri yakın takımlarda beraberlik daha olasıdır.",
+      "Kalan maçlar bu olasılıklarla 10.000 kez oynatılır. Her seferinde tablo puana, sonra averaja göre sıralanır ve her takımın bitirdiği sıra sayılır.",
+    ],
+    matchTitle: "Kazanma olasılığı",
+    matchNote: (home: number, away: number) =>
+      `Elo ${home} – ${away} · bu sezonki sonuçlara göre maç öncesi tahmin`,
+    draw: "Beraberlik",
+    seeSeason: "Sezon olasılıkları",
   },
   offline: {
     title: "Çevrimdışısın",

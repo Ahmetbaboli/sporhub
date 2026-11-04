@@ -110,6 +110,7 @@
 - [x] 6. Ctrl+K hızlı arama (armalı anlık sonuçlar; ⌘K ve "/" da açar, ↑↓ Enter Esc)
 - [x] 7. Takvime ekle (.ics, takım sayfasında düğme)
 - [x] 8. PWA (manifest, kodla çizilen simge, çevrimdışı sayfası)
+- [x] 10. Sezon olasılıkları: Elo + 10.000 simülasyon (lig sayfasında "Olasılıklar" sekmesi; maç sayfasında kazanma olasılığı)
 - [ ] 9. Playwright e2e
 
 ### Aşama 6 — Vitrin

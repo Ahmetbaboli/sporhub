@@ -8,6 +8,7 @@ import { TableSkeleton } from "@/components/sport/skeletons";
 import { ChampionshipTables } from "@/components/sport/championship-tables";
 import { CompetitionStatsView } from "@/components/sport/competition-stats";
 import { ConferenceStandings } from "@/components/sport/conference-standings";
+import { SeasonForecastView } from "@/components/sport/season-forecast";
 import { StandingsTable } from "@/components/sport/standings-table";
 import { EmptyState } from "@/components/ui/states";
 import { Pagination } from "@/components/ui/pagination";
@@ -21,7 +22,7 @@ import { templateFor, type SportTemplate, type StandingsLayout } from "@/lib/spo
 
 export const dynamic = "force-dynamic";
 
-const TABS = ["fixtures", "results", "standings", "stats"] as const;
+const TABS = ["fixtures", "results", "standings", "stats", "forecast"] as const;
 type Tab = (typeof TABS)[number];
 
 type Props = {
@@ -36,23 +37,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: detail?.name ?? t().app.name };
 }
 
-function parseTab(value: string | undefined): Tab {
-  return TABS.includes(value as Tab) ? (value as Tab) : "standings";
+function parseTab(value: string | undefined, template: SportTemplate): Tab {
+  const tab = TABS.includes(value as Tab) ? (value as Tab) : "standings";
+  return tab === "forecast" && !template.forecast ? "standings" : tab;
 }
 
 export default async function CompetitionPage({ params, searchParams }: Props) {
   await initLocale();
   const { sport, competition: ref } = await params;
   const query = await searchParams;
-  const tab = parseTab(query.tab);
+  const template = templateFor(sport);
+  const tab = parseTab(query.tab, template);
   const page = parsePage(query.page);
 
   const competition = await orNotFound(api.competition(ref));
   if (competition.sport_slug !== sport) notFound();
 
-  const template = templateFor(sport);
   const base = `/${sport}/${competition.slug}`;
-  const tabs = TABS.map((id) => ({
+  const tabs = TABS.filter((id) => id !== "forecast" || template.forecast).map((id) => ({
     id,
     label: template.tabs(t())[id],
     href: `${base}?tab=${id}`,
@@ -103,6 +105,8 @@ export default async function CompetitionPage({ params, searchParams }: Props) {
       <Suspense key={`${tab}-${page}`} fallback={<TableSkeleton />}>
         {tab === "standings" ? (
           <StandingsTab competition={competition.slug} layout={template.standings} />
+        ) : tab === "forecast" ? (
+          <ForecastTab competition={competition.slug} />
         ) : tab === "stats" ? (
           <StatsTab competition={competition.slug} template={template} />
         ) : (
@@ -140,6 +144,11 @@ async function StandingsTab({
     default:
       return <StandingsTable rows={standings.items} />;
   }
+}
+
+async function ForecastTab({ competition }: { competition: string }) {
+  const forecast = await api.competitionForecast(competition);
+  return <SeasonForecastView forecast={forecast} />;
 }
 
 async function StatsTab({

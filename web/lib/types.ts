@@ -398,3 +398,46 @@ export interface MatchDetails {
   attendance: number | null;
   fetched_at: string | null;
 }
+
+/** Season forecast and match odds (api/app/schemas/forecast.py). */
+export type ForecastReason = "unsupported" | "not_started" | "finished";
+
+export interface TeamForecast {
+  team: Team;
+  elo: number;
+  played: number;
+  points: number;
+  goal_difference: number;
+  expected_points: number;
+  /** positions[i] = chance of finishing (i + 1)th, 0..1. */
+  positions: number[];
+  title: number;
+  top: number;
+  relegation: number | null;
+}
+
+export interface SeasonForecast {
+  competition: Competition;
+  season: string | null;
+  available: boolean;
+  reason: ForecastReason | null;
+  simulations: number;
+  played: number;
+  remaining: number;
+  top_spots: number;
+  top_kind: "europe" | "top";
+  relegation_spots: number | null;
+  teams: TeamForecast[];
+  generated_at: string | null;
+}
+
+export interface MatchForecast {
+  event_id: number;
+  available: boolean;
+  reason: ForecastReason | null;
+  home: number | null;
+  draw: number | null;
+  away: number | null;
+  home_elo: number | null;
+  away_elo: number | null;
+}

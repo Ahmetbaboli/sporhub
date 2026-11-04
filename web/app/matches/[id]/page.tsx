@@ -9,6 +9,7 @@ import {
   MatchStats,
   MatchTimeline,
 } from "@/components/match/match-parts";
+import { MatchForecastSection } from "@/components/match/match-forecast";
 import { PredictionRow } from "@/components/predictions/prediction-parts";
 import { LiveRefresher } from "@/components/sport/live-refresher";
 import { EmptyState } from "@/components/ui/states";
@@ -47,7 +48,14 @@ export default async function MatchPage({ params }: Props) {
       <Suspense fallback={<MatchHeader event={event} />}>
         <Details event={event} />
       </Suspense>
-      {event.status === "scheduled" ? <PredictCard event={event} /> : null}
+      {event.status === "scheduled" ? (
+        <>
+          <Suspense fallback={null}>
+            <MatchForecastSection event={event} />
+          </Suspense>
+          <PredictCard event={event} />
+        </>
+      ) : null}
     </div>
   );
 }

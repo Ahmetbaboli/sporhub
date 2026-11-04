@@ -69,6 +69,7 @@ export const en: Messages = {
       results: "Results",
       standings: "Table",
       stats: "Statistics",
+      forecast: "Forecast",
     },
     tabsBySport: {
       basketball: {
@@ -76,12 +77,14 @@ export const en: Messages = {
         results: "Results",
         standings: "Conference standings",
         stats: "Statistics",
+        forecast: "Forecast",
       },
       "formula-1": {
         fixtures: "Calendar",
         results: "Race results",
         standings: "Championship",
         stats: "Statistics",
+        forecast: "Forecast",
       },
     },
     tabsLabel: "League sections",
@@ -484,6 +487,42 @@ export const en: Messages = {
     yourRows: "Your teams",
     homeSection: "Your agenda",
     seeAll: "Open my page",
+  },
+  forecast: {
+    title: "End-of-season chances",
+    intro: (sims: string, played: number, remaining: number) =>
+      `The remaining ${remaining} matches were played ${sims} times (played so far: ${played}). Team strength is an Elo rating built from this season's results.`,
+    caveat:
+      "This is a forecast, not a certainty. Early in the season there are few results, so uncertainty is high; injuries, transfers and coaching changes are not included.",
+    team: "Team",
+    points: "Pts",
+    pointsLong: "Points now",
+    expected: "Exp. Pts",
+    expectedLong: "Expected final points",
+    champion: "Champion",
+    europe: "Europe",
+    top: (n: number) => `Top ${n}`,
+    relegation: "Relegation",
+    distribution: "Finishing place",
+    elo: "Elo",
+    likely: (a: number, b: number) =>
+      a === b ? `Most likely ${a}` : `Most likely ${a}–${b}`,
+    place: (place: number, chance: string) => `Place ${place}: ${chance}`,
+    legend: "Darker square = more likely to finish there",
+    unsupported: "No season forecast for this format (knockout/cup).",
+    notStarted: "The season has not started; the forecast needs results first.",
+    finished: "The season is over; the final table is in the Standings tab.",
+    how: "How is it calculated?",
+    howSteps: [
+      "Every team starts at 1500 Elo. After each match the winner takes points from the loser, more for an upset and a wide margin. The home side gets a 60-point bonus.",
+      "The Elo gap gives win, draw and loss chances; draws are likelier between evenly matched sides.",
+      "The remaining matches are played 10,000 times with those chances. Each time the table is ranked by points, then goal difference, and every team's place is counted.",
+    ],
+    matchTitle: "Win probability",
+    matchNote: (home: number, away: number) =>
+      `Elo ${home} – ${away} · pre-match forecast from this season's results`,
+    draw: "Draw",
+    seeSeason: "Season forecast",
   },
   offline: {
     title: "You're offline",

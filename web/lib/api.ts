@@ -15,6 +15,7 @@ import type {
   Favorites,
   HeadToHead,
   MatchDetails,
+  MatchForecast,
   Meta,
   NewsArchive,
   NewsCategoryFilter,
@@ -27,6 +28,7 @@ import type {
   PlayerStatsList,
   Standing,
   StandingEntry,
+  SeasonForecast,
   TeamAnalysis,
   TeamDetail,
 } from "@/lib/types";
@@ -186,6 +188,9 @@ export const api = {
       page: q.page,
       page_size: q.pageSize,
     }),
+  competitionForecast: (ref: string) =>
+    get<SeasonForecast>(`/api/v1/competitions/${encodeURIComponent(ref)}/forecast`),
+  matchForecast: (id: number) => get<MatchForecast>(`/api/v1/events/${id}/forecast`),
   competitionStats: (ref: string) =>
     get<CompetitionStats>(`/api/v1/competitions/${encodeURIComponent(ref)}/stats`),
   standings: (ref: string) =>

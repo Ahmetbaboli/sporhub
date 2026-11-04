@@ -17,6 +17,8 @@ export interface SportTemplate {
   pageSize: number;
   /** How team form/analysis is shown; null = sport has no two-sided matches (races). */
   analysis: { draws: boolean; cleanSheets: boolean; unit: "goals" | "points" } | null;
+  /** Season forecast tab (Elo simulation needs draws and a points table). */
+  forecast: boolean;
 }
 
 const DEFAULT_TEMPLATE: SportTemplate = {
@@ -25,6 +27,7 @@ const DEFAULT_TEMPLATE: SportTemplate = {
   tabs: (m) => m.competition.tabs,
   pageSize: 20,
   analysis: { draws: true, cleanSheets: true, unit: "goals" },
+  forecast: true,
 };
 
 const TEMPLATES: Record<string, SportTemplate> = {
@@ -35,6 +38,7 @@ const TEMPLATES: Record<string, SportTemplate> = {
     tabs: (m) => m.competition.tabsBySport.basketball,
     pageSize: 20,
     analysis: { draws: false, cleanSheets: false, unit: "points" },
+    forecast: false,
   },
   "formula-1": {
     icon: Flag,
@@ -42,6 +46,7 @@ const TEMPLATES: Record<string, SportTemplate> = {
     tabs: (m) => m.competition.tabsBySport["formula-1"],
     pageSize: 6,
     analysis: null,
+    forecast: false,
   },
 };
 

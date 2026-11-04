@@ -41,6 +41,9 @@ rozetler var, haber fotoğrafı yok): yayıncıların ve kulüplerin görselleri
   çubukları; istek anında çekilir ve önbelleğe alınır.
 - Kulüplerin gerçek renkleri (takım sayfası, maç sahası); sağlayıcının yer tutucu renkleri atlanır.
 - Lig istatistikleri: gol krallığı, liderlik tabloları, sezon geçmişi.
+- Sezon olasılıkları: bu sezonun sonuçlarından Elo güç puanı, kalan maçlar 10.000 kez
+  simüle edilir; şampiyonluk, Avrupa/ilk N ve düşme yüzdeleri, sıra dağılımı. Maç sayfasında
+  maç öncesi kazanma olasılığı.
 - Takım analizi: form, iç saha/deplasman, geçmiş karşılaşmalar.
 - Karşılaştırma ve grafikler.
 - Spora özel şablonlar: futbol lig tablosu, NBA konferansları, F1 yarış kartı ve şampiyona.
