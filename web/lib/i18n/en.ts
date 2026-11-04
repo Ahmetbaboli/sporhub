@@ -403,6 +403,17 @@ export const en: Messages = {
     prompt: "Type at least 2 characters to search.",
     tooShort: "Type at least 2 characters.",
   },
+  quickSearch: {
+    open: "Quick search (Ctrl+K)",
+    title: "Quick search",
+    hint: "Start typing a team, player or league.",
+    error: "Search is unavailable right now, try again shortly.",
+    count: (n: number) => `${n} result${n === 1 ? "" : "s"}`,
+    seeAll: (q: string) => `All results for “${q}”`,
+    keyMove: "move",
+    keyOpen: "open",
+    keyClose: "close",
+  },
   privacy: {
     title: "Privacy",
     intro:

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { UserMenu } from "@/components/account/user-menu";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { PalettePicker } from "@/components/layout/palette-picker";
+import { QuickSearch } from "@/components/layout/quick-search";
 import { SearchForm } from "@/components/layout/search-form";
 import { SportNav } from "@/components/layout/sport-nav";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
@@ -31,8 +32,9 @@ export async function Header() {
           <span className="text-primary">Just</span>
           <span className="text-accent">Sport</span>
         </Link>
-        <div className="order-3 w-full sm:order-2 sm:w-64 sm:flex-none md:ml-auto">
-          <SearchForm />
+        <div className="relative order-3 w-full sm:order-2 sm:w-72 sm:flex-none md:ml-auto">
+          <SearchForm shortcutSpace />
+          <QuickSearch />
         </div>
         <div className="order-2 ml-auto flex items-center sm:order-3 sm:ml-0">
           <LanguageSwitcher />

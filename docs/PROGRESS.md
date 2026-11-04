@@ -107,7 +107,7 @@
 - [ ] 3. Canlı demo: Vercel (web) + Render (API) ücretsiz plan — sahibinin hesabı gerekir
 - [ ] 4. Skor tahmin oyunu (cihazda, hesapsız; tam skor 3, sonuç 1 puan)
 - [x] 5. Gerçek takım renkleri (ESPN `team.color`; siyah/kırmızı yer tutucu atlanır): takım sayfası şeridi, maç sahasında iki forma
-- [ ] 6. Ctrl+K hızlı arama (armalı anlık sonuçlar)
+- [x] 6. Ctrl+K hızlı arama (armalı anlık sonuçlar; ⌘K ve "/" da açar, ↑↓ Enter Esc)
 - [ ] 7. Takvime ekle (.ics), 8. PWA, 9. Playwright e2e
 
 ### Aşama 6 — Vitrin

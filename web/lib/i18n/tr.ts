@@ -407,6 +407,17 @@ export const tr = {
     prompt: "Aramak için en az 2 karakter girin.",
     tooShort: "En az 2 karakter girin.",
   },
+  quickSearch: {
+    open: "Hızlı arama (Ctrl+K)",
+    title: "Hızlı arama",
+    hint: "Takım, oyuncu veya lig yazmaya başla.",
+    error: "Arama şu an yapılamadı, birazdan tekrar dene.",
+    count: (n: number) => `${n} sonuç`,
+    seeAll: (q: string) => `“${q}” için tüm sonuçlar`,
+    keyMove: "gez",
+    keyOpen: "aç",
+    keyClose: "kapat",
+  },
   privacy: {
     title: "Gizlilik",
     intro:
