@@ -15,10 +15,17 @@ from app.schemas.api import (
     SearchResults,
     TeamDetail,
 )
+from app.schemas.forecast import MatchForecast, SeasonForecast
 from app.schemas.match import MatchDetailsOut
 from app.schemas.meta import MetaOut
 from app.schemas.stats import CompetitionStats, PlayerStatsList
-from app.services import analysis_service, match_service, meta_service, stats_service
+from app.services import (
+    analysis_service,
+    forecast_service,
+    match_service,
+    meta_service,
+    stats_service,
+)
 from app.services import read_service as svc
 
 DEFAULT_PAGE_SIZE = 20
@@ -246,6 +253,26 @@ async def head_to_head(
 )
 async def competition_stats(ref: str, session: Session) -> CompetitionStats:
     return await stats_service.get_competition_stats(session, ref)
+
+
+@router.get(
+    "/competitions/{ref}/forecast",
+    response_model=SeasonForecast,
+    tags=["competitions"],
+    summary="Sezon tahmini: Elo + 10.000 sezon simülasyonu (şampiyonluk, üst sıra, düşme)",
+)
+async def competition_forecast(ref: str, session: Session) -> SeasonForecast:
+    return await forecast_service.get_season_forecast(session, ref)
+
+
+@router.get(
+    "/events/{event_id}/forecast",
+    response_model=MatchForecast,
+    tags=["events"],
+    summary="Maç öncesi kazanma olasılıkları (Elo)",
+)
+async def event_forecast(event_id: int, session: Session) -> MatchForecast:
+    return await forecast_service.get_match_forecast(session, event_id)
 
 
 @router.get(
