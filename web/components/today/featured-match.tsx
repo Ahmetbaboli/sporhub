@@ -24,6 +24,29 @@ function Side({ p }: { p?: Participant }) {
   );
 }
 
+/** Score/time block; links to the match page for matches (not races). */
+function Center({
+  href,
+  label,
+  children,
+}: {
+  href?: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  const className = "flex flex-col items-center gap-1 rounded-lg px-1 py-1";
+  if (!href) return <div className={className}>{children}</div>;
+  return (
+    <Link
+      href={href}
+      aria-label={`${t().match.open}: ${label}`}
+      className={cn(className, "hover:bg-muted/60 transition-colors duration-150")}
+    >
+      {children}
+    </Link>
+  );
+}
+
 /** Big card for one of the day's featured games. */
 export function FeaturedMatch({ event }: { event: SportEvent }) {
   const home = sideOf(event, "home");
@@ -51,7 +74,10 @@ export function FeaturedMatch({ event }: { event: SportEvent }) {
       </header>
       <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3">
         <Side p={home} />
-        <div className="flex flex-col items-center gap-1">
+        <Center
+          href={event.kind === "match" ? `/matches/${event.id}` : undefined}
+          label={name}
+        >
           {scored ? (
             <ScoreFlash
               value={`${home!.score}-${away!.score}`}
@@ -78,7 +104,7 @@ export function FeaturedMatch({ event }: { event: SportEvent }) {
                 : t().event[event.status]}
             </span>
           )}
-        </div>
+        </Center>
         <Side p={away} />
       </div>
     </article>

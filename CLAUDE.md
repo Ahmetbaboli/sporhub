@@ -28,6 +28,7 @@ uv run uvicorn app.main:app --reload
 uv run pytest --cov=app                  # test + kapsam (varsayılan SQLite)
 # Gerçek PostgreSQL/Redis ile: TEST_DATABASE_URL=postgresql+asyncpg://... TEST_REDIS_URL=redis://... uv run pytest
 PYTHONPATH=. uv run python tools/capture_jolpica.py 2026   # gerçek Jolpica yanıtlarından anonim F1 fixture; tools/generate_*.py diğerleri
+PYTHONPATH=. uv run python tools/capture_espn_summary.py 401888258   # gerçek ESPN maç özeti (kadro/olay/istatistik) -> fixtures/espn/summary_<id>.json
 PYTHONPATH=. uv run python tools/live_check.py jolpica     # gerçek API duman testi (anahtar gerekirse .env/ortam)
 uv run ruff check . && uv run ruff format --check .
 uv run alembic revision --autogenerate -m "mesaj"

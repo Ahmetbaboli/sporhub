@@ -102,7 +102,7 @@
 - [ ] Pilot portreleri: izinli kaynak bulunamadı
 
 ### Sıradaki fikirler (2026-11-03, sahibiyle konuşuldu; öneri sırası 1 → 2 → 5)
-- [ ] 1. Maç detay sayfası: Süper Lig için ESPN `summary?event=` (kadro/diziliş, olay zaman çizelgesi, istatistik çubukları)
+- [x] 1. Maç detay sayfası (`/matches/[id]`): Süper Lig için ESPN `summary?event=` istek anında — saha üzerinde iki ilk 11, önemli anlar, istatistik çubukları; skor hücreleri sayfaya bağlanır
 - [ ] 2. README ekran görüntüleri + kısa GIF (ana sayfa, F1, Süper Lig tablosu)
 - [ ] 3. Canlı demo: Vercel (web) + Render (API) ücretsiz plan — sahibinin hesabı gerekir
 - [ ] 4. Skor tahmin oyunu (cihazda, hesapsız; tam skor 3, sonuç 1 puan)

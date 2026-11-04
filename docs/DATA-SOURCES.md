@@ -61,6 +61,14 @@ ve takım logoları var. **TFF 1. Lig yok** (`tur.2` boş). ESPN'in kendi web/uy
 üçüncü taraflar için koşul ya da limit yayımlanmamıştır: bu yüzden varsayılan kapalı, yalnızca
 kişisel/ticari olmayan kullanım için açılır; istek bütçesi bilinçli olarak düşük tutulur.
 
+**ESPN maç özeti (2026-11-04, canlı denendi):** `/apis/site/v2/sports/soccer/tur.1/summary?event=<id>`
+bitmiş maçta iki kadroyu (diziliş, ilk 11, yedekler, oyuncu değişikliği bayrakları), `keyEvents`
+(gol, kart, değişiklik; dakika ve takım kimliğiyle) ve `boxscore` takım istatistiklerini
+(topa sahip olma, şut, korner, faul, pas…) veriyor; maç öncesi kadro ve olay boş, istatistik yerine
+sezon toplamları geliyor (kullanılmaz). Sync'e girmez, yalnızca maç sayfası açılınca istenir
+(aynı `espn` bütçesinden) ve önbelleğe alınır (bkz. DECISIONS 2026-11-04). Değişiklikte
+`participants` sırası [giren, çıkan]; `attendance` bilinmiyorsa 0 (gösterilmez).
+
 Satır ayrıntıları:
 
 - **TheSportsDB**
