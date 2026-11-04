@@ -1,0 +1,76 @@
+{
+ "header": {
+  "competitions": [
+   {
+    "competitors": [
+     {
+      "id": "20070",
+      "homeAway": "home"
+     },
+     {
+      "id": "6870",
+      "homeAway": "away"
+     }
+    ]
+   }
+  ]
+ },
+ "boxscore": {
+  "teams": [
+   {
+    "homeAway": "home",
+    "statistics": [
+     {
+      "name": "goalDifference",
+      "displayValue": "-8"
+     },
+     {
+      "name": "totalGoals",
+      "displayValue": "9"
+     },
+     {
+      "name": "goalAssists",
+      "displayValue": "4"
+     },
+     {
+      "name": "goalsConceded",
+      "displayValue": "17"
+     }
+    ]
+   },
+   {
+    "homeAway": "away",
+    "statistics": [
+     {
+      "name": "goalDifference",
+      "displayValue": "4"
+     },
+     {
+      "name": "totalGoals",
+      "displayValue": "15"
+     },
+     {
+      "name": "goalAssists",
+      "displayValue": "13"
+     },
+     {
+      "name": "goalsConceded",
+      "displayValue": "11"
+     }
+    ]
+   }
+  ]
+ },
+ "rosters": [
+  {
+   "homeAway": "home",
+   "roster": []
+  },
+  {
+   "homeAway": "away",
+   "roster": []
+  }
+ ],
+ "keyEvents": [],
+ "gameInfo": {}
+}

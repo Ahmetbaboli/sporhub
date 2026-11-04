@@ -74,6 +74,9 @@ class HttpFixtureAdapter(BaseAdapter):
             raise SourceNotConfiguredError(self.source)
         return await self._http.get_json(path, params)
 
+    def _has_fixture(self, name: str) -> bool:
+        return (self._fixtures_dir / f"{name}.json").is_file()
+
     def _load_fixture(self, name: str) -> Any:
         data = json.loads((self._fixtures_dir / f"{name}.json").read_text(encoding="utf-8"))
         return self._apply_date_shift(data)

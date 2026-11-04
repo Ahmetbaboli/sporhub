@@ -19,7 +19,14 @@ from app.adapters.dto import (
     CompetitionDTO,
     EventDTO,
     EventStatus,
+    IncidentDTO,
+    IncidentKind,
+    LineupDTO,
+    LineupPlayerDTO,
+    MatchDetailsDTO,
+    MatchStatDTO,
     ParticipantDTO,
+    Side,
     StandingDTO,
     TeamDTO,
     TeamRef,
@@ -148,6 +155,121 @@ def normalize_standing(entry: dict[str, Any]) -> StandingDTO:
     )
 
 
+# ESPN boxscore stat name -> our key, in display order. Pass accuracy is derived from counts.
+MATCH_STAT_KEYS: dict[str, str] = {
+    "possessionPct": "possession",
+    "totalShots": "shots",
+    "shotsOnTarget": "shots_on_target",
+    "wonCorners": "corners",
+    "foulsCommitted": "fouls",
+    "yellowCards": "yellow_cards",
+    "redCards": "red_cards",
+    "offsides": "offsides",
+    "saves": "saves",
+    "totalPasses": "passes",
+}
+PASS_ACCURACY_KEY = "pass_accuracy"
+PERCENT = 100
+
+
+def _team_stats(team: dict[str, Any]) -> dict[str, float]:
+    raw = {s.get("name"): _float(s.get("displayValue")) for s in team.get("statistics") or []}
+    stats = {key: raw[name] for name, key in MATCH_STAT_KEYS.items() if raw.get(name) is not None}
+    accurate, total = raw.get("accuratePasses"), raw.get("totalPasses")
+    if accurate is not None and total:
+        stats[PASS_ACCURACY_KEY] = round(accurate / total * PERCENT)
+    return stats
+
+
+def _float(value: Any) -> float | None:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def normalize_match_stats(boxscore: dict[str, Any]) -> list[MatchStatDTO]:
+    by_side = {t.get("homeAway"): _team_stats(t) for t in boxscore.get("teams") or []}
+    home, away = by_side.get("home", {}), by_side.get("away", {})
+    order = [*MATCH_STAT_KEYS.values(), PASS_ACCURACY_KEY]
+    return [
+        MatchStatDTO(key=key, home=home.get(key), away=away.get(key))
+        for key in order
+        if key in home or key in away
+    ]
+
+
+def _lineup_player(entry: dict[str, Any]) -> LineupPlayerDTO:
+    athlete = entry.get("athlete") or {}
+    return LineupPlayerDTO(
+        external_id=str(athlete["id"]) if athlete.get("id") else None,
+        name=athlete.get("displayName") or athlete.get("fullName") or "?",
+        number=entry.get("jersey"),
+        position=(entry.get("position") or {}).get("abbreviation"),
+        subbed_in=bool(entry.get("subbedIn")),
+        subbed_out=bool(entry.get("subbedOut")),
+    )
+
+
+def normalize_lineup(roster: dict[str, Any]) -> LineupDTO | None:
+    entries = roster.get("roster") or []
+    if roster.get("homeAway") not in ("home", "away") or not entries:
+        return None
+    starters = sorted(
+        (e for e in entries if e.get("starter")), key=lambda e: _int(e.get("formationPlace")) or 0
+    )
+    return LineupDTO(
+        side=roster["homeAway"],
+        formation=roster.get("formation"),
+        starters=[_lineup_player(e) for e in starters],
+        substitutes=[_lineup_player(e) for e in entries if not e.get("starter")],
+    )
+
+
+def incident_kind(raw: dict[str, Any]) -> IncidentKind | None:
+    kind = ((raw.get("type") or {}).get("type") or "").lower()
+    if raw.get("scoringPlay"):
+        if "own" in kind:
+            return "own_goal"
+        return "penalty_goal" if "penalty" in kind else "goal"
+    if "substitution" in kind:
+        return "substitution"
+    if "red" in kind:  # also "yellow-red" (second yellow)
+        return "red_card"
+    return "yellow_card" if "yellow" in kind else None
+
+
+def normalize_incident(raw: dict[str, Any], sides: dict[str, Side]) -> IncidentDTO | None:
+    kind = incident_kind(raw)
+    if kind is None:
+        return None
+    names = [(p.get("athlete") or {}).get("displayName") for p in raw.get("participants") or []]
+    return IncidentDTO(
+        minute=(raw.get("clock") or {}).get("displayValue") or "",
+        kind=kind,
+        side=sides.get(str((raw.get("team") or {}).get("id"))),
+        player=names[0] if names else None,
+        related_player=names[1] if len(names) > 1 else None,
+    )
+
+
+def normalize_match_details(data: dict[str, Any]) -> MatchDetailsDTO:
+    competition = ((data.get("header") or {}).get("competitions") or [{}])[0]
+    sides: dict[str, Side] = {
+        str(c.get("id")): c["homeAway"]
+        for c in competition.get("competitors") or []
+        if c.get("homeAway") in ("home", "away")
+    }
+    lineups = [lu for r in data.get("rosters") or [] if (lu := normalize_lineup(r))]
+    incidents = [i for raw in data.get("keyEvents") or [] if (i := normalize_incident(raw, sides))]
+    return MatchDetailsDTO(
+        lineups=sorted(lineups, key=lambda lu: lu.side != "home"),
+        incidents=incidents,
+        stats=normalize_match_stats(data.get("boxscore") or {}),
+        attendance=_int((data.get("gameInfo") or {}).get("attendance")) or None,
+    )
+
+
 def normalize_team(raw: dict[str, Any]) -> TeamDTO:
     team = raw.get("team", raw)
     return TeamDTO(**team_ref(team).model_dump(), country=COUNTRY)
@@ -230,6 +352,18 @@ class EspnSoccerAdapter(HttpFixtureAdapter):
         groups = data.get("children") or []
         entries = groups[0].get("standings", {}).get("entries", []) if groups else []
         return sorted((normalize_standing(e) for e in entries), key=lambda r: r.position)
+
+    async def fetch_match_details(
+        self, competition_ext_id: str, event_ext_id: str
+    ) -> MatchDetailsDTO | None:
+        if self.use_fixtures and not self._has_fixture(f"summary_{event_ext_id}"):
+            return None
+        data = await self._request(
+            f"/site/v2/sports/soccer/{competition_ext_id}/summary",
+            f"summary_{event_ext_id}",
+            {"event": event_ext_id},
+        )
+        return normalize_match_details(data)
 
     async def fetch_teams(self, competition_ext_id: str, season: str) -> list[TeamDTO]:
         data = await self._request(

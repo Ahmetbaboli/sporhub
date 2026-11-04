@@ -86,3 +86,52 @@ class PlayerStatDTO(BaseModel):
     player: PlayerDTO
     team: TeamRef | None = None
     stats: dict[str, float] = Field(default_factory=dict)
+
+
+IncidentKind = Literal[
+    "goal", "own_goal", "penalty_goal", "yellow_card", "red_card", "substitution"
+]
+
+
+class LineupPlayerDTO(BaseModel):
+    external_id: str | None = None
+    name: str
+    number: str | None = None
+    position: str | None = None
+    subbed_in: bool = False
+    subbed_out: bool = False
+
+
+class LineupDTO(BaseModel):
+    side: Side
+    formation: str | None = None
+    starters: list[LineupPlayerDTO] = Field(default_factory=list)
+    substitutes: list[LineupPlayerDTO] = Field(default_factory=list)
+
+
+class IncidentDTO(BaseModel):
+    """One key moment. For substitutions `player` comes on and `related_player` goes off."""
+
+    minute: str
+    kind: IncidentKind
+    side: Side | None = None
+    player: str | None = None
+    related_player: str | None = None
+
+
+class MatchStatDTO(BaseModel):
+    """One team statistic, home and away; keys are sport-neutral (possession, shots, ...)."""
+
+    key: str
+    home: float | None = None
+    away: float | None = None
+
+
+class MatchDetailsDTO(BaseModel):
+    lineups: list[LineupDTO] = Field(default_factory=list)
+    incidents: list[IncidentDTO] = Field(default_factory=list)
+    stats: list[MatchStatDTO] = Field(default_factory=list)
+    attendance: int | None = None
+
+    def is_empty(self) -> bool:
+        return not (self.lineups or self.incidents or self.stats)

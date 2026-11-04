@@ -15,9 +15,10 @@ from app.schemas.api import (
     SearchResults,
     TeamDetail,
 )
+from app.schemas.match import MatchDetailsOut
 from app.schemas.meta import MetaOut
 from app.schemas.stats import CompetitionStats, PlayerStatsList
-from app.services import analysis_service, meta_service, stats_service
+from app.services import analysis_service, match_service, meta_service, stats_service
 from app.services import read_service as svc
 
 DEFAULT_PAGE_SIZE = 20
@@ -113,6 +114,12 @@ async def today_events(
 @router.get("/events/{event_id}", response_model=EventOut, tags=["events"])
 async def get_event(event_id: int, session: Session) -> EventOut:
     return await svc.get_event_detail(session, event_id)
+
+
+@router.get("/events/{event_id}/details", response_model=MatchDetailsOut, tags=["events"])
+async def get_event_details(event_id: int, session: Session) -> MatchDetailsOut:
+    """Lineups, key moments and team stats, when the source offers them (fetched on demand)."""
+    return await match_service.get_match_details(session, event_id, get_settings())
 
 
 @router.get("/teams/{team_id}", response_model=TeamDetail, tags=["teams"])

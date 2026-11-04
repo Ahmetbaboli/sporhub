@@ -1,6 +1,13 @@
 from abc import ABC, abstractmethod
 
-from app.adapters.dto import CompetitionDTO, EventDTO, PlayerStatDTO, StandingDTO, TeamDTO
+from app.adapters.dto import (
+    CompetitionDTO,
+    EventDTO,
+    MatchDetailsDTO,
+    PlayerStatDTO,
+    StandingDTO,
+    TeamDTO,
+)
 
 
 class BaseAdapter(ABC):
@@ -38,6 +45,15 @@ class BaseAdapter(ABC):
     async def fetch_player_stats(self, competition_ext_id: str, season: str) -> list[PlayerStatDTO]:
         """Optional: per-player season totals. Sources without them return nothing."""
         return []
+
+    async def fetch_match_details(
+        self, competition_ext_id: str, event_ext_id: str
+    ) -> MatchDetailsDTO | None:
+        """Optional: lineups, key moments and team stats of one match, fetched on demand.
+
+        None means the source has no such data (the page then shows only the score).
+        """
+        return None
 
     async def aclose(self) -> None:  # noqa: B027 - optional hook
         """Release network resources."""
