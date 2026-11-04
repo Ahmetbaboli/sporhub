@@ -9,6 +9,7 @@ from app.adapters.espn_soccer import (
     season_months,
     team_colors,
 )
+from app.adapters.football_data import FootballDataAdapter
 from app.core.config import Settings
 from app.models.catalog import Team
 from app.services.sync_service import run_sync
@@ -70,3 +71,15 @@ async def test_synced_teams_carry_real_colours_only(
         rows = dict((await s.execute(select(Team.name, Team.color))).all())
     assert rows["Fenerbahce"] == "#ffff00" and rows["Galatasaray"] == "#aa0031"
     assert rows["Goztepe"] is None  # ESPN placeholder
+
+
+async def test_colours_reach_a_club_first_created_by_another_source(
+    maker: async_sessionmaker[AsyncSession], settings: Settings
+) -> None:
+    await run_sync(maker, FootballDataAdapter(settings), ("CL",))  # has Galatasaray, no colours
+    await run_sync(maker, EspnSoccerAdapter(settings), ("tur.1",))
+    async with maker() as s:
+        rows = (
+            await s.execute(select(Team.source, Team.color).where(Team.name.like("Galatasaray%")))
+        ).all()
+    assert rows == [("demo:football-data", "#aa0031")]  # one club, ESPN's colour

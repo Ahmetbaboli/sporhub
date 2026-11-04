@@ -45,6 +45,9 @@ export interface Team {
   logo_url: string | null;
   country: string | null;
   sport_slug: string | null;
+  /** Provider's kit colours ("#rrggbb"), when known. */
+  color?: string | null;
+  alternate_color?: string | null;
 }
 
 export interface Player {

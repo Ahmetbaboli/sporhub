@@ -4,6 +4,7 @@ import { competitionHref } from "@/components/sport/event-list";
 import { LocalDateTime } from "@/components/sport/local-date-time";
 import { TeamBadge } from "@/components/sport/team-badge";
 import { sideOf } from "@/lib/events";
+import { kitPair, readableOn } from "@/lib/colors";
 import { formationLines, pitchName } from "@/lib/lineup";
 import { t } from "@/lib/i18n";
 import { providerName } from "@/lib/sources";
@@ -291,16 +292,28 @@ export function MatchTimeline({ incidents }: { incidents: Incident[] }) {
   );
 }
 
-function PitchPlayer({ player, side }: { player: LineupPlayer; side: "home" | "away" }) {
+function PitchPlayer({
+  player,
+  side,
+  kit,
+}: {
+  player: LineupPlayer;
+  side: "home" | "away";
+  /** The team's kit colour; theme colours when unknown or clashing. */
+  kit?: string;
+}) {
   return (
     <li className="flex w-14 flex-col items-center gap-0.5 sm:w-20" title={player.name}>
       <span
         className={cn(
-          "num relative inline-flex size-7 items-center justify-center rounded-full text-[11px] font-bold shadow sm:size-8",
-          side === "home"
-            ? "bg-primary text-primary-foreground"
-            : "bg-accent text-accent-foreground",
+          "num relative inline-flex size-7 items-center justify-center rounded-full text-[11px] font-bold shadow ring-2 ring-white/70 sm:size-8",
+          kit
+            ? null
+            : side === "home"
+              ? "bg-primary text-primary-foreground"
+              : "bg-accent text-accent-foreground",
         )}
+        style={kit ? { backgroundColor: kit, color: readableOn(kit) } : undefined}
       >
         {player.number ?? ""}
         {player.subbed_out ? (
@@ -318,14 +331,23 @@ function PitchPlayer({ player, side }: { player: LineupPlayer; side: "home" | "a
 }
 
 /** Both XIs on one pitch: home attacks upwards from the bottom, away downwards from the top. */
-function Pitch({ home, away }: { home: Lineup; away: Lineup }) {
+function Pitch({ home, away, event }: { home: Lineup; away: Lineup; event: SportEvent }) {
   const homeLines = formationLines(home);
   const awayLines = formationLines(away);
   if (!homeLines || !awayLines) return null;
+  const kits = kitPair(
+    sideOf(event, "home")?.team ?? undefined,
+    sideOf(event, "away")?.team ?? undefined,
+  );
   const row = (line: LineupPlayer[], side: "home" | "away", key: string) => (
     <ul key={key} className="flex justify-around">
       {line.map((p) => (
-        <PitchPlayer key={`${p.external_id}-${p.name}`} player={p} side={side} />
+        <PitchPlayer
+          key={`${p.external_id}-${p.name}`}
+          player={p}
+          side={side}
+          kit={kits ? kits[side === "home" ? 0 : 1] : undefined}
+        />
       ))}
     </ul>
   );
@@ -414,7 +436,7 @@ export function MatchLineups({
   if (!home && !away) return null;
   return (
     <Section title={t().match.lineups}>
-      {home && away ? <Pitch home={home} away={away} /> : null}
+      {home && away ? <Pitch home={home} away={away} event={event} /> : null}
       <div className="grid gap-6 sm:grid-cols-2">
         {home ? (
           <TeamSheet lineup={home} name={sideOf(event, "home")?.team?.name ?? ""} />

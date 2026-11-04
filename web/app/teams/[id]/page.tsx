@@ -42,6 +42,7 @@ export default async function TeamPage({ params }: Props) {
 
   return (
     <>
+      <TeamColorBand team={team} />
       <div className="flex flex-wrap items-center gap-4">
         <TeamBadge team={team} size="lg" />
         <div>
@@ -80,6 +81,28 @@ export default async function TeamPage({ params }: Props) {
         <Freshness sport={team.sport_slug} />
       </Suspense>
     </>
+  );
+}
+
+/** The club's own colours as a strip and a faint glow; nothing when the source has none. */
+function TeamColorBand({ team }: { team: TeamDetail }) {
+  if (!team.color) return null;
+  const second = team.alternate_color ?? team.color;
+  return (
+    <div aria-hidden className="relative mb-6">
+      <div
+        className="pointer-events-none absolute -top-10 left-0 h-32 w-2/3 opacity-25 blur-3xl"
+        style={{
+          background: `radial-gradient(closest-side, ${team.color}, transparent)`,
+        }}
+      />
+      <div
+        className="relative h-1.5 w-full rounded-full"
+        style={{
+          background: `linear-gradient(90deg, ${team.color} 0 60%, ${second} 60% 100%)`,
+        }}
+      />
+    </div>
   );
 }
 

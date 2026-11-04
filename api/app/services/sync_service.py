@@ -133,6 +133,10 @@ def _colors(ref: TeamRef) -> dict[str, str]:
 async def _upsert_team(ctx: SyncContext, ref: TeamRef, country: str | None = None) -> int:
     other = await _resolve_other_source(ctx, ref, country)
     if other is not None:
+        # The club belongs to another provider's row; a provider without colours (e.g.
+        # football-data) never sends any, so this one's colours still go there.
+        if colors := _colors(ref):
+            await ctx.session.execute(update(Team).where(Team.id == other).values(**colors))
         ctx.team_ids[ref.external_id] = other
         return other
     team_id = await upsert_row(
