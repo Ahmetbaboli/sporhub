@@ -8,18 +8,36 @@
 - Sitede görünen her bilgi gerçek bir kaynaktan gelir. Kaynağı yapılandırılmamış bir spor için
   "yapılandırılmadı" denir; örnek veri gösterilmez.
 
-> Durum: **v0.4.0, gerçek veri.** Kapsam:
-> - Futbol (football-data.org'un ücretsiz katmanındaki 12 lig; Süper Lig için TheSportsDB)
+> Durum: **v0.5, gerçek veri.** Kapsam:
+> - Futbol (football-data.org'un ücretsiz katmanındaki 12 lig; Süper Lig için isteğe bağlı ESPN)
 > - NBA (balldontlie)
 > - Formula 1 (Jolpica)
 > - Gerçek haber akışları (BBC Sport, ESPN, Yahoo Sports, Habertürk, Sporx)
 >
 > Sıradaki aşamalar: [docs/PROGRESS.md](docs/PROGRESS.md).
 
+## Ekran görüntüleri
+
+Görüntüler gerçek veriyle, sağlayıcı görselleri **kapalıyken** alındı (armaların yerinde çizilmiş
+rozetler var, haber fotoğrafı yok): yayıncıların ve kulüplerin görselleri repoya konmaz.
+
+| Bugün | Maç detayı (derbi, gerçek kadrolar) |
+| --- | --- |
+| ![Bugünün karşılaşmaları, puan durumu ve son haberler](docs/screenshots/home.png) | ![Galatasaray 2-1 Fenerbahçe: önemli anlar, istatistikler, sahada iki ilk 11](docs/screenshots/match.png) |
+
+| Süper Lig puan durumu | Formula 1 | Takım sayfası (kulüp renkleri) |
+| --- | --- | --- |
+| ![Süper Lig puan durumu ve bölgeler](docs/screenshots/superlig.png) | ![F1 yarış takvimi ve şampiyona](docs/screenshots/f1.png) | ![Galatasaray takım sayfası](docs/screenshots/team.png) |
+
+<p align="center"><img src="docs/screenshots/match-mobile.png" width="260" alt="Maç sayfası telefonda"></p>
+
 ## Özellikler
 
 **Veri**
 - Bugünün karşılaşmaları, fikstür, sonuçlar, puan tablosu.
+- Maç detayı (Süper Lig): sahada iki ilk 11, gol/kart/değişiklik zaman çizelgesi, istatistik
+  çubukları; istek anında çekilir ve önbelleğe alınır.
+- Kulüplerin gerçek renkleri (takım sayfası, maç sahası); sağlayıcının yer tutucu renkleri atlanır.
 - Lig istatistikleri: gol krallığı, liderlik tabloları, sezon geçmişi.
 - Takım analizi: form, iç saha/deplasman, geçmiş karşılaşmalar.
 - Karşılaştırma ve grafikler.

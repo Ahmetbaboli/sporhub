@@ -103,7 +103,7 @@
 
 ### Sıradaki fikirler (2026-11-03, sahibiyle konuşuldu; öneri sırası 1 → 2 → 5)
 - [x] 1. Maç detay sayfası (`/matches/[id]`): Süper Lig için ESPN `summary?event=` istek anında — saha üzerinde iki ilk 11, önemli anlar, istatistik çubukları; skor hücreleri sayfaya bağlanır
-- [ ] 2. README ekran görüntüleri + kısa GIF (ana sayfa, F1, Süper Lig tablosu)
+- [x] 2. README ekran görüntüleri (Bugün, maç detayı, Süper Lig, F1, takım, telefon); sağlayıcı görselleri kapalıyken çekildi. GIF yapılmadı
 - [ ] 3. Canlı demo: Vercel (web) + Render (API) ücretsiz plan — sahibinin hesabı gerekir
 - [ ] 4. Skor tahmin oyunu (cihazda, hesapsız; tam skor 3, sonuç 1 puan)
 - [x] 5. Gerçek takım renkleri (ESPN `team.color`; siyah/kırmızı yer tutucu atlanır): takım sayfası şeridi, maç sahasında iki forma
