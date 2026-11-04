@@ -3,13 +3,14 @@
 Race sports (F1) have no sides or opponents, so their analysis is simply empty.
 """
 
+from collections import Counter
 from collections.abc import Iterable, Sequence
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.cache import cached
 from app.core.errors import NotFoundError
-from app.models import Event, Team
+from app.models import Event, Season, Team
 from app.repositories import queries
 from app.schemas.analysis import FormEntry, HeadToHead, SplitStats, TeamAnalysis
 from app.services.read_service import event_out, team_out
@@ -78,19 +79,34 @@ def _margin(entry: FormEntry) -> int:
     return entry.scored - entry.conceded
 
 
+def main_season(pairs: Sequence[tuple[Event, FormEntry]]) -> Season:
+    """The season the season panel describes: the team's busiest current one.
+
+    A club plays its league and a cup or European competition at once; the most recent match
+    may be a Champions League night, but the league (more matches) is what the season is about.
+    Only current seasons compete, so an old full season never beats a young one; when the source
+    marks none current, the latest match's season is used. Ties go to the most recent.
+    """
+    seasons = [event.season for event, _ in pairs]
+    current = [s for s in seasons if s.is_current] or [seasons[0]]
+    counts = Counter(s.id for s in current)
+    # `seasons` is newest first, so max() keeps the most recent on equal counts.
+    return max({s.id: s for s in current}.values(), key=lambda s: counts[s.id])
+
+
 def analyse(team: Team, events: Sequence[Event], form_size: int) -> TeamAnalysis:
     """`events` are finished events of the team, most recent first."""
     pairs = [(e, entry) for e in events if (entry := entry_for(e, team.id)) is not None]
     if not pairs:
         return TeamAnalysis(team=team_out(team))
-    latest_season = pairs[0][0].season_id
-    season = [entry for event, entry in pairs if event.season_id == latest_season]
+    main = main_season(pairs)
+    season = [entry for event, entry in pairs if event.season_id == main.id]
     form = [entry for _, entry in pairs[:form_size]]
     wins = [e for e in season if e.result == "W"]
     losses = [e for e in season if e.result == "L"]
     return TeamAnalysis(
         team=team_out(team),
-        season=pairs[0][0].season.year_label,
+        season=main.year_label,
         form=form,
         form_stats=summarize(form),
         streak=current_streak(form),

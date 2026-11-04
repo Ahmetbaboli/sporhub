@@ -1,4 +1,6 @@
 from datetime import UTC, datetime
+from types import SimpleNamespace
+from typing import Any
 
 import pytest
 from httpx import AsyncClient
@@ -7,7 +9,7 @@ from sqlalchemy.ext.asyncio import async_sessionmaker
 from app.core import cache
 from app.schemas.analysis import FormEntry
 from app.schemas.api import TeamOut
-from app.services.analysis_service import current_streak, summarize
+from app.services.analysis_service import current_streak, main_season, summarize
 
 V1 = "/api/v1"
 OPPONENT = TeamOut(id=99, name="Rakip")
@@ -33,6 +35,30 @@ def test_summarize_counts_and_averages() -> None:
     assert (stats.scored, stats.conceded, stats.clean_sheets) == (7, 5, 1)
     assert stats.win_pct == 0.5
     assert stats.avg_scored == 1.75
+
+
+def _played_in(*seasons: Any) -> list[Any]:
+    """(event, entry) pairs, newest first, one per season given."""
+    return [(SimpleNamespace(season=s, season_id=s.id), entry(1, 0)) for s in seasons]
+
+
+def test_main_season_prefers_the_league_over_a_recent_cup_night() -> None:
+    # Galatasaray: last match in the Champions League, but ten league games this season.
+    league = SimpleNamespace(id=1, is_current=True)
+    europe = SimpleNamespace(id=2, is_current=True)
+    pairs = _played_in(europe, league, europe, league, league, europe, league)
+    assert main_season(pairs) is league  # type: ignore[arg-type]
+
+
+def test_main_season_ignores_old_seasons_and_breaks_ties_by_recency() -> None:
+    old = SimpleNamespace(id=1, is_current=False)
+    new_cup = SimpleNamespace(id=2, is_current=True)
+    new_league = SimpleNamespace(id=3, is_current=True)
+    pairs = _played_in(new_cup, new_league, old, old, old)
+    assert main_season(pairs) is new_cup  # type: ignore[arg-type]
+    # No season flagged current: the latest match's season.
+    a, b = SimpleNamespace(id=4, is_current=False), SimpleNamespace(id=5, is_current=False)
+    assert main_season(_played_in(a, b, b)) is a  # type: ignore[arg-type]
 
 
 def test_summarize_empty_is_zero() -> None:
