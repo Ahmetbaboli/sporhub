@@ -3,6 +3,7 @@ import { Barlow_Condensed, Inter, Playfair_Display } from "next/font/google";
 import { DemoBanner } from "@/components/layout/demo-banner";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { ServiceWorker } from "@/components/layout/service-worker";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { TribuneProvider } from "@/components/tribune/tribune-provider";
 import { initLocale, t } from "@/lib/i18n";
@@ -32,6 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: { default: `${app.name} — ${app.tagline}`, template: `%s · ${app.name}` },
     description: app.description,
+    appleWebApp: { capable: true, title: app.name, statusBarStyle: "black-translucent" },
   };
 }
 
@@ -74,6 +76,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 {children}
               </main>
               <Footer />
+              <ServiceWorker />
             </TribuneProvider>
           </ThemeProvider>
         </I18nProvider>

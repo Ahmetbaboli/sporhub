@@ -105,10 +105,12 @@
 - [x] 1. Maç detay sayfası (`/matches/[id]`): Süper Lig için ESPN `summary?event=` istek anında — saha üzerinde iki ilk 11, önemli anlar, istatistik çubukları; skor hücreleri sayfaya bağlanır
 - [x] 2. README ekran görüntüleri (Bugün, maç detayı, Süper Lig, F1, takım, telefon); sağlayıcı görselleri kapalıyken çekildi. GIF yapılmadı
 - [ ] 3. Canlı demo: Vercel (web) + Render (API) ücretsiz plan — sahibinin hesabı gerekir
-- [ ] 4. Skor tahmin oyunu (cihazda, hesapsız; tam skor 3, sonuç 1 puan)
+- [x] 4. Skor tahmin oyunu (`/tahmin`; cihazda, hesapsız; tam skor 3, sonuç 1 puan; maç sayfasında da kutu)
 - [x] 5. Gerçek takım renkleri (ESPN `team.color`; siyah/kırmızı yer tutucu atlanır): takım sayfası şeridi, maç sahasında iki forma
 - [x] 6. Ctrl+K hızlı arama (armalı anlık sonuçlar; ⌘K ve "/" da açar, ↑↓ Enter Esc)
-- [ ] 7. Takvime ekle (.ics), 8. PWA, 9. Playwright e2e
+- [x] 7. Takvime ekle (.ics, takım sayfasında düğme)
+- [x] 8. PWA (manifest, kodla çizilen simge, çevrimdışı sayfası)
+- [ ] 9. Playwright e2e
 
 ### Aşama 6 — Vitrin
 - [ ] README ekran görüntüleri/GIF, repo konu etiketleri, v1.0.0
