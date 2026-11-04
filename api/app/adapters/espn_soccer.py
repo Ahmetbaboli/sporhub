@@ -107,10 +107,29 @@ def team_colors(team: dict[str, Any]) -> dict[str, str | None]:
     return {"color": color, "alternate_color": alternate}
 
 
+# ESPN writes Turkish club names without Turkish letters ("Besiktas", "Genclerbirligi").
+# Keyed by ESPN team id so a renamed club keeps working; clubs not listed keep ESPN's name.
+TURKISH_NAMES: dict[str, str] = {
+    "1895": "Beşiktaş",
+    "7656": "Çaykur Rizespor",
+    "20729": "Eyüpspor",
+    "436": "Fenerbahçe",
+    "996": "Gençlerbirliği",
+    "789": "Göztepe",
+    "7914": "İstanbul Başakşehir",
+    "6870": "Kasımpaşa",
+    "132334": "Çorum FK",
+}
+
+
+def team_name(team: dict[str, Any]) -> str:
+    return TURKISH_NAMES.get(str(team.get("id"))) or team.get("displayName") or team["name"]
+
+
 def team_ref(team: dict[str, Any]) -> TeamRef:
     return TeamRef(
         external_id=str(team["id"]),
-        name=team.get("displayName") or team["name"],
+        name=team_name(team),
         short_name=team.get("abbreviation"),
         logo_url=_logo(team),
         **team_colors(team),

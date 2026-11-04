@@ -8,6 +8,7 @@ from app.adapters.espn_soccer import (
     season_label,
     season_months,
     team_colors,
+    team_name,
 )
 from app.adapters.football_data import FootballDataAdapter
 from app.core.config import Settings
@@ -69,8 +70,24 @@ async def test_synced_teams_carry_real_colours_only(
     await run_sync(maker, EspnSoccerAdapter(settings), ("tur.1",))
     async with maker() as s:
         rows = dict((await s.execute(select(Team.name, Team.color))).all())
-    assert rows["Fenerbahce"] == "#ffff00" and rows["Galatasaray"] == "#aa0031"
-    assert rows["Goztepe"] is None  # ESPN placeholder
+    assert rows["Fenerbahçe"] == "#ffff00" and rows["Galatasaray"] == "#aa0031"
+    assert rows["Göztepe"] is None  # ESPN placeholder
+
+
+async def test_synced_teams_get_turkish_letters_back(
+    maker: async_sessionmaker[AsyncSession], settings: Settings
+) -> None:
+    await run_sync(maker, EspnSoccerAdapter(settings), ("tur.1",))
+    async with maker() as s:
+        names = set((await s.scalars(select(Team.name))).all())
+    assert {"Beşiktaş", "Gençlerbirliği", "İstanbul Başakşehir", "Çaykur Rizespor"} <= names
+    assert not names & {"Besiktas", "Genclerbirligi", "Kasimpasa", "Goztepe"}
+    assert "Alanyaspor" in names  # already correct in ESPN, kept as is
+
+
+def test_team_name_falls_back_to_espn_for_unlisted_clubs() -> None:
+    assert team_name({"id": "1895", "displayName": "Besiktas"}) == "Beşiktaş"
+    assert team_name({"id": "999999", "displayName": "Yeni Kulüp"}) == "Yeni Kulüp"
 
 
 async def test_colours_reach_a_club_first_created_by_another_source(
@@ -83,3 +100,24 @@ async def test_colours_reach_a_club_first_created_by_another_source(
             await s.execute(select(Team.source, Team.color).where(Team.name.like("Galatasaray%")))
         ).all()
     assert rows == [("demo:football-data", "#aa0031")]  # one club, ESPN's colour
+
+
+async def test_search_ignores_turkish_letters(
+    maker: async_sessionmaker[AsyncSession], settings: Settings
+) -> None:
+    from app.repositories import queries
+
+    await run_sync(maker, EspnSoccerAdapter(settings), ("tur.1",))
+    async with maker() as s:
+        for q in ("besiktas", "BEŞİKTAŞ", "Beşiktaş", "BESIKTAS"):
+            _, teams, _ = await queries.search(s, q)
+            assert [t.name for t in teams] == ["Beşiktaş"], q
+        listed = await queries.list_teams(s, None, "basaksehir", 10)
+    assert [t.name for t in listed] == ["İstanbul Başakşehir"]
+
+
+def test_fold_text() -> None:
+    from app.repositories.queries import fold_text
+
+    assert fold_text("İstanbul Başakşehir") == "istanbul basaksehir"
+    assert fold_text("ÇAYKUR RİZESPOR") == "caykur rizespor"

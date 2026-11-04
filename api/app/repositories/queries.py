@@ -1,6 +1,7 @@
 """Read-side SQL. Returns ORM rows with everything the mappers need already loaded."""
 
 from datetime import datetime
+from typing import Any
 
 from sqlalchemy import Select, func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -176,7 +177,7 @@ async def list_teams(
     if sport_slug:
         stmt = stmt.where(Sport.slug == sport_slug)
     if q:
-        stmt = stmt.where(Team.name.ilike(_like(q)))
+        stmt = stmt.where(_matches(Team.name, q))
     return list((await session.scalars(stmt.order_by(Team.name).limit(limit))).all())
 
 
@@ -191,12 +192,40 @@ async def list_players(
     if sport_slug:
         stmt = stmt.where(Sport.slug == sport_slug)
     if q:
-        stmt = stmt.where(Player.name.ilike(_like(q)))
+        stmt = stmt.where(_matches(Player.name, q))
     return list((await session.scalars(stmt.order_by(Player.name).limit(limit))).unique().all())
 
 
 def _like(text: str) -> str:
     return f"%{text.replace('%', '').replace('_', '')}%"
+
+
+# Search ignores Turkish letters both ways: "besiktas" finds "Beşiktaş" and "Beşiktaş" finds
+# "Besiktas". Plain REPLACE + LOWER works the same on PostgreSQL and SQLite (whose LOWER only
+# folds ASCII, hence the upper-case letters are listed too).
+_TURKISH_FOLD = {
+    "ç": "c", "Ç": "c", "ğ": "g", "Ğ": "g", "ı": "i", "İ": "i", "ö": "o", "Ö": "o",
+    "ş": "s", "Ş": "s", "ü": "u", "Ü": "u", "â": "a", "Â": "a", "î": "i", "Î": "i",
+    "û": "u", "Û": "u",
+}  # fmt: skip
+
+
+def fold_text(text: str) -> str:
+    for letter, plain in _TURKISH_FOLD.items():
+        text = text.replace(letter, plain)
+    return text.lower()
+
+
+def _folded(column: Any) -> Any:
+    expr = column
+    for letter, plain in _TURKISH_FOLD.items():
+        expr = func.replace(expr, letter, plain)
+    return func.lower(expr)
+
+
+def _matches(column: Any, query: str) -> Any:
+    """`column` contains `query`, case- and Turkish-letter-insensitive."""
+    return _folded(column).like(_like(fold_text(query)))
 
 
 async def standings_of(
@@ -257,26 +286,25 @@ async def get_player(session: AsyncSession, player_id: int) -> Player | None:
 async def search(
     session: AsyncSession, query: str
 ) -> tuple[list[Competition], list[Team], list[Player]]:
-    like = _like(query)
     comps = await session.scalars(
         select(Competition)
         .join(Competition.sport)
         .options(contains_eager(Competition.sport))
-        .where(or_(Competition.name.ilike(like), Competition.country.ilike(like)))
+        .where(or_(_matches(Competition.name, query), _matches(Competition.country, query)))
         .order_by(Competition.name)
         .limit(SEARCH_LIMIT)
     )
     teams = await session.scalars(
         select(Team)
         .options(joinedload(Team.sport))
-        .where(or_(Team.name.ilike(like), Team.short_name.ilike(like)))
+        .where(or_(_matches(Team.name, query), _matches(Team.short_name, query)))
         .order_by(Team.name)
         .limit(SEARCH_LIMIT)
     )
     players = await session.scalars(
         select(Player)
         .options(joinedload(Player.team).joinedload(Team.sport))
-        .where(Player.name.ilike(like))
+        .where(_matches(Player.name, query))
         .order_by(Player.name)
         .limit(SEARCH_LIMIT)
     )
