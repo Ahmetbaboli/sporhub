@@ -8,7 +8,7 @@
 - Sitede görünen her bilgi gerçek bir kaynaktan gelir. Kaynağı yapılandırılmamış bir spor için
   "yapılandırılmadı" denir; örnek veri gösterilmez.
 
-> Durum: **v0.5, gerçek veri.** Kapsam:
+> Durum: **v0.6, gerçek veri.** Kapsam:
 > - Futbol (football-data.org'un ücretsiz katmanındaki 12 lig; Süper Lig için isteğe bağlı ESPN)
 > - NBA (balldontlie)
 > - Formula 1 (Jolpica)
@@ -29,7 +29,9 @@ rozetler var, haber fotoğrafı yok): yayıncıların ve kulüplerin görselleri
 | --- | --- | --- |
 | ![Süper Lig puan durumu ve bölgeler](docs/screenshots/superlig.png) | ![F1 yarış takvimi ve şampiyona](docs/screenshots/f1.png) | ![Galatasaray takım sayfası](docs/screenshots/team.png) |
 
-<p align="center"><img src="docs/screenshots/match-mobile.png" width="260" alt="Maç sayfası telefonda"></p>
+| Skor tahmini | Telefonda maç sayfası |
+| --- | --- |
+| ![Skor tahmin oyunu: puan özeti ve önümüzdeki Süper Lig maçları](docs/screenshots/predict.png) | <img src="docs/screenshots/match-mobile.png" width="260" alt="Maç sayfası telefonda"> |
 
 ## Özellikler
 
@@ -55,12 +57,18 @@ rozetler var, haber fotoğrafı yok): yayıncıların ve kulüplerin görselleri
 - Ücretsiz katmanı gecikmeli olan canlı skorlarda "gecikmeli olabilir" notu.
 
 **Kullanıcı**
+- Skor tahmin oyunu (`/tahmin`): önümüzdeki 7 günün maçları, tam skor 3 / doğru sonuç 1 puan;
+  maç bitince puan kendiliğinden hesaplanır. Hesap gerekmez, tahminler yalnızca cihazda kalır.
+- Takvime ekle: takımın önümüzdeki maçları `.ics` dosyası olarak (telefon, Outlook, Google Takvim).
 - GitHub/Google ile giriş.
 - Favori takım, sporcu ve lig; kişisel panel.
 - Hesabı ve tüm veriyi silme.
 - Gizlilik sayfası.
 
 **Arayüz**
+- Ctrl+K (⌘K, "/") hızlı arama: yazarken armalı anlık sonuçlar, klavyeyle gezinme.
+- Arama Türkçe harflere duyarsız ("besiktas" → Beşiktaş).
+- Telefona uygulama gibi yüklenebilir (PWA); bağlantı yokken çevrimdışı sayfası.
 - TR/EN dil desteği.
 - 6 renk paleti (yüksek kontrast dahil), koyu/açık tema.
 - Mobil öncelikli ve erişilebilir.
