@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import {
@@ -8,6 +9,7 @@ import {
   MatchStats,
   MatchTimeline,
 } from "@/components/match/match-parts";
+import { PredictionRow } from "@/components/predictions/prediction-parts";
 import { LiveRefresher } from "@/components/sport/live-refresher";
 import { EmptyState } from "@/components/ui/states";
 import { api } from "@/lib/api";
@@ -45,7 +47,27 @@ export default async function MatchPage({ params }: Props) {
       <Suspense fallback={<MatchHeader event={event} />}>
         <Details event={event} />
       </Suspense>
+      {event.status === "scheduled" ? <PredictCard event={event} /> : null}
     </div>
+  );
+}
+
+/** The prediction game's score boxes for an upcoming match. */
+function PredictCard({ event }: { event: SportEvent }) {
+  return (
+    <section aria-labelledby="predict-this" className="bg-card rounded-xl border">
+      <div className="flex items-center justify-between gap-3 border-b px-4 py-3">
+        <h2 id="predict-this" className="font-display text-xl font-semibold uppercase">
+          {t().predict.title}
+        </h2>
+        <Link href="/tahmin" className="text-primary text-sm font-medium hover:underline">
+          {t().predict.mine}
+        </Link>
+      </div>
+      <ul>
+        <PredictionRow event={event} />
+      </ul>
+    </section>
   );
 }
 

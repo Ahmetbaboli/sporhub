@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeftRight, GitCompareArrows, Newspaper, Star } from "lucide-react";
+import { ArrowLeftRight, GitCompareArrows, Newspaper, Star, Target } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useT } from "@/lib/i18n/client";
@@ -21,6 +21,7 @@ export function SportNav({ sports }: { sports: Sport[] }) {
     })),
     { href: "/transferler", label: tr.transfers.title, Icon: ArrowLeftRight },
     { href: "/tribun", label: tr.tribune.title, Icon: Star },
+    { href: "/tahmin", label: tr.predict.nav, Icon: Target },
     { href: "/compare", label: tr.compare.title, Icon: GitCompareArrows },
   ];
 
