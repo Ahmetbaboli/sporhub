@@ -24,7 +24,11 @@ TIMEOUT_SECONDS = 30
 
 
 def team(raw: dict[str, Any]) -> dict[str, Any]:
-    keep = {k: raw[k] for k in ("id", "displayName", "abbreviation") if k in raw}
+    keep = {
+        k: raw[k]
+        for k in ("id", "displayName", "abbreviation", "color", "alternateColor")
+        if k in raw
+    }
     if raw.get("logo"):
         keep["logo"] = raw["logo"]
     if raw.get("logos"):

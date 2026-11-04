@@ -3,6 +3,8 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base, JSONType
 
+HEX_COLOR_LENGTH = 7  # "#RRGGBB"
+
 
 class Sport(Base):
     __tablename__ = "sports"
@@ -43,6 +45,9 @@ class Team(Base):
     short_name: Mapped[str | None] = mapped_column(String(64))
     logo_url: Mapped[str | None] = mapped_column(String(512))
     country: Mapped[str | None] = mapped_column(String(128))
+    # Provider's kit colours, "#RRGGBB" (None when the source has none).
+    color: Mapped[str | None] = mapped_column(String(HEX_COLOR_LENGTH))
+    alternate_color: Mapped[str | None] = mapped_column(String(HEX_COLOR_LENGTH))
 
     sport: Mapped[Sport] = relationship()
 

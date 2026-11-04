@@ -54,6 +54,8 @@ class TeamOut(BaseModel):
     logo_url: str | None = None
     country: str | None = None
     sport_slug: str | None = None
+    color: str | None = None
+    alternate_color: str | None = None
 
 
 class PlayerOut(BaseModel):

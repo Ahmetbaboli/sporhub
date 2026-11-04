@@ -30,6 +30,7 @@ from app.adapters.dto import (
     StandingDTO,
     TeamDTO,
     TeamRef,
+    hex_color,
 )
 from app.adapters.http_fixture import HttpFixtureAdapter
 from app.core.config import Settings
@@ -93,12 +94,26 @@ def _logo(team: dict[str, Any]) -> str | None:
     return logos[0].get("href") if logos else None
 
 
+# ESPN's default for clubs it has no kit for (checked 2026-11-04: Alanyaspor, Göztepe, Samsunspor…
+# all come back black/black or black/red). Showing it would paint those clubs wrongly.
+PLACEHOLDER_PRIMARY = "#000000"
+PLACEHOLDER_ALTERNATES = frozenset({"#000000", "#c60000"})
+
+
+def team_colors(team: dict[str, Any]) -> dict[str, str | None]:
+    color, alternate = hex_color(team.get("color")), hex_color(team.get("alternateColor"))
+    if color == PLACEHOLDER_PRIMARY and (alternate is None or alternate in PLACEHOLDER_ALTERNATES):
+        return {"color": None, "alternate_color": None}
+    return {"color": color, "alternate_color": alternate}
+
+
 def team_ref(team: dict[str, Any]) -> TeamRef:
     return TeamRef(
         external_id=str(team["id"]),
         name=team.get("displayName") or team["name"],
         short_name=team.get("abbreviation"),
         logo_url=_logo(team),
+        **team_colors(team),
     )
 
 

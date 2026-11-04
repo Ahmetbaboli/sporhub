@@ -124,6 +124,12 @@ async def _resolve_other_source(ctx: SyncContext, ref: TeamRef, country: str | N
     return matched
 
 
+def _colors(ref: TeamRef) -> dict[str, str]:
+    """Only the colours the source sent, so a later colourless ref never erases them."""
+    colors = {"color": ref.color, "alternate_color": ref.alternate_color}
+    return {k: v for k, v in colors.items() if v}
+
+
 async def _upsert_team(ctx: SyncContext, ref: TeamRef, country: str | None = None) -> int:
     other = await _resolve_other_source(ctx, ref, country)
     if other is not None:
@@ -140,6 +146,7 @@ async def _upsert_team(ctx: SyncContext, ref: TeamRef, country: str | None = Non
             "short_name": ref.short_name,
             "logo_url": ref.logo_url,
             "country": country,
+            **_colors(ref),
         },
         ["source", "external_id"],
     )

@@ -1,5 +1,6 @@
 """Common DTOs every adapter normalizes into. Adapters never touch the database."""
 
+import re
 from datetime import date, datetime
 from typing import Literal
 
@@ -10,11 +11,22 @@ EventStatus = Literal["scheduled", "live", "finished", "postponed", "cancelled"]
 Side = Literal["home", "away"]
 
 
+HEX_COLOR = re.compile(r"^#?([0-9a-fA-F]{6})$")
+
+
+def hex_color(value: object) -> str | None:
+    """'ffff00' / '#FFFF00' -> '#ffff00'; anything else -> None."""
+    match = HEX_COLOR.match(value) if isinstance(value, str) else None
+    return f"#{match.group(1).lower()}" if match else None
+
+
 class TeamRef(BaseModel):
     external_id: str
     name: str
     short_name: str | None = None
     logo_url: str | None = None
+    color: str | None = None
+    alternate_color: str | None = None
 
 
 class PlayerDTO(BaseModel):

@@ -69,7 +69,9 @@
         "id": "436",
         "displayName": "Fenerbahce",
         "abbreviation": "FEN",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
+        "color": "ffff00",
+        "alternateColor": "ffffff"
        }
       },
       {
@@ -80,7 +82,9 @@
         "id": "789",
         "displayName": "Goztepe",
         "abbreviation": "GOZ",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/789.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/789.png",
+        "color": "000000",
+        "alternateColor": "000000"
        }
       }
      ]
@@ -110,7 +114,9 @@
         "id": "132335",
         "displayName": "Amed SFK",
         "abbreviation": "AMED",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132335.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132335.png",
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       },
       {
@@ -121,7 +127,9 @@
         "id": "20729",
         "displayName": "Eyupspor",
         "abbreviation": "EYU",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png",
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       }
      ]
@@ -151,7 +159,9 @@
         "id": "7914",
         "displayName": "Istanbul Basaksehir",
         "abbreviation": "IBFK",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7914.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7914.png",
+        "color": "ff6600",
+        "alternateColor": "091453"
        }
       },
       {
@@ -162,7 +172,9 @@
         "id": "11429",
         "displayName": "Samsunspor",
         "abbreviation": "SAM",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11429.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11429.png",
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       }
      ]
@@ -192,7 +204,9 @@
         "id": "997",
         "displayName": "Trabzonspor",
         "abbreviation": "TRAB",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/997.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/997.png",
+        "color": "5699eb",
+        "alternateColor": "8E003B"
        }
       },
       {
@@ -203,7 +217,9 @@
         "id": "20070",
         "displayName": "Gaziantep FK",
         "abbreviation": "GAZ",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20070.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20070.png",
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       }
      ]
@@ -233,7 +249,9 @@
         "id": "6870",
         "displayName": "Kasimpasa",
         "abbreviation": "KAS",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png",
+        "color": "000000",
+        "alternateColor": "000000"
        }
       },
       {
@@ -244,7 +262,9 @@
         "id": "1895",
         "displayName": "Besiktas",
         "abbreviation": "BES",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png",
+        "color": "ffffff",
+        "alternateColor": "1a1a1a"
        }
       }
      ]
@@ -274,7 +294,9 @@
         "id": "996",
         "displayName": "Genclerbirligi",
         "abbreviation": "GEN",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/996.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/996.png",
+        "color": "000000",
+        "alternateColor": "e91b23"
        }
       },
       {
@@ -285,7 +307,9 @@
         "id": "9078",
         "displayName": "Alanyaspor",
         "abbreviation": "ALA",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9078.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9078.png",
+        "color": "000000",
+        "alternateColor": "000000"
        }
       }
      ]
@@ -315,7 +339,9 @@
         "id": "20070",
         "displayName": "Gaziantep FK",
         "abbreviation": "GAZ",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20070.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20070.png",
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       },
       {
@@ -326,7 +352,9 @@
         "id": "6870",
         "displayName": "Kasimpasa",
         "abbreviation": "KAS",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png",
+        "color": "000000",
+        "alternateColor": "000000"
        }
       }
      ]
@@ -356,7 +384,9 @@
         "id": "20729",
         "displayName": "Eyupspor",
         "abbreviation": "EYU",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png",
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       },
       {
@@ -367,7 +397,9 @@
         "id": "995",
         "displayName": "Kocaelispor",
         "abbreviation": "KOC",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/995.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/995.png",
+        "color": "000000",
+        "alternateColor": "000000"
        }
       }
      ]
@@ -397,7 +429,9 @@
         "id": "11429",
         "displayName": "Samsunspor",
         "abbreviation": "SAM",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11429.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11429.png",
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       },
       {
@@ -408,7 +442,9 @@
         "id": "7648",
         "displayName": "Konyaspor",
         "abbreviation": "KNY",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7648.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7648.png",
+        "color": "288A00",
+        "alternateColor": "000000"
        }
       }
      ]
@@ -438,7 +474,9 @@
         "id": "432",
         "displayName": "Galatasaray",
         "abbreviation": "GAL",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+        "color": "aa0031",
+        "alternateColor": "ffffff"
        }
       },
       {
@@ -449,7 +487,9 @@
         "id": "132335",
         "displayName": "Amed SFK",
         "abbreviation": "AMED",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132335.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132335.png",
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       }
      ]
@@ -479,7 +519,9 @@
         "id": "789",
         "displayName": "Goztepe",
         "abbreviation": "GOZ",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/789.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/789.png",
+        "color": "000000",
+        "alternateColor": "000000"
        }
       },
       {
@@ -490,7 +532,9 @@
         "id": "7914",
         "displayName": "Istanbul Basaksehir",
         "abbreviation": "IBFK",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7914.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7914.png",
+        "color": "ff6600",
+        "alternateColor": "091453"
        }
       }
      ]
@@ -520,7 +564,9 @@
         "id": "7656",
         "displayName": "Caykur Rizespor",
         "abbreviation": "CAY",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png",
+        "color": "000000",
+        "alternateColor": "000000"
        }
       },
       {
@@ -531,7 +577,9 @@
         "id": "19267",
         "displayName": "Erzurum BB",
         "abbreviation": "ERZ",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19267.png"
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19267.png",
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       }
      ]

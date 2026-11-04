@@ -13,7 +13,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/9078.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "000000"
        }
       },
       {
@@ -25,7 +27,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/132335.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       },
       {
@@ -37,7 +41,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png"
          }
-        ]
+        ],
+        "color": "ffffff",
+        "alternateColor": "1a1a1a"
        }
       },
       {
@@ -49,7 +55,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "000000"
        }
       },
       {
@@ -61,7 +69,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/19267.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       },
       {
@@ -73,7 +83,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       },
       {
@@ -85,7 +97,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png"
          }
-        ]
+        ],
+        "color": "ffff00",
+        "alternateColor": "ffffff"
        }
       },
       {
@@ -97,7 +111,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png"
          }
-        ]
+        ],
+        "color": "aa0031",
+        "alternateColor": "ffffff"
        }
       },
       {
@@ -109,7 +125,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/20070.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       },
       {
@@ -121,7 +139,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/996.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "e91b23"
        }
       },
       {
@@ -133,7 +153,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/789.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "000000"
        }
       },
       {
@@ -145,7 +167,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/7914.png"
          }
-        ]
+        ],
+        "color": "ff6600",
+        "alternateColor": "091453"
        }
       },
       {
@@ -157,7 +181,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "000000"
        }
       },
       {
@@ -169,7 +195,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/995.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "000000"
        }
       },
       {
@@ -181,7 +209,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/7648.png"
          }
-        ]
+        ],
+        "color": "288A00",
+        "alternateColor": "000000"
        }
       },
       {
@@ -193,7 +223,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/11429.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       },
       {
@@ -205,7 +237,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/997.png"
          }
-        ]
+        ],
+        "color": "5699eb",
+        "alternateColor": "8E003B"
        }
       },
       {
@@ -217,7 +251,9 @@
          {
           "href": "https://a.espncdn.com/i/teamlogos/soccer/500/132334.png"
          }
-        ]
+        ],
+        "color": "000000",
+        "alternateColor": "C60000"
        }
       }
      ]

@@ -57,6 +57,8 @@ def team_out(team: Team) -> TeamOut:
         logo_url=provider_image(team.logo_url),
         country=team.country,
         sport_slug=team.sport.slug if "sport" in team.__dict__ else None,
+        color=team.color,
+        alternate_color=team.alternate_color,
     )
 
 
