@@ -1,3 +1,4 @@
+import { CalendarPlus } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -55,6 +56,7 @@ export default async function TeamPage({ params }: Props) {
         </div>
         <div className="ml-auto flex flex-wrap items-center gap-2">
           <CompareLink href={`/compare?type=teams&a=${id}`} />
+          <CalendarLink teamId={id} />
           <TribuneStar kind="teams" id={id} name={team.name} withText />
           <Suspense fallback={null}>
             <FavoriteToggle
@@ -81,6 +83,21 @@ export default async function TeamPage({ params }: Props) {
         <Freshness sport={team.sport_slug} />
       </Suspense>
     </>
+  );
+}
+
+/** Upcoming fixtures as an .ics download; calendar apps import it in one tap. */
+function CalendarLink({ teamId }: { teamId: number }) {
+  return (
+    <a
+      href={`/teams/${teamId}/calendar`}
+      download
+      title={t().team.calendarHint}
+      className="hover:bg-muted bg-card inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-sm font-medium"
+    >
+      <CalendarPlus className="size-4" aria-hidden />
+      {t().team.calendar}
+    </a>
   );
 }
 
