@@ -29,6 +29,7 @@ import type {
   Standing,
   StandingEntry,
   SeasonForecast,
+  Team,
   TeamAnalysis,
   TeamDetail,
 } from "@/lib/types";
@@ -204,6 +205,8 @@ export const api = {
   event: (id: number) => get<SportEvent>(`/api/v1/events/${id}`),
   matchDetails: (id: number) => get<MatchDetails>(`/api/v1/events/${id}/details`),
   team: (id: number) => get<TeamDetail>(`/api/v1/teams/${id}`),
+  teams: (q: { sport?: string; limit?: number } = {}) =>
+    get<Page<Team>>("/api/v1/teams", { sport: q.sport, limit: q.limit }),
   teamEvents: (id: number, q: Pick<EventsQuery, "order" | "page" | "pageSize"> = {}) =>
     get<Page<SportEvent>>(`/api/v1/teams/${id}/events`, {
       order: q.order,

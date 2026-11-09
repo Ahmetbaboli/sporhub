@@ -17,6 +17,7 @@ import { api } from "@/lib/api";
 import { orNotFound, parseId } from "@/lib/api-helpers";
 import { groupSquad, splitTeamEvents } from "@/lib/events";
 import { initLocale, t } from "@/lib/i18n";
+import { shareMetadata } from "@/lib/share";
 import { teamProgression } from "@/lib/series";
 import { templateFor } from "@/lib/sports";
 import type { TeamDetail } from "@/lib/types";
@@ -32,7 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   await initLocale();
   const { id } = await params;
   const team = await api.team(parseId(id)).catch(() => null);
-  return { title: team?.name ?? t().app.name };
+  if (!team) return { title: t().app.name };
+  return shareMetadata(team.name, t().share.teamDescription(team.name));
 }
 
 export default async function TeamPage({ params }: Props) {

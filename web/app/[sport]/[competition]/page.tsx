@@ -18,6 +18,7 @@ import { TribuneStar } from "@/components/tribune/tribune-provider";
 import { api } from "@/lib/api";
 import { orNotFound, parsePage } from "@/lib/api-helpers";
 import { initLocale, t } from "@/lib/i18n";
+import { shareMetadata } from "@/lib/share";
 import { templateFor, type SportTemplate, type StandingsLayout } from "@/lib/sports";
 
 export const dynamic = "force-dynamic";
@@ -34,7 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   await initLocale();
   const { competition } = await params;
   const detail = await api.competition(competition).catch(() => null);
-  return { title: detail?.name ?? t().app.name };
+  if (!detail) return { title: t().app.name };
+  return shareMetadata(detail.name, t().share.leagueDescription(detail.name));
 }
 
 function parseTab(value: string | undefined, template: SportTemplate): Tab {

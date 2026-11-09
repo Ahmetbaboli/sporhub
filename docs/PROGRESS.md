@@ -111,6 +111,7 @@
 - [x] 7. Takvime ekle (.ics, takım sayfasında düğme)
 - [x] 8. PWA (manifest, kodla çizilen simge, çevrimdışı sayfası)
 - [x] 10. Sezon olasılıkları: Elo + 10.000 simülasyon (lig sayfasında "Olasılıklar" sekmesi; maç sayfasında kazanma olasılığı)
+- [x] 11. Paylaşım kartları (site, maç, takım, lig, tahmin) + sitemap.xml + robots.txt
 - [ ] 9. Playwright e2e
 
 ### Aşama 6 — Vitrin

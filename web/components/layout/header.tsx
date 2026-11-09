@@ -32,7 +32,7 @@ export async function Header() {
           <span className="text-primary">Just</span>
           <span className="text-accent">Sport</span>
         </Link>
-        <div className="relative order-3 w-full sm:order-2 sm:w-72 sm:flex-none md:ml-auto">
+        <div className="relative order-3 w-full sm:order-2 sm:w-80 sm:flex-none md:ml-auto">
           <SearchForm shortcutSpace />
           <QuickSearch />
         </div>

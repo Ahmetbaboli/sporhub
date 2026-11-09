@@ -10,6 +10,7 @@ import { api } from "@/lib/api";
 import { groupByDay } from "@/lib/events";
 import { formatDay } from "@/lib/format";
 import { initLocale, intlLocale, t } from "@/lib/i18n";
+import { shareMetadata } from "@/lib/share";
 import type { Competition, SportEvent } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -24,7 +25,7 @@ type Props = { searchParams: Promise<{ lig?: string }> };
 
 export async function generateMetadata(): Promise<Metadata> {
   await initLocale();
-  return { title: t().predict.title };
+  return shareMetadata(t().predict.title, t().share.predictDescription);
 }
 
 const isoDay = (ms: number) => new Date(ms).toISOString().slice(0, 10);

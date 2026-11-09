@@ -17,6 +17,7 @@ import { api } from "@/lib/api";
 import { orNotFound, parseId } from "@/lib/api-helpers";
 import { sideOf } from "@/lib/events";
 import { initLocale, t } from "@/lib/i18n";
+import { shareMetadata } from "@/lib/share";
 import type { MatchDetails, SportEvent } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -32,7 +33,20 @@ function matchTitle(event: SportEvent): string {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   await initLocale();
   const event = await api.event(parseId((await params).id)).catch(() => null);
-  return { title: event ? matchTitle(event) : t().match.open };
+  if (!event) return { title: t().match.open };
+  const home = sideOf(event, "home");
+  const away = sideOf(event, "away");
+  const played = event.status === "finished" || event.status === "live";
+  const score = played ? `${home?.score ?? 0}–${away?.score ?? 0}` : null;
+  return shareMetadata(
+    matchTitle(event),
+    t().share.matchDescription(
+      home?.team?.name ?? "—",
+      away?.team?.name ?? "—",
+      score,
+      event.competition.name,
+    ),
+  );
 }
 
 export default async function MatchPage({ params }: Props) {

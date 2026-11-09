@@ -494,6 +494,32 @@ export const tr = {
     homeSection: "Senin gündemin",
     seeAll: "Panelin tamamı",
   },
+  share: {
+    siteAlt:
+      "Just Sport: futbol, basketbol ve Formula 1 için canlı skor, fikstür ve puan durumu",
+    siteLine: "Futbol · Basketbol · Formula 1",
+    matchDescription: (
+      home: string,
+      away: string,
+      score: string | null,
+      league: string,
+    ) =>
+      score
+        ? `${home} ${score} ${away} (${league}): önemli anlar, kadrolar ve istatistikler.`
+        : `${home} – ${away} (${league}): maç saati, kazanma olasılığı ve skor tahmini.`,
+    matchAlt: (home: string, away: string) => `${home} – ${away} maç kartı`,
+    teamDescription: (team: string) =>
+      `${team}: son maçlar, fikstür, form, sezon analizi ve kadro.`,
+    teamLine: "Fikstür · Form · Analiz · Kadro",
+    teamAlt: (team: string) => `${team} takım kartı`,
+    leagueDescription: (league: string) =>
+      `${league}: puan durumu, fikstür, istatistikler ve şampiyonluk olasılıkları.`,
+    leagueAlt: (league: string) => `${league} puan durumu kartı`,
+    predictDescription:
+      "Önümüzdeki maçlara skor tahmini yap: tam skor 3, doğru sonuç 1 puan. Hesap gerekmez.",
+    predictLine: "Tam skor 3 puan · Doğru sonuç 1 puan",
+    points: (n: number) => `${n} P`,
+  },
   forecast: {
     title: "Sezon sonu olasılıkları",
     intro: (sims: string, played: number, remaining: number) =>

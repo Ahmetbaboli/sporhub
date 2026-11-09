@@ -72,6 +72,8 @@ rozetler var, haber fotoğrafı yok): yayıncıların ve kulüplerin görselleri
 - Ctrl+K (⌘K, "/") hızlı arama: yazarken armalı anlık sonuçlar, klavyeyle gezinme.
 - Arama Türkçe harflere duyarsız ("besiktas" → Beşiktaş).
 - Telefona uygulama gibi yüklenebilir (PWA); bağlantı yokken çevrimdışı sayfası.
+- Paylaşım kartları: maç, takım ve lig linkleri paylaşılınca skorlu, kulüp renkli görsel çıkar
+  (kodla çizilir, sağlayıcı görseli içermez); `sitemap.xml` ve `robots.txt`.
 - TR/EN dil desteği.
 - 6 renk paleti (yüksek kontrast dahil), koyu/açık tema.
 - Mobil öncelikli ve erişilebilir.

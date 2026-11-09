@@ -9,6 +9,7 @@ import { TribuneProvider } from "@/components/tribune/tribune-provider";
 import { initLocale, t } from "@/lib/i18n";
 import { I18nProvider } from "@/lib/i18n/client";
 import { PALETTE_BOOT_SCRIPT } from "@/lib/palettes";
+import { siteUrl } from "@/lib/site";
 import { getTribune } from "@/lib/tribune-server";
 import "./globals.css";
 
@@ -28,11 +29,20 @@ const display = Barlow_Condensed({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  await initLocale();
+  const locale = await initLocale();
   const { app } = t();
   return {
     title: { default: `${app.name} — ${app.tagline}`, template: `%s · ${app.name}` },
     description: app.description,
+    metadataBase: new URL(siteUrl()),
+    openGraph: {
+      siteName: app.name,
+      type: "website",
+      locale: locale === "tr" ? "tr_TR" : "en_GB",
+      title: `${app.name} — ${app.tagline}`,
+      description: app.description,
+    },
+    twitter: { card: "summary_large_image" },
     appleWebApp: { capable: true, title: app.name, statusBarStyle: "black-translucent" },
   };
 }

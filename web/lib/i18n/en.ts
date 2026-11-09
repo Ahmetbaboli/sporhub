@@ -488,6 +488,32 @@ export const en: Messages = {
     homeSection: "Your agenda",
     seeAll: "Open my page",
   },
+  share: {
+    siteAlt:
+      "Just Sport: live scores, fixtures and tables for football, basketball and Formula 1",
+    siteLine: "Football · Basketball · Formula 1",
+    matchDescription: (
+      home: string,
+      away: string,
+      score: string | null,
+      league: string,
+    ) =>
+      score
+        ? `${home} ${score} ${away} (${league}): key moments, line-ups and stats.`
+        : `${home} – ${away} (${league}): kick-off, win probability and score prediction.`,
+    matchAlt: (home: string, away: string) => `${home} – ${away} match card`,
+    teamDescription: (team: string) =>
+      `${team}: recent results, fixtures, form, season analysis and squad.`,
+    teamLine: "Fixtures · Form · Analysis · Squad",
+    teamAlt: (team: string) => `${team} team card`,
+    leagueDescription: (league: string) =>
+      `${league}: table, fixtures, stats and title chances.`,
+    leagueAlt: (league: string) => `${league} table card`,
+    predictDescription:
+      "Predict upcoming scores: exact score 3 points, right result 1. No account needed.",
+    predictLine: "Exact score 3 points · Right result 1 point",
+    points: (n: number) => `${n} pts`,
+  },
   forecast: {
     title: "End-of-season chances",
     intro: (sims: string, played: number, remaining: number) =>
