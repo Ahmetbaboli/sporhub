@@ -154,3 +154,12 @@ def test_every_settings_consumer_is_isolated_in_tests() -> None:
 def test_tests_do_not_read_dotenv() -> None:
     assert Settings.model_config["env_file"] is None
     assert Settings().football_data_api_key == ""
+
+
+def test_rate_limit_without_internal_key_warns_and_short_key_fails() -> None:
+    no_key = Settings(rate_limit_per_minute=120, internal_api_key="", redis_url="")
+    assert any("INTERNAL_API_KEY" in w for w in check_settings(no_key)[1])
+    short = Settings(internal_api_key="short", redis_url="")
+    assert any("INTERNAL_API_KEY" in e for e in check_settings(short)[0])
+    off = Settings(rate_limit_per_minute=0, internal_api_key="", redis_url="")
+    assert not any("INTERNAL_API_KEY" in w for w in check_settings(off)[1])

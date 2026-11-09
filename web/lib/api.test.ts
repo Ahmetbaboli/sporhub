@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { api, ApiError, buildUrl } from "@/lib/api";
+import { api, ApiError, buildUrl, INTERNAL_KEY_HEADER, internalHeaders } from "@/lib/api";
 
 afterEach(() => vi.restoreAllMocks());
 
@@ -67,5 +67,29 @@ describe("api client", () => {
     const error = await api.sports().catch((e: unknown) => e);
     expect(error).toBeInstanceOf(ApiError);
     expect((error as ApiError).code).toBe("unreachable");
+  });
+});
+
+describe("internal key", () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+    vi.unstubAllGlobals();
+  });
+
+  it("is sent by the server so its page requests skip the API's limit", async () => {
+    vi.stubEnv("INTERNAL_API_KEY", "server-key");
+    vi.stubGlobal("window", undefined); // as on the Next.js server
+    const spy = vi
+      .spyOn(globalThis, "fetch")
+      .mockResolvedValue(jsonResponse({ items: [] }));
+    await api.sports();
+    const headers = spy.mock.calls[0][1]?.headers as Record<string, string>;
+    expect(headers[INTERNAL_KEY_HEADER]).toBe("server-key");
+    expect(headers.Accept).toBe("application/json");
+  });
+
+  it("never leaves a browser", () => {
+    vi.stubEnv("INTERNAL_API_KEY", "server-key");
+    expect(internalHeaders()).toEqual({});
   });
 });

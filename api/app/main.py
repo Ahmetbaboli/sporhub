@@ -13,6 +13,7 @@ from app.core.config import get_settings
 from app.core.data_mode import is_demo
 from app.core.errors import register_error_handlers
 from app.core.logging import configure_logging
+from app.core.rate_limit import install_rate_limit
 from app.core.startup import ConfigurationError, describe_validation_error, ensure_valid
 from app.db.dialect import try_scheduler_lock
 from app.db.session import get_engine, get_session, get_sessionmaker
@@ -78,6 +79,8 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
     register_error_handlers(app)
+    # Added before the access log so it runs inside it: refused requests are logged too.
+    install_rate_limit(app)
 
     @app.middleware("http")
     async def access_log(

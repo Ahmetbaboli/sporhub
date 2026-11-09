@@ -34,6 +34,7 @@ services:
       SEED_ON_START: "true"
       ADMIN_TOKEN: ${ADMIN_TOKEN:-dev-admin-token}
       API_TOKEN_SECRET: ${API_TOKEN_SECRET:-}
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY:-local-dev-internal-key-change-me-32c}
       CORS_ORIGINS: http://localhost:3000
       SCHEDULER_ENABLED: "false"
       FOOTBALL_DATA_API_KEY: ${FOOTBALL_DATA_API_KEY:-}
@@ -59,6 +60,7 @@ services:
         NEXT_PUBLIC_API_URL: http://localhost:8000
     environment:
       API_INTERNAL_URL: http://api:8000
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY:-local-dev-internal-key-change-me-32c}
       # Sign-in is optional; empty values keep the site signed-out.
       AUTH_SECRET: ${AUTH_SECRET:-}
       AUTH_TRUST_HOST: "true"

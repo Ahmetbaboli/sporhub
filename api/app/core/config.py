@@ -57,6 +57,12 @@ class Settings(BaseSettings):
     # HS256 key shared with the web app (API_TOKEN_SECRET); empty disables /api/v1/me.
     api_token_secret: str = Field(default="", repr=False)
     cors_origins: str = "http://localhost:3000"
+    # Requests per minute per client IP (heavy endpoints count more); 0 turns the limit off.
+    rate_limit_per_minute: int = 120
+    # Shared with the web server (same value in web/.env); its requests skip the limit.
+    internal_api_key: str = Field(default="", repr=False)
+    # Proxies in front of the API that append to X-Forwarded-For (Render: 1; direct: 0).
+    trusted_proxy_hops: int = 0
     log_level: str = "info"
 
     # News feeds (JSON list): [{"name", "url", "sport", "category", "language"}]. See .env.example.

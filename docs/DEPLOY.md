@@ -51,6 +51,9 @@ veya ekran görüntüsüne koymayın.
 | `CORS_ORIGINS` | evet | Web adresi, ör. `https://justsport.vercel.app` (`*` reddedilir) |
 | `ADMIN_TOKEN` | önerilir | ≥16 rastgele karakter (Render `generateValue`); boşsa admin uçları kapalı |
 | `API_TOKEN_SECRET` | girişi kullanacaksanız | ≥32 karakter; web'dekiyle **aynı** |
+| `INTERNAL_API_KEY` | **evet** | ≥32 rastgele karakter; web'dekiyle **aynı**. Web sunucusu bununla dakikalık istek sınırından muaf olur; boşsa sitenin kendisi de 429 alabilir |
+| `TRUSTED_PROXY_HOPS` | Render'da | `1` (blueprint ayarlar): gerçek ziyaretçi IP'si Render'ın eklediği `X-Forwarded-For` değerinden okunur |
+| `RATE_LIMIT_PER_MINUTE` | — | IP başına dakikalık kota (varsayılan 120; olasılık 5, maç detayı 3, arama 2 sayılır). `0` kapatır |
 | `FOOTBALL_DATA_API_KEY` | futbol için | https://www.football-data.org/client/register (ücretsiz: 12 lig, 10 istek/dk, skorlar gecikmeli) |
 | `THESPORTSDB_API_KEY` | Süper Lig için | **Ücretli** anahtar; açık geliştirme anahtarı `123` canlıda yok sayılır |
 | `BALLDONTLIE_API_KEY` | NBA için | https://app.balldontlie.io (ücretsiz: 5 istek/dk, kadro yok) |
@@ -92,6 +95,8 @@ veya ekran görüntüsüne koymayın.
 | `NEXT_PUBLIC_API_URL` | evet | `https://<api>.onrender.com` |
 | `AUTH_SECRET` | girişi kullanacaksanız | `npx auth secret` |
 | `API_TOKEN_SECRET` | girişi kullanacaksanız | API'dekiyle aynı |
+| `INTERNAL_API_KEY` | **evet** | API'dekiyle aynı; yalnızca sunucuda kullanılır, tarayıcıya gitmez |
+| `NEXT_PUBLIC_SITE_URL` | — | Sitenin adresi (paylaşım kartları, sitemap). Vercel'de boş bırakılabilir |
 | `AUTH_GITHUB_ID` / `AUTH_GITHUB_SECRET` | girişi kullanacaksanız | `docs/AUTH-SETUP.md` |
 | `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` | — | isteğe bağlı |
 | `ADMIN_ACCOUNT_IDS` | — | `/admin/status`'u görebilecek hesaplar, ör. `github:12345` |

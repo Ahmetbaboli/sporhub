@@ -42,6 +42,16 @@ def check_settings(settings: Settings) -> tuple[list[str], list[str]]:
             f"API_TOKEN_SECRET en az {MIN_API_TOKEN_SECRET_LENGTH} karakter olmalı "
             "(web uygulamasındakiyle aynı değer)."
         )
+    if settings.internal_api_key and len(settings.internal_api_key) < MIN_API_TOKEN_SECRET_LENGTH:
+        errors.append(
+            f"INTERNAL_API_KEY en az {MIN_API_TOKEN_SECRET_LENGTH} karakter olmalı "
+            "(web sunucusundakiyle aynı değer)."
+        )
+    if settings.rate_limit_per_minute > 0 and not settings.internal_api_key:
+        warnings.append(
+            "RATE_LIMIT_PER_MINUTE açık ama INTERNAL_API_KEY boş: web sunucusunun istekleri de "
+            "sınırlanır; yoğun trafikte site 429 alabilir."
+        )
     if "*" in settings.cors_origin_list:
         errors.append("CORS_ORIGINS '*' içeremez; web sitesinin tam adresini yazın.")
     for i, feed in enumerate(settings.news_feeds):

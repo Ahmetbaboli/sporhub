@@ -29,6 +29,7 @@ from app.adapters.football_data import FootballDataAdapter
 from app.adapters.news_rss import RssNewsAdapter
 from app.core import cache
 from app.core.config import Settings, get_settings
+from app.core.rate_limit import reset_rate_limits
 from app.db.base import Base
 from app.db.session import get_session
 from app.main import create_app
@@ -81,6 +82,7 @@ SETTINGS_CONSUMERS = (
     "app.core.config",
     "app.core.auth",
     "app.core.cache",
+    "app.core.rate_limit",
     "app.core.redact",
     "app.db.session",
     "app.main",
@@ -103,6 +105,7 @@ def settings() -> Settings:
         api_token_secret=TOKEN_SECRET,
         redis_url="",
         database_url="sqlite+aiosqlite://",
+        rate_limit_per_minute=0,  # tests/test_rate_limit.py turns it on
     )
 
 
@@ -116,6 +119,7 @@ def _isolate(settings: Settings, monkeypatch: pytest.MonkeyPatch) -> None:
         monkeypatch.setattr(f"{module}.get_settings", lambda: settings)
     cache.reset_cache()
     reset_budgets()
+    reset_rate_limits()
 
 
 @pytest.fixture

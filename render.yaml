@@ -26,6 +26,12 @@ services:
         sync: false # e.g. https://justsport.vercel.app
       - key: API_TOKEN_SECRET
         sync: false # same value as the web app's API_TOKEN_SECRET (>= 32 characters)
+      - key: INTERNAL_API_KEY
+        sync: false # >= 32 chars; same value as the web app's INTERNAL_API_KEY (skips rate limit)
+      - key: TRUSTED_PROXY_HOPS
+        value: "1" # Render's proxy appends the caller's IP to X-Forwarded-For
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "120"
       - key: FOOTBALL_DATA_API_KEY
         sync: false
       - key: THESPORTSDB_API_KEY

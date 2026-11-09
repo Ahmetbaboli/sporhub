@@ -85,11 +85,21 @@ async function parseError(response: Response): Promise<ApiError> {
   }
 }
 
+/** Header that exempts our own server from the API's per-IP limit (every page's calls
+ * come from this one server). Only on the server: the key never reaches a browser. */
+export const INTERNAL_KEY_HEADER = "X-Internal-Key";
+
+export function internalHeaders(): Record<string, string> {
+  const key = typeof window === "undefined" ? process.env.INTERNAL_API_KEY : undefined;
+  return key ? { [INTERNAL_KEY_HEADER]: key } : {};
+}
+
 async function send(url: string, init: RequestInit): Promise<Response> {
   let response: Response;
   try {
     response = await fetch(url, {
       ...init,
+      headers: { ...internalHeaders(), ...(init.headers as Record<string, string>) },
       signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
     });
   } catch {
