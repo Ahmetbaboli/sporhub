@@ -43,7 +43,9 @@ def upgrade() -> None:
         sa.UniqueConstraint("user_id", "player_id"),
         sa.UniqueConstraint("user_id", "competition_id"),
         sa.CheckConstraint(
-            "(team_id IS NOT NULL) + (player_id IS NOT NULL) + (competition_id IS NOT NULL) = 1",
+            "(CASE WHEN team_id IS NOT NULL THEN 1 ELSE 0 END)"
+            " + (CASE WHEN player_id IS NOT NULL THEN 1 ELSE 0 END)"
+            " + (CASE WHEN competition_id IS NOT NULL THEN 1 ELSE 0 END) = 1",
             name="ck_favorites_one_target",
         ),
     )

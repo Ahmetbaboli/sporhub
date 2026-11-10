@@ -177,7 +177,20 @@ async def seeded(
         shutil.copy(seeded_template, copy)
         engine = create_async_engine(f"sqlite+aiosqlite:///{copy}")
     yield async_sessionmaker(engine, expire_on_commit=False)
+    if IS_POSTGRES:
+        await _forget_users(engine)
     await engine.dispose()
+
+
+# The seeded PostgreSQL schema is shared by every test, but API tests sign users in and save
+# favorites into it; without this the next test would see them (SQLite copies a fresh file).
+USER_TABLES = ("favorites", "users")  # children first
+
+
+async def _forget_users(engine: AsyncEngine) -> None:
+    async with engine.begin() as conn:
+        for table in USER_TABLES:
+            await conn.execute(text(f"DELETE FROM {table}"))
 
 
 @pytest.fixture

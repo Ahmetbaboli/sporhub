@@ -15,7 +15,7 @@ from app.core.errors import register_error_handlers
 from app.core.logging import configure_logging
 from app.core.rate_limit import install_rate_limit
 from app.core.startup import ConfigurationError, describe_validation_error, ensure_valid
-from app.db.dialect import try_scheduler_lock
+from app.db.dialect import release_scheduler_lock, try_scheduler_lock
 from app.db.session import get_engine, get_session, get_sessionmaker
 from app.routers import admin, me, news, v1
 from app.schemas.api import HealthOut
@@ -57,7 +57,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     if scheduler:
         scheduler.shutdown(wait=False)
     if lock is not None:
-        await lock.close()  # releases the advisory lock
+        await release_scheduler_lock(lock)
 
 
 def create_app() -> FastAPI:

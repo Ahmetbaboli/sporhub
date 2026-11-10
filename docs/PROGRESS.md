@@ -114,6 +114,7 @@
 - [x] 11. Paylaşım kartları (site, maç, takım, lig, tahmin) + sitemap.xml + robots.txt
 - [x] 12. API istek sınırı (IP başına, ağır uçlar pahalı, web sunucusu iç anahtarla muaf)
 - [ ] 9. Playwright e2e
+- [x] 2026-11-10: Kırmızı CI düzeltildi (PostgreSQL'de CHECK kuralı, test izolasyonu, zamanlayıcı kilidinin bırakılması)
 
 ### Aşama 6 — Vitrin
 - [ ] README ekran görüntüleri/GIF, repo konu etiketleri, v1.0.0

@@ -1,3 +1,4 @@
+import time
 from collections.abc import AsyncIterator
 from types import SimpleNamespace
 
@@ -11,6 +12,7 @@ from app.core.rate_limit import INTERNAL_KEY_HEADER, client_ip, request_weight
 V1 = "/api/v1"
 LIMIT = 5
 INTERNAL_KEY = "web-server-key-for-tests"
+MID_WINDOW = 1_800_000_030.0  # 30 s into a one-minute window
 
 
 @pytest.fixture
@@ -22,10 +24,14 @@ async def client(app: FastAPI) -> AsyncIterator[AsyncClient]:
 
 
 @pytest.fixture(autouse=True)
-def _limited(settings: Settings) -> None:
+def _limited(settings: Settings, monkeypatch: pytest.MonkeyPatch) -> None:
     # The shared `settings` fixture is what every get_settings() returns during a test.
     settings.rate_limit_per_minute = LIMIT
     settings.internal_api_key = INTERNAL_KEY
+    # Freeze the wall clock mid-window: a slow request (the forecast takes seconds on
+    # PostgreSQL) must not let the next one start a fresh minute and slip past the limit.
+    frozen = SimpleNamespace(time=lambda: MID_WINDOW, monotonic=time.monotonic)
+    monkeypatch.setattr("app.core.rate_limit.time", frozen)
 
 
 async def test_requests_over_the_quota_get_429_with_retry_after(client: AsyncClient) -> None:

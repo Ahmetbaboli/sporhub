@@ -47,7 +47,9 @@ class NewsTag(Base):
     __tablename__ = "news_tags"
     __table_args__ = (
         CheckConstraint(
-            "(team_id IS NOT NULL) + (player_id IS NOT NULL) + (competition_id IS NOT NULL) = 1",
+            "(CASE WHEN team_id IS NOT NULL THEN 1 ELSE 0 END)"
+            " + (CASE WHEN player_id IS NOT NULL THEN 1 ELSE 0 END)"
+            " + (CASE WHEN competition_id IS NOT NULL THEN 1 ELSE 0 END) = 1",
             name="ck_news_tags_one_target",
         ),
     )

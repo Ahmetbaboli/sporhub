@@ -13,7 +13,7 @@ from app.core.startup import (
     describe_validation_error,
     ensure_valid,
 )
-from app.db.dialect import try_scheduler_lock
+from app.db.dialect import release_scheduler_lock, try_scheduler_lock
 from app.db.session import get_session
 from app.main import create_app
 from app.services.sync_service import run_sync
@@ -127,10 +127,10 @@ async def test_only_one_process_gets_the_scheduler_lock() -> None:
     first = await try_scheduler_lock(first_engine)
     assert first is not None
     assert await try_scheduler_lock(second_engine) is None  # another replica: no scheduler
-    await first.close()  # releasing lets the next replica take over
+    await release_scheduler_lock(first)  # releasing lets the next replica take over
     taken_over = await try_scheduler_lock(second_engine)
     assert taken_over is not None
-    await taken_over.close()
+    await release_scheduler_lock(taken_over)
     await first_engine.dispose()
     await second_engine.dispose()
 

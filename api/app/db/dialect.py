@@ -50,3 +50,15 @@ async def try_scheduler_lock(engine: AsyncEngine) -> AsyncConnection | None:
         return conn
     await conn.close()
     return None
+
+
+async def release_scheduler_lock(conn: AsyncConnection) -> None:
+    """Release the lock taken by `try_scheduler_lock` and close its connection.
+
+    Closing alone is not enough: the connection goes back to the pool with its PostgreSQL
+    session (and so the session-level lock) still alive.
+    """
+    if conn.dialect.name == POSTGRESQL:
+        await conn.execute(text("SELECT pg_advisory_unlock(:key)"), {"key": SCHEDULER_LOCK_KEY})
+        await conn.commit()
+    await conn.close()
